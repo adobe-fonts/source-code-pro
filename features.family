@@ -1,0 +1,231 @@
+
+@LETTERS_MAJUSCULE_LATIN = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Agrave Aacute Acircumflex Atilde Adieresis Amacron Abreve Aring Acaron Adotbelow Ahook Acircumflexacute Acircumflexgrave Acircumflexhook Acircumflextilde Acircumflexdotbelow Abreveacute Abrevegrave Abrevehook Abrevetilde Abrevedotbelow Aogonek AE Ccedilla Cacute Ccircumflex Ccaron Cdotaccent Dcaron Ddotbelow Dlinebelow Dcroat Egrave Eacute Ecircumflex Ecaron Edieresis Emacron Ebreve Edotaccent Edotbelow Ehook Etilde Ecircumflexacute Ecircumflexgrave Ecircumflexhook Ecircumflextilde Ecircumflexdotbelow Eogonek Gcircumflex Gbreve Gdotaccent Gcommaaccent Gcaron Gmacron Gtilde Hcircumflex Hdotbelow Hbrevebelow Hbar Igrave Iacute Icircumflex Itilde Idieresis Imacron Idotaccent Icaron Ihook Idotbelow Iogonek Jcircumflex Kcommaaccent Lacute Lcaron Lcommaaccent Ldot Ldotbelow Ldotbelowmacron Llinebelow Lslash Mdotbelow Nacute Ncaron Ntilde Ncommaaccent Ndotaccent Ndotbelow Nlinebelow Ograve Oacute Ocircumflex Otilde Odieresis Omacron Ohungarumlaut Ocaron Odotbelow Ohook Ocircumflexacute Ocircumflexgrave Ocircumflexhook Ocircumflextilde Ocircumflexdotbelow Oslash OE Ohorn Ohornacute Ohorngrave Ohornhook Ohorntilde Ohorndotbelow Oogonek Racute Rcaron Rcommaaccent Rdotbelow Rdotbelowmacron Rlinebelow Sacute Scircumflex Scaron Scedilla Scommaaccent Sdotaccent Sdotbelow Germandbls Tcaron Tcedilla Tcommaaccent Tdotbelow Tlinebelow Ugrave Uacute Ucircumflex Utilde Udieresis Umacron Ubreve Uring Uhungarumlaut Ucaron Udieresismacron Udieresisacute Udieresiscaron Udieresisgrave Udotbelow Uhook Uogonek Uhorn Uhornacute Uhorngrave Uhornhook Uhorntilde Uhorndotbelow Wgrave Wacute Wcircumflex Wdieresis Ygrave Yacute Ycircumflex Ydieresis Ydotaccent Ydotbelow Yhookabove Ytilde Zacute Zcaron Zdotaccent Zdotbelow Eth Thorn Schwa];
+
+@LETTERS_SMALL_FOR_SUPS = [a b c d e f g h i j k l m n o p q r s t u v w x y z egrave eacute schwa];
+@SUPERIOR_LETTERS_SMALL = [a.sups b.sups c.sups d.sups e.sups f.sups g.sups h.sups i.sups j.sups k.sups l.sups m.sups n.sups o.sups p.sups q.sups r.sups s.sups t.sups u.sups v.sups w.sups x.sups y.sups z.sups egrave.sups eacute.sups schwa.sups];
+
+@MARKS_CMB = [gravecmb acutecmb circumflexcmb tildecmb macroncmb brevecmb dotaccentcmb dieresiscmb hookabovecmb ringcmb hungarumlautcmb caroncmb dblgravecmb cedillacmb ogonekcmb
+dieresismacron dieresisacute dieresiscaron dieresisgrave circumflexacute circumflexgrave circumflexhook circumflextilde breveacute brevegrave brevehook brevetilde circumflexbreve];
+
+@MARKS_CMB_CASE = [gravecmb.cap acutecmb.cap circumflexcmb.cap tildecmb.cap macroncmb.cap brevecmb.cap dotaccentcmb.cap dieresiscmb.cap hookabovecmb.cap ringcmb.cap hungarumlautcmb.cap caroncmb.cap dblgravecmb.cap cedillacmb.cap ogonekcmb.cap
+dieresismacron.cap dieresisacute.cap dieresiscaron.cap dieresisgrave.cap circumflexacute.cap circumflexgrave.cap circumflexhook.cap circumflextilde.cap breveacute.cap brevegrave.cap brevehook.cap brevetilde.cap circumflexbreve.cap];
+
+@FIGURES_LINING = [zero one two three four five six seven eight nine];
+@FIGURES_OLDSTYLE = [zero.onum one.onum two.onum three.onum four.onum five.onum six.onum seven.onum eight.onum nine.onum];
+@FIGURES_NUMERATOR = [zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr];
+@FIGURES_DENOMINATOR = [zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom];
+@FIGURES_SUPERIOR = [zero.sups one.sups two.sups three.sups four.sups five.sups six.sups seven.sups eight.sups nine.sups];
+@FIGURES_INFERIOR = [zero.subs one.subs two.subs three.subs four.subs five.subs six.subs seven.subs eight.subs nine.subs];
+
+@PUNCTUATION_FOR_SMALL_FIGURE_STYLES = [parenleft parenright period comma];
+@PUNCTUATION_NUMERATOR = [parenleft.numr parenright.numr period.numr comma.numr];
+@PUNCTUATION_DENOMINATOR = [parenleft.dnom parenright.dnom period.dnom comma.dnom];
+@PUNCTUATION_SUPERIOR = [parenleft.sups parenright.sups period.sups comma.sups];
+@PUNCTUATION_INFERIOR = [parenleft.subs parenright.subs period.subs comma.subs];
+
+@SS02_A_LC_DEFAULT = [a agrave aacute acircumflex atilde adieresis amacron abreve aring acaron adotbelow ahook acircumflexacute acircumflexgrave acircumflexhook acircumflextilde acircumflexdotbelow abreveacute abrevegrave abrevehook abrevetilde abrevedotbelow aogonek a.sups ordfeminine];
+@SS02_A_LC_ALTERNATE = [a.alt agrave.alt aacute.alt acircumflex.alt atilde.alt adieresis.alt amacron.alt abreve.alt aring.alt acaron.alt adotbelow.alt ahook.alt acircumflexacute.alt acircumflexgrave.alt acircumflexhook.alt acircumflextilde.alt acircumflexdotbelow.alt abreveacute.alt abrevegrave.alt abrevehook.alt abrevetilde.alt abrevedotbelow.alt aogonek.alt a.supa ordfeminine.alt];
+
+@SS03_G_LC_DEFAULT = [g gcircumflex gbreve gdotaccent gcommaaccent gcaron gmacron gtilde g.sups];
+@SS03_G_LC_ALTERNATE = [g.alt gcircumflex.alt gbreve.alt gdotaccent.alt gcommaaccent.alt gcaron.alt gmacron.alt gtilde.alt g.supa];
+
+
+#--------------------------------------
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+
+
+#--------------------------------------
+feature aalt { # Access All Alternates
+	feature numr;
+	feature dnom;
+	feature ordn;
+	feature sups;
+	feature subs;
+	feature sinf;
+	feature onum;
+	feature case;
+	feature ss02;
+	feature ss03;
+	feature salt;
+} aalt;
+
+
+#--------------------------------------
+lookup DECOMPOSITION {
+		sub Ecircumflex by E circumflexcmb;
+		sub ecircumflex by e circumflexcmb;
+		sub Ocircumflex by O circumflexcmb;
+		sub ocircumflex by o circumflexcmb;
+} DECOMPOSITION;
+
+feature ccmp { # Glyph Composition / Decomposition
+
+	lookup GLYPH_DECOMPOSITION_CONTEXTUAL_2 {
+		#decomposes ecircumflex and ocircumflex forms when followed by comining breve: Jarai language support
+		sub [Ecircumflex ecircumflex Ocircumflex ocircumflex]' lookup DECOMPOSITION brevecmb;
+	} GLYPH_DECOMPOSITION_CONTEXTUAL_2;
+
+	lookup GLYPH_COMPOSITION_CONTEXTUAL {
+		#substitutes dotless form of iogonek when followed by combining acute: Navajo language support
+		sub i' ogonekcmb' acutecmb by iogonek.d;
+		sub iogonek' acutecmb by iogonek.d;
+	} GLYPH_COMPOSITION_CONTEXTUAL;
+
+	lookup MARKS_COMPOSITION {
+		sub dieresiscmb macroncmb by dieresismacron;
+		sub dieresiscmb acutecmb by dieresisacute;
+		sub dieresiscmb caroncmb by dieresiscaron;
+		sub dieresiscmb gravecmb by dieresisgrave;
+		sub circumflexcmb acutecmb by circumflexacute;
+		sub circumflexcmb gravecmb by circumflexgrave;
+		sub circumflexcmb hookabovecmb by circumflexhook;
+		sub circumflexcmb tildecmb by circumflextilde;
+		sub brevecmb acutecmb by breveacute;
+		sub brevecmb gravecmb by brevegrave;
+		sub brevecmb hookabovecmb by brevehook;
+		sub brevecmb tildecmb by brevetilde;
+		sub circumflexcmb brevecmb by circumflexbreve;
+	} MARKS_COMPOSITION;
+
+	lookup GLYPH_COMPOSITION_NONCONTEXTUAL {
+		sub d caroncmb by dcaron;
+		sub l caroncmb by lcaron;
+		sub t caroncmb by tcaron;
+		sub g tildecmb by gtilde;
+		sub G tildecmb by Gtilde;
+		sub a ogonekcmb by aogonek;
+		sub A ogonekcmb by Aogonek;
+		sub e ogonekcmb by eogonek;
+		sub E ogonekcmb	by Eogonek;
+		sub i ogonekcmb by iogonek;
+		sub I ogonekcmb by Iogonek;
+		sub o ogonekcmb by oogonek;
+		sub O ogonekcmb by Oogonek;
+		sub u ogonekcmb by uogonek;
+		sub U ogonekcmb by Uogonek;
+		sub g cedillacmb by gcommaaccent; # The decomposition defined by Unicode is: 0067+0327
+		sub g.alt cedillacmb by gcommaaccent.alt;
+	} GLYPH_COMPOSITION_NONCONTEXTUAL;
+
+	lookup MAJUCSULE_ACCENTS_CMB_CONTEXT { # substitutes combining marks for miniscules with forms for majuscules
+		sub @LETTERS_MAJUSCULE_LATIN @MARKS_CMB' by @MARKS_CMB_CASE;
+	} MAJUCSULE_ACCENTS_CMB_CONTEXT;
+
+} ccmp;
+
+
+#--------------------------------------
+feature numr { # Numerators
+	lookup NUMR {
+		sub @FIGURES_LINING by @FIGURES_NUMERATOR;
+		sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_NUMERATOR;
+	} NUMR;
+} numr;
+
+
+#--------------------------------------
+feature dnom { # Denominators
+	sub @FIGURES_LINING by @FIGURES_DENOMINATOR;
+	sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_DENOMINATOR;
+} dnom;
+
+
+#--------------------------------------
+feature frac { # Fractions
+	@SPACE_DEFAULT = [space nbspace];
+	@SPACE_FRAC = [space.frac nbspace.frac];
+	@SLASH = [slash.frac fraction divisionslash];
+
+	lookup NUMR;
+	sub slash by slash.frac;
+	sub @FIGURES_NUMERATOR @SPACE_DEFAULT' by @SPACE_FRAC;
+
+	sub [fraction divisionslash slash.frac @FIGURES_DENOMINATOR @PUNCTUATION_DENOMINATOR] [@FIGURES_NUMERATOR @PUNCTUATION_NUMERATOR]' by [@FIGURES_DENOMINATOR @PUNCTUATION_DENOMINATOR];
+	sub @FIGURES_DENOMINATOR @SPACE_FRAC [@FIGURES_NUMERATOR @PUNCTUATION_NUMERATOR]' by [@FIGURES_DENOMINATOR @PUNCTUATION_DENOMINATOR];
+} frac;
+
+
+#--------------------------------------
+feature ordn {
+	lookup SUPERIOR_LETTERS_SMALL {
+		sub @LETTERS_SMALL_FOR_SUPS by @SUPERIOR_LETTERS_SMALL;
+	} SUPERIOR_LETTERS_SMALL;
+} ordn;
+
+
+#--------------------------------------
+feature sups { # Superscript
+	lookup SUPERIOR_LETTERS_SMALL;
+
+	sub @FIGURES_LINING by @FIGURES_SUPERIOR;
+	sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_SUPERIOR;
+} sups;
+
+
+#--------------------------------------
+feature subs { # Subscript
+	lookup INFERIOR {
+		sub @FIGURES_LINING by @FIGURES_INFERIOR;
+		sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_INFERIOR;
+	} INFERIOR;
+} subs;
+
+
+#--------------------------------------
+feature sinf { # Scientific Inferiors
+	lookup INFERIOR;
+} sinf;
+
+
+#--------------------------------------
+feature onum { # Oldstyle (Text) Figures
+	sub @FIGURES_LINING by @FIGURES_OLDSTYLE;
+} onum;
+
+
+#--------------------------------------
+feature case { # Case-Sensitive Forms
+	sub @MARKS_CMB by @MARKS_CMB_CASE;
+	sub at by at.case;
+} case;
+
+
+#--------------------------------------
+feature ss02 { # Stylistic Set 2 (alternate a)
+	featureNames {
+		name "Alternate a"; # Windows English
+		name 1 0 0 "Alternate a"; # Mac English
+	};
+	
+	lookup A_ALTS {
+		sub @SS02_A_LC_DEFAULT by @SS02_A_LC_ALTERNATE;
+	} A_ALTS;
+} ss02;
+
+
+#--------------------------------------
+feature ss03 { # Stylistic Set 3 (alternate g)
+	featureNames {
+		name "Alternate g"; # Windows English
+		name 1 0 0 "Alternate g"; # Mac English
+	};
+	
+	lookup G_ALTS {
+		sub @SS03_G_LC_DEFAULT by @SS03_G_LC_ALTERNATE;
+	} G_ALTS;
+} ss03;
+
+
+#--------------------------------------
+feature salt { # Stylistic Alternates
+	lookup A_ALTS;
+	lookup G_ALTS;
+} salt;
+
+
+#-------------------------------------------
+feature size {
+	parameters 10.0 0; # design size, subfamily
+} size;
+
