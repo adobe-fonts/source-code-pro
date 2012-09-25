@@ -1,13 +1,15 @@
 #!/bin/sh
 
-# Build OTFs
-for f in $(find . -name 'font.pfa')
-do
-	makeotf -f $f -r
-done
+family=SourceCodePro
+weights=('Black' 'Bold' 'ExtraLight' 'Light' 'Regular' 'Semibold')
 
-# Build TTFs
-for f in $(find . -name 'font.ttf')
+# clean existing build artifacts
+rm -rf target/
+mkdir target/
+
+for w in ${weights[@]};
 do
-	makeotf -f $f -gf GlyphOrderAndAliasDB_TT -newNameID4 -r
+  makeotf -sp target/$family-$w-otf.fpr -f Roman/$w/font.pfa -r -o target/$family-$w.otf
+  makeotf -sp target/$family-$w-ttf.fpr -f Roman/$w/font.ttf -gf GlyphOrderAndAliasDB_TT -newNameID4 -r -o target/$family-$w.ttf
+  rm Roman/$w/current.fpr # remove default options file from the source tree after building
 done
