@@ -49,3 +49,8 @@ It builds all OTFs and TTFs, and can be executed by typing:
 	$ ./build.sh
 
 
+Installing
+====
+
+[Font Installation Instructions](http://www.adobe.com/type/browser/fontinstall/instructions_english.html).
+
