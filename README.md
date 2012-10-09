@@ -18,6 +18,7 @@ Repo URL Change Note
 We recently changed the repo URI for Source Code Pro. If you have forked or cloned the repo you will have to make updates to your local version.
 
 First check your remote repositories
+
 `git remote -v`
 
 Usually you will have `origin` (in the case of a clone) and something like `upstream` if you've forked the repo. To update those you need to run
