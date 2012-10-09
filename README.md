@@ -13,6 +13,18 @@ Getting Involved
 Send suggestions for changes to the Source Code OpenType font project maintainer,
 phunt@adobe.com, for consideration.
 
+Repo URL Change Note
+----
+We recently changed the repo URI for Source Code Pro. If you have forked or cloned the repo you will have to make updates to your local version.
+
+First check your remote repositories
+`git remote -v`
+
+Usually you will have `origin` (in the case of a clone) and something like `upstream` if you've forked the repo. To update those you need to run
+
+`git remote set-url origin https://github.com/adobe/source-code-pro.git`
+
+If you have other remote repositories you will need to run that command again and replace `origin` with the name of the remote repository (eg `upstream`).
 
 Building
 ====
