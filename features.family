@@ -45,8 +45,10 @@ feature aalt { # Access All Alternates
 	feature sinf;
 	feature onum;
 	feature case;
+	feature ss01;
 	feature ss02;
 	feature ss03;
+	feature ss04;
 	feature salt;
 } aalt;
 
@@ -192,6 +194,19 @@ feature case { # Case-Sensitive Forms
 
 
 #--------------------------------------
+feature ss01 { # Stylistic Set 1 (typographic alternates)
+	featureNames {
+		name "Typographic alternates"; # Windows English
+		name 1 0 0 "Typographic alternates"; # Mac English
+	};
+
+	lookup TYPO_ALTS {
+	sub [asterisk hyphen sfthyphen] by [asterisk.a hyphen.a sfthyphen.a];
+	} TYPO_ALTS;
+} ss01;
+
+
+#--------------------------------------
 feature ss02 { # Stylistic Set 2 (alternate a)
 	featureNames {
 		name "Alternate a"; # Windows English
@@ -218,9 +233,24 @@ feature ss03 { # Stylistic Set 3 (alternate g)
 
 
 #--------------------------------------
+feature ss04 { # Stylistic Set 4 (alternate dollar sign)
+	featureNames {
+		name "Alternate dollar sign"; # Windows English
+		name 1 0 0 "Alternate dollar sign"; # Mac English
+	};
+	
+	lookup DOLLAR_ALT {
+		sub dollar by dollar.a;
+	} DOLLAR_ALT;
+} ss04;
+
+
+#--------------------------------------
 feature salt { # Stylistic Alternates
+	lookup TYPO_ALTS;
 	lookup A_ALTS;
 	lookup G_ALTS;
+	lookup DOLLAR_ALT;
 } salt;
 
 
