@@ -1,0 +1,92 @@
+IsItalicStyle	false
+IsBoldStyle	false
+PreferOS/2TypoMetrics	false
+IsOS/2WidthWeigthSlopeOnly	false
+IsOS/2OBLIQUE	false
+UseOldNameID4	false
+LicenseCode	ADOBE
+
+#------------------------------------------------------
+
+begin FDDict LOWERCASE
+	BaselineYCoord 0
+	BaselineOvershoot -12
+	LcHeight 489
+	LcOvershoot 12
+	AscenderHeight 709
+	AscenderOvershoot 12
+	DescenderHeight -200
+	DescenderOvershoot -12
+	DominantV [100]
+	DominantH [80]
+	FlexOK false
+end FDDict LOWERCASE
+
+
+begin FDDict UPPERCASE
+	BaselineYCoord 0
+	BaselineOvershoot -12
+	CapHeight 655           
+	CapOvershoot 12
+	DominantV [100]
+	DominantH [80]
+	FlexOK false
+end FDDict UPPERCASE
+
+
+begin FDDict FIGURES
+	BaselineYCoord 0
+	BaselineOvershoot -12
+	FigHeight 637
+	FigOvershoot 12
+	DominantV [100]
+	DominantH [80]
+	FlexOK false
+end FDDict FIGURES
+
+begin FDDict TEXT_FIGURES
+	BaselineYCoord 0
+	BaselineOvershoot -12
+	FigHeight 575
+	FigOvershoot 12
+	DominantV [100]
+	DominantH [80]
+	FlexOK false
+end FDDict TEXT_FIGURES
+
+#------------------------------------------------------
+
+begin GlyphSet UPPERCASE
+	#Latin
+		^[A-Z][A-Z]?(breve|circumflex|dieresis|horn|dotbelow)?(grave|acute|circumflex|tilde|dieresis|ring|caron|slash|cedilla|horn|breve|macron|ogonek|croat|dotaccent|commaaccent|hungarumlaut|dot|bar|th|line|hook|stroke)?(above|below|dotaccent)?$
+		^(Germandbls|Schwa)$
+	#Punctuation
+		^(exclam|question)$
+		^(trademark|registered|servicemark)$
+		^(ampersand|section|paragraph)$
+	#Math
+		^(Delta|Omega).math$
+end GlyphSet UPPERCASE
+
+
+begin GlyphSet LOWERCASE
+	#Latin
+		^(dotless|germandbl|schw)?[a-z](breve|circumflex|dieresis|horn|dotbelow)?(grave|acute|circumflex|tilde|dieresis|ring|caron|slash|cedilla|horn|breve|macron|ogonek|croat|dotaccent|commaaccent|hungarumlaut|dot|bar|th|line|hook|stroke|tail|ng|script|greenlandic|apostrophe)?(above|below|dotaccent)?(\.)?(alt|d)?$
+		^[afo][eil]$
+		^(f)_(f|t)$
+	#Punctuation
+		^(exclam|question)down$
+		^(dagger|daggerdbl)$
+end GlyphSet LOWERCASE
+
+
+begin GlyphSet FIGURES
+		^(zero|one|two|three|four|five|six|seven|eight|nine)(\.)?(slash)?(pnum)?$
+		^(dollar|cent|sterling|yen|Euro|florin|colonmonetary|lira|naira|peseta|dong|peso|guarani|cedi|rupeeindian)(turkish)?$
+		^(percent|perthousand|numbersign)$
+		^(one|two|three|five|seven)(half|quarter|third|eighth)(s)?$
+end GlyphSet FIGURES
+
+begin GlyphSet TEXT_FIGURES
+		^(zero|one|two|three|four|five|six|seven|eight|nine)(\.)?(slash)?(onum|tnum)$
+end GlyphSet TEXT_FIGURES
