@@ -18,7 +18,7 @@ Building
 
 Pre-built font binaries
 ----
-The font binaries are not part of the source files. They are provided in the [Downloads](https://github.com/adobe/Source-Code-Pro/downloads) section.
+The font binaries are not part of the source files. They are available on [SourceForge](https://sourceforge.net/projects/sourcecodepro.adobe/files/) section.
 
 
 Requirements
