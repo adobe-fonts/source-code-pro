@@ -1,7 +1,7 @@
 #!/bin/sh
 
 family=SourceCodePro
-weights=('Black' 'Bold' 'ExtraLight' 'Light' 'Regular' 'Semibold')
+weights=('Black' 'Bold' 'ExtraLight' 'Light' 'Medium' 'Regular' 'Semibold')
 
 # clean existing build artifacts
 rm -rf target/
