@@ -13,18 +13,19 @@ Getting Involved
 Send suggestions for changes to the Source Code OpenType font project maintainer,
 phunt@adobe.com, for consideration.
 
-Building
+
+Font Binaries (OTF and TTF files)
 ====
+The font binaries are not part of the repository. They can be downloaded from [SourceForge](https://sourceforge.net/projects/sourcecodepro.adobe/files/).
 
-Pre-built font binaries
-----
-The font binaries are not part of the source files. They are available on [SourceForge](https://sourceforge.net/projects/sourcecodepro.adobe/files/).
 
+Building Font Binaries
+====
 
 Requirements
 ----
 
-For building binary font files from source, installation of the [Adobe Font Development Kit for OpenType](http://www.adobe.com/devnet/opentype/afdko.html) (AFDKO) is necessary. The AFDKO tools are widely used for font development today, and are part of most font editor applications.
+To build the binary font files from source, you need to have installed the [Adobe Font Development Kit for OpenType](http://www.adobe.com/devnet/opentype/afdko.html) (AFDKO). The AFDKO tools are widely used for font development today, and are part of most font editor applications.
 
 Building one font
 ----
