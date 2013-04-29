@@ -13,7 +13,7 @@ The font binaries are not part of the repository. They can be
 ## Installation instructions
 
 * [Mac OS X](http://support.apple.com/kb/HT2509)
-* [Windows](http://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts).
+* [Windows](http://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
 * [Linux/Unix-based systems](https://github.com/adobe/source-code-pro/issues/17#issuecomment-8967116)
 
 ## Building from source
