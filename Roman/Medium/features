@@ -1,0 +1,42 @@
+
+table head {
+   FontRevision 1.017;
+} head;
+
+include (../../features.family)
+
+include (features.markclasses);
+
+feature mark {
+	include (../../widthsAdjust.mark)
+	include (features.mark)
+} mark;
+
+feature mkmk {
+	include (features.mkmk);
+} mkmk;
+
+table OS/2 {
+	Panose 2 11 5 9 3 4 3 2 2 4;
+	FSType 0;
+	# NOTE: For cross-platform consistency, OS/2.TypoAscender and |OS/2.TypoDescender| must add up to the font's UPM value
+	TypoAscender 750;	# Must be the same on all fonts for cross-platform consistency
+	TypoDescender -250;	# Must be the same on all fonts for cross-platform consistency
+	TypoLineGap 0;		# Must be zero for cross-platform consistency
+	winAscent 984;		# Must be the same on all fonts for cross-weight consistency
+	winDescent 273;		# Must be the same on all fonts for cross-weight consistency
+	XHeight 480;
+	CapHeight 660;
+	WeightClass 500;	# Normal (Regular)
+	WidthClass 5;		# Medium (normal)
+	Vendor "ADBE";
+} OS/2;
+
+table hhea {
+	# NOTE: The OS/2.winAscent and OS/2.winDescent values are set by MakeOTF and vary depending on the font's bounding box
+	Ascender 984;		# Must match OS/2.winAscent for cross-platform consistency
+	Descender -273;		# Must match OS/2.winDescent for cross-platform consistency
+	LineGap 0;			# Must be zero for cross-platform consistency
+} hhea;
+
+include (../../features.tables)
