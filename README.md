@@ -33,15 +33,19 @@ Information and usage instructions can be found by executing `makeotf -h`.
 In this repository, all necessary files are in place for building the OTF and TTF fonts.  
 For example, build a binary OTF font for the Regular style like this:
 
-    $ cd Roman/Regular/
-    $ makeotf -r
+```sh
+$ cd Roman/Regular/
+$ makeotf -r
+```
 
 ### Building all fonts
 
 For convenience, a shell script named `build.sh` is provided in the root directory.  
 It builds all OTFs and TTFs, and can be executed by typing:
 
-	$ ./build.sh
+```sh
+$ ./build.sh
+```
 
 ## Getting Involved
 
