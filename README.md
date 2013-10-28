@@ -8,7 +8,7 @@ by using the AFDKO makeotf tool.
 ## Download font binaries (OTF and TTF files)
 
 The font binaries are not part of the repository. They can be
-[downloaded from SourceForge here](http://sourceforge.net/projects/sourcecodepro.adobe/files/latest/download).
+[downloaded from SourceForge here](http://sourceforge.net/projects/sourcecodepro.adobe/files/?source=navbar).
 
 ## Installation instructions
 
