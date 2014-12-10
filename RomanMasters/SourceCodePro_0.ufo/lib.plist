@@ -44,6 +44,8 @@
 	<array>
 		<string>mask</string>
 	</array>
+	<key>com.typemytype.robofont.mask.layerShow</key>
+	<true/>
 	<key>com.typemytype.robofont.mask.layerStrokeColor</key>
 	<array>
 		<real>1.0</real>
@@ -59,8 +61,6 @@
 			<key>ascending</key>
 			<array>
 				<string>.notdef</string>
-				<string>NULL</string>
-				<string>CR</string>
 				<string>space</string>
 				<string>A</string>
 				<string>B</string>
@@ -307,6 +307,7 @@
 				<string>Schwa</string>
 				<string>Eng</string>
 				<string>IJ</string>
+				<string>IJacute</string>
 				<string>agrave</string>
 				<string>aacute</string>
 				<string>acircumflex</string>
@@ -504,6 +505,7 @@
 				<string>eng</string>
 				<string>dotlessj</string>
 				<string>ij</string>
+				<string>ijacute</string>
 				<string>aturned</string>
 				<string>alphalatinturned</string>
 				<string>bhook</string>
@@ -532,6 +534,7 @@
 				<string>istroke</string>
 				<string>Ismall</string>
 				<string>jcrossedtail</string>
+				<string>kturned</string>
 				<string>lbelt</string>
 				<string>lretroflex</string>
 				<string>lezh</string>
@@ -555,6 +558,7 @@
 				<string>shook</string>
 				<string>esh</string>
 				<string>dotlessjstrokehook</string>
+				<string>tturned</string>
 				<string>tretroflex</string>
 				<string>ubar</string>
 				<string>upsilonlatin</string>
@@ -867,6 +871,8 @@
 				<string>obarcyr</string>
 				<string>umacroncyr</string>
 				<string>uacutedblcyr</string>
+				<string>acyr.a</string>
+				<string>abrevecyr.a</string>
 				<string>be.srb</string>
 				<string>numero</string>
 				<string>ampersand</string>
@@ -880,6 +886,7 @@
 				<string>seven</string>
 				<string>eight</string>
 				<string>nine</string>
+				<string>zero.0</string>
 				<string>zero.onum</string>
 				<string>one.onum</string>
 				<string>two.onum</string>
@@ -890,6 +897,7 @@
 				<string>seven.onum</string>
 				<string>eight.onum</string>
 				<string>nine.onum</string>
+				<string>zero.0o</string>
 				<string>zero.cap</string>
 				<string>one.cap</string>
 				<string>two.cap</string>
@@ -900,6 +908,7 @@
 				<string>seven.cap</string>
 				<string>eight.cap</string>
 				<string>nine.cap</string>
+				<string>zero.0c</string>
 				<string>period</string>
 				<string>comma</string>
 				<string>colon</string>
@@ -1079,7 +1088,6 @@
 				<string>dollar</string>
 				<string>sterling</string>
 				<string>yen</string>
-				<string>yuan</string>
 				<string>Euro</string>
 				<string>cent</string>
 				<string>florin</string>
@@ -1480,8 +1488,13 @@
 				<string>ZWNBS</string>
 				<string>fi</string>
 				<string>fl</string>
-				<string>ffi</string>
-				<string>ffl</string>
+				<string>uniE0A0</string>
+				<string>uniE0A1</string>
+				<string>uniE0A2</string>
+				<string>uniE0B0</string>
+				<string>uniE0B1</string>
+				<string>uniE0B2</string>
+				<string>uniE0B3</string>
 			</array>
 			<key>type</key>
 			<string>glyphList</string>
@@ -1490,8 +1503,6 @@
 	<key>public.glyphOrder</key>
 	<array>
 		<string>.notdef</string>
-		<string>NULL</string>
-		<string>CR</string>
 		<string>space</string>
 		<string>A</string>
 		<string>B</string>
@@ -1738,6 +1749,7 @@
 		<string>Schwa</string>
 		<string>Eng</string>
 		<string>IJ</string>
+		<string>IJacute</string>
 		<string>agrave</string>
 		<string>aacute</string>
 		<string>acircumflex</string>
@@ -1935,6 +1947,7 @@
 		<string>eng</string>
 		<string>dotlessj</string>
 		<string>ij</string>
+		<string>ijacute</string>
 		<string>aturned</string>
 		<string>alphalatinturned</string>
 		<string>bhook</string>
@@ -1963,6 +1976,7 @@
 		<string>istroke</string>
 		<string>Ismall</string>
 		<string>jcrossedtail</string>
+		<string>kturned</string>
 		<string>lbelt</string>
 		<string>lretroflex</string>
 		<string>lezh</string>
@@ -1986,6 +2000,7 @@
 		<string>shook</string>
 		<string>esh</string>
 		<string>dotlessjstrokehook</string>
+		<string>tturned</string>
 		<string>tretroflex</string>
 		<string>ubar</string>
 		<string>upsilonlatin</string>
@@ -2298,6 +2313,8 @@
 		<string>obarcyr</string>
 		<string>umacroncyr</string>
 		<string>uacutedblcyr</string>
+		<string>acyr.a</string>
+		<string>abrevecyr.a</string>
 		<string>be.srb</string>
 		<string>numero</string>
 		<string>ampersand</string>
@@ -2311,6 +2328,7 @@
 		<string>seven</string>
 		<string>eight</string>
 		<string>nine</string>
+		<string>zero.0</string>
 		<string>zero.onum</string>
 		<string>one.onum</string>
 		<string>two.onum</string>
@@ -2321,6 +2339,7 @@
 		<string>seven.onum</string>
 		<string>eight.onum</string>
 		<string>nine.onum</string>
+		<string>zero.0o</string>
 		<string>zero.cap</string>
 		<string>one.cap</string>
 		<string>two.cap</string>
@@ -2331,6 +2350,7 @@
 		<string>seven.cap</string>
 		<string>eight.cap</string>
 		<string>nine.cap</string>
+		<string>zero.0c</string>
 		<string>period</string>
 		<string>comma</string>
 		<string>colon</string>
@@ -2510,7 +2530,6 @@
 		<string>dollar</string>
 		<string>sterling</string>
 		<string>yen</string>
-		<string>yuan</string>
 		<string>Euro</string>
 		<string>cent</string>
 		<string>florin</string>
@@ -2911,25 +2930,23 @@
 		<string>ZWNBS</string>
 		<string>fi</string>
 		<string>fl</string>
-		<string>ffi</string>
-		<string>ffl</string>
-		<string>racute.a</string>
-		<string>rdotbelowmacron.a</string>
-		<string>tturned</string>
 		<string>uniE0A0</string>
+		<string>uniE0A1</string>
+		<string>uniE0A2</string>
+		<string>uniE0B0</string>
+		<string>uniE0B1</string>
+		<string>uniE0B2</string>
+		<string>uniE0B3</string>
+		<string>racute.a</string>
+		<string>rlonglegturned.a</string>
+		<string>rdotbelowmacron.a</string>
 		<string>rdotaccent.a</string>
 		<string>rlinebelow.a</string>
+		<string>rturned.a</string>
 		<string>rdotbelow.a</string>
 		<string>rcaron.a</string>
 		<string>r.a</string>
-		<string>kturned</string>
-		<string>uniE0B1</string>
-		<string>uniE0B3</string>
-		<string>uniE0B0</string>
-		<string>uniE0B2</string>
 		<string>rcommaaccent.a</string>
-		<string>uniE0A1</string>
-		<string>uniE0A2</string>
 	</array>
 </dict>
 </plist>

@@ -49,20 +49,19 @@ dieresismacron.cap dieresisacute.cap dieresiscaron.cap dieresisgrave.cap circumf
 @PUNCTUATION_SUPERIOR = [parenleft.sups parenright.sups period.sups comma.sups];
 @PUNCTUATION_INFERIOR = [parenleft.subs parenright.subs period.subs comma.subs];
 
-@SS02_A_LC_DEFAULT = [a agrave aacute acircumflex atilde adieresis amacron abreve aring acaron adotbelow ahoi acircumflexacute acircumflexgrave acircumflexhoi acircumflextilde acircumflexdotbelow abreveacute abrevegrave abrevehoi abrevetilde abrevedotbelow aogonek a.sups ordfeminine];
-@SS02_A_LC_ALTERNATE = [a.alt agrave.alt aacute.alt acircumflex.alt atilde.alt adieresis.alt amacron.alt abreve.alt aring.alt acaron.alt adotbelow.alt ahoi.alt acircumflexacute.alt acircumflexgrave.alt acircumflexhoi.alt acircumflextilde.alt acircumflexdotbelow.alt abreveacute.alt abrevegrave.alt abrevehoi.alt abrevetilde.alt abrevedotbelow.alt aogonek.alt a.supa ordfeminine.alt];
+@A_LC = [a agrave aacute acircumflex atilde adieresis amacron abreve aring acaron adotbelow ahoi acircumflexacute acircumflexgrave acircumflexhoi acircumflextilde acircumflexdotbelow abreveacute abrevegrave abrevehoi abrevetilde abrevedotbelow aogonek a.sups ordfeminine acyr abrevecyr];
+@A_LC_ALT = [a.alt agrave.alt aacute.alt acircumflex.alt atilde.alt adieresis.alt amacron.alt abreve.alt aring.alt acaron.alt adotbelow.alt ahoi.alt acircumflexacute.alt acircumflexgrave.alt acircumflexhoi.alt acircumflextilde.alt acircumflexdotbelow.alt abreveacute.alt abrevegrave.alt abrevehoi.alt abrevetilde.alt abrevedotbelow.alt aogonek.alt a.supa ordfeminine.alt acyr.a abrevecyr.a];
 
-@SS03_G_LC_DEFAULT = [g gacute gcircumflex gbreve gdotaccent gcommaaccent gcaron gmacron gtilde g.sups];
-@SS03_G_LC_ALTERNATE = [g.alt gacute.alt gcircumflex.alt gbreve.alt gdotaccent.alt gcommaaccent.alt gcaron.alt gmacron.alt gtilde.alt g.supa];
+@G_LC = [g gacute gcircumflex gbreve gdotaccent gcommaaccent gcaron gmacron gtilde g.sups];
+@G_LC_ALT = [g.alt gacute.alt gcircumflex.alt gbreve.alt gdotaccent.alt gcommaaccent.alt gcaron.alt gmacron.alt gtilde.alt g.supa];
 
+@R_LC = [r racute rcommaaccent rcaron rdotaccent rdotbelow rdotbelowmacron rlinebelow rturned rlonglegturned];# rtail r.sups];
+@R_LC_ALT = [r.a racute.a rcommaaccent.a rcaron.a rdotaccent.a rdotbelow.a rdotbelowmacron.a rlinebelow.a rturned.a rlonglegturned.a];# rtail.a r.supa];
 
 #--------------------------------------
 languagesystem DFLT dflt; # Default
 
 languagesystem latn dflt; # Latin default
-#	languagesystem latn AZE; # Azeri
-#	languagesystem latn CRT; # Crimean Tatar
-#	languagesystem latn TRK; # Turkish
 	languagesystem latn NSM; # Northern Sami
 	languagesystem latn SKS; # Skolt Sami
 
@@ -72,25 +71,78 @@ languagesystem cyrl dflt; # Cyrillic default
 	languagesystem cyrl SRB; # Serbian
 
 #--------------------------------------
-feature aalt { # Access All Alternates
-	feature locl;
-	feature numr;
-	feature dnom;
-	feature ordn;
-	feature sups;
-	feature subs;
-	feature sinf;
-	feature onum;
-#	feature ss05;
-	feature zero;
-	feature case;
-	feature ss01;
-	feature ss02;
-	feature ss03;
-	feature ss04;
-	feature ss06;
-	feature salt;
-} aalt;
+lookup A_LC_ALT {
+	sub @A_LC by @A_LC_ALT;
+} A_LC_ALT;
+
+lookup G_LC_ALT {
+	sub @G_LC by @G_LC_ALT;
+} G_LC_ALT;
+
+lookup R_LC_ALT {
+	sub @R_LC by @R_LC_ALT;
+} R_LC_ALT;
+
+lookup ENG_UC_SAMI { # preferred Eng shape for Sami languages
+	sub Eng by Eng.alt;
+} ENG_UC_SAMI;
+
+lookup BETA_LC_ALT {
+	sub beta by beta.alt;
+} BETA_LC_ALT;
+
+lookup THETA_LC_ALT {
+	sub theta by theta.alt;
+} THETA_LC_ALT;
+
+lookup PHI_LC_ALT {
+	sub phi by phi.alt;
+} PHI_LC_ALT;
+
+lookup BREVE_CYR { #preferred breve shape for Cyrillic script
+	sub [brevecmb brevecmb.cap] by [brevecmb.cyr brevecmb.cyrcap]; # combining marks
+} BREVE_CYR;
+
+lookup BE_LC_SRB {
+	sub be by be.srb;
+} BE_LC_SRB;
+
+lookup ZERO_SLASH {
+	sub [zero zero.onum zero.cap] by [zero.0 zero.0o zero.0c];
+} ZERO_SLASH;
+
+lookup HYPHEN_ALT {
+	sub [hyphen sfthyphen] by [hyphen.a sfthyphen.a];
+} HYPHEN_ALT;
+
+lookup ASTERISK_ALT {
+	sub asterisk by asterisk.a;
+} ASTERISK_ALT;
+
+lookup DOLLAR_ALT {
+	sub dollar by dollar.a;
+} DOLLAR_ALT;
+
+#--------------------------------------
+#feature aalt { # Access All Alternates
+#	feature locl;
+#	feature numr;
+#	feature dnom;
+#	feature ordn;
+#	feature sups;
+#	feature subs;
+#	feature sinf;
+#	feature onum;
+##	feature ss05;
+#	feature zero;
+#	feature case;
+#	feature ss01;
+#	feature ss02;
+#	feature ss03;
+#	feature ss04;
+#	feature ss06;
+#	feature salt;
+#} aalt;
 
 
 #--------------------------------------
@@ -98,35 +150,21 @@ feature aalt { # Access All Alternates
 feature locl { # Localized Forms
 
 	script latn;
-#		language TRK exclude_dflt;
-#			lookup I_TURKISH {
-#				sub i by i.trk;
-#			} I_TURKISH;
-#
-#		language AZE exclude_dflt;
-#			lookup I_TURKISH;
-#
-#		language CRT exclude_dflt;
-#			lookup I_TURKISH;
-		
+
 		language NSM exclude_dflt;
-			lookup ENG_SAMI { # preferred Eng shape for Sami languages
-				sub Eng by Eng.alt;
-			} ENG_SAMI;
+			lookup ENG_UC_SAMI;
 
 		language SKS exclude_dflt;
-			lookup ENG_SAMI;
+			lookup ENG_UC_SAMI;
 			
 	script grek;
 		sub [acutecmb gravecmb commaturnedabovecmb commaabovecmb] by [tonoscmb variacmb aspercmb leniscmb]; # combining marks
 
 	script cyrl;
-		sub [brevecmb brevecmb.cap] by [brevecmb.cyr brevecmb.cyrcap]; # combining marks
+		lookup BREVE_CYR;
 		
 		language SRB include_dflt;
-			lookup BE_LC_SRB {
-				sub be by be.srb;
-			} BE_LC_SRB;
+			lookup BE_LC_SRB;
 
 } locl;
 
@@ -156,8 +194,8 @@ feature ccmp { # Glyph Composition / Decomposition
 
 	lookup GLYPH_COMPOSITION_CONTEXTUAL {
 		#substitutes dotless form of iogonek when followed by combining acute: Navajo language support
-		sub i' ogonekcmb' acutecmb by iogonek.d;
-		sub iogonek' acutecmb by iogonek.d;
+		sub i' ogonekcmb' @MARKS_CMB by iogonek.d;
+		sub [i j iogonek]' @MARKS_CMB by [dotlessi dotlessj iogonek.d];
 	} GLYPH_COMPOSITION_CONTEXTUAL;
 
 	lookup MARKS_COMPOSITION {
@@ -203,6 +241,8 @@ feature ccmp { # Glyph Composition / Decomposition
 		sub U ogonekcmb by Uogonek;
 		sub g cedillacmb by gcommaaccent; # The decomposition defined by Unicode is: 0067+0327
 		sub g.alt cedillacmb by gcommaaccent.alt;
+		sub ij acutecmb by ijacute;
+		sub IJ acutecmb by IJacute;
 	} GLYPH_COMPOSITION_LATIN_NONCONTEXTUAL;
 
 	lookup MAJUCSULE_ACCENTS_CMB_CONTEXT { # substitutes combining marks for miniscules with forms for majuscules
@@ -212,6 +252,148 @@ feature ccmp { # Glyph Composition / Decomposition
 
 } ccmp;
 
+
+#--------------------------------------
+feature cv01 { # Character Variant 1 (alternate lowercase a)
+	featureNames {
+		name "Alternate a"; # Windows English
+		name 1 0 0 "Alternate a"; # Mac English
+	};
+	
+	lookup A_LC_ALT;
+
+} cv01;
+
+#--------------------------------------
+feature cv02 { # Character Variant 2 (alternate lowercase g)
+	featureNames {
+		name "Alternate g"; # Windows English
+		name 1 0 0 "Alternate g"; # Mac English
+	};
+	
+	lookup G_LC_ALT;
+
+} cv02;
+
+#--------------------------------------
+feature cv04 { # Character Variant 4 (alternate lowercase r)
+	featureNames {
+		name "Alternate r"; # Windows English
+		name 1 0 0 "Alternate r"; # Mac English
+	};
+	
+	lookup R_LC_ALT;
+
+} cv04;
+
+#--------------------------------------
+feature cv06 { # Character Variant 6 (alternate Sami uppercase Eng)
+	featureNames {
+		name "Sami Eng"; # Windows English
+		name 1 0 0 "Sami Eng"; # Mac English
+	};
+	
+	lookup ENG_UC_SAMI;
+
+} cv06;
+
+#--------------------------------------
+feature cv07 { # Character Variant 7 (alternate lowercase beta)
+	featureNames {
+		name "Alternate beta"; # Windows English
+		name 1 0 0 "Alternate beta"; # Mac English
+	};
+	
+	lookup BETA_LC_ALT;
+
+} cv07;
+
+#--------------------------------------
+feature cv08 { # Character Variant 8 (alternate lowercase theta)
+	featureNames {
+		name "Alternate theta"; # Windows English
+		name 1 0 0 "Alternate theta"; # Mac English
+	};
+	
+	lookup THETA_LC_ALT;
+
+} cv08;
+
+#--------------------------------------
+feature cv09 { # Character Variant 9 (alternate lowercase phi)
+	featureNames {
+		name "Alternate phi"; # Windows English
+		name 1 0 0 "Alternate phi"; # Mac English
+	};
+	
+	lookup PHI_LC_ALT;
+
+} cv09;
+
+#--------------------------------------
+feature cv10 { # Character Variant 10 (alternate lowercase be)
+	featureNames {
+		name "Serbian alternate be"; # Windows English
+		name 1 0 0 "Serbian alternate be"; # Mac English
+	};
+
+	lookup BE_LC_SRB;
+} cv10;
+
+#--------------------------------------
+feature cv11 { # Character Variant 11 (alternate breve for Cyrillic)
+	featureNames {
+		name "Alternate breve"; # Windows English
+		name 1 0 0 "Alternate breve"; # Mac English
+	};
+
+	lookup BREVE_CYR;
+
+} cv11;
+
+#--------------------------------------
+feature cv12 { # Character Variant 12 (slashed zero)
+	featureNames {
+		name "Slashed zero"; # Windows English
+		name 1 0 0 "Slashed zero"; # Mac English
+	};
+	
+	lookup ZERO_SLASH;
+
+} cv12;
+
+#--------------------------------------
+feature cv14 { # Character Variant 14 (alternate hyphen)
+	featureNames {
+		name "Alternate hyphen"; # Windows English
+		name 1 0 0 "Alternate hyphen"; # Mac English
+	};
+ 
+ 	lookup HYPHEN_ALT;
+
+} cv14;
+
+#--------------------------------------
+feature cv15 { # Character Variant 15 (alternate asterisk)
+	featureNames {
+		name "Alternate asterisk"; # Windows English
+		name 1 0 0 "Alternate asterisk"; # Mac English
+	};
+ 
+	lookup ASTERISK_ALT;
+
+} cv15;
+
+#--------------------------------------
+feature cv16 { # Character Variant 16 (alternate dollar sign)
+	featureNames {
+		name "Alternate dollar sign"; # Windows English
+		name 1 0 0 "Alternate dollar sign"; # Mac English
+	};
+ 
+	lookup DOLLAR_ALT;
+
+} cv16;
 
 #--------------------------------------
 feature numr { # Numerators
@@ -291,30 +473,10 @@ feature onum { # Oldstyle (Text) Figures
 
 
 #--------------------------------------
-#feature ss05 { # Stylistic Set 5 (Slashed zero)
-#	featureNames {
-#		name "Slashed zero"; # Windows English
-#		name 1 0 0 "Slashed zero"; # Mac English
-#	};
-#	
-#	sub zero by zero.0s;
-#	sub zero.pnum by zero.0ps;
-#	
-#} ss05;
-#
-#
-##--------------------------------------
-##OK
-#feature zero {
-#	sub zero by zero.0;
-#	sub zero.pnum by zero.0p;
-#} zero;
-
-
-#--------------------------------------
 feature case { # Case-Sensitive Forms
 	sub @MARKS_CMB by @MARKS_CMB_CASE;
 	sub @FIGURES_OLDSTYLE by @FIGURES_CASE;
+	sub ijacute by IJacute;
 	sub at by at.case;
 	sub anoteleia by anoteleia.cap;
 } case;
@@ -327,9 +489,9 @@ feature ss01 { # Stylistic Set 1 (typographic alternates)
 		name 1 0 0 "Typographic alternates"; # Mac English
 	};
 
-	lookup TYPO_ALTS {
-	sub [asterisk hyphen sfthyphen] by [asterisk.a hyphen.a sfthyphen.a];
-	} TYPO_ALTS;
+	lookup HYPHEN_ALT;
+	lookup ASTERISK_ALT;
+
 } ss01;
 
 
@@ -340,13 +502,9 @@ feature ss02 { # Stylistic Set 2 (alternate a)
 		name 1 0 0 "Alternate a"; # Mac English
 	};
 	
-	lookup A_ALTS {
-		sub @SS02_A_LC_DEFAULT by @SS02_A_LC_ALTERNATE;
-	} A_ALTS;
+	lookup A_LC_ALT;
+	lookup BETA_LC_ALT;
 
-	lookup BETA_ALT {
-		sub beta by beta.alt;
-	} BETA_ALT;
 } ss02;
 
 
@@ -357,40 +515,71 @@ feature ss03 { # Stylistic Set 3 (alternate g)
 		name 1 0 0 "Alternate g"; # Mac English
 	};
 	
-	lookup G_ALTS {
-		sub @SS03_G_LC_DEFAULT by @SS03_G_LC_ALTERNATE;
-	} G_ALTS;
+	lookup G_LC_ALT;
+	lookup THETA_LC_ALT;
+	lookup BE_LC_SRB;
 
-	lookup THETA_ALT {
-		sub theta by theta.alt;
-	} THETA_ALT;
 } ss03;
 
 
 #--------------------------------------
-feature ss05 { # Stylistic Set 5 (alternate dollar sign)
+feature ss04 { # Stylistic Set 4 (alternate r)
+	featureNames {
+		name "Alternate r"; # Windows English
+		name 1 0 0 "Alternate r"; # Mac English
+	};
+	
+	lookup R_LC_ALT;
+
+} ss04;
+
+
+#--------------------------------------
+feature ss05 { # Stylistic Set 5 (alternate Sami uppercase Eng)
+	featureNames {
+		name "Sami Eng"; # Windows English
+		name 1 0 0 "Sami Eng"; # Mac English
+	};
+	
+	lookup ENG_UC_SAMI;
+	lookup PHI_LC_ALT;
+
+} ss05;
+
+
+#--------------------------------------
+feature ss06 { # Stylistic Set 6 (alternate dollar sign)
 	featureNames {
 		name "Alternate dollar sign"; # Windows English
 		name 1 0 0 "Alternate dollar sign"; # Mac English
 	};
 	
-	lookup DOLLAR_ALT {
-		sub dollar by dollar.a;
-	} DOLLAR_ALT;
-} ss05;
+	lookup DOLLAR_ALT;
+
+} ss06;
+
+
+#
+#
+##--------------------------------------
+feature zero {
+	lookup ZERO_SLASH;
+} zero;
 
 
 #--------------------------------------
 feature salt { # Stylistic Alternates
-	lookup TYPO_ALTS;
-	lookup A_ALTS;
-	lookup G_ALTS;
+	lookup A_LC_ALT;
+	lookup G_LC_ALT;
+	lookup R_LC_ALT;
+	lookup ENG_UC_SAMI;
+	lookup BETA_LC_ALT;
+	lookup THETA_LC_ALT;
+	lookup PHI_LC_ALT; #!!!
+	lookup ZERO_SLASH;
+	lookup HYPHEN_ALT;
+	lookup ASTERISK_ALT;
 	lookup DOLLAR_ALT;
-	lookup ENG_SAMI;
-	lookup BETA_ALT;
-	lookup THETA_ALT;
-#	lookup PHI_ALT; #!!!
-#	sub [zero.0 zero.0p] by [zero.0s zero.0ps];
 } salt;
 
 
