@@ -29,11 +29,15 @@
 
 @LETTERS_MAJUSCULE_ALL = [@LETTERS_MAJUSCULE_LATIN_ALL @LETTERS_MAJUSCULE_GREEK_ALL @LETTERS_MAJUSCULE_CYRILLIC_ALL];
 
-@MARKS_CMB = [gravecmb acutecmb circumflexcmb tildecmb macroncmb brevecmb dotaccentcmb dieresiscmb hoicmb ringcmb hungarumlautcmb caroncmb dblgravecmb cedillacmb ogonekcmb
-dieresismacron dieresisacute dieresiscaron dieresisgrave circumflexacute circumflexgrave circumflexhoi circumflextilde breveacute brevegrave brevehoi brevetilde circumflexbreve];
+@MARKS_ABOVE_CMB = [gravecmb acutecmb circumflexcmb tildecmb macroncmb overlinecmb brevecmb brevecmb.cyr dotaccentcmb dieresiscmb hoicmb ringcmb hungarumlautcmb caroncmb dblgravecmb breveinvertedcmb perispomenicmb
+dieresisacute dieresisgrave dieresismacron dieresiscaron circumflexacute circumflexgrave circumflexhoi circumflextilde breveacute brevegrave brevehoi brevetilde circumflexbreve macronacute];
+@MARKS_BELOW_CMB = [cedillacmb ogonekcmb];
+@MARKS_CMB_ALL = [@MARKS_ABOVE_CMB @MARKS_BELOW_CMB];
 
-@MARKS_CMB_CASE = [gravecmb.cap acutecmb.cap circumflexcmb.cap tildecmb.cap macroncmb.cap brevecmb.cap dotaccentcmb.cap dieresiscmb.cap hoicmb.cap ringcmb.cap hungarumlautcmb.cap caroncmb.cap dblgravecmb.cap cedillacmb.cap ogonekcmb.cap
-dieresismacron.cap dieresisacute.cap dieresiscaron.cap dieresisgrave.cap circumflexacute.cap circumflexgrave.cap circumflexhoi.cap circumflextilde.cap breveacute.cap brevegrave.cap brevehoi.cap brevetilde.cap circumflexbreve.cap];
+@MARKS_ABOVE_CMB_CASE = [gravecmb.cap acutecmb.cap circumflexcmb.cap tildecmb.cap macroncmb.cap overlinecmb.cap brevecmb.cap brevecmb.cyrcap dotaccentcmb.cap dieresiscmb.cap hoicmb.cap ringcmb.cap hungarumlautcmb.cap caroncmb.cap dblgravecmb.cap breveinvertedcmb.cap perispomenicmb.cap
+dieresisacute.cap dieresisgrave.cap dieresismacron.cap dieresiscaron.cap circumflexacute.cap circumflexgrave.cap circumflexhoi.cap circumflextilde.cap breveacute.cap brevegrave.cap brevehoi.cap brevetilde.cap circumflexbreve.cap macronacute.cap];
+@MARKS_BELOW_CMB_CASE = [cedillacmb.cap ogonekcmb.cap];
+@MARKS_CMB_ALL_CASE = [@MARKS_ABOVE_CMB_CASE @MARKS_BELOW_CMB_CASE];
 
 @FIGURES_LINING = [zero one two three four five six seven eight nine];
 @FIGURES_OLDSTYLE = [zero.onum one.onum two.onum three.onum four.onum five.onum six.onum seven.onum eight.onum nine.onum];
@@ -193,9 +197,9 @@ feature ccmp { # Glyph Composition / Decomposition
 	} GLYPH_DECOMPOSITION_CONTEXTUAL_2;
 
 	lookup GLYPH_COMPOSITION_CONTEXTUAL {
-		#substitutes dotless form of iogonek when followed by combining acute: Navajo language support
-		sub i' ogonekcmb' @MARKS_CMB by iogonek.d;
-		sub [i j iogonek]' @MARKS_CMB by [dotlessi dotlessj iogonek.d];
+		#substitutes dotless forms of i & j when followed by combining accents above: (Navajo language support)
+		sub i' ogonekcmb' @MARKS_ABOVE_CMB by iogonek.d;
+		sub [i j iogonek istroke jcrossedtail]' @MARKS_ABOVE_CMB by [dotlessi dotlessj iogonek.d istroke.d jcrossedtail.d];
 	} GLYPH_COMPOSITION_CONTEXTUAL;
 
 	lookup MARKS_COMPOSITION {
@@ -246,8 +250,8 @@ feature ccmp { # Glyph Composition / Decomposition
 	} GLYPH_COMPOSITION_LATIN_NONCONTEXTUAL;
 
 	lookup MAJUCSULE_ACCENTS_CMB_CONTEXT { # substitutes combining marks for miniscules with forms for majuscules
-		sub @LETTERS_MAJUSCULE_ALL @MARKS_CMB' by @MARKS_CMB_CASE;
-		sub @MARKS_CMB_CASE @MARKS_CMB' by @MARKS_CMB_CASE;
+		sub @LETTERS_MAJUSCULE_ALL @MARKS_CMB_ALL' by @MARKS_CMB_ALL_CASE;
+		sub @MARKS_CMB_ALL_CASE @MARKS_CMB_ALL' by @MARKS_CMB_ALL_CASE;
 	} MAJUCSULE_ACCENTS_CMB_CONTEXT;
 
 } ccmp;
@@ -474,7 +478,7 @@ feature onum { # Oldstyle (Text) Figures
 
 #--------------------------------------
 feature case { # Case-Sensitive Forms
-	sub @MARKS_CMB by @MARKS_CMB_CASE;
+	sub @MARKS_CMB_ALL by @MARKS_CMB_ALL_CASE;
 	sub @FIGURES_OLDSTYLE by @FIGURES_CASE;
 	sub ijacute by IJacute;
 	sub at by at.case;
