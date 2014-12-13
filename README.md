@@ -53,4 +53,4 @@ Send suggestions for changes to the Source Code OpenType font project maintainer
 
 ## Further information
 
-For information about the design and background of Source Code, please refer to the [official font readme file](http://htmlpreview.github.io/?https://github.com/adobe-fonts/source-code-pro/blob/master/SourceCodeProReadMe.html).
+For information about the design and background of Source Code, please refer to the [official font readme file](https://rawgit.com/adobe-fonts/source-code-pro/master/SourceCodeProReadMe.html).
