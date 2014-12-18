@@ -2,13 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>com.typemytype.robofont.background.layerStrokeColor</key>
-	<array>
-		<real>1.0</real>
-		<real>0.75</real>
-		<real>0.0</real>
-		<real>0.7</real>
-	</array>
 	<key>com.typemytype.robofont.binarySource</key>
 	<string>/Users/phunt/Perforce/AdobeTypeLibrary/fonts/SourceCodePro/ItalicMM/SourceCodePro_0.pfa</string>
 	<key>com.typemytype.robofont.compileSettings.autohint</key>
@@ -28,19 +21,51 @@
 		<real>0.5</real>
 		<real>0.7</real>
 	</array>
+	<key>com.typemytype.robofont.guides</key>
+	<array>
+		<dict>
+			<key>angle</key>
+			<real>78.7</real>
+			<key>isGlobal</key>
+			<integer>1</integer>
+			<key>magnetic</key>
+			<integer>5</integer>
+			<key>name</key>
+			<string></string>
+			<key>x</key>
+			<integer>229</integer>
+			<key>y</key>
+			<integer>-49</integer>
+		</dict>
+		<dict>
+			<key>angle</key>
+			<integer>0</integer>
+			<key>isGlobal</key>
+			<integer>1</integer>
+			<key>magnetic</key>
+			<integer>5</integer>
+			<key>name</key>
+			<string>retroflex</string>
+			<key>x</key>
+			<integer>476</integer>
+			<key>y</key>
+			<integer>-180</integer>
+		</dict>
+	</array>
 	<key>com.typemytype.robofont.italicSlantOffset</key>
 	<integer>0</integer>
 	<key>com.typemytype.robofont.layerOrder</key>
 	<array>
 		<string>mask</string>
-		<string>background</string>
 	</array>
+	<key>com.typemytype.robofont.mask.layerShow</key>
+	<true/>
 	<key>com.typemytype.robofont.mask.layerStrokeColor</key>
 	<array>
+		<real>0.4</real>
 		<real>1.0</real>
-		<real>0.0211</real>
-		<real>0.0744</real>
-		<real>0.7</real>
+		<real>0.4</real>
+		<real>1.0</real>
 	</array>
 	<key>com.typemytype.robofont.segmentType</key>
 	<string>curve</string>
@@ -193,7 +218,6 @@
 				<string>Lacute</string>
 				<string>Lcaron</string>
 				<string>Lcommaaccent</string>
-				<string>Ldot</string>
 				<string>Ldotbelow</string>
 				<string>Ldotbelowmacron</string>
 				<string>Llinebelow</string>
@@ -301,6 +325,7 @@
 				<string>Schwa</string>
 				<string>Eng</string>
 				<string>IJ</string>
+				<string>IJacute</string>
 				<string>agrave</string>
 				<string>aacute</string>
 				<string>acircumflex</string>
@@ -378,7 +403,6 @@
 				<string>ihoi</string>
 				<string>idotbelow</string>
 				<string>iogonek</string>
-				<string>iogonek.d</string>
 				<string>ibreve</string>
 				<string>dotlessi</string>
 				<string>jcircumflex</string>
@@ -388,7 +412,6 @@
 				<string>kgreenlandic</string>
 				<string>lacute</string>
 				<string>lcaron</string>
-				<string>ldot</string>
 				<string>lcommaaccent</string>
 				<string>ldotbelow</string>
 				<string>ldotbelowmacron</string>
@@ -499,6 +522,7 @@
 				<string>eng</string>
 				<string>dotlessj</string>
 				<string>ij</string>
+				<string>ijacute</string>
 				<string>aturned</string>
 				<string>alphalatinturned</string>
 				<string>bhook</string>
@@ -527,6 +551,7 @@
 				<string>istroke</string>
 				<string>Ismall</string>
 				<string>jcrossedtail</string>
+				<string>kturned</string>
 				<string>lbelt</string>
 				<string>lretroflex</string>
 				<string>lezh</string>
@@ -550,6 +575,7 @@
 				<string>shook</string>
 				<string>esh</string>
 				<string>dotlessjstrokehook</string>
+				<string>tturned</string>
 				<string>tretroflex</string>
 				<string>ubar</string>
 				<string>upsilonlatin</string>
@@ -600,6 +626,21 @@
 				<string>gcaron.alt</string>
 				<string>gmacron.alt</string>
 				<string>gtilde.alt</string>
+				<string>r.a</string>
+				<string>racute.a</string>
+				<string>rcommaaccent.a</string>
+				<string>rcaron.a</string>
+				<string>rdotaccent.a</string>
+				<string>rdotbelow.a</string>
+				<string>rdotbelowmacron.a</string>
+				<string>rlinebelow.a</string>
+				<string>rturned.a</string>
+				<string>rlonglegturned.a</string>
+				<string>rtail.a</string>
+				<string>r.supa</string>
+				<string>iogonek.d</string>
+				<string>istroke.d</string>
+				<string>jcrossedtail.d</string>
 				<string>Alpha</string>
 				<string>Beta</string>
 				<string>Gamma</string>
@@ -862,6 +903,8 @@
 				<string>obarcyr</string>
 				<string>umacroncyr</string>
 				<string>uacutedblcyr</string>
+				<string>acyr.a</string>
+				<string>abrevecyr.a</string>
 				<string>be.srb</string>
 				<string>numero</string>
 				<string>ampersand</string>
@@ -875,6 +918,7 @@
 				<string>seven</string>
 				<string>eight</string>
 				<string>nine</string>
+				<string>zero.0</string>
 				<string>zero.onum</string>
 				<string>one.onum</string>
 				<string>two.onum</string>
@@ -885,6 +929,7 @@
 				<string>seven.onum</string>
 				<string>eight.onum</string>
 				<string>nine.onum</string>
+				<string>zero.0o</string>
 				<string>zero.cap</string>
 				<string>one.cap</string>
 				<string>two.cap</string>
@@ -895,6 +940,7 @@
 				<string>seven.cap</string>
 				<string>eight.cap</string>
 				<string>nine.cap</string>
+				<string>zero.0c</string>
 				<string>period</string>
 				<string>comma</string>
 				<string>colon</string>
@@ -925,7 +971,7 @@
 				<string>periodcentered</string>
 				<string>bullet</string>
 				<string>underscore</string>
-				<string>overscore</string>
+				<string>overline</string>
 				<string>undertie</string>
 				<string>parenleft</string>
 				<string>parenright</string>
@@ -1074,7 +1120,6 @@
 				<string>dollar</string>
 				<string>sterling</string>
 				<string>yen</string>
-				<string>yuan</string>
 				<string>Euro</string>
 				<string>cent</string>
 				<string>florin</string>
@@ -1092,6 +1137,7 @@
 				<string>liraturkish</string>
 				<string>tugrik</string>
 				<string>tenge</string>
+				<string>ruble</string>
 				<string>fraction</string>
 				<string>divisionslash</string>
 				<string>slash.frac</string>
@@ -1470,11 +1516,21 @@
 				<string>uprightquadrant</string>
 				<string>uprightdnleftquadrant</string>
 				<string>uprightdnleftdnrightquadrant</string>
+				<string>NNBS</string>
 				<string>ZWNBS</string>
 				<string>fi</string>
 				<string>fl</string>
-				<string>ffi</string>
-				<string>ffl</string>
+				<string>uniE0A0</string>
+				<string>uniE0A1</string>
+				<string>uniE0A2</string>
+				<string>uniE0B0</string>
+				<string>uniE0B1</string>
+				<string>uniE0B2</string>
+				<string>uniE0B3</string>
+				<string>n.copy_1</string>
+				<string>H.copy_1</string>
+				<string>O.copy_1</string>
+				<string>o.copy_1</string>
 			</array>
 			<key>type</key>
 			<string>glyphList</string>
@@ -1624,7 +1680,6 @@
 		<string>Lacute</string>
 		<string>Lcaron</string>
 		<string>Lcommaaccent</string>
-		<string>Ldot</string>
 		<string>Ldotbelow</string>
 		<string>Ldotbelowmacron</string>
 		<string>Llinebelow</string>
@@ -1732,6 +1787,7 @@
 		<string>Schwa</string>
 		<string>Eng</string>
 		<string>IJ</string>
+		<string>IJacute</string>
 		<string>agrave</string>
 		<string>aacute</string>
 		<string>acircumflex</string>
@@ -1809,7 +1865,6 @@
 		<string>ihoi</string>
 		<string>idotbelow</string>
 		<string>iogonek</string>
-		<string>iogonek.d</string>
 		<string>ibreve</string>
 		<string>dotlessi</string>
 		<string>jcircumflex</string>
@@ -1819,7 +1874,6 @@
 		<string>kgreenlandic</string>
 		<string>lacute</string>
 		<string>lcaron</string>
-		<string>ldot</string>
 		<string>lcommaaccent</string>
 		<string>ldotbelow</string>
 		<string>ldotbelowmacron</string>
@@ -1930,6 +1984,7 @@
 		<string>eng</string>
 		<string>dotlessj</string>
 		<string>ij</string>
+		<string>ijacute</string>
 		<string>aturned</string>
 		<string>alphalatinturned</string>
 		<string>bhook</string>
@@ -1958,6 +2013,7 @@
 		<string>istroke</string>
 		<string>Ismall</string>
 		<string>jcrossedtail</string>
+		<string>kturned</string>
 		<string>lbelt</string>
 		<string>lretroflex</string>
 		<string>lezh</string>
@@ -1981,6 +2037,7 @@
 		<string>shook</string>
 		<string>esh</string>
 		<string>dotlessjstrokehook</string>
+		<string>tturned</string>
 		<string>tretroflex</string>
 		<string>ubar</string>
 		<string>upsilonlatin</string>
@@ -2031,6 +2088,21 @@
 		<string>gcaron.alt</string>
 		<string>gmacron.alt</string>
 		<string>gtilde.alt</string>
+		<string>r.a</string>
+		<string>racute.a</string>
+		<string>rcommaaccent.a</string>
+		<string>rcaron.a</string>
+		<string>rdotaccent.a</string>
+		<string>rdotbelow.a</string>
+		<string>rdotbelowmacron.a</string>
+		<string>rlinebelow.a</string>
+		<string>rturned.a</string>
+		<string>rlonglegturned.a</string>
+		<string>rtail.a</string>
+		<string>r.supa</string>
+		<string>iogonek.d</string>
+		<string>istroke.d</string>
+		<string>jcrossedtail.d</string>
 		<string>Alpha</string>
 		<string>Beta</string>
 		<string>Gamma</string>
@@ -2293,6 +2365,8 @@
 		<string>obarcyr</string>
 		<string>umacroncyr</string>
 		<string>uacutedblcyr</string>
+		<string>acyr.a</string>
+		<string>abrevecyr.a</string>
 		<string>be.srb</string>
 		<string>numero</string>
 		<string>ampersand</string>
@@ -2306,6 +2380,7 @@
 		<string>seven</string>
 		<string>eight</string>
 		<string>nine</string>
+		<string>zero.0</string>
 		<string>zero.onum</string>
 		<string>one.onum</string>
 		<string>two.onum</string>
@@ -2316,6 +2391,7 @@
 		<string>seven.onum</string>
 		<string>eight.onum</string>
 		<string>nine.onum</string>
+		<string>zero.0o</string>
 		<string>zero.cap</string>
 		<string>one.cap</string>
 		<string>two.cap</string>
@@ -2326,6 +2402,7 @@
 		<string>seven.cap</string>
 		<string>eight.cap</string>
 		<string>nine.cap</string>
+		<string>zero.0c</string>
 		<string>period</string>
 		<string>comma</string>
 		<string>colon</string>
@@ -2356,7 +2433,7 @@
 		<string>periodcentered</string>
 		<string>bullet</string>
 		<string>underscore</string>
-		<string>overscore</string>
+		<string>overline</string>
 		<string>undertie</string>
 		<string>parenleft</string>
 		<string>parenright</string>
@@ -2505,7 +2582,6 @@
 		<string>dollar</string>
 		<string>sterling</string>
 		<string>yen</string>
-		<string>yuan</string>
 		<string>Euro</string>
 		<string>cent</string>
 		<string>florin</string>
@@ -2523,6 +2599,7 @@
 		<string>liraturkish</string>
 		<string>tugrik</string>
 		<string>tenge</string>
+		<string>ruble</string>
 		<string>fraction</string>
 		<string>divisionslash</string>
 		<string>slash.frac</string>
@@ -2901,11 +2978,21 @@
 		<string>uprightquadrant</string>
 		<string>uprightdnleftquadrant</string>
 		<string>uprightdnleftdnrightquadrant</string>
+		<string>NNBS</string>
 		<string>ZWNBS</string>
 		<string>fi</string>
 		<string>fl</string>
-		<string>ffi</string>
-		<string>ffl</string>
+		<string>uniE0A0</string>
+		<string>uniE0A1</string>
+		<string>uniE0A2</string>
+		<string>uniE0B0</string>
+		<string>uniE0B1</string>
+		<string>uniE0B2</string>
+		<string>uniE0B3</string>
+		<string>n.copy_1</string>
+		<string>H.copy_1</string>
+		<string>O.copy_1</string>
+		<string>o.copy_1</string>
 	</array>
 </dict>
 </plist>
