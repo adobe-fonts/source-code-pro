@@ -1,4 +1,4 @@
-# Created: Wed Dec 10 17:45:01 2014
+# Created: Wed Feb  4 19:02:09 2015
 # PS Name: SourceCodePro-Black
 # MM Inst: None
 # exported from Defcon
@@ -19,7 +19,6 @@ lookup MARK_BASE_above {
 	@bGC_nhookleft_above = [nhookleft nretroflex];
 	@bGC_o_above = [o w x oslash ohorn oogonek ereversed gammalatin Ismall obar Rsmall vturned wturned zcurl circledotted];
 	@bGC_p_above = [p z];
-	@bGC_r_above = [r r.a];
 	@bGC_s_above = [s alphalatin shook a.alt aogonek.alt acyr.a];
 	@bGC_t_above = [t tbar];
 	@bGC_u_above = [u uogonek uhorn ubar];
@@ -37,7 +36,6 @@ lookup MARK_BASE_above {
 	pos base @bGC_nhookleft_above <anchor 323 522> mark @MC_above;
 	pos base @bGC_o_above <anchor 300 522> mark @MC_above;
 	pos base @bGC_p_above <anchor 324 522> mark @MC_above;
-	pos base @bGC_r_above <anchor 338 522> mark @MC_above;
 	pos base @bGC_s_above <anchor 316 522> mark @MC_above;
 	pos base @bGC_t_above <anchor 266 664> mark @MC_above;
 	pos base @bGC_u_above <anchor 296 522> mark @MC_above;
@@ -72,8 +70,8 @@ lookup MARK_BASE_above {
 	pos base mturned <anchor 304 524> mark @MC_above;
 	pos base oopen <anchor 286 522> mark @MC_above;
 	pos base q <anchor 309 522> mark @MC_above;
-	pos base rturned <anchor 358 522> mark @MC_above;
-	pos base rturned.a <anchor 398 522> mark @MC_above;
+	pos base r <anchor 338 522> mark @MC_above;
+	pos base rturned <anchor 398 522> mark @MC_above;
 	pos base schwa <anchor 305 522> mark @MC_above;
 	pos base schwahookrhotic <anchor 195 522> mark @MC_above;
 	pos base thorn <anchor 154 722> mark @MC_above;
@@ -81,6 +79,11 @@ lookup MARK_BASE_above {
 	pos base v <anchor 302 522> mark @MC_above;
 	pos base yturned <anchor 306 722> mark @MC_above;
 } MARK_BASE_above;
+
+
+lookup MARK_BASE_aboveright {
+	pos base circledotted <anchor 482 522> mark @MC_aboveright;
+} MARK_BASE_aboveright;
 
 
 lookup MARK_BASE_base {
@@ -144,10 +147,8 @@ lookup MARK_BASE_below {
 	pos base l <anchor 358 -22> mark @MC_below;
 	pos base oopen <anchor 278 -22> mark @MC_below;
 	pos base q <anchor 445 -222> mark @MC_below;
-	pos base r <anchor 250 -22> mark @MC_below;
-	pos base r.a <anchor 204 -22> mark @MC_below;
-	pos base rturned <anchor 280 -22> mark @MC_below;
-	pos base rturned.a <anchor 148 -22> mark @MC_below;
+	pos base r <anchor 204 -22> mark @MC_below;
+	pos base rturned <anchor 148 -22> mark @MC_below;
 	pos base s <anchor 306 -22> mark @MC_below;
 	pos base tturned <anchor 338 -162> mark @MC_below;
 	pos base vhook <anchor 308 -22> mark @MC_below;

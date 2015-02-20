@@ -1,4 +1,4 @@
-# Created: Wed Dec 10 17:44:56 2014
+# Created: Wed Feb  4 18:54:28 2015
 # PS Name: SourceCodePro-ExtraLight
 # MM Inst: None
 # exported from Defcon
@@ -20,7 +20,6 @@ lookup MARK_BASE_above {
 	@bGC_o_above = [o w x oslash ohorn oogonek Ismall vhook wturned];
 	@bGC_obar_above = [obar circledotted];
 	@bGC_q_above = [q s];
-	@bGC_rturned_above = [rturned rturned.a];
 	@bGC_t_above = [t tbar];
 	@bGC_u_above = [u uogonek uhorn ereversed];
 	@bGC_v_above = [v vturned];
@@ -39,7 +38,6 @@ lookup MARK_BASE_above {
 	pos base @bGC_o_above <anchor 300 500> mark @MC_above;
 	pos base @bGC_obar_above <anchor 300 502> mark @MC_above;
 	pos base @bGC_q_above <anchor 296 500> mark @MC_above;
-	pos base @bGC_rturned_above <anchor 402 500> mark @MC_above;
 	pos base @bGC_t_above <anchor 262 630> mark @MC_above;
 	pos base @bGC_u_above <anchor 294 500> mark @MC_above;
 	pos base @bGC_v_above <anchor 301 500> mark @MC_above;
@@ -82,8 +80,8 @@ lookup MARK_BASE_above {
 	pos base mturned <anchor 290 498> mark @MC_above;
 	pos base oopen <anchor 270 500> mark @MC_above;
 	pos base p <anchor 308 500> mark @MC_above;
-	pos base r <anchor 354 500> mark @MC_above;
-	pos base r.a <anchor 344 500> mark @MC_above;
+	pos base r <anchor 344 500> mark @MC_above;
+	pos base rturned <anchor 402 500> mark @MC_above;
 	pos base schwa <anchor 297 500> mark @MC_above;
 	pos base schwahookrhotic <anchor 222 502> mark @MC_above;
 	pos base shook <anchor 206 502> mark @MC_above;
@@ -91,6 +89,11 @@ lookup MARK_BASE_above {
 	pos base ubar <anchor 304 502> mark @MC_above;
 	pos base zcurl <anchor 313 502> mark @MC_above;
 } MARK_BASE_above;
+
+
+lookup MARK_BASE_aboveright {
+	pos base circledotted <anchor 478 502> mark @MC_aboveright;
+} MARK_BASE_aboveright;
 
 
 lookup MARK_BASE_base {
@@ -116,7 +119,6 @@ lookup MARK_BASE_below {
 	@bGC_c_below = [c k Gsmall];
 	@bGC_e_below = [e z];
 	@bGC_i_below = [i dotlessi istroke.d];
-	@bGC_rturned_below = [rturned rturned.a];
 	@bGC_t_below = [t tbar];
 	@bGC_u_below = [u uhorn];
 	@bGC_v_below = [v gammalatin vturned];
@@ -132,7 +134,6 @@ lookup MARK_BASE_below {
 	pos base @bGC_c_below <anchor 344 -22> mark @MC_below;
 	pos base @bGC_e_below <anchor 316 -22> mark @MC_below;
 	pos base @bGC_i_below <anchor 350 -22> mark @MC_below;
-	pos base @bGC_rturned_below <anchor 100 -22> mark @MC_below;
 	pos base @bGC_t_below <anchor 388 -22> mark @MC_below;
 	pos base @bGC_u_below <anchor 322 -22> mark @MC_below;
 	pos base @bGC_v_below <anchor 301 -22> mark @MC_below;
@@ -164,8 +165,8 @@ lookup MARK_BASE_below {
 	pos base oopen <anchor 280 -22> mark @MC_below;
 	pos base p <anchor 130 -218> mark @MC_below;
 	pos base q <anchor 452 -218> mark @MC_below;
-	pos base r <anchor 240 -22> mark @MC_below;
-	pos base r.a <anchor 198 -22> mark @MC_below;
+	pos base r <anchor 198 -22> mark @MC_below;
+	pos base rturned <anchor 100 -22> mark @MC_below;
 	pos base schwa <anchor 285 -22> mark @MC_below;
 	pos base thorn <anchor 306 -22> mark @MC_below;
 	pos base tturned <anchor 362 -22> mark @MC_below;

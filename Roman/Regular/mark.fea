@@ -1,4 +1,4 @@
-# Created: Wed Dec 10 17:44:57 2014
+# Created: Wed Feb  4 18:57:10 2015
 # PS Name: SourceCodePro-Regular
 # MM Inst: None
 # exported from Defcon
@@ -14,6 +14,7 @@ lookup MARK_BASE_above {
 	@bGC_X_above = [X Oslash];
 	@bGC_a_above = [a p aogonek];
 	@bGC_b_above = [b thorn];
+	@bGC_dotlessi_above = [dotlessi dotlessj iogonek.d istroke.d jcrossedtail.d];
 	@bGC_e_above = [e eogonek alphalatinturned];
 	@bGC_g_above = [g alphalatin a.alt aogonek.alt acyr.a];
 	@bGC_gammalatin_above = [gammalatin ubar];
@@ -24,7 +25,6 @@ lookup MARK_BASE_above {
 	@bGC_obar_above = [obar circledotted];
 	@bGC_oopen_above = [oopen iota];
 	@bGC_q_above = [q v vturned];
-	@bGC_r_above = [r dotlessi dotlessj iogonek.d istroke.d jcrossedtail.d];
 	@bGC_s_above = [s vhook];
 	@bGC_t_above = [t tbar];
 	@bGC_u_above = [u uogonek uhorn mturned];
@@ -36,6 +36,7 @@ lookup MARK_BASE_above {
 	pos base @bGC_X_above <anchor 301 678> mark @MC_above;
 	pos base @bGC_a_above <anchor 314 508> mark @MC_above;
 	pos base @bGC_b_above <anchor 138 727> mark @MC_above;
+	pos base @bGC_dotlessi_above <anchor 348 508> mark @MC_above;
 	pos base @bGC_e_above <anchor 315 508> mark @MC_above;
 	pos base @bGC_g_above <anchor 307 508> mark @MC_above;
 	pos base @bGC_gammalatin_above <anchor 301 509> mark @MC_above;
@@ -46,7 +47,6 @@ lookup MARK_BASE_above {
 	pos base @bGC_obar_above <anchor 300 509> mark @MC_above;
 	pos base @bGC_oopen_above <anchor 276 508> mark @MC_above;
 	pos base @bGC_q_above <anchor 301 508> mark @MC_above;
-	pos base @bGC_r_above <anchor 348 508> mark @MC_above;
 	pos base @bGC_s_above <anchor 303 508> mark @MC_above;
 	pos base @bGC_t_above <anchor 263 643> mark @MC_above;
 	pos base @bGC_u_above <anchor 295 508> mark @MC_above;
@@ -78,9 +78,8 @@ lookup MARK_BASE_above {
 	pos base kturned <anchor 279 508> mark @MC_above;
 	pos base l <anchor 284 727> mark @MC_above;
 	pos base m <anchor 316 508> mark @MC_above;
-	pos base r.a <anchor 342 508> mark @MC_above;
-	pos base rturned <anchor 386 508> mark @MC_above;
-	pos base rturned.a <anchor 401 508> mark @MC_above;
+	pos base r <anchor 342 508> mark @MC_above;
+	pos base rturned <anchor 401 508> mark @MC_above;
 	pos base schwahookrhotic <anchor 212 509> mark @MC_above;
 	pos base shook <anchor 246 509> mark @MC_above;
 	pos base tturned <anchor 235 508> mark @MC_above;
@@ -89,6 +88,11 @@ lookup MARK_BASE_above {
 	pos base z <anchor 320 508> mark @MC_above;
 	pos base zcurl <anchor 308 509> mark @MC_above;
 } MARK_BASE_above;
+
+
+lookup MARK_BASE_aboveright {
+	pos base circledotted <anchor 479 509> mark @MC_aboveright;
+} MARK_BASE_aboveright;
 
 
 lookup MARK_BASE_base {
@@ -159,10 +163,8 @@ lookup MARK_BASE_below {
 	pos base oopen <anchor 279 -22> mark @MC_below;
 	pos base p <anchor 137 -219> mark @MC_below;
 	pos base q <anchor 449 -219> mark @MC_below;
-	pos base r <anchor 244 -22> mark @MC_below;
-	pos base r.a <anchor 200 -22> mark @MC_below;
-	pos base rturned <anchor 166 -22> mark @MC_below;
-	pos base rturned.a <anchor 118 -22> mark @MC_below;
+	pos base r <anchor 200 -22> mark @MC_below;
+	pos base rturned <anchor 118 -22> mark @MC_below;
 	pos base schwa <anchor 288 -22> mark @MC_below;
 	pos base thorn <anchor 249 -96> mark @MC_below;
 	pos base tturned <anchor 353 -74> mark @MC_below;

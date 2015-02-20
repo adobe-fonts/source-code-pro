@@ -59,8 +59,8 @@ dieresisacute.cap dieresisgrave.cap dieresismacron.cap dieresiscaron.cap circumf
 @G_LC = [g gacute gcircumflex gbreve gdotaccent gcommaaccent gcaron gmacron gtilde g.sups];
 @G_LC_ALT = [g.alt gacute.alt gcircumflex.alt gbreve.alt gdotaccent.alt gcommaaccent.alt gcaron.alt gmacron.alt gtilde.alt g.supa];
 
-@R_LC = [r racute rcommaaccent rcaron rdotaccent rdotbelow rdotbelowmacron rlinebelow rturned rlonglegturned];# rtail r.sups];
-@R_LC_ALT = [r.a racute.a rcommaaccent.a rcaron.a rdotaccent.a rdotbelow.a rdotbelowmacron.a rlinebelow.a rturned.a rlonglegturned.a];# rtail.a r.supa];
+#@R_LC = [r racute rcommaaccent rcaron rdotaccent rdotbelow rdotbelowmacron rlinebelow rturned rlonglegturned];# rtail r.sups];
+#@R_LC_ALT = [r.a racute.a rcommaaccent.a rcaron.a rdotaccent.a rdotbelow.a rdotbelowmacron.a rlinebelow.a rturned.a rlonglegturned.a];# rtail.a r.supa];
 
 #--------------------------------------
 languagesystem DFLT dflt; # Default
@@ -83,9 +83,9 @@ lookup G_LC_ALT {
 	sub @G_LC by @G_LC_ALT;
 } G_LC_ALT;
 
-lookup R_LC_ALT {
-	sub @R_LC by @R_LC_ALT;
-} R_LC_ALT;
+#lookup R_LC_ALT {
+#	sub @R_LC by @R_LC_ALT;
+#} R_LC_ALT;
 
 lookup ENG_UC_SAMI { # preferred Eng shape for Sami languages
 	sub Eng by Eng.alt;
@@ -280,15 +280,15 @@ feature cv02 { # Character Variant 2 (alternate lowercase g)
 } cv02;
 
 #--------------------------------------
-feature cv04 { # Character Variant 4 (alternate lowercase r)
-	featureNames {
-		name "Alternate r"; # Windows English
-		name 1 0 0 "Alternate r"; # Mac English
-	};
-	
-	lookup R_LC_ALT;
-
-} cv04;
+#feature cv04 { # Character Variant 4 (alternate lowercase r)
+#	featureNames {
+#		name "Alternate r"; # Windows English
+#		name 1 0 0 "Alternate r"; # Mac English
+#	};
+#	
+#	lookup R_LC_ALT;
+#
+#} cv04;
 
 #--------------------------------------
 feature cv06 { # Character Variant 6 (alternate Sami uppercase Eng)
@@ -527,15 +527,15 @@ feature ss03 { # Stylistic Set 3 (alternate g)
 
 
 #--------------------------------------
-feature ss04 { # Stylistic Set 4 (alternate r)
-	featureNames {
-		name "Alternate r"; # Windows English
-		name 1 0 0 "Alternate r"; # Mac English
-	};
-	
-	lookup R_LC_ALT;
-
-} ss04;
+#feature ss04 { # Stylistic Set 4 (alternate r)
+#	featureNames {
+#		name "Alternate r"; # Windows English
+#		name 1 0 0 "Alternate r"; # Mac English
+#	};
+#	
+#	lookup R_LC_ALT;
+#
+#} ss04;
 
 
 #--------------------------------------
@@ -575,7 +575,7 @@ feature zero {
 feature salt { # Stylistic Alternates
 	lookup A_LC_ALT;
 	lookup G_LC_ALT;
-	lookup R_LC_ALT;
+#	lookup R_LC_ALT;
 	lookup ENG_UC_SAMI;
 	lookup BETA_LC_ALT;
 	lookup THETA_LC_ALT;
