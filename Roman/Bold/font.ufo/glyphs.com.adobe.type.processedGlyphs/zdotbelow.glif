@@ -1,9 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="1" name="zdotbelow">
+<glyph format="2" name="zdotbelow">
   <advance width="600" />
   <outline>
     <contour>
-      <point name="hintSet0000" type="curve" x="318" y="-251" />
+      <point name="hintSet0000" type="line" x="70" y="0" />
+      <point type="line" x="540" y="0" />
+      <point type="line" x="540" y="115" />
+      <point type="line" x="273" y="115" />
+      <point type="line" x="533" y="418" />
+      <point type="line" x="533" y="496" />
+      <point type="line" x="101" y="496" />
+      <point type="line" x="101" y="381" />
+      <point type="line" x="329" y="381" />
+      <point type="line" x="70" y="79" />
+    </contour>
+    <contour>
+      <point name="hintSet0010" type="curve" x="318" y="-251" />
       <point x="375" y="-251" />
       <point x="416" y="-216" />
       <point type="curve" x="416" y="-162" />
@@ -16,18 +28,6 @@
       <point x="220" y="-216" />
       <point x="261" y="-251" />
     </contour>
-    <contour>
-      <point type="line" x="70" y="0" />
-      <point type="line" x="540" y="0" />
-      <point type="line" x="540" y="115" />
-      <point type="line" x="273" y="115" />
-      <point type="line" x="533" y="418" />
-      <point type="line" x="533" y="496" />
-      <point type="line" x="101" y="496" />
-      <point type="line" x="101" y="381" />
-      <point type="line" x="329" y="381" />
-      <point type="line" x="70" y="79" />
-    </contour>
   </outline>
   <lib>
     <dict>
@@ -35,6 +35,11 @@
       <data>
         <hintSetList id="7a7f3af35fd7fe0663b53577d7c55d694213c7051078d3eae5ec31378b20323b2c5ca2700aa7e06b50685f9d012316cdae6e3ace02c3121faa5444c49c6d9efe">
           <hintset pointTag="hintSet0000">
+            <hstem pos="0" width="115" />
+            <hstem pos="381" width="115" />
+            <vstem pos="70" width="470" />
+          </hintset>
+          <hintset pointTag="hintSet0010">
             <hstem pos="-251" width="181" />
             <hstem pos="0" width="115" />
             <hstem pos="381" width="115" />

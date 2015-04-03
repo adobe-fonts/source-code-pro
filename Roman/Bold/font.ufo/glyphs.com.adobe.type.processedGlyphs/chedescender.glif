@@ -1,9 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="1" name="chedescender">
+<glyph format="2" name="chedescender">
   <advance width="600" />
   <outline>
     <contour>
-      <point name="hintSet0000" type="line" x="507" y="115" />
+      <point name="hintSet0000" type="line" x="360" y="0" />
+      <point name="hintSet0001" type="line" x="447" y="0" />
+      <point type="line" x="447" y="-172" />
+      <point type="line" x="572" y="-172" />
+      <point type="line" x="586" y="19" />
+      <point type="line" x="586" y="115" />
+      <point name="hintSet0006" type="line" x="507" y="115" />
       <point type="line" x="507" y="496" />
       <point type="line" x="360" y="496" />
       <point type="line" x="360" y="283" />
@@ -22,12 +28,6 @@
       <point x="312" y="161" />
       <point x="332" y="164" />
       <point type="curve" x="360" y="169" />
-      <point type="line" x="360" y="0" />
-      <point name="hintSet0012" type="line" x="447" y="0" />
-      <point type="line" x="447" y="-172" />
-      <point type="line" x="572" y="-172" />
-      <point type="line" x="586" y="19" />
-      <point type="line" x="586" y="115" />
     </contour>
   </outline>
   <lib>
@@ -41,11 +41,17 @@
             <vstem pos="64" width="147" />
             <vstem pos="360" width="147" />
           </hintset>
-          <hintset pointTag="hintSet0012">
+          <hintset pointTag="hintSet0001">
             <hstem pos="0" width="115" />
             <hstem pos="161" width="115" />
             <vstem pos="64" width="147" />
             <vstem pos="447" width="139" />
+          </hintset>
+          <hintset pointTag="hintSet0006">
+            <hstem pos="0" width="115" />
+            <hstem pos="161" width="115" />
+            <vstem pos="64" width="147" />
+            <vstem pos="360" width="147" />
           </hintset>
         </hintSetList>
       </data>
