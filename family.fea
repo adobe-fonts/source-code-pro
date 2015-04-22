@@ -29,13 +29,12 @@
 
 @LETTERS_MAJUSCULE_ALL = [@LETTERS_MAJUSCULE_LATIN_ALL @LETTERS_MAJUSCULE_GREEK_ALL @LETTERS_MAJUSCULE_CYRILLIC_ALL];
 
-@MARKS_ABOVE_CMB = [gravecmb acutecmb circumflexcmb tildecmb macroncmb overlinecmb brevecmb brevecmb.cyr dotaccentcmb dieresiscmb hoicmb ringcmb hungarumlautcmb caroncmb dblgravecmb breveinvertedcmb perispomenicmb
-dieresisacute dieresisgrave dieresismacron dieresiscaron circumflexacute circumflexgrave circumflexhoi circumflextilde breveacute brevegrave brevehoi brevetilde circumflexbreve macronacute];
+@MARKS_ABOVE_CMB = [gravecmb acutecmb circumflexcmb tildecmb macroncmb overlinecmb brevecmb dotaccentcmb dieresiscmb hoicmb candrabinducmb ringcmb hungarumlautcmb caroncmb dblgravecmb breveinvertedcmb perispomenicmb];
+@MARKS_BELOW_CMB_CASE = [cedillacmb.cap ogonekcmb.cap];
 @MARKS_BELOW_CMB = [cedillacmb ogonekcmb];
 @MARKS_CMB_ALL = [@MARKS_ABOVE_CMB @MARKS_BELOW_CMB];
 
-@MARKS_ABOVE_CMB_CASE = [gravecmb.cap acutecmb.cap circumflexcmb.cap tildecmb.cap macroncmb.cap overlinecmb.cap brevecmb.cap brevecmb.cyrcap dotaccentcmb.cap dieresiscmb.cap hoicmb.cap ringcmb.cap hungarumlautcmb.cap caroncmb.cap dblgravecmb.cap breveinvertedcmb.cap perispomenicmb.cap
-dieresisacute.cap dieresisgrave.cap dieresismacron.cap dieresiscaron.cap circumflexacute.cap circumflexgrave.cap circumflexhoi.cap circumflextilde.cap breveacute.cap brevegrave.cap brevehoi.cap brevetilde.cap circumflexbreve.cap macronacute.cap];
+@MARKS_ABOVE_CMB_CASE = [gravecmb.cap acutecmb.cap circumflexcmb.cap tildecmb.cap macroncmb.cap overlinecmb.cap brevecmb.cap dotaccentcmb.cap dieresiscmb.cap hoicmb.cap candrabinducmb.cap ringcmb.cap hungarumlautcmb.cap caroncmb.cap dblgravecmb.cap breveinvertedcmb.cap perispomenicmb.cap];
 @MARKS_BELOW_CMB_CASE = [cedillacmb.cap ogonekcmb.cap];
 @MARKS_CMB_ALL_CASE = [@MARKS_ABOVE_CMB_CASE @MARKS_BELOW_CMB_CASE];
 
@@ -58,6 +57,9 @@ dieresisacute.cap dieresisgrave.cap dieresismacron.cap dieresiscaron.cap circumf
 
 @G_LC = [g gacute gcircumflex gbreve gdotaccent gcommaaccent gcaron gmacron gtilde g.sups];
 @G_LC_ALT = [g.alt gacute.alt gcircumflex.alt gbreve.alt gdotaccent.alt gcommaaccent.alt gcaron.alt gmacron.alt gtilde.alt g.supa];
+
+@I_LC = [i  dotlessi igrave iacute icircumflex itilde idieresis imacron icaron iogonek ihoi idotbelow ibreve istroke iogonek.d istroke.d iukran i.sups];
+@I_LC_ALT = [i.a  dotlessi.a igrave.a iacute.a icircumflex.a itilde.a idieresis.a imacron.a icaron.a iogonek.a ihoi.a idotbelow.a ibreve.a istroke.a iogonek.da istroke.da iukran.a i.supa];
 
 #@R_LC = [r racute rcommaaccent rcaron rdotaccent rdotbelow rdotbelowmacron rlinebelow rturned rlonglegturned];# rtail r.sups];
 #@R_LC_ALT = [r.a racute.a rcommaaccent.a rcaron.a rdotaccent.a rdotbelow.a rdotbelowmacron.a rlinebelow.a rturned.a rlonglegturned.a];# rtail.a r.supa];
@@ -82,6 +84,10 @@ lookup A_LC_ALT {
 lookup G_LC_ALT {
 	sub @G_LC by @G_LC_ALT;
 } G_LC_ALT;
+
+lookup I_LC_ALT {
+	sub @I_LC by @I_LC_ALT;
+} I_LC_ALT;
 
 #lookup R_LC_ALT {
 #	sub @R_LC by @R_LC_ALT;
@@ -187,7 +193,7 @@ lookup DECOMPOSITION {
 		sub yi by dotlessi dieresiscmb;
 } DECOMPOSITION;
 
-feature ccmp { # Glyph Composition / Decomposition
+feature ccmp { # Glyph Composition  Decomposition
 
 	lookup GLYPH_DECOMPOSITION_CONTEXTUAL_2 {
 		#decomposes accented forms when followed by comining accent
@@ -280,15 +286,15 @@ feature cv02 { # Character Variant 2 (alternate lowercase g)
 } cv02;
 
 #--------------------------------------
-#feature cv04 { # Character Variant 4 (alternate lowercase r)
-#	featureNames {
-#		name "Alternate r"; # Windows English
-#		name 1 0 0 "Alternate r"; # Mac English
-#	};
-#	
-#	lookup R_LC_ALT;
-#
-#} cv04;
+feature cv04 { # Character Variant 4 (alternate lowercase r)
+	featureNames {
+		name "Alternate i"; # Windows English
+		name 1 0 0 "Alternate i"; # Mac English
+	};
+	
+	lookup I_LC_ALT;
+
+} cv04;
 
 #--------------------------------------
 feature cv06 { # Character Variant 6 (alternate Sami uppercase Eng)
@@ -502,8 +508,8 @@ feature ss01 { # Stylistic Set 1 (typographic alternates)
 #--------------------------------------
 feature ss02 { # Stylistic Set 2 (alternate a)
 	featureNames {
-		name "Alternate a"; # Windows English
-		name 1 0 0 "Alternate a"; # Mac English
+		name "simple a"; # Windows English
+		name 1 0 0 "simple a"; # Mac English
 	};
 	
 	lookup A_LC_ALT;
@@ -515,8 +521,8 @@ feature ss02 { # Stylistic Set 2 (alternate a)
 #--------------------------------------
 feature ss03 { # Stylistic Set 3 (alternate g)
 	featureNames {
-		name "Alternate g"; # Windows English
-		name 1 0 0 "Alternate g"; # Mac English
+		name "simple g"; # Windows English
+		name 1 0 0 "simple g"; # Mac English
 	};
 	
 	lookup G_LC_ALT;
@@ -527,15 +533,15 @@ feature ss03 { # Stylistic Set 3 (alternate g)
 
 
 #--------------------------------------
-#feature ss04 { # Stylistic Set 4 (alternate r)
-#	featureNames {
-#		name "Alternate r"; # Windows English
-#		name 1 0 0 "Alternate r"; # Mac English
-#	};
-#	
-#	lookup R_LC_ALT;
-#
-#} ss04;
+feature ss04 { # Stylistic Set 4 (alternate i)
+	featureNames {
+		name "serifed i"; # Windows English
+		name 1 0 0 "serifed i"; # Mac English
+	};
+	
+	lookup I_LC_ALT;
+
+} ss04;
 
 
 #--------------------------------------
