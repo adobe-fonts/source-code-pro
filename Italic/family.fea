@@ -30,12 +30,12 @@
 @LETTERS_MAJUSCULE_ALL = [@LETTERS_MAJUSCULE_LATIN_ALL]; ##### @LETTERS_MAJUSCULE_GREEK_ALL @LETTERS_MAJUSCULE_CYRILLIC_ALL];
 
 @MARKS_ABOVE_CMB = [gravecmb acutecmb circumflexcmb tildecmb macroncmb overlinecmb brevecmb brevecmb.cyr dotaccentcmb dieresiscmb hoicmb ringcmb hungarumlautcmb caroncmb dblgravecmb breveinvertedcmb perispomenicmb
-dieresisacute dieresisgrave dieresismacron dieresiscaron circumflexacute circumflexgrave circumflexhoi circumflextilde breveacute brevegrave brevehoi brevetilde circumflexbreve macronacute];
+dieresisacutecmb dieresisgravecmb dieresismacroncmb dieresiscaroncmb circumflexacutecmb circumflexgravecmb circumflexhoicmb circumflextildecmb breveacutecmb brevegravecmb brevehoicmb brevetildecmb circumflexbrevecmb macronacutecmb];
 @MARKS_BELOW_CMB = [cedillacmb ogonekcmb];
 @MARKS_CMB_ALL = [@MARKS_ABOVE_CMB @MARKS_BELOW_CMB];
 
 @MARKS_ABOVE_CMB_CASE = [gravecmb.cap acutecmb.cap circumflexcmb.cap tildecmb.cap macroncmb.cap overlinecmb.cap brevecmb.cap brevecmb.cyrcap dotaccentcmb.cap dieresiscmb.cap hoicmb.cap ringcmb.cap hungarumlautcmb.cap caroncmb.cap dblgravecmb.cap breveinvertedcmb.cap perispomenicmb.cap
-dieresisacute.cap dieresisgrave.cap dieresismacron.cap dieresiscaron.cap circumflexacute.cap circumflexgrave.cap circumflexhoi.cap circumflextilde.cap breveacute.cap brevegrave.cap brevehoi.cap brevetilde.cap circumflexbreve.cap macronacute.cap];
+dieresisacutecmb.cap dieresisgravecmb.cap dieresismacroncmb.cap dieresiscaroncmb.cap circumflexacutecmb.cap circumflexgravecmb.cap circumflexhoicmb.cap circumflextildecmb.cap breveacutecmb.cap brevegravecmb.cap brevehoicmb.cap brevetildecmb.cap circumflexbrevecmb.cap macronacutecmb.cap];
 @MARKS_BELOW_CMB_CASE = [cedillacmb.cap ogonekcmb.cap];
 @MARKS_CMB_ALL_CASE = [@MARKS_ABOVE_CMB_CASE @MARKS_BELOW_CMB_CASE];
 
@@ -54,10 +54,10 @@ dieresisacute.cap dieresisgrave.cap dieresismacron.cap dieresiscaron.cap circumf
 @PUNCTUATION_INFERIOR = [parenleft.subs parenright.subs period.subs comma.subs];
 
 @A_LC = [a agrave aacute acircumflex atilde adieresis amacron abreve aring acaron adotbelow ahoi acircumflexacute acircumflexgrave acircumflexhoi acircumflextilde acircumflexdotbelow abreveacute abrevegrave abrevehoi abrevetilde abrevedotbelow aogonek a.sups ordfeminine]; ##### acyr abrevecyr];
-@A_LC_ALT = [a.alt agrave.alt aacute.alt acircumflex.alt atilde.alt adieresis.alt amacron.alt abreve.alt aring.alt acaron.alt adotbelow.alt ahoi.alt acircumflexacute.alt acircumflexgrave.alt acircumflexhoi.alt acircumflextilde.alt acircumflexdotbelow.alt abreveacute.alt abrevegrave.alt abrevehoi.alt abrevetilde.alt abrevedotbelow.alt aogonek.alt a.supa ordfeminine.alt]; ##### acyr.a abrevecyr.a];
+@A_LC_ALT = [a.a agrave.a aacute.a acircumflex.a atilde.a adieresis.a amacron.a abreve.a aring.a acaron.a adotbelow.a ahoi.a acircumflexacute.a acircumflexgrave.a acircumflexhoi.a acircumflextilde.a acircumflexdotbelow.a abreveacute.a abrevegrave.a abrevehoi.a abrevetilde.a abrevedotbelow.a aogonek.a a.supa ordfeminine.a]; ##### acyr.a abrevecyr.a];
 
 @G_LC = [g gacute gcircumflex gbreve gdotaccent gcommaaccent gcaron gmacron gtilde g.sups];
-@G_LC_ALT = [g.alt gacute.alt gcircumflex.alt gbreve.alt gdotaccent.alt gcommaaccent.alt gcaron.alt gmacron.alt gtilde.alt g.supa];
+@G_LC_ALT = [g.a gacute.a gcircumflex.a gbreve.a gdotaccent.a gcommaaccent.a gcaron.a gmacron.a gtilde.a g.supa];
 
 #@R_LC = [r racute rcommaaccent rcaron rdotaccent rdotbelow rdotbelowmacron rlinebelow rturned rlonglegturned];# rtail r.sups];
 #@R_LC_ALT = [r.a racute.a rcommaaccent.a rcaron.a rdotaccent.a rdotbelow.a rdotbelowmacron.a rlinebelow.a rturned.a rlonglegturned.a];# rtail.a r.supa];
@@ -88,19 +88,19 @@ lookup G_LC_ALT {
 #} R_LC_ALT;
 
 lookup ENG_UC_SAMI { # preferred Eng shape for Sami languages
-	sub Eng by Eng.alt;
+	sub Eng by Eng.a;
 } ENG_UC_SAMI;
 
 #lookup BETA_LC_ALT {
-#	sub beta by beta.alt;
+#	sub beta by beta.a;
 #} BETA_LC_ALT;
 #
 #lookup THETA_LC_ALT {
-#	sub theta by theta.alt;
+#	sub theta by theta.a;
 #} THETA_LC_ALT;
 #
 #lookup PHI_LC_ALT {
-#	sub phi by phi.alt;
+#	sub phi by phi.a;
 #} PHI_LC_ALT;
 #
 #lookup BREVE_CYR { #preferred breve shape for Cyrillic script
@@ -203,22 +203,22 @@ feature ccmp { # Glyph Composition / Decomposition
 	} GLYPH_COMPOSITION_CONTEXTUAL;
 
 	lookup MARKS_COMPOSITION {
-		sub dieresiscmb acutecmb by dieresisacute;
+		sub dieresiscmb acutecmb by dieresisacutecmb;
 		sub dieresiscmb tonoscmb by dieresistonoscmb;
-		sub dieresiscmb gravecmb by dieresisgrave;
+		sub dieresiscmb gravecmb by dieresisgravecmb;
 		sub dieresiscmb variacmb by dialytikagravecmb;
-		sub dieresiscmb [tildecmb perispomenicmb] by dieresistilde;
-		sub dieresiscmb macroncmb by dieresismacron;
-		sub dieresiscmb caroncmb by dieresiscaron;
-		sub circumflexcmb acutecmb by circumflexacute;
-		sub circumflexcmb gravecmb by circumflexgrave;
-		sub circumflexcmb hoicmb by circumflexhoi;
-		sub circumflexcmb tildecmb by circumflextilde;
-		sub circumflexcmb brevecmb by circumflexbreve;
-		sub brevecmb acutecmb by breveacute;
-		sub brevecmb gravecmb by brevegrave;
-		sub brevecmb hoicmb by brevehoi;
-		sub brevecmb [tildecmb perispomenicmb] by brevetilde;
+		sub dieresiscmb [tildecmb perispomenicmb] by dieresistildecmb;
+		sub dieresiscmb macroncmb by dieresismacroncmb;
+		sub dieresiscmb caroncmb by dieresiscaroncmb;
+		sub circumflexcmb acutecmb by circumflexacutecmb;
+		sub circumflexcmb gravecmb by circumflexgravecmb;
+		sub circumflexcmb hoicmb by circumflexhoicmb;
+		sub circumflexcmb tildecmb by circumflextildecmb;
+		sub circumflexcmb brevecmb by circumflexbrevecmb;
+		sub brevecmb acutecmb by breveacutecmb;
+		sub brevecmb gravecmb by brevegravecmb;
+		sub brevecmb hoicmb by brevehoicmb;
+		sub brevecmb [tildecmb perispomenicmb] by brevetildecmb;
 		sub aspercmb [tonoscmb acutecmb] by asperacutecmb;
 		sub aspercmb [variacmb gravecmb] by aspergravecmb;
 		sub aspercmb [tildecmb perispomenicmb] by aspertildecmb;
@@ -244,7 +244,7 @@ feature ccmp { # Glyph Composition / Decomposition
 		sub u ogonekcmb by uogonek;
 		sub U ogonekcmb by Uogonek;
 		sub g cedillacmb by gcommaaccent; # The decomposition defined by Unicode is: 0067+0327
-		sub g.alt cedillacmb by gcommaaccent.alt;
+		sub g.a cedillacmb by gcommaaccent.a;
 		sub ij acutecmb by ijacute;
 		sub IJ acutecmb by IJacute;
 	} GLYPH_COMPOSITION_LATIN_NONCONTEXTUAL;
