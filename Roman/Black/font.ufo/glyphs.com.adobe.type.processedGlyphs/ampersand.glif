@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="2" name="ampersand">
   <advance width="600" />
+  <unicode hex="0026" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="230" y="-12" />
@@ -57,8 +58,8 @@
       <point x="213" y="467" />
     </contour>
     <contour>
-      <point name="hintSet0020" type="curve" x="252" y="118" />
-      <point x="206" y="118" />
+      <point type="curve" x="252" y="118" />
+      <point name="hintSet0021" x="206" y="118" />
       <point x="178" y="146" />
       <point type="curve" x="178" y="186" />
       <point x="178" y="204" />
@@ -67,7 +68,7 @@
       <point x="223" y="199" />
       <point x="258" y="163" />
       <point type="curve" x="295" y="131" />
-      <point x="281" y="123" />
+      <point name="hintSet0024" x="281" y="123" />
       <point x="266" y="118" />
     </contour>
   </outline>
@@ -100,10 +101,16 @@
             <vstem pos="72" width="141" />
             <vstem pos="278" width="130" />
           </hintset>
-          <hintset pointTag="hintSet0020">
+          <hintset pointTag="hintSet0021">
             <hstem pos="-12" width="130" />
             <hstem pos="550" width="112" />
             <vstem pos="16" width="162" />
+            <vstem pos="278" width="130" />
+          </hintset>
+          <hintset pointTag="hintSet0024">
+            <hstem pos="-12" width="130" />
+            <hstem pos="550" width="112" />
+            <vstem pos="72" width="141" />
             <vstem pos="278" width="130" />
           </hintset>
         </hintSetList>

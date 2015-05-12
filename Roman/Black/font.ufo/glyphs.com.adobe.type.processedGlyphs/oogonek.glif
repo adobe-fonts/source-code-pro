@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="2" name="oogonek">
   <advance width="600" />
+  <unicode hex="01EB" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="318" y="-228" />
@@ -36,8 +37,8 @@
       <point x="252" y="-228" />
     </contour>
     <contour>
-      <point name="hintSet0012" type="curve" x="300" y="122" />
-      <point x="242" y="122" />
+      <point type="curve" x="300" y="122" />
+      <point name="hintSet0013" x="242" y="122" />
       <point x="218" y="170" />
       <point type="curve" x="218" y="250" />
       <point x="218" y="326" />
@@ -46,7 +47,7 @@
       <point x="358" y="374" />
       <point x="382" y="326" />
       <point type="curve" x="382" y="250" />
-      <point x="382" y="170" />
+      <point name="hintSet0016" x="382" y="170" />
       <point x="358" y="122" />
     </contour>
   </outline>
@@ -76,11 +77,18 @@
             <vstem pos="200" width="114" />
             <vstem pos="382" width="176" />
           </hintset>
-          <hintset pointTag="hintSet0012">
+          <hintset pointTag="hintSet0013">
             <hstem pos="-228" width="100" />
             <hstem pos="12" width="-21" />
             <hstem pos="374" width="138" />
             <vstem pos="42" width="176" />
+            <vstem pos="382" width="176" />
+          </hintset>
+          <hintset pointTag="hintSet0016">
+            <hstem pos="-228" width="100" />
+            <hstem pos="12" width="-21" />
+            <hstem pos="374" width="138" />
+            <vstem pos="200" width="114" />
             <vstem pos="382" width="176" />
           </hintset>
         </hintSetList>
