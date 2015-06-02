@@ -1,4 +1,4 @@
-# Created: Mon May 11 17:19:54 2015
+# Created: Tue Jun  2 14:37:39 2015
 # PS Name: SourceCodePro-SemiboldIt
 # MM Inst: None
 # exported from Defcon
@@ -129,14 +129,12 @@ lookup MARK_BASE_aboveright {
 
 lookup MARK_BASE_base {
 	@bGC_I_base = [I O U Oslash oslash];
-	@bGC_L_base = [L t];
 	@bGC_T_base = [T o];
 	@bGC_Z_base = [Z z];
 	@bGC_a_base = [a alphalatin];
 	@bGC_e_base = [e s];
-	@bGC_i_base = [i dotlessi istroke];
+	@bGC_i_base = [i istroke];
 	pos base @bGC_I_base <anchor 238 0> mark @MC_base;
-	pos base @bGC_L_base <anchor 306 0> mark @MC_base;
 	pos base @bGC_T_base <anchor 239 0> mark @MC_base;
 	pos base @bGC_Z_base <anchor 278 0> mark @MC_base;
 	pos base @bGC_a_base <anchor 420 0> mark @MC_base;
@@ -149,6 +147,7 @@ lookup MARK_BASE_base {
 	pos base E <anchor 282 0> mark @MC_base;
 	pos base F <anchor 124 0> mark @MC_base;
 	pos base H <anchor 69 0> mark @MC_base;
+	pos base L <anchor 306 0> mark @MC_base;
 	pos base M <anchor 422 0> mark @MC_base;
 	pos base N <anchor 408 0> mark @MC_base;
 	pos base OE <anchor 360 0> mark @MC_base;
@@ -161,7 +160,8 @@ lookup MARK_BASE_base {
 	pos base c <anchor 276 0> mark @MC_base;
 	pos base circledotted <anchor 244 0> mark @MC_base;
 	pos base d <anchor 226 0> mark @MC_base;
-	pos base eopen <anchor 253 0> mark @MC_base;
+	pos base dotlessi <anchor 345 0> mark @MC_base;
+	pos base eopen <anchor 254 0> mark @MC_base;
 	pos base f <anchor 212 0> mark @MC_base;
 	pos base h <anchor 80 0> mark @MC_base;
 	pos base l <anchor 323 0> mark @MC_base;
@@ -171,6 +171,7 @@ lookup MARK_BASE_base {
 	pos base oopen <anchor 246 0> mark @MC_base;
 	pos base r <anchor 142 0> mark @MC_base;
 	pos base schwa <anchor 243 0> mark @MC_base;
+	pos base t <anchor 307 0> mark @MC_base;
 	pos base u <anchor 416 0> mark @MC_base;
 	pos base ubar <anchor 395 0> mark @MC_base;
 	pos base x <anchor 424 0> mark @MC_base;
@@ -205,7 +206,6 @@ lookup MARK_BASE_below {
 	@bGC_r_below = [r rfishhook];
 	@bGC_rturned_below = [rturned rlonglegturned];
 	@bGC_schwa_below = [schwa circledotted];
-	@bGC_t_below = [t tbar];
 	@bGC_v_below = [v w vturned wturned yturned];
 	pos base @bGC_A_below <anchor 250 -20> mark @MC_below;
 	pos base @bGC_Dcroat_below <anchor 226 -20> mark @MC_below;
@@ -234,7 +234,6 @@ lookup MARK_BASE_below {
 	pos base @bGC_r_below <anchor 142 -20> mark @MC_below;
 	pos base @bGC_rturned_below <anchor 222 -20> mark @MC_below;
 	pos base @bGC_schwa_below <anchor 238 -20> mark @MC_below;
-	pos base @bGC_t_below <anchor 306 -20> mark @MC_below;
 	pos base @bGC_v_below <anchor 240 -20> mark @MC_below;
 	pos base AE <anchor 288 -20> mark @MC_below;
 	pos base C <anchor 292 -20> mark @MC_below;
@@ -265,7 +264,9 @@ lookup MARK_BASE_below {
 	pos base rtail <anchor 226 -192> mark @MC_below;
 	pos base s <anchor 263 -20> mark @MC_below;
 	pos base schwahookrhotic <anchor 158 -20> mark @MC_below;
-	pos base shook <anchor 257 -128> mark @MC_below;
+	pos base shook <anchor 246 -212> mark @MC_below;
+	pos base t <anchor 307 -20> mark @MC_below;
+	pos base tbar <anchor 306 -20> mark @MC_below;
 	pos base tretroflex <anchor 267 -192> mark @MC_below;
 	pos base tturned <anchor 272 -154> mark @MC_below;
 	pos base upsilonlatin <anchor 236 -20> mark @MC_below;
@@ -296,6 +297,7 @@ lookup MARK_BASE_ogonek {
 	@bGC_Y_ogonek = [Y o odieresis];
 	@bGC_a.a_ogonek = [a.a aacute.a adieresis.a aring.a];
 	@bGC_a_ogonek = [a aacute adieresis aring];
+	@bGC_e_ogonek = [e eacute];
 	@bGC_i_ogonek = [i dotlessi];
 	pos base @bGC_A_ogonek <anchor 441 0> mark @MC_ogonek;
 	pos base @bGC_E_ogonek <anchor 385 0> mark @MC_ogonek;
@@ -303,11 +305,10 @@ lookup MARK_BASE_ogonek {
 	pos base @bGC_Y_ogonek <anchor 239 0> mark @MC_ogonek;
 	pos base @bGC_a.a_ogonek <anchor 382 0> mark @MC_ogonek;
 	pos base @bGC_a_ogonek <anchor 392 0> mark @MC_ogonek;
+	pos base @bGC_e_ogonek <anchor 356 0> mark @MC_ogonek;
 	pos base @bGC_i_ogonek <anchor 354 0> mark @MC_ogonek;
 	pos base Schwa <anchor 255 0> mark @MC_ogonek;
 	pos base circledotted <anchor 244 0> mark @MC_ogonek;
-	pos base e <anchor 355 0> mark @MC_ogonek;
-	pos base eacute <anchor 356 0> mark @MC_ogonek;
 	pos base schwa <anchor 243 0> mark @MC_ogonek;
 	pos base y <anchor 116 -154> mark @MC_ogonek;
 } MARK_BASE_ogonek;

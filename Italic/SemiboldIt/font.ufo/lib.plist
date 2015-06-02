@@ -96,14 +96,6 @@
 	<integer>0</integer>
 	<key>com.typemytype.robofont.layerOrder</key>
 	<array>
-		<string>mask</string>
-	</array>
-	<key>com.typemytype.robofont.mask.layerStrokeColor</key>
-	<array>
-		<real>1.0</real>
-		<real>0.75</real>
-		<real>0.0</real>
-		<real>0.7</real>
 	</array>
 	<key>com.typemytype.robofont.segmentType</key>
 	<string>curve</string>
@@ -176,6 +168,7 @@
 				<string>Amacron</string>
 				<string>Abreve</string>
 				<string>Aring</string>
+				<string>Aringacute</string>
 				<string>Acaron</string>
 				<string>Aogonek</string>
 				<string>Adotbelow</string>
@@ -294,6 +287,7 @@
 				<string>Ohorndotbelow</string>
 				<string>Omacronacute</string>
 				<string>Oslash</string>
+				<string>Oslashacute</string>
 				<string>OE</string>
 				<string>Racute</string>
 				<string>Rcaron</string>
@@ -371,6 +365,7 @@
 				<string>amacron</string>
 				<string>abreve</string>
 				<string>aring</string>
+				<string>aringacute</string>
 				<string>acaron</string>
 				<string>aogonek</string>
 				<string>adotbelow</string>
@@ -491,6 +486,7 @@
 				<string>ohorntilde</string>
 				<string>ohorndotbelow</string>
 				<string>oslash</string>
+				<string>oslashacute</string>
 				<string>oe</string>
 				<string>racute</string>
 				<string>rcommaaccent</string>
@@ -507,6 +503,7 @@
 				<string>sdotaccent</string>
 				<string>sdotbelow</string>
 				<string>germandbls</string>
+				<string>longs</string>
 				<string>tcaron</string>
 				<string>tcedilla</string>
 				<string>tcommaaccent</string>
@@ -644,6 +641,7 @@
 				<string>amacron.a</string>
 				<string>abreve.a</string>
 				<string>aring.a</string>
+				<string>aringacute.a</string>
 				<string>acaron.a</string>
 				<string>adotbelow.a</string>
 				<string>ahoi.a</string>
@@ -723,19 +721,27 @@
 				<string>quotedblright</string>
 				<string>quotesinglbase</string>
 				<string>quotedblbase</string>
+				<string>quotereversed</string>
 				<string>guilsinglleft</string>
 				<string>guilsinglright</string>
 				<string>guillemotleft</string>
 				<string>guillemotright</string>
 				<string>hyphen</string>
 				<string>sfthyphen</string>
+				<string>hyphentwo</string>
 				<string>endash</string>
 				<string>emdash</string>
 				<string>figuredash</string>
 				<string>horizontalbar</string>
 				<string>periodcentered</string>
 				<string>bullet</string>
+				<string>bulletwhite</string>
+				<string>bulletsquare</string>
+				<string>bulletsquarewhite</string>
+				<string>invbullet</string>
+				<string>filledrect</string>
 				<string>underscore</string>
+				<string>underscoredbl</string>
 				<string>overline</string>
 				<string>undertie</string>
 				<string>parenleft</string>
@@ -781,6 +787,7 @@
 				<string>asterisk.a</string>
 				<string>hyphen.a</string>
 				<string>sfthyphen.a</string>
+				<string>hyphentwo.a</string>
 				<string>dollar.a</string>
 				<string>zero.sups</string>
 				<string>one.sups</string>
@@ -905,6 +912,7 @@
 				<string>tugrik</string>
 				<string>tenge</string>
 				<string>ruble</string>
+				<string>franc</string>
 				<string>fraction</string>
 				<string>divisionslash</string>
 				<string>slash.frac</string>
@@ -935,6 +943,7 @@
 				<string>divide</string>
 				<string>bulletoperator</string>
 				<string>equal</string>
+				<string>equivalence</string>
 				<string>less</string>
 				<string>greater</string>
 				<string>lessequal</string>
@@ -945,10 +954,15 @@
 				<string>asciitilde</string>
 				<string>approxequal</string>
 				<string>logicalnot</string>
+				<string>revlogicalnot</string>
+				<string>intersection</string>
+				<string>orthogonal</string>
 				<string>infinity</string>
 				<string>mu.math</string>
 				<string>partialdiff</string>
 				<string>integral</string>
+				<string>integraltp</string>
+				<string>integralbt</string>
 				<string>radical</string>
 				<string>Delta.math</string>
 				<string>Omega.math</string>
@@ -957,6 +971,7 @@
 				<string>proportion</string>
 				<string>summation</string>
 				<string>product</string>
+				<string>careof</string>
 				<string>litre</string>
 				<string>estimated</string>
 				<string>arrowleft</string>
@@ -971,10 +986,15 @@
 				<string>arrowdblup</string>
 				<string>arrowdblright</string>
 				<string>arrowdbldown</string>
+				<string>arrowboth</string>
+				<string>arrowupdn</string>
+				<string>arrowupdnbse</string>
+				<string>circleblack</string>
+				<string>circlewhite</string>
 				<string>squareblack</string>
-				<string>diamondblack</string>
-				<string>fisheye</string>
+				<string>squarewhite</string>
 				<string>squareshadow</string>
+				<string>diamondblack</string>
 				<string>triangleblackup</string>
 				<string>trianglewhiteup</string>
 				<string>triangleblackright</string>
@@ -983,11 +1003,26 @@
 				<string>trianglewhitedown</string>
 				<string>triangleblackleft</string>
 				<string>trianglewhiteleft</string>
+				<string>pointerblackright</string>
+				<string>pointerblackleft</string>
+				<string>invcircle</string>
+				<string>fisheye</string>
 				<string>checkbox</string>
 				<string>checkedbox</string>
 				<string>check</string>
 				<string>eighthnote</string>
+				<string>musicalnotedbl</string>
+				<string>smileface</string>
+				<string>invsmileface</string>
+				<string>sun</string>
+				<string>female</string>
+				<string>male</string>
+				<string>spade</string>
+				<string>club</string>
+				<string>heart</string>
+				<string>diamond</string>
 				<string>lozenge</string>
+				<string>house</string>
 				<string>prime</string>
 				<string>dblprime</string>
 				<string>primereversed</string>
@@ -1297,6 +1332,8 @@
 				<string>ZWNBS</string>
 				<string>fi</string>
 				<string>fl</string>
+				<string>Ldot</string>
+				<string>ldot</string>
 				<string>uniE0A0</string>
 				<string>uniE0A1</string>
 				<string>uniE0A2</string>
@@ -1373,6 +1410,7 @@
 		<string>Amacron</string>
 		<string>Abreve</string>
 		<string>Aring</string>
+		<string>Aringacute</string>
 		<string>Acaron</string>
 		<string>Aogonek</string>
 		<string>Adotbelow</string>
@@ -1491,6 +1529,7 @@
 		<string>Ohorndotbelow</string>
 		<string>Omacronacute</string>
 		<string>Oslash</string>
+		<string>Oslashacute</string>
 		<string>OE</string>
 		<string>Racute</string>
 		<string>Rcaron</string>
@@ -1568,6 +1607,7 @@
 		<string>amacron</string>
 		<string>abreve</string>
 		<string>aring</string>
+		<string>aringacute</string>
 		<string>acaron</string>
 		<string>aogonek</string>
 		<string>adotbelow</string>
@@ -1688,6 +1728,7 @@
 		<string>ohorntilde</string>
 		<string>ohorndotbelow</string>
 		<string>oslash</string>
+		<string>oslashacute</string>
 		<string>oe</string>
 		<string>racute</string>
 		<string>rcommaaccent</string>
@@ -1704,6 +1745,7 @@
 		<string>sdotaccent</string>
 		<string>sdotbelow</string>
 		<string>germandbls</string>
+		<string>longs</string>
 		<string>tcaron</string>
 		<string>tcedilla</string>
 		<string>tcommaaccent</string>
@@ -1841,6 +1883,7 @@
 		<string>amacron.a</string>
 		<string>abreve.a</string>
 		<string>aring.a</string>
+		<string>aringacute.a</string>
 		<string>acaron.a</string>
 		<string>adotbelow.a</string>
 		<string>ahoi.a</string>
@@ -1920,19 +1963,27 @@
 		<string>quotedblright</string>
 		<string>quotesinglbase</string>
 		<string>quotedblbase</string>
+		<string>quotereversed</string>
 		<string>guilsinglleft</string>
 		<string>guilsinglright</string>
 		<string>guillemotleft</string>
 		<string>guillemotright</string>
 		<string>hyphen</string>
 		<string>sfthyphen</string>
+		<string>hyphentwo</string>
 		<string>endash</string>
 		<string>emdash</string>
 		<string>figuredash</string>
 		<string>horizontalbar</string>
 		<string>periodcentered</string>
 		<string>bullet</string>
+		<string>bulletwhite</string>
+		<string>bulletsquare</string>
+		<string>bulletsquarewhite</string>
+		<string>invbullet</string>
+		<string>filledrect</string>
 		<string>underscore</string>
+		<string>underscoredbl</string>
 		<string>overline</string>
 		<string>undertie</string>
 		<string>parenleft</string>
@@ -1978,6 +2029,7 @@
 		<string>asterisk.a</string>
 		<string>hyphen.a</string>
 		<string>sfthyphen.a</string>
+		<string>hyphentwo.a</string>
 		<string>dollar.a</string>
 		<string>zero.sups</string>
 		<string>one.sups</string>
@@ -2102,6 +2154,7 @@
 		<string>tugrik</string>
 		<string>tenge</string>
 		<string>ruble</string>
+		<string>franc</string>
 		<string>fraction</string>
 		<string>divisionslash</string>
 		<string>slash.frac</string>
@@ -2132,6 +2185,7 @@
 		<string>divide</string>
 		<string>bulletoperator</string>
 		<string>equal</string>
+		<string>equivalence</string>
 		<string>less</string>
 		<string>greater</string>
 		<string>lessequal</string>
@@ -2142,10 +2196,15 @@
 		<string>asciitilde</string>
 		<string>approxequal</string>
 		<string>logicalnot</string>
+		<string>revlogicalnot</string>
+		<string>intersection</string>
+		<string>orthogonal</string>
 		<string>infinity</string>
 		<string>mu.math</string>
 		<string>partialdiff</string>
 		<string>integral</string>
+		<string>integraltp</string>
+		<string>integralbt</string>
 		<string>radical</string>
 		<string>Delta.math</string>
 		<string>Omega.math</string>
@@ -2154,6 +2213,7 @@
 		<string>proportion</string>
 		<string>summation</string>
 		<string>product</string>
+		<string>careof</string>
 		<string>litre</string>
 		<string>estimated</string>
 		<string>arrowleft</string>
@@ -2168,10 +2228,15 @@
 		<string>arrowdblup</string>
 		<string>arrowdblright</string>
 		<string>arrowdbldown</string>
+		<string>arrowboth</string>
+		<string>arrowupdn</string>
+		<string>arrowupdnbse</string>
+		<string>circleblack</string>
+		<string>circlewhite</string>
 		<string>squareblack</string>
-		<string>diamondblack</string>
-		<string>fisheye</string>
+		<string>squarewhite</string>
 		<string>squareshadow</string>
+		<string>diamondblack</string>
 		<string>triangleblackup</string>
 		<string>trianglewhiteup</string>
 		<string>triangleblackright</string>
@@ -2180,11 +2245,26 @@
 		<string>trianglewhitedown</string>
 		<string>triangleblackleft</string>
 		<string>trianglewhiteleft</string>
+		<string>pointerblackright</string>
+		<string>pointerblackleft</string>
+		<string>invcircle</string>
+		<string>fisheye</string>
 		<string>checkbox</string>
 		<string>checkedbox</string>
 		<string>check</string>
 		<string>eighthnote</string>
+		<string>musicalnotedbl</string>
+		<string>smileface</string>
+		<string>invsmileface</string>
+		<string>sun</string>
+		<string>female</string>
+		<string>male</string>
+		<string>spade</string>
+		<string>club</string>
+		<string>heart</string>
+		<string>diamond</string>
 		<string>lozenge</string>
+		<string>house</string>
 		<string>prime</string>
 		<string>dblprime</string>
 		<string>primereversed</string>
@@ -2494,6 +2574,8 @@
 		<string>ZWNBS</string>
 		<string>fi</string>
 		<string>fl</string>
+		<string>Ldot</string>
+		<string>ldot</string>
 		<string>uniE0A0</string>
 		<string>uniE0A1</string>
 		<string>uniE0A2</string>
