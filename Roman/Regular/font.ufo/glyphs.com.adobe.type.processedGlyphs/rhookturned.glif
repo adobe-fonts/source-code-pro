@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="2" name="rhookturned">
   <advance width="600" />
-  <unicode hex="027B" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="436" y="-183" />
@@ -24,8 +23,8 @@
       <point x="127" y="62" />
       <point x="111" y="67" />
       <point type="curve" x="82" y="79" />
-      <point type="line" x="63" y="8" />
-      <point x="94" y="-7" />
+      <point name="hintSet0010" type="line" x="63" y="8" />
+      <point name="hintSet0011" x="94" y="-7" />
       <point x="122" y="-12" />
       <point type="curve" x="150" y="-12" />
       <point x="215" y="-12" />
@@ -45,6 +44,19 @@
           <hintset pointTag="hintSet0000">
             <hstem pos="-183" width="67" />
             <hstem pos="-12" width="74" />
+            <hstem pos="486" width="-20" />
+            <vstem pos="295" width="82" />
+          </hintset>
+          <hintset pointTag="hintSet0010">
+            <hstem pos="-183" width="67" />
+            <hstem pos="-12" width="20" />
+            <hstem pos="486" width="-20" />
+            <vstem pos="295" width="82" />
+          </hintset>
+          <hintset pointTag="hintSet0011">
+            <hstem pos="-183" width="67" />
+            <hstem pos="-12" width="74" />
+            <hstem pos="486" width="-20" />
             <vstem pos="295" width="82" />
           </hintset>
         </hintSetList>
