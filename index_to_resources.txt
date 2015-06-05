@@ -1,27 +1,46 @@
-Index to resources in repository for Source Code Pro
+Index to resources in repository for Source Code Pro (SCP)
 
 	This document’s purpose is to provide a description of the file types and 
 folder structure found in this repository and the tools used to generate and
-process them.
+process them. This index also lays out the workflow from making and editing the 
+sources to compiling working fonts.
 
 A.	Key to File Types:
 
-	1.	Files for design
+	1.	Files for type design
 		The vast majority of files in this repository belong to the Unified Font 
 		Object (ufo) storage format, which is an open format and largely XML based. 
-		This document will not describe UFO-related files that are specified in 
-		the official documentation of the UFO specification, that can be found 
-		online at: 
-		http://unifiedfontobject.org/ OR
+		This document will not describe UFO-related files that are found in the 
+		UFO file packages in this repository. For information about these file 
+		types, please consult the official documentation of the UFO specification, 
+		that can be found online at: 
+		http://unifiedfontobject.org OR
 		https://github.com/unified-font-object/ufo-spec
 
 		1.1	Master UFO files
 			A master, in the context of typeface design, is a designed reference 
-			point that defines the bounds of the design space. Master files must 
-			be point-compatible with all other masters in order to enable the 
-			interpolation of intermediate instances within the design space that 
-			the masters define. Master UFO files are what the designer modifies 
-			directly using a font editor that has UFO import/export support.
+			point that defines the bounds of the type design space. Master UFO 
+			files house all the information needed to compile a working font in a 
+			format that is easily read by font editors and humans alike. However, 
+			this information is stored using XML syntax, whereas the tools used 
+			to compile fonts for this project use the feature file (.fea) syntax 
+			(see §3 for more information).
+				Perhaps most imporatantly, the masters define the paramaters of a 
+			typeface family. Each master is a separate design that relates to the 
+			others. Basically this means that the the masters must be compatible 
+			with each other in certain ways: masters must (except for the case of 
+			intermediate masters) contain the same number of glyphs, each of which 
+			must be point-compatible with the corresponding glyph outlines in each
+			design master. Additionally, 
+			These parameters include designed glyph outlines at 
+			the extremes of the design space, sometimes with intermediate poles 
+			that help with more fine-grained control of the design space. Glyph
+			outlines must be point-compatible with all other masters in order to 
+			enable the interpolation of intermediate instances within the design 
+			space that the masters define. Master UFO files are what the designer 
+			modifies directly using a font editor that has UFO import / export support.
+				Master UFO files will also be the inputs for tools that will ap-
+			ply kerning and anchor information to the design.
 				The master UFO files live in the directories named 'RomanMasters' 
 			and 'ItalicMasters'. These have the family name, eg. 'SourceCodePro', 
 			in the UFO file name, to which is appended '-It' for italic masters, 
@@ -46,39 +65,132 @@ A.	Key to File Types:
 		1.2	UFO types in this repository
 ]
 
-	2.	Files for Adobe Font Development Kit for OpenType (FDK)
-		The FDK is an open source set of tools developed and maintained by Adobe 
-		for the purpose of developing, compiling, and processing OpenType (OT) 
-		fonts, specifically for Compact Font Format (CFF) fonts, but with some 
-		TrueType (TTF) font support as well.
+	2.	Files for interpolation
 
-		2.1	File type XXX
+		2.1	Design space file (.designspace)
+			This is a MutatorMath file in XML format that maps the relationships 
+			between the design master UFOs and the instances that will be generated 
+			by those using the makeInstancesUFO (FDK) tool. The designspace file can 
+			be output by Superpolator (3rd party, proprietary tool), or crafted and 
+			edited by any text editor.
+		2.2	Superpolator file (.sp3)
+			This is a Superpolator file that maps the relationships between the 
+			design masters to define the design space and also plots the postions 
+			of intermediate masters to be interpolated. As stated above, this 
+			information can be exported to a .designspace file.
 
-	3.	Files for interpolation
+	3.	Files for font compilation
+		The entirety of this project leverages a workflow that relies on the 
+		Adobe Font Development Kit for OpenType (FDK) to compile the final font 
+		software. The FDK is a set of open source tools developed and maintained 
+		by Adobe for the purpose of developing, compiling, and processing OpenType 
+		(OT) fonts, specifically for Compact Font Format (CFF) fonts, but with 
+		some TrueType (TTF) font support as well.
+		Documentation on the FDK can be found on Adobe’s website:
+		http://www.adobe.com/devnet/opentype/afdko.html
+		The open source version of the toolkit can be found on GitHub:
+		https://github.com/adobe-type-tools/afdko
+			Many of the files in this repository are input files used by the 
+		makeotf tool to compile font software. A full description of these input 
+		files can be found as part of the FDK distribution package on GitHub:
+		https://github.com/adobe-type-tools/afdko/blob/master/FDK/Technical%20Documentation/MakeOTFUserGuide.pdf
+		However, a brief description of each of these files will follow.
 
-	4.	Files for font compliation
-		4.1	Instance UFO files
-			An instance, in the context of font development, is a input file that 
-			is automatically interpolated from within the design space of the 
-			master files. Instance UFOs are generated by the makeInstancesUFO 
-			(FDK) tool, which will also flatten (remove overlaps) and add 
-			hinting instructions to all glyphs. Instance UFO files will also con-
-			tain interpolated kerning and anchor infomation if present in the 
-			master UFO files.
-				The instance UFO files live in directories that correspond to 
-			their style names, eg. 'Regular' for the Regular style. Instance 
-			files typically are simply named 'font.ufo'.
+		3.1	Family-wide files
+			Files that contain information that applies to the entire type family 
+			(or sub-family) are typically stored at the top-level directory.
 
-	5.	Files for storage of information
+			a.	family.fea
+				This file contains the OT shaping rules that apply to all fonts 
+				in the family. Because there is currently a discrepancy in the 
+				glyph repritoire of the upright and italic fonts, there is also 
+				an italics.fea file that overrides the family.fea file.
+			b.	FontMenuNameDB
+				A text file which stores font naming information.
+			c.	GlyphOrderAndAliasDB
+				A text file which stores relationships between glyph names used 
+				in production and glyph names to be used int he final font. In 
+				general, the production names follow those that can be found in 
+				the Adobe Glyp Dictionary (AGD.txt), which is part of the FDK 
+				distribution. Final names follow a strict set of rules laid out 
+				by the Adobe Glyph List Specification:
+				https://github.com/adobe-type-tools/agl-specification
+					This file is also used to set the order of glyphs in the final 
+				font software.
+			d.	tables.fea
+				For this project, this file only houses some of the <name> table 
+				information that is shared across all fonts in the family and the 
+				<base> table information. However, this file can also be used to 
+				house other table information as needed.
+			e.	widthsAdjust.fea
+				This file is specific to this project. Because SCP is a monospace 
+				font, some interpreters expect strict adherance to a common set 
+				width for each character, including those which are defined by 
+				Unicode to be non-spacing (have 0 width). To satisfy both these 
+				requirements, the combining diacritics are set on the full width 
+				and then OT positioning features adjust the width of these char-
+				acters so that they effectively become non-spacing.
+
+		3.2	Font-specific files
+			Files that contain information that applies to a specific font style. 
+			These can be found in the directories that correspond to the font 
+			style names, eg. 'Regular' for the Regular style.
+
+			a.	Instance UFO files
+				An instance, in the context of font development, is a input file 
+				that is automatically interpolated from within the design space of 
+				the master files. Instance UFOs are generated by the makeInstancesUFO 
+				(FDK) tool, which will also flatten (remove overlaps) and add 
+				hinting instructions to all glyphs. Instance UFO files will also 
+				contain interpolated kerning and anchor infomation if present in the 
+				master UFO files. The instance UFO files typically are simply 
+				named 'font.ufo'.
+					In additon to the default UFO structure, these instance UFOs 
+				also inlcude a file named 'com.adobe.type.processedHashMap', in 
+				the 'data' folder. This file stores a hash of the outlines of all 
+				glyphs in the default layer (glyphs folder). This is for the pur-
+				pose of tracking which modified glyphs need to be processed by 
+				checkOutlines (FDK) and autohint (FDK).
+
+	4.	Files for storage of font meta information
 		These files, although not strictly necessary, are helpful auxilliary files 
 		that can aid in the type design / font development process.
-	
-	3.	-.designspace
-		This is a MutatorMath file in XML format that maps the relationships 
-		between the design master UFOs and the instances that will be generated 
-		by those using the makeInstancesUFO (FDK) tool. The designspace file can 
-		be output by Superpolator (3rd party, proprietary tool), or crafted and 
-		edited by any text editor.
+
+		4.1	Masters meta information files
+			a.	derivedchars_0
+				Stores information on the relationships of components for 
+				composite glyphs.
+			b.	anchors_0
+				Houses anchor information that is used in generating the various 
+				mark features files that are used by the FDK.
+
+		4.2	Instances meta information files
+			a.	derivedchars_TT
+				Similar to the other derivedchars files previously described, these 
+				files are used to regenerate composite glyphs in the font.ttf.
+			b.	tthints
+				This is a storage file for TT hinting information.
+			c.	ppms
+				Another file storing TT hinting parameters.
+
+	5.	Build scripts & misc.
+		These files do something:
+		5.1	build.sh
+			DESCRIPTION GOES HERE.
+		5.2	package.json
+			DESCRIPTION GOES HERE.
+		5.3	.gitignore
+			Self-explanatory.
+
+	6.	Docmentation
+		These are human-readable files and should be self-explanatory:
+			6.1	LICENSE.txt
+			6.2	ReadMe.html
+			6.3	README.md
+			6.4	relnotes.txt
+			6.5	Roadmap.txt
+			6.6	SourceCodeProReadMe.html
+
 
 
 B.	Key to Folder Structure*:
@@ -122,15 +234,15 @@ SoucrceCodePro
 					└ do.
 				└ data
 					└ com.adobe.type.processedHashMap
-			├ derivedchars_TT
 			├ features
-			├ font.ttf
 			├ fontinfo
-			├ mark.fea
 			├ markclasses.fea
+			├ mark.fea
 			├ mkmk.fea
-			├ ppms
-			└ tthints
+			├ font.ttf
+			├ derivedchars_TT
+			├ tthints
+			└ ppms
 		├ …
 	└ Italic
 		└ do.
@@ -156,3 +268,5 @@ lowing conventions are also used to this end: do. to connote that the contents
 are structurally the same as the previous item at the same level (if having dif-
 ferent file names), … to connote an ellision of files of the same type as the 
 previous item at the same level.
+
+C.	Workflow
