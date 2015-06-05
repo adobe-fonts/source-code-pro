@@ -2,13 +2,13 @@ table head {
    FontRevision 1.005;
 } head;
 
-include (../italics.fea)
+include (../italics.fea);
 
 include (markclasses.fea);
 
 feature mark {
-	include (../../widthsAdjust.fea)
-	include (mark.fea)
+	include (../../widthsAdjust.fea);
+	include (mark.fea);
 } mark;
 
 feature mkmk {
@@ -38,4 +38,4 @@ table hhea {
 	LineGap 0;			# Must be zero for cross-platform consistency
 } hhea;
 
-include (../../tables.fea)
+include (../../tables.fea);
