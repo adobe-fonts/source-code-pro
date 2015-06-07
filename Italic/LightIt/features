@@ -29,6 +29,19 @@ table OS/2 {
 	WeightClass 300;	# Light
 	WidthClass 5;		# Medium (normal)
 	Vendor "ADBO";
+	UnicodeRange 0  # Basic Latin
+	             1  # Latin-1 Supplement
+	             2  # Latin Extended-A
+	             4  # IPA Extensions
+	             5  # Spacing Modifier Letters
+	             6  # Combining Diacritical Marks
+	             29 # Latin Extended Additional
+	             32 # Superscripts and Subscripts
+	             33 # Currency Symbols
+	             43 # Box Drawing
+	             44 # Block Elements
+	             45 # Geometric Shapes (override to force makeotf to turn this bit on)
+	             57;# beyond the BMP (Basic Multilingual Plane)
 } OS/2;
 
 table hhea {
