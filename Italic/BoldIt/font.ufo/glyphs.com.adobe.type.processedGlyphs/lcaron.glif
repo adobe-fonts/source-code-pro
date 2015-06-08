@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="lcaron">
+<glyph format="1" name="lcaron">
   <advance width="600" />
   <unicode hex="013E" />
   <outline>
@@ -30,7 +30,7 @@
       <point x="237" y="-12" />
     </contour>
     <contour>
-      <point type="line" x="467" y="548" />
+      <point name="hintSet0013" type="line" x="467" y="548" />
       <point type="line" x="555" y="548" />
       <point type="line" x="618" y="724" />
       <point type="line" x="641" y="822" />
@@ -39,12 +39,24 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.30000000000000004</real>
+        <real>0.6294117647058824</real>
+        <integer>1</integer>
+        <integer>1</integer>
+      </array>
       <key>com.adobe.type.autohint</key>
       <data>
-        <hintSetList id="ed4a24b5c2e1845fd03b4e4cfc91d5e07f26e690ad9f4717c9b4db7a2d40862eef7e6b69fe2e5483a7c0d9cc5be9bbe53f1b4e4f39f52337f9a478ab4567eb8b">
+        <hintSetList id="3fa588426a32d7e2cddd8ec9d8d73990e9b67c8221d41c4d17a04bc6dc08b1888675c4c842ab49a78b6fe70d82702ca674aca104d88a624cf65313eaa1720725">
           <hintset pointTag="hintSet0000">
             <hstem pos="-12" width="112" />
             <hstem pos="594" width="107" />
+            <vstem pos="174" width="136" />
+          </hintset>
+          <hintset pointTag="hintSet0013">
+            <hstem pos="-12" width="112" />
+            <hstem pos="548" width="153" />
             <vstem pos="174" width="136" />
           </hintset>
         </hintSetList>

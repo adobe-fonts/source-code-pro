@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="gcircumflex">
+<glyph format="1" name="gcircumflex">
   <advance width="600" />
   <unicode hex="011D" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="269" y="-206" />
-      <point name="hintSet0001" x="456" y="-206" />
+      <point x="456" y="-206" />
       <point x="575" y="-132" />
       <point type="curve" x="575" y="-24" />
       <point x="575" y="68" />
       <point x="499" y="106" />
       <point type="curve" x="367" y="106" />
-      <point type="line" x="282" y="106" />
+      <point name="hintSet0003" type="line" x="282" y="106" />
       <point x="226" y="106" />
       <point x="204" y="114" />
       <point type="curve" x="204" y="136" />
@@ -21,7 +21,7 @@
       <point x="244" y="160" />
       <point x="265" y="158" />
       <point type="curve" x="283" y="158" />
-      <point name="hintSet0007" x="402" y="158" />
+      <point x="402" y="158" />
       <point x="494" y="206" />
       <point type="curve" x="494" y="324" />
       <point x="494" y="344" />
@@ -50,7 +50,7 @@
       <point name="hintSet0019" x="70" y="-10" />
       <point x="44" y="-41" />
       <point type="curve" x="44" y="-82" />
-      <point x="44" y="-172" />
+      <point name="hintSet0020" x="44" y="-172" />
       <point x="145" y="-206" />
     </contour>
     <contour>
@@ -69,7 +69,7 @@
     </contour>
     <contour>
       <point name="hintSet0026" type="curve" x="296" y="-100" />
-      <point name="hintSet0027" x="229" y="-100" />
+      <point x="229" y="-100" />
       <point x="183" y="-86" />
       <point type="curve" x="183" y="-54" />
       <point x="183" y="-40" />
@@ -79,7 +79,7 @@
       <point x="245" y="-24" />
       <point type="curve" x="284" y="-24" />
       <point type="line" x="334" y="-24" />
-      <point name="hintSet0031" x="384" y="-24" />
+      <point x="384" y="-24" />
       <point x="412" y="-28" />
       <point type="curve" x="412" y="-54" />
       <point x="412" y="-82" />
@@ -87,7 +87,7 @@
     </contour>
     <contour>
       <point type="line" x="173" y="558" />
-      <point name="hintSet0034" type="line" x="301" y="642" />
+      <point type="line" x="301" y="642" />
       <point type="line" x="305" y="642" />
       <point type="line" x="433" y="558" />
       <point type="line" x="497" y="618" />
@@ -98,33 +98,32 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.30000000000000004</real>
+        <real>0.6294117647058824</real>
+        <integer>1</integer>
+        <integer>1</integer>
+      </array>
       <key>com.adobe.type.autohint</key>
       <data>
-        <hintSetList id="bd41f8bd07327176eb7baa73345ff86148aa5f4105419909e4bee6648981122b3f0e1a21645a7fbf9290a761c395879435987df3d6736a3dde76f0efcc9da41a">
+        <hintSetList id="17cafa3a4068af546dd68f075bbd685735a6b7660e7c85a848e9bae8434fed5b31b9825d1b3a5687d927aa66a2ea1a5f85c01c3216993e8b283849cf7c7fb835">
           <hintset pointTag="hintSet0000">
             <hstem pos="-206" width="106" />
             <hstem pos="-24" width="130" />
             <hstem pos="158" width="102" />
             <hstem pos="376" width="124" />
             <hstem pos="642" width="104" />
-            <vstem pos="44" width="347" />
+            <vstem pos="44" width="139" />
+            <vstem pos="412" width="163" />
           </hintset>
-          <hintset pointTag="hintSet0001">
+          <hintset pointTag="hintSet0003">
             <hstem pos="-206" width="106" />
             <hstem pos="-24" width="130" />
             <hstem pos="158" width="102" />
             <hstem pos="376" width="124" />
             <hstem pos="642" width="104" />
             <vstem pos="70" width="134" />
-            <vstem pos="412" width="163" />
-          </hintset>
-          <hintset pointTag="hintSet0007">
-            <hstem pos="-206" width="106" />
-            <hstem pos="-24" width="130" />
-            <hstem pos="158" width="102" />
-            <hstem pos="376" width="124" />
-            <hstem pos="642" width="104" />
-            <vstem pos="62" width="161" />
             <vstem pos="344" width="150" />
           </hintset>
           <hintset pointTag="hintSet0012">
@@ -151,7 +150,17 @@
             <hstem pos="158" width="102" />
             <hstem pos="376" width="124" />
             <hstem pos="642" width="104" />
-            <vstem pos="44" width="347" />
+            <vstem pos="44" width="139" />
+            <vstem pos="344" width="150" />
+          </hintset>
+          <hintset pointTag="hintSet0020">
+            <hstem pos="-206" width="106" />
+            <hstem pos="-24" width="130" />
+            <hstem pos="158" width="102" />
+            <hstem pos="376" width="124" />
+            <hstem pos="642" width="104" />
+            <vstem pos="44" width="139" />
+            <vstem pos="412" width="163" />
           </hintset>
           <hintset pointTag="hintSet0021">
             <hstem pos="-206" width="106" />
@@ -168,33 +177,8 @@
             <hstem pos="158" width="102" />
             <hstem pos="376" width="124" />
             <hstem pos="642" width="104" />
-            <vstem pos="62" width="161" />
+            <vstem pos="44" width="139" />
             <vstem pos="412" width="163" />
-          </hintset>
-          <hintset pointTag="hintSet0027">
-            <hstem pos="-206" width="106" />
-            <hstem pos="-24" width="130" />
-            <hstem pos="158" width="102" />
-            <hstem pos="376" width="124" />
-            <hstem pos="642" width="104" />
-            <vstem pos="44" width="347" />
-          </hintset>
-          <hintset pointTag="hintSet0031">
-            <hstem pos="-206" width="106" />
-            <hstem pos="-24" width="130" />
-            <hstem pos="158" width="102" />
-            <hstem pos="376" width="124" />
-            <hstem pos="642" width="104" />
-            <vstem pos="62" width="161" />
-            <vstem pos="412" width="163" />
-          </hintset>
-          <hintset pointTag="hintSet0034">
-            <hstem pos="-206" width="106" />
-            <hstem pos="-24" width="130" />
-            <hstem pos="158" width="102" />
-            <hstem pos="376" width="124" />
-            <hstem pos="642" width="104" />
-            <vstem pos="44" width="347" />
           </hintset>
         </hintSetList>
       </data>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="gcaron">
+<glyph format="1" name="gcaron">
   <advance width="600" />
   <unicode hex="01E7" />
   <outline>
@@ -50,7 +50,7 @@
       <point name="hintSet0019" x="113" y="-11" />
       <point x="84" y="-54" />
       <point type="curve" x="84" y="-92" />
-      <point x="84" y="-176" />
+      <point name="hintSet0020" x="84" y="-176" />
       <point x="158" y="-231" />
     </contour>
     <contour>
@@ -98,9 +98,16 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.30000000000000004</real>
+        <real>0.6294117647058824</real>
+        <integer>1</integer>
+        <integer>1</integer>
+      </array>
       <key>com.adobe.type.autohint</key>
       <data>
-        <hintSetList id="a78d154beaa7f59deb56a999c5d75e2b7cc0655a52cb871bfdf0180a5d0682e37e194f8f9f4a73ab4e6818ceb9529b728fe72e5144fc215fa1fe8af0d71220c3">
+        <hintSetList id="90bdca5653ea22a3335bcc64ddaf1de815232133d4c145a57cbd5568458da3357124c3dbb290930bd8faa35b14a045d0ae30f0b954421488aad472c5921cbf4a">
           <hintset pointTag="hintSet0000">
             <hstem pos="-231" width="36" />
             <hstem pos="-1" width="42" />
@@ -139,6 +146,15 @@
           </hintset>
           <hintset pointTag="hintSet0019">
             <hstem pos="-231" width="36" />
+            <hstem pos="20" width="-21" />
+            <hstem pos="153" width="35" />
+            <hstem pos="442" width="38" />
+            <vstem pos="84" width="42" />
+            <vstem pos="428" width="44" />
+            <vstem pos="516" width="46" />
+          </hintset>
+          <hintset pointTag="hintSet0020">
+            <hstem pos="-231" width="36" />
             <hstem pos="-1" width="42" />
             <hstem pos="153" width="35" />
             <hstem pos="442" width="38" />
@@ -150,7 +166,7 @@
             <hstem pos="-231" width="36" />
             <hstem pos="-1" width="42" />
             <hstem pos="153" width="35" />
-            <hstem pos="455" width="37" />
+            <hstem pos="455" width="25" />
             <vstem pos="116" width="45" />
             <vstem pos="428" width="44" />
             <vstem pos="516" width="46" />
@@ -168,7 +184,7 @@
             <hstem pos="-231" width="36" />
             <hstem pos="-1" width="42" />
             <hstem pos="153" width="35" />
-            <hstem pos="455" width="37" />
+            <hstem pos="455" width="25" />
             <vstem pos="116" width="45" />
             <vstem pos="428" width="44" />
             <vstem pos="516" width="46" />

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="abrevegrave">
+<glyph format="1" name="abrevegrave">
   <advance width="600" />
   <unicode hex="1EB1" />
   <outline>
@@ -13,9 +13,9 @@
       <point type="line" x="480" y="0" />
       <point type="line" x="580" y="500" />
       <point type="line" x="452" y="500" />
-      <point type="line" x="430" y="450" />
+      <point name="hintSet0007" type="line" x="430" y="450" />
       <point type="line" x="426" y="450" />
-      <point name="hintSet0009" x="404" y="488" />
+      <point x="404" y="488" />
       <point x="358" y="512" />
       <point type="curve" x="294" y="512" />
       <point x="156" y="512" />
@@ -64,9 +64,16 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.30000000000000004</real>
+        <real>0.6294117647058824</real>
+        <integer>1</integer>
+        <integer>1</integer>
+      </array>
       <key>com.adobe.type.autohint</key>
       <data>
-        <hintSetList id="3a26c1f7df761b0bcea3b2cdc2ff19355e7a3eb3f9d947265b79bd92d855a1d0e0cf2ff657e1e34e49c187a1364477458f59f6f9af101efd8c4652d4b7e9b853">
+        <hintSetList id="1181d0f40246b1565c0ff2ed282fc547fc19a60fafe15d2cfe333b978b21d96ce2d33790c780045b51da843747eaecf02c46c0957c786c5683e282d90a67e74d">
           <hintset pointTag="hintSet0000">
             <hstem pos="9" width="-21" />
             <hstem pos="500" width="-20" />
@@ -79,7 +86,7 @@
             <hstem pos="572" width="96" />
             <vstem pos="28" width="166" />
           </hintset>
-          <hintset pointTag="hintSet0009">
+          <hintset pointTag="hintSet0007">
             <hstem pos="21" width="-21" />
             <hstem pos="382" width="130" />
             <hstem pos="572" width="96" />
@@ -101,6 +108,7 @@
             <hstem pos="21" width="-21" />
             <hstem pos="500" width="-20" />
             <hstem pos="572" width="96" />
+            <vstem pos="28" width="166" />
             <vstem pos="209" width="93" />
           </hintset>
         </hintSetList>

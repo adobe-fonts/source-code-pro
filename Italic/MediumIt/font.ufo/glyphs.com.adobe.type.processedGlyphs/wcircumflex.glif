@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="wcircumflex">
+<glyph format="1" name="wcircumflex">
   <advance width="600" />
   <unicode hex="0175" />
   <outline>
@@ -26,7 +26,7 @@
       <point x="378" y="124" />
       <point x="379" y="167" />
       <point type="curve" x="378" y="214" />
-      <point type="line" x="370" y="454" />
+      <point name="hintSet0014" type="line" x="370" y="454" />
       <point type="line" x="286" y="454" />
       <point type="line" x="185" y="214" />
       <point x="165" y="168" />
@@ -52,15 +52,31 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.30000000000000004</real>
+        <real>0.6294117647058824</real>
+        <integer>1</integer>
+        <integer>1</integer>
+      </array>
       <key>com.adobe.type.autohint</key>
       <data>
-        <hintSetList id="95ee2a9e0be8967c0fc553393b380c7fabe894c0c480221c7f2fa1681aa72c23608606454e5ff571bfed4db688f2b85bf67440016ee0c9de8a8a7c72b9c1b186">
+        <hintSetList id="35f9cfd64105fa0fe20afb296888511cd1bb92af5a6cd703f87826c40a948a6435724b39c97149452f988b13aaf12caf048ffc0dd0fe941d0f4589541a296f37">
           <hintset pointTag="hintSet0000">
             <hstem pos="0" width="77" />
             <hstem pos="367" width="87" />
+            <hstem pos="489" width="-20" />
             <hstem pos="678" width="64" />
             <vstem pos="48.5" width="87" />
             <vstem pos="312.5" width="65" />
+          </hintset>
+          <hintset pointTag="hintSet0014">
+            <hstem pos="0" width="77" />
+            <hstem pos="367" width="87" />
+            <hstem pos="489" width="-20" />
+            <hstem pos="678" width="64" />
+            <vstem pos="48.5" width="87" />
+            <vstem pos="313" width="61" />
           </hintset>
         </hintSetList>
       </data>

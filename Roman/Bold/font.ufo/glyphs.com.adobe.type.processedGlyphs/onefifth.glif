@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="onefifth">
+<glyph format="1" name="onefifth">
   <advance width="600" />
   <unicode hex="2155" />
   <outline>
@@ -8,10 +8,10 @@
       <point type="line" x="241" y="324" />
       <point type="line" x="241" y="636" />
       <point type="line" x="158" y="636" />
-      <point x="125" y="616" />
+      <point name="hintSet0004" x="125" y="616" />
       <point x="104" y="607" />
       <point type="curve" x="53" y="600" />
-      <point type="line" x="53" y="536" />
+      <point name="hintSet0005" type="line" x="53" y="536" />
       <point type="line" x="134" y="536" />
     </contour>
     <contour>
@@ -31,7 +31,7 @@
       <point x="522" y="-12" />
       <point x="579" y="37" />
       <point type="curve" x="579" y="98" />
-      <point name="hintSet0017" x="579" y="159" />
+      <point x="579" y="159" />
       <point x="536" y="195" />
       <point type="curve" x="470" y="195" />
       <point x="456" y="195" />
@@ -56,28 +56,41 @@
       <point x="371" y="81" />
       <point type="curve" x="349" y="96" />
       <point type="line" x="308" y="30" />
-      <point name="hintSet0030" x="355" y="-5" />
+      <point x="355" y="-5" />
       <point x="400" y="-12" />
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.30000000000000004</real>
+        <real>0.6294117647058824</real>
+        <integer>1</integer>
+        <integer>1</integer>
+      </array>
       <key>com.adobe.type.autohint</key>
       <data>
-        <hintSetList id="f48a9ebe52521d17e8fa43bd3d7fdfe9634153d1bc18d158238626e0abb063d5e19288556df8e07e955ca1cff93b2a5d7102366a6e092cf61400e3714aec7c37">
+        <hintSetList id="59c0f8f5ebbe3bc06c3a6296af67e25fdfc74ca8450c9ee53d8ab9092a69c1af7b792a296996001b4beeb8741f3d5085f42ad15f5981a4aa722873e761c59e0c">
           <hintset pointTag="hintSet0000">
             <hstem pos="-12" width="79" />
             <hstem pos="224" width="88" />
             <hstem pos="536" width="100" />
             <vstem pos="134" width="107" />
-            <vstem pos="475" width="104" />
           </hintset>
-          <hintset pointTag="hintSet0017">
+          <hintset pointTag="hintSet0004">
+            <hstem pos="-12" width="79" />
+            <hstem pos="224" width="88" />
+            <hstem pos="536" width="64" />
+            <vstem pos="134" width="107" />
+          </hintset>
+          <hintset pointTag="hintSet0005">
             <hstem pos="-12" width="79" />
             <hstem pos="138" width="57" />
             <hstem pos="224" width="88" />
             <hstem pos="536" width="100" />
             <vstem pos="134" width="107" />
+            <vstem pos="344" width="85" />
             <vstem pos="475" width="104" />
           </hintset>
           <hintset pointTag="hintSet0019">
@@ -85,7 +98,7 @@
             <hstem pos="224" width="88" />
             <hstem pos="536" width="100" />
             <vstem pos="134" width="107" />
-            <vstem pos="475" width="104" />
+            <vstem pos="344" width="85" />
           </hintset>
           <hintset pointTag="hintSet0023">
             <hstem pos="-12" width="79" />
@@ -93,13 +106,7 @@
             <hstem pos="224" width="88" />
             <hstem pos="536" width="100" />
             <vstem pos="134" width="107" />
-            <vstem pos="475" width="104" />
-          </hintset>
-          <hintset pointTag="hintSet0030">
-            <hstem pos="-12" width="79" />
-            <hstem pos="224" width="88" />
-            <hstem pos="536" width="100" />
-            <vstem pos="134" width="107" />
+            <vstem pos="344" width="85" />
             <vstem pos="475" width="104" />
           </hintset>
         </hintSetList>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="oneeighth">
+<glyph format="1" name="oneeighth">
   <advance width="600" />
   <unicode hex="215B" />
   <outline>
@@ -8,10 +8,10 @@
       <point type="line" x="227" y="328" />
       <point type="line" x="227" y="636" />
       <point type="line" x="160" y="636" />
-      <point x="130" y="618" />
+      <point name="hintSet0004" x="130" y="618" />
       <point x="107" y="609" />
       <point type="curve" x="60" y="602" />
-      <point type="line" x="60" y="549" />
+      <point name="hintSet0005" type="line" x="60" y="549" />
       <point type="line" x="141" y="549" />
     </contour>
     <contour>
@@ -85,12 +85,28 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.30000000000000004</real>
+        <real>0.6294117647058824</real>
+        <integer>1</integer>
+        <integer>1</integer>
+      </array>
       <key>com.adobe.type.autohint</key>
       <data>
-        <hintSetList id="195dcb6f339abf92443a18da7307bb883562910fbd09842c2629ed2fe76117f59fd9f621ecfd72bb9fcae1638e5f8affed7a1c8862ca70f28d3eeb7120453cdb">
+        <hintSetList id="21c24fd063c4d5ea822f2fa7b4faeb6495a5dd96b4937264b0900152a80ebe5cdd75f4f3b4d5946b09c7c7d25fc57e45be0820b443f73ca9cf8dcbcc099880d0">
           <hintset pointTag="hintSet0000">
             <hstem pos="-12" width="57" />
             <hstem pos="263" width="57" />
+            <hstem pos="549" width="87" />
+            <vstem pos="141" width="86" />
+          </hintset>
+          <hintset pointTag="hintSet0004">
+            <hstem pos="549" width="53" />
+            <vstem pos="141" width="86" />
+          </hintset>
+          <hintset pointTag="hintSet0005">
+            <hstem pos="-12" width="57" />
             <hstem pos="549" width="87" />
             <vstem pos="141" width="86" />
             <vstem pos="312" width="77" />
@@ -107,7 +123,6 @@
           </hintset>
           <hintset pointTag="hintSet0025">
             <hstem pos="-12" width="57" />
-            <hstem pos="263" width="57" />
             <hstem pos="549" width="87" />
             <vstem pos="141" width="86" />
             <vstem pos="312" width="77" />

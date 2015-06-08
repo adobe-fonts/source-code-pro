@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="amacron.a">
+<glyph format="1" name="amacron.a">
   <advance width="600" />
   <outline>
     <contour>
@@ -12,9 +12,9 @@
       <point type="line" x="512" y="0" />
       <point type="line" x="512" y="489" />
       <point type="line" x="434" y="489" />
-      <point type="line" x="425" y="436" />
+      <point name="hintSet0007" type="line" x="425" y="436" />
       <point type="line" x="422" y="436" />
-      <point name="hintSet0009" x="378" y="479" />
+      <point x="378" y="479" />
       <point x="332" y="501" />
       <point type="curve" x="277" y="501" />
       <point x="161" y="501" />
@@ -47,9 +47,16 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.30000000000000004</real>
+        <real>0.6294117647058824</real>
+        <integer>1</integer>
+        <integer>1</integer>
+      </array>
       <key>com.adobe.type.autohint</key>
       <data>
-        <hintSetList id="92872a959f674e8152880133a136686690b840f6d4cc04e35d37685e26b7d7a67c01004717e0f66f82ba463bfc33554737d46d60b1ccce1f7df9560ea97d1043">
+        <hintSetList id="822e62b71c67a372f6ab6799744876284bc202cdef4d34ed2014fb49987c27f172f6c58671519ae15f9915ee73f92584a2e53d86628c46095a156d5e6fd09052">
           <hintset pointTag="hintSet0000">
             <hstem pos="-12" width="82" />
             <hstem pos="418" width="83" />
@@ -64,7 +71,7 @@
             <vstem pos="56" width="102" />
             <vstem pos="413" width="99" />
           </hintset>
-          <hintset pointTag="hintSet0009">
+          <hintset pointTag="hintSet0007">
             <hstem pos="-12" width="82" />
             <hstem pos="418" width="83" />
             <hstem pos="598" width="67" />
@@ -75,6 +82,7 @@
             <hstem pos="-12" width="82" />
             <hstem pos="418" width="83" />
             <hstem pos="598" width="67" />
+            <vstem pos="56" width="102" />
             <vstem pos="168" width="274" />
           </hintset>
         </hintSetList>

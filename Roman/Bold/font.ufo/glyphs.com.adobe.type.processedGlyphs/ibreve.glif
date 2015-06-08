@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="ibreve">
+<glyph format="1" name="ibreve">
   <advance width="600" />
   <unicode hex="012D" />
   <outline>
@@ -12,7 +12,7 @@
       <point type="line" x="278" y="381" />
     </contour>
     <contour>
-      <point type="curve" x="345" y="572" />
+      <point name="hintSet0006" type="curve" x="345" y="572" />
       <point x="460" y="572" />
       <point x="511" y="641" />
       <point type="curve" x="514" y="729" />
@@ -30,14 +30,28 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.30000000000000004</real>
+        <real>0.6294117647058824</real>
+        <integer>1</integer>
+        <integer>1</integer>
+      </array>
       <key>com.adobe.type.autohint</key>
       <data>
-        <hintSetList id="176729179641231572260743266700278027838129266434557234566439866442470042504254964307434605725116415147296007938179496">
+        <hintSetList id="1bc8708a5bd718699a401bb17ec39a91f77734287381bf30e07b4cf7c313e5e5ba51e7eb4128162b82e762568e834099d79fe29cacc3c977139151bdbce80a8f">
           <hintset pointTag="hintSet0000">
             <hstem pos="21" width="-21" />
             <hstem pos="381" width="115" />
             <hstem pos="572" width="92" />
             <vstem pos="278" width="147" />
+          </hintset>
+          <hintset pointTag="hintSet0006">
+            <hstem pos="21" width="-21" />
+            <hstem pos="381" width="115" />
+            <hstem pos="572" width="92" />
+            <vstem pos="176" width="84" />
+            <vstem pos="430" width="84" />
           </hintset>
         </hintSetList>
       </data>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="acircumflextilde">
+<glyph format="1" name="acircumflextilde">
   <advance width="600" />
   <unicode hex="1EAB" />
   <outline>
@@ -62,10 +62,10 @@
       <point x="417" y="755" />
       <point x="410" y="740" />
       <point type="curve" x="388" y="740" />
-      <point x="344" y="740" />
+      <point name="hintSet0030" x="344" y="740" />
       <point x="312" y="782" />
       <point type="curve" x="251" y="782" />
-      <point name="hintSet0031" x="207" y="782" />
+      <point x="207" y="782" />
       <point x="192" y="743" />
       <point type="curve" x="190" y="707" />
       <point type="line" x="219" y="704" />
@@ -78,9 +78,16 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.30000000000000004</real>
+        <real>0.6294117647058824</real>
+        <integer>1</integer>
+        <integer>1</integer>
+      </array>
       <key>com.adobe.type.autohint</key>
       <data>
-        <hintSetList id="310b53a3e8111f6ad0264f470eb89314b0f8afd4dac75d32cc0ba49d7d255ebdd6e1a4beafd0226ab341557687b99cdb39b7e9400bac898f203520620da658dc">
+        <hintSetList id="2676080e41407a5c7d8708b0e0c3a95b017a80295b3f1e99b44e40e2088170b8e2b9d7c60fdc4e4ce0d6bdd54637ecb4100551fa5bfe1f463e591c7776358d2c">
           <hintset pointTag="hintSet0000">
             <hstem pos="-12" width="38" />
             <hstem pos="453" width="39" />
@@ -110,10 +117,12 @@
             <hstem pos="453" width="39" />
             <hstem pos="648" width="38" />
             <hstem pos="707" width="33" />
+            <hstem pos="749" width="33" />
             <vstem pos="92" width="45" />
             <vstem pos="421" width="29" />
+            <vstem pos="460" width="44" />
           </hintset>
-          <hintset pointTag="hintSet0031">
+          <hintset pointTag="hintSet0030">
             <hstem pos="-12" width="38" />
             <hstem pos="453" width="39" />
             <hstem pos="648" width="38" />
@@ -127,8 +136,10 @@
             <hstem pos="453" width="39" />
             <hstem pos="648" width="38" />
             <hstem pos="707" width="33" />
+            <hstem pos="749" width="33" />
             <vstem pos="92" width="45" />
             <vstem pos="421" width="29" />
+            <vstem pos="460" width="44" />
           </hintset>
         </hintSetList>
       </data>
