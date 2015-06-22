@@ -1,4 +1,4 @@
-# Created: Tue Jun  2 14:37:35 2015
+# Created: Sun Jun 21 21:16:39 2015
 # PS Name: SourceCodePro-BlackIt
 # MM Inst: None
 # exported from Defcon
@@ -8,7 +8,7 @@
 lookup MARK_BASE_above {
 	@bGC_A_above = [A D H I M O Q R T U Aogonek Dcroat Iogonek Oogonek Ohorn Oslash Tbar Uogonek Uhorn Eth];
 	@bGC_E_above = [E Eogonek];
-	@bGC_J_above = [J P];
+	@bGC_J_above = [J P Dhook];
 	@bGC_K_above = [K Eng];
 	@bGC_L_above = [L Lslash];
 	@bGC_N_above = [N V W X Y Z Schwa Eng.a];
@@ -82,6 +82,7 @@ lookup MARK_BASE_above {
 	pos base rturned <anchor 440 520> mark @MC_above;
 	pos base schwa <anchor 355 520> mark @MC_above;
 	pos base schwahookrhotic <anchor 250 520> mark @MC_above;
+	pos base ts <anchor 396 644> mark @MC_above;
 	pos base tturned <anchor 300 520> mark @MC_above;
 	pos base w <anchor 330 523> mark @MC_above;
 	pos base yturned <anchor 468 730> mark @MC_above;
@@ -158,7 +159,7 @@ lookup MARK_BASE_below {
 	@bGC_hturned_below = [hturned ysmall];
 	@bGC_i_below = [i t dotlessi tbar istroke istroke.d];
 	@bGC_j_below = [j dotlessj dotlessjstroke jcrossedtail jcrossedtail.d];
-	@bGC_k_below = [k oe gsmall rsmall];
+	@bGC_k_below = [k Dhook oe gsmall rsmall];
 	@bGC_l_below = [l lslash lmiddletilde lbelt];
 	@bGC_lsmall_below = [lsmall oesmall];
 	@bGC_p_below = [p thorn];
@@ -207,6 +208,7 @@ lookup MARK_BASE_below {
 	pos base s <anchor 266 -20> mark @MC_below;
 	pos base shook <anchor 256 -200> mark @MC_below;
 	pos base tretroflex <anchor 268 -200> mark @MC_below;
+	pos base ts <anchor 274 -20> mark @MC_below;
 	pos base tturned <anchor 260 -150> mark @MC_below;
 	pos base y <anchor 197 -200> mark @MC_below;
 } MARK_BASE_below;

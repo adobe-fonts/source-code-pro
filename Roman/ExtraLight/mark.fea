@@ -1,4 +1,4 @@
-# Created: Tue Jun  2 16:04:00 2015
+# Created: Sun Jun 21 21:16:51 2015
 # PS Name: SourceCodePro-ExtraLight
 # MM Inst: None
 # exported from Defcon
@@ -9,7 +9,7 @@ lookup MARK_BASE_above {
 	@bGC_AE_above = [AE Aie];
 	@bGC_A_above = [A D H I M O T U V W X Y Aogonek Dcroat Iogonek Oogonek Ohorn Oslash Tbar Uogonek Uhorn Eth Alpha Eta Iota Omicron Upsilon Omega Acyr Zhe Ocyr Ucyr Yeru Fita Izhitsa Ustraight Ustraightstroke Obarcyr];
 	@bGC_E_above = [E Eogonek Epsilon Ie];
-	@bGC_J_above = [J P Rho];
+	@bGC_J_above = [J P Dhook Rho];
 	@bGC_L_above = [L Lslash];
 	@bGC_N_above = [N Eng.a Ze Ka Ya];
 	@bGC_Z_above = [Z Schwa];
@@ -94,6 +94,7 @@ lookup MARK_BASE_above {
 	pos base rturned <anchor 410 500> mark @MC_above;
 	pos base soft <anchor 180 500> mark @MC_above;
 	pos base tesh <anchor 315 730> mark @MC_above;
+	pos base ts <anchor 330 630> mark @MC_above;
 	pos base tturned <anchor 224 500> mark @MC_above;
 	pos base yturned <anchor 430 740> mark @MC_above;
 	pos base yu <anchor 280 500> mark @MC_above;
@@ -160,7 +161,7 @@ lookup MARK_BASE_below {
 	@bGC_esh_below = [esh dotlessjstrokehook];
 	@bGC_g_below = [g shook];
 	@bGC_ghook_below = [ghook gscript ezh g.a];
-	@bGC_gsmall_below = [gsmall i.a dotlessi.a istroke.a istroke.da];
+	@bGC_gsmall_below = [gsmall ts i.a dotlessi.a istroke.a istroke.da];
 	@bGC_i_below = [i dotlessi istroke lsmall oesmall istroke.d];
 	@bGC_j_below = [j dotlessj dotlessjstroke jcrossedtail jcrossedtail.d];
 	@bGC_l_below = [l lslash lmiddletilde lbelt];
@@ -195,6 +196,7 @@ lookup MARK_BASE_below {
 	pos base @bGC_t_below <anchor 390 -20> mark @MC_below;
 	pos base B <anchor 305 -20> mark @MC_below;
 	pos base C <anchor 346 -20> mark @MC_below;
+	pos base Dhook <anchor 370 -20> mark @MC_below;
 	pos base F <anchor 181 -20> mark @MC_below;
 	pos base G <anchor 336 -20> mark @MC_below;
 	pos base K <anchor 349 -20> mark @MC_below;
