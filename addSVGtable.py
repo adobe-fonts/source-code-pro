@@ -84,9 +84,7 @@ def processFontFile(fontFilePath, svgFilePathsList):
 	if not svgDocsDict:
 		return
 
-	svgGIDsList = svgDocsDict.keys()
-	svgGIDsList.sort()
-	svgDocsList = [svgDocsDict[index] for index in svgGIDsList]
+	svgDocsList = [svgDocsDict[index] for index in sorted(svgDocsDict.keys())]
 
 	svgTable = S_V_G_.table_S_V_G_()
 	svgTable.docList = svgDocsList
