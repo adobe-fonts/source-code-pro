@@ -62,9 +62,6 @@ dieresisacutecmb.cap dieresisgravecmb.cap dieresismacroncmb.cap dieresiscaroncmb
 @I_LC = [i dotlessi igrave iacute icircumflex itilde idieresis imacron icaron iogonek ihoi idotbelow ibreve istroke iogonek.d istroke.d iukran i.sups];
 @I_LC_ALT = [i.a dotlessi.a igrave.a iacute.a icircumflex.a itilde.a idieresis.a imacron.a icaron.a iogonek.a ihoi.a idotbelow.a ibreve.a istroke.a iogonek.da istroke.da iukran.a i.supa];
 
-#@R_LC = [r racute rcommaaccent rcaron rdotaccent rdotbelow rdotbelowmacron rlinebelow rturned rlonglegturned];# rtail r.sups];
-#@R_LC_ALT = [r.a racute.a rcommaaccent.a rcaron.a rdotaccent.a rdotbelow.a rdotbelowmacron.a rlinebelow.a rturned.a rlonglegturned.a];# rtail.a r.supa];
-
 #--------------------------------------
 languagesystem DFLT dflt; # Default
 
@@ -89,10 +86,6 @@ lookup G_LC_ALT {
 lookup I_LC_ALT {
 	sub @I_LC by @I_LC_ALT;
 } I_LC_ALT;
-
-#lookup R_LC_ALT {
-#	sub @R_LC by @R_LC_ALT;
-#} R_LC_ALT;
 
 lookup ENG_UC_SAMI { # preferred Eng shape for Sami languages
 	sub Eng by Eng.a;
@@ -144,13 +137,13 @@ lookup DOLLAR_ALT {
 #	feature subs;
 #	feature sinf;
 #	feature onum;
-##	feature ss05;
 #	feature zero;
 #	feature case;
 #	feature ss01;
 #	feature ss02;
 #	feature ss03;
 #	feature ss04;
+#	feature ss05;
 #	feature ss06;
 #	feature salt;
 #} aalt;
