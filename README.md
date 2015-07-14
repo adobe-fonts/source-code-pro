@@ -5,7 +5,7 @@ in user interface (UI) environments. In addition to a functional OpenType font, 
 source project provides all of the source files that were used to build this OpenType font
 by using the AFDKO makeotf tool.
 
-## Download the fonts (OTF, TTF, WOFF, EOT)
+## Download the fonts (OTF, TTF, WOFF, WOFF2, EOT)
 
 * [Latest release](../../releases/latest)
 * [All releases](../../releases)
@@ -27,10 +27,10 @@ editor applications.
 
 ### Building one font
 
-The key to building OTF or TTF fonts is `makeotf`, which is part of the AFDKO toolset.  
+The key to building OTF or TTF fonts is `makeotf`, which is part of the AFDKO toolset.
 Information and usage instructions can be found by executing `makeotf -h`.
 
-In this repository, all necessary files are in place for building the OTF and TTF fonts.  
+In this repository, all necessary files are in place for building the OTF and TTF fonts.
 For example, build a binary OTF font for the Regular style like this:
 
 ```sh
@@ -40,7 +40,7 @@ $ makeotf -r
 
 ### Building all fonts
 
-For convenience, a shell script named `build.sh` is provided in the root directory.  
+For convenience, a shell script named `build.sh` is provided in the root directory.
 It builds all OTFs and TTFs, and can be executed by typing:
 
 ```sh
@@ -53,4 +53,4 @@ Send suggestions for changes to the Source Code OpenType font project maintainer
 
 ## Further information
 
-For information about the design and background of Source Code, please refer to the [official font readme file](https://rawgit.com/adobe-fonts/source-code-pro/master/SourceCodeProReadMe.html).
+For information about the design and background of Source Code, please refer to the [official font readme file](http://www.adobe.com/products/type/font-information/source-code-pro-readme.html).
