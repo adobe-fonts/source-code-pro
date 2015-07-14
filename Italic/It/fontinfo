@@ -1,0 +1,107 @@
+IsItalicStyle	true
+IsBoldStyle	false
+PreferOS/2TypoMetrics	false		# Must be 'false' for vertical layout cross-platform consistency
+IsOS/2WidthWeigthSlopeOnly	false	# Must be 'false' for OS/2 table version 3
+IsOS/2OBLIQUE	false
+UseOldNameID4	false
+LicenseCode	ADOBE
+
+#------------------------------------------------------
+
+begin FDDict LOWERCASE
+	BaselineYCoord 0
+	BaselineOvershoot -12
+	LcHeight 486
+	LcOvershoot 12
+	AscenderHeight 712
+	AscenderOvershoot 12
+	DescenderHeight -205
+	DescenderOvershoot -12
+	DominantV [86]
+	DominantH [68]
+	FlexOK false
+end FDDict LOWERCASE
+
+
+begin FDDict UPPERCASE
+	BaselineYCoord 0
+	BaselineOvershoot -12
+	CapHeight 656
+	CapOvershoot 12
+	DominantV [86]
+	DominantH [68]
+	FlexOK false
+end FDDict UPPERCASE
+
+
+begin FDDict FIGURES
+	BaselineYCoord 0
+	BaselineOvershoot -12
+	FigHeight 638
+	FigOvershoot 12
+	DominantV [86]
+	DominantH [68]
+	FlexOK false
+end FDDict FIGURES
+
+begin FDDict TEXT_FIGURES
+	BaselineYCoord 0
+	BaselineOvershoot -12
+	FigHeight 574
+	FigOvershoot 12
+	DominantV [86]
+	DominantH [68]
+	FlexOK false
+end FDDict TEXT_FIGURES
+
+#------------------------------------------------------
+
+begin GlyphSet UPPERCASE
+	#Latin
+		^([A-Z]|AE|OE|Germandbls|Eth|Thorn|Schwa|Eng|IJ)(acute|grave|circumflex|tilde|dieresis|macron|breve|ring|ringacute|caron|ogonek|dotbelow|hoi|stroke|linebelow|cedilla|dotaccent|croat|commaaccent|hook|brevebelow|bar|dotbelowmacron|slash|hungarumlaut|horn|cat|dot)?(acute|grave|hoi|tilde|dotbelow|macron|caron|.a)?$
+	#Greek
+		^(Alpha|Beta|Gamma|Delta|Epsilon|Zeta|Eta|Theta|Iota|Kappa|Lambda|Mu|Nu|Xi|Omicron|Pi|Rho|Sigma|Tau|Upsilon|Phi|Chi|Psi|Omega)(iotasub)?(tonos|grave|acute|dieresis|lenis|asper|breve|macron|.greek)?(grave|acute|tilde)?(.a|.alt)?$
+	#Cyrillic
+		^(A|E|I|O|U|Schwa)(grave|breve|dieresis|macron|gravedbl|straight|bar)?(acutedbl)?(cyr|short|ukran|straight)(stroke)?$
+		^(Be|Ve|Ghe|De|Ie|Zhe|Ze|Ka|El|Em|En|Pe|Er|Es|Te|Ef|Ha|Tse|Che|Sha|Shcha|Hard|Yeru|Soft|Yu|Ya|Io|Dje|Gje|Dze|Yi|Je|Lje|Nje|Tshe|Kje|Dzhe|Yat|Fita|Izhitsa|Shha|Palochka|Aie)(grave|breve|ukran|up|descender|stroke|bashkir)?$
+	#Punctuation
+		^(exclam|question|exclamdbl|questiondbl|exclamquestion|questionexclam|interrobang)$
+		^(trademark|registered|servicemark)$
+		^(ampersand|section|paragraph)$
+	#Cap figures
+		^(zero|one|two|three|four|five|six|seven|eight|nine)(.cap|\.0c)$
+	#Math
+		^(Delta|Omega).math$
+		^(universal|existential|lozenge|house|estimated)$
+end GlyphSet UPPERCASE
+
+
+begin GlyphSet LOWERCASE
+	#Latin
+		(dotless|germandbl|long)?([a-z]|eth|eng|schwa|rams|heng|lezh|esh|ezh|dezh|tesh)(acute|grave|circumflex|tilde|dieresis|macron|breve|ring|caron|ogonek|dotbelow|stroke|line|cedilla|dotaccent|croat|commaaccent|bar|greenlandic|slash|apostrophe|hungarumlaut|horn|cat|dot|turned|latin|hook|open|curl|tail|reversed|small|script|crossed|middle|belt|retroflex|longleg|fish|lottalstop|lick)?(acute|grave|hoi|tilde|dotbelow|below|macron|caron|turned|rhotic|reversed|tail|left|hook|inverted|stroke|alveolar|bilabial)?(closed|reversed|.a|.d|.da)?
+		^[afoi][eijl](acute|macron|small)?$
+		^(f)_(f|t)$
+	#Greek
+		^(alpha|beta|gamma|delta|epsilon|zeta|eta|theta|iota|kappa|lambda|mu|nu|xi|omicron|pi|rho|sigma|tau|upsilon|phi|chi|psi|omega)(dieresis|latin|.end|.a|.math)?(tonos|turned)?$
+		^(kai|stigma|koppa|sampi|digamma)$
+	#Cyrillic
+		^(a|e|i|o|u|ie|schwa)(grave|breve|dieresis|macron|gravedbl|straight|bar|acutedbl)?(cyr|short|ukran|stroke)?(.a)?$
+		^(be|ve|ghe|de|ie|zhe|ze|ka|el|em|en|pe|er|es|te|ef|ha|tse|che|sha|shcha|hard|yeru|soft|yu|ya|io|dje|gje|dze|yi|je|lje|nje|tshe|kje|dzhe|yat|fita|izhitsa|shha|palochka|aie)(grave|breve|ukran|up|descender|straight)?(stroke|bashkir|ital|.srb|.a)?$
+	#Punctuation
+		^(exclam|question|interrobang)down$
+		^(dagger|daggerdbl)$
+	#Math & Symbol
+		^(litre|heart|club|diamond|spade)$
+end GlyphSet LOWERCASE
+
+
+begin GlyphSet FIGURES
+		^(zero|one|two|three|four|five|six|seven|eight|nine)(\.0)?$
+		^(dollar|cent|sterling|yen|Euro|florin|colonmonetary|lira|naira|peseta|dong|peso|guarani|cedi|rupeeindian|won|hryvnia|tugrik|tenge|ruble|franc)(turkish)?$
+		^(percent|perthousand|numbersign|numero)$
+		^(zero|one|two|three|four|five|seven)(half|third|quarter|fifth|sixth|seventh|eighth|ninth|tenth)(s)?$
+end GlyphSet FIGURES
+
+begin GlyphSet TEXT_FIGURES
+		^(zero|one|two|three|four|five|six|seven|eight|nine)(.onum|\.0o)$
+end GlyphSet TEXT_FIGURES

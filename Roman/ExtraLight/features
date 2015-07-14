@@ -1,19 +1,18 @@
-
 table head {
-   FontRevision 1.017;
+   FontRevision 2.010;
 } head;
 
-include (../../features.family)
+include (../../family.fea);
 
-include (features.markclasses);
+include (markclasses.fea);
 
 feature mark {
-	include (../../widthsAdjust.mark)
-	include (features.mark)
+	include (../../widthsAdjust.fea);
+	include (mark.fea);
 } mark;
 
 feature mkmk {
-	include (features.mkmk);
+	include (mkmk.fea);
 } mkmk;
 
 table OS/2 {
@@ -29,7 +28,22 @@ table OS/2 {
 	CapHeight 660;
 	WeightClass 200;	# Extra-light (Ultra-light)
 	WidthClass 5;		# Medium (normal)
-	Vendor "ADBE";
+	Vendor "ADBO";
+	UnicodeRange 0  # Basic Latin
+	             1  # Latin-1 Supplement
+	             2  # Latin Extended-A
+	             4  # IPA Extensions
+	             5  # Spacing Modifier Letters
+	             6  # Combining Diacritical Marks
+	             7  # Greek
+	             9  # Cyrillic
+	             29 # Latin Extended Additional
+	             32 # Superscripts and Subscripts
+	             33 # Currency Symbols
+	             43 # Box Drawing
+	             44 # Block Elements
+	             45 # Geometric Shapes (override to force makeotf to turn this bit on)
+	             57;# beyond the BMP (Basic Multilingual Plane)
 } OS/2;
 
 table hhea {
@@ -39,4 +53,4 @@ table hhea {
 	LineGap 0;			# Must be zero for cross-platform consistency
 } hhea;
 
-include (../../features.tables)
+include (../../tables.fea);
