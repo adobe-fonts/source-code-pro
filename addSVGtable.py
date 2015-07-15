@@ -101,6 +101,8 @@ def processFontFile(fontFilePath, svgFilePathsList):
 	font.save(newFontFilePath)
 	os.rename(newFontFilePath, fontFilePath)
 
+	print >> sys.stdout, "\nSVG table successfully added to %s" % fontFilePath
+
 
 def validateSVGfiles(svgFilePathsList):
 	"""
