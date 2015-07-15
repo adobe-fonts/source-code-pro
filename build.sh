@@ -9,22 +9,24 @@ addSVG=$(cd $(dirname "$0") && pwd -P)/addSVGtable.py
 
 # clean existing build artifacts
 rm -rf target/
-mkdir target/ target/OTF/ target/TTF/
+otfDir="target/OTF"
+ttfDir="target/TTF"
+mkdir -p $otfDir $ttfDir
 
 for w in $romanWeights
 do
-  makeotf -f Roman/$w/font.ufo -r -o target/OTF/$family-$w.otf
-  makeotf -f Roman/$w/font.ttf -r -o target/TTF/$family-$w.ttf
+  makeotf -f Roman/$w/font.ufo -r -o $otfDir/$family-$w.otf
+  makeotf -f Roman/$w/font.ttf -r -o $ttfDir/$family-$w.ttf
   rm Roman/$w/current.fpr # remove default options file from the source tree after building
-  $addSVG target/OTF/$family-$w.otf svg/
-  $addSVG target/TTF/$family-$w.ttf svg/
+  "$addSVG" $otfDir/$family-$w.otf svg
+  "$addSVG" $ttfDir/$family-$w.ttf svg
 done
 
 for w in $italicWeights
 do
-  makeotf -f Italic/$w/font.ufo -r -o target/OTF/$family-$w.otf
-  makeotf -f Italic/$w/font.ttf -r -o target/TTF/$family-$w.ttf
+  makeotf -f Italic/$w/font.ufo -r -o $otfDir/$family-$w.otf
+  makeotf -f Italic/$w/font.ttf -r -o $ttfDir/$family-$w.ttf
   rm Italic/$w/current.fpr # remove default options file from the source tree after building
-  $addSVG target/OTF/$family-$w.otf svg/
-  $addSVG target/TTF/$family-$w.ttf svg/
+  "$addSVG" $otfDir/$family-$w.otf svg
+  "$addSVG" $ttfDir/$family-$w.ttf svg
 done
