@@ -99,6 +99,9 @@ def processFontFile(fontFilePath, svgFilePathsList):
 	newFontFilePath = os.path.join(folderPath, "%s%s%s" % ('.', fileNameNoExtension, fileExtension))
 
 	font.save(newFontFilePath)
+	font.close()
+	# On windows file can't be renamed to file what already exist.
+	os.remove(fontFilePath)
 	os.rename(newFontFilePath, fontFilePath)
 
 	print >> sys.stdout, "\nSVG table successfully added to %s" % fontFilePath
