@@ -40,11 +40,17 @@ $ makeotf -r
 
 ### Building all fonts
 
-For convenience, a shell script named `build.sh` is provided in the root directory.
+For convenience, a shell script named **build** is provided in the root directory.
 It builds all OTFs and TTFs, and can be executed by typing:
 
 ```sh
 $ ./build.sh
+```
+
+or this on Windows:
+
+```sh
+> build.cmd
 ```
 
 ## Getting Involved
