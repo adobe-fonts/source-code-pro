@@ -35,7 +35,7 @@ def readFile(filePath):
 
 
 def setIDvalue(data, gid):
-	id = re.search(r"<svg.+?(id=\".*?\").+?>", data, re.DOTALL)
+	id = re.search(r"<svg[^>]+?(id=\".*?\").+?>", data, re.DOTALL)
 	if id:
 		newData = re.sub(id.group(1), 'id="glyph%s"' % gid, data)
 	else:
