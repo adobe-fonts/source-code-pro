@@ -15,6 +15,8 @@ by using the AFDKO makeotf tool.
 * [Mac OS X](http://support.apple.com/kb/HT2509)
 * [Windows](https://www.microsoft.com/en-us/Typography/TrueTypeInstall.aspx)
 * [Linux/Unix-based systems](https://github.com/adobe-fonts/source-code-pro/issues/17#issuecomment-8967116)
+* Bower: run the following command,<br/>
+	`bower install git://github.com/adobe-fonts/source-code-pro.git#release`
 
 ## Building the fonts from source
 
