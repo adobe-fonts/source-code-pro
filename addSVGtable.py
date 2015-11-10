@@ -27,6 +27,13 @@ if StrictVersion(version) < StrictVersion(minFontToolsVersion):
 	sys.exit(1)
 
 
+# Regexp patterns
+reXMLheader = re.compile(r"<\?xml.+?\?>")
+reSVGelement = re.compile(r"<svg.+?>.+?</svg>", re.DOTALL)
+reIDvalue = re.compile(r"<svg[^>]+?(id=\".*?\").+?>", re.DOTALL)
+reViewBox = re.compile(r"<svg.+?(viewBox=[\"|\'][\d, ]+[\"|\']).+?>", re.DOTALL)
+
+
 def readFile(filePath):
 	f = open(filePath, "rt")
 	data = f.read()
@@ -35,7 +42,7 @@ def readFile(filePath):
 
 
 def setIDvalue(data, gid):
-	id = re.search(r"<svg[^>]+?(id=\".*?\").+?>", data, re.DOTALL)
+	id = reIDvalue.search(data)
 	if id:
 		newData = re.sub(id.group(1), 'id="glyph%s"' % gid, data)
 	else:
@@ -44,7 +51,7 @@ def setIDvalue(data, gid):
 
 
 def fixViewBox(data):
-	viewBox = re.search(r"<svg.+?(viewBox=[\"|\'][\d, ]+[\"|\']).+?>", data, re.DOTALL)
+	viewBox = reViewBox.search(data)
 	if not viewBox:
 		return data
 	fixedViewBox = 'viewBox=\"0 1000 1000 1000\"'
@@ -126,13 +133,13 @@ def validateSVGfiles(svgFilePathsList):
 		data = readFile(filePath)
 
 		# find <xml> header
-		xml = re.search(r"<\?xml.+?\?>", data)
+		xml = reXMLheader.search(data)
 		if not xml:
 			print "WARNING: Could not find <xml> header in the file. Skiping %s" % (filePath)
 			continue
 
 		# find <svg> blob
-		svg = re.search(r"<svg.+?>.+?</svg>", data, re.DOTALL)
+		svg = reSVGelement.search(data)
 		if not svg:
 			print "WARNING: Could not find <svg> element in the file. Skiping %s" % (filePath)
 			continue
