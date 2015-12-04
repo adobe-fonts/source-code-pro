@@ -24,6 +24,7 @@ by using the AFDKO makeotf tool.
 	`npm install --fetch-only git://github.com/adobe-fonts/source-code-pro.git#release`
 * npm 3.x<br/>
 	`npm install git://github.com/adobe-fonts/source-code-pro.git#release`
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ## Building the fonts from source
@@ -62,6 +63,8 @@ or this on Windows:
 ```sh
 > build.cmd
 ```
+=======
+>>>>>>> adobe-fonts/gh-pages
 
 =======
 >>>>>>> adobe-fonts/gh-pages
