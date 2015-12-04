@@ -22,10 +22,15 @@ by using the AFDKO makeotf tool.
 	`bower install git://github.com/adobe-fonts/source-code-pro.git#release`
 * npm 2.x<br/>
 	`npm install --fetch-only git://github.com/adobe-fonts/source-code-pro.git#release`
+<<<<<<< HEAD
 * npm 3.x<br/>
 	`npm install git://github.com/adobe-fonts/source-code-pro.git#release`
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/release
 
 <<<<<<< HEAD
 ## Building the fonts from source
@@ -64,10 +69,14 @@ or this on Windows:
 ```sh
 > build.cmd
 ```
+<<<<<<< HEAD
 =======
 >>>>>>> adobe-fonts/gh-pages
 =======
 >>>>>>> adobe-fonts/release
+=======
+>>>>>>> master
+>>>>>>> origin/release
 
 =======
 >>>>>>> adobe-fonts/gh-pages
