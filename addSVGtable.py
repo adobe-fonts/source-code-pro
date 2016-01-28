@@ -66,7 +66,6 @@ def getGlyphNameFromFileName(filePath):
 
 
 def processFontFile(fontFilePath, svgFilePathsList):
-	# retrieve the font's glyph order, to determine the GID later
 	font = ttLib.TTFont(fontFilePath)
 
 	# first create a dictionary because the SVG glyphs need to be sorted in the table
@@ -75,7 +74,7 @@ def processFontFile(fontFilePath, svgFilePathsList):
 		gName = getGlyphNameFromFileName(svgFilePath)
 		try:
 			gid = font.getGlyphID(gName)
-		except ValueError:
+		except KeyError:
 			print >> sys.stderr, "ERROR: Could not find a glyph named %s in the font %s." % (gName, os.path.split(fontFilePath)[1])
 			continue
 		svgItemsList = []
