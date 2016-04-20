@@ -105,7 +105,7 @@ def processFontFile(fontFilePath, svgFilePathsList):
 
 	font.save(newFontFilePath)
 	font.close()
-	# On windows file can't be renamed to file what already exist.
+	# On Windows a file can't be renamed to a file that already exists
 	os.remove(fontFilePath)
 	os.rename(newFontFilePath, fontFilePath)
 
