@@ -28,7 +28,6 @@ if StrictVersion(version) < StrictVersion(minFontToolsVersion):
 
 
 # Regexp patterns
-reXMLheader = re.compile(r"<\?xml.+?\?>")
 reSVGelement = re.compile(r"<svg.+?>.+?</svg>", re.DOTALL)
 reIDvalue = re.compile(r"<svg[^>]+?(id=\".*?\").+?>", re.DOTALL)
 reViewBox = re.compile(r"<svg.+?(viewBox=[\"|\'][\d, ]+[\"|\']).+?>", re.DOTALL)
@@ -115,9 +114,7 @@ def processFontFile(fontFilePath, svgFilePathsList):
 def validateSVGfiles(svgFilePathsList):
 	"""
 	Light validation of SVG files.
-	Checks that:
-		- there is an <xml> header
-		- there is an <svg> element
+	Checks that there is an <svg> element.
 	"""
 	validatedPaths = []
 
@@ -129,12 +126,6 @@ def validateSVGfiles(svgFilePathsList):
 
 		# read file
 		data = readFile(filePath)
-
-		# find <xml> header
-		xml = reXMLheader.search(data)
-		if not xml:
-			print "WARNING: Could not find <xml> header in the file. Skiping %s" % (filePath)
-			continue
 
 		# find <svg> blob
 		svg = reSVGelement.search(data)
