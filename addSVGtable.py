@@ -92,7 +92,6 @@ def processFontFile(fontFilePath, svgFilePathsList):
 
 	svgTable = S_V_G_.table_S_V_G_()
 	svgTable.docList = svgDocsList
-	svgTable.colorPalettes = None
 	font['SVG '] = svgTable
 
 	# FontTools can't overwrite a font on save,
