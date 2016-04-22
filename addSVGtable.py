@@ -12,7 +12,6 @@ from distutils.version import StrictVersion
 
 try:
 	from fontTools import ttLib, version
-	from fontTools.ttLib.tables import S_V_G_
 except ImportError:
 	print >> sys.stderr, "ERROR: FontTools Python module is not installed."
 	sys.exit(1)
@@ -26,6 +25,8 @@ if StrictVersion(version) < StrictVersion(minFontToolsVersion):
 	Get the latest version at https://github.com/behdad/fonttools" % (minFontToolsVersion, version)
 	sys.exit(1)
 
+
+TABLE_TAG = 'SVG '
 
 # Regexp patterns
 reSVGelement = re.compile(r"<svg.+?>.+?</svg>", re.DOTALL)
@@ -69,13 +70,16 @@ def processFontFile(fontFilePath, svgFilePathsList):
 
 	# first create a dictionary because the SVG glyphs need to be sorted in the table
 	svgDocsDict = {}
+
 	for svgFilePath in svgFilePathsList:
 		gName = getGlyphNameFromFileName(svgFilePath)
+
 		try:
 			gid = font.getGlyphID(gName)
 		except KeyError:
 			print >> sys.stderr, "ERROR: Could not find a glyph named %s in the font %s." % (gName, os.path.split(fontFilePath)[1])
 			continue
+
 		svgItemsList = []
 		svgItemData = readFile(svgFilePath)
 		svgItemData = setIDvalue(svgItemData, gid)
@@ -86,13 +90,14 @@ def processFontFile(fontFilePath, svgFilePathsList):
 
 	# don't do any changes to the source OTF/TTF font if there's no SVG data
 	if not svgDocsDict:
+		print >> sys.stderr, "ERROR: Could not find any artwork files that can be added to the font."
 		return
 
 	svgDocsList = [svgDocsDict[index] for index in sorted(svgDocsDict.keys())]
 
-	svgTable = S_V_G_.table_S_V_G_()
+	svgTable = ttLib.newTable(TABLE_TAG)
 	svgTable.docList = svgDocsList
-	font['SVG '] = svgTable
+	font[TABLE_TAG] = svgTable
 
 	# FontTools can't overwrite a font on save,
 	# so save to a hidden file, and then rename it
@@ -142,6 +147,7 @@ def getFontFormat(fontFilePath):
 	f = open(fontFilePath, "rb")
 	header = f.read(256)
 	head = header[:4]
+	f.close()
 	if head == "OTTO":
 		return "OTF"
 	elif head in ("\0\1\0\0", "true"):
