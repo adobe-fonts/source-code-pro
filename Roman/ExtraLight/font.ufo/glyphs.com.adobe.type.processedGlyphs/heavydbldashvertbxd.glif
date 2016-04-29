@@ -4,29 +4,37 @@
   <unicode hex="254F" />
   <outline>
     <contour>
-      <point name="hintSet0000" type="line" x="270" y="-75" />
-      <point type="line" x="330" y="-75" />
-      <point type="line" x="330" y="175" />
-      <point type="line" x="270" y="175" />
+      <point name="hintSet0000" type="line" x="270" y="450" />
+      <point type="line" x="330" y="450" />
+      <point type="line" x="330" y="750" />
+      <point type="line" x="270" y="750" />
     </contour>
     <contour>
-      <point type="line" x="270" y="425" />
-      <point type="line" x="330" y="425" />
-      <point type="line" x="330" y="675" />
-      <point type="line" x="270" y="675" />
+      <point type="line" x="270" y="-150" />
+      <point type="line" x="330" y="-150" />
+      <point type="line" x="330" y="150" />
+      <point type="line" x="270" y="150" />
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l270-75l330-75l330175l270175l270425l330425l330675l270675">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-75" width="250" />
-            <vstem pos="270" width="60" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l270450l330450l330750l270750l270-150l330-150l330150l270150</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -150 900</string>
+              <string>vstem 270 60</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>
