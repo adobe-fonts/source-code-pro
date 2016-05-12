@@ -7,6 +7,8 @@
 @LETTERS_MINISCULE_LATIN_ACCENTED = [aeacute aemacron aacute abreve abreveacute abrevedotbelow abrevegrave abrevehoi abrevetilde acaron acircumflex acircumflexacute acircumflexdotbelow acircumflexgrave acircumflexhoi acircumflextilde adieresis adotbelow agrave ahoi amacron aogonek aring aringacute atilde blinebelow cacute ccaron ccedilla ccircumflex cdotaccent dcaron ddotbelow dlinebelow eacute ebreve ecaron ecircumflex ecircumflexacute ecircumflexdotbelow ecircumflexgrave ecircumflexhoi ecircumflextilde edieresis edotaccent edotbelow egrave ehoi emacron emacronacute eogonek etilde gacute gbreve gcaron gcircumflex gcommaaccent gdotaccent gmacron gtilde hbar hbrevebelow hcircumflex hdotbelow iacute ibreve icaron icircumflex idieresis idotbelow igrave ihoi imacron iogonek itilde jcircumflex kcommaaccent kdotbelow klinebelow lacute lcaron lcommaaccent ldotbelow ldotbelowmacron llinebelow macute mdotaccent mdotbelow nacute ncaron ncommaaccent ndotaccent ndotbelow ngrave nlinebelow ntilde oacute obreve ocaron ocircumflex ocircumflexacute ocircumflexdotbelow ocircumflexgrave ocircumflexhoi ocircumflextilde odieresis odotbelow ograve ohoi ohorn ohornacute ohorndotbelow ohorngrave ohornhoi ohorntilde ohungarumlaut omacron omacronacute oogonek otilde oslashacute racute rcaron rcommaaccent rdotaccent rdotbelow rdotbelowmacron rlinebelow sacute scaron scedilla scircumflex scommaaccent sdotaccent sdotbelow tcaron tcedilla tcommaaccent tdotbelow tlinebelow uacute ubreve ucaron ucircumflex udieresis udieresisacute udieresiscaron udieresisgrave udieresismacron udotbelow ugrave uhoi uhorn uhornacute uhorndotbelow uhorngrave uhornhoi uhorntilde uhungarumlaut umacron uogonek uring utilde wacute wcircumflex wdieresis wgrave yacute ycircumflex ydieresis ydotaccent ydotbelow ygrave yhoi ytilde zacute zcaron zdotaccent zdotbelow zlinebelow ldot];
 @LETTERS_MINISCULE_LATIN_ADDL = [ae bstroke dcroat ghook lslash oslash oe tbar eth thorn schwa eng ij longs];
 @LETTERS_MINISCULE_LATIN_SUPERIOR = [a.sups b.sups c.sups d.sups e.sups f.sups g.sups h.sups i.sups j.sups k.sups l.sups m.sups n.sups o.sups p.sups q.sups r.sups s.sups t.sups u.sups v.sups w.sups x.sups y.sups z.sups];
+@LETTERS_MINISCULE_LATIN_ASCENDERS = [b d f h i j k l t bstroke dcroat lslash tbar eth thorn ij longs bhook dtail dhook ghook hhook henghook istroke jcrossedtail lmiddletilde lbelt lretroflex lezh philatin rlonglegturned esh dotlessjstrokehook tretroflex yturned dezh ts tesh glottalstop glottalstopreversed glottalstopstroke glottalstopstrokereversed clickalveolar clickbilabial];
+@LETTERS_MINISCULE_LATIN_DESCENDERS = [g j p q y thorn eng ij dtail dotlessjstroke ghook gscript gammalatin hturned henghook jcrossedtail kturned lretroflex lezh mlonglegturned mhook nhookleft nretroflex philatin rhookturned rtail shook esh dotlessjstrokehook tretroflex zretroflex ezh dezh tesh clickalveolar];
 
 @LETTERS_MAJUSCULE_GREEK_BASIC = [Alpha Beta Gamma Delta Epsilon Zeta Eta Theta Iota Kappa Lambda Mu Nu Xi Omicron Pi Rho Sigma Tau Upsilon Phi Chi Psi Omega];
 @LETTERS_MAJUSCULE_GREEK_TONOS = [Alphatonos Epsilontonos Etatonos Iotatonos Omicrontonos Upsilontonos Omegatonos];
@@ -148,7 +150,6 @@ lookup DOLLAR_ALT {
 #	feature salt;
 #} aalt;
 
-
 #--------------------------------------
 feature locl { # Localized Forms
 
@@ -171,7 +172,6 @@ feature locl { # Localized Forms
 
 } locl;
 
-
 #--------------------------------------
 lookup DECOMPOSITION {
 		sub Ecircumflex by E circumflexcmb;
@@ -185,6 +185,14 @@ lookup DECOMPOSITION {
 		sub Yi by I dieresiscmb;
 		sub yi by dotlessi dieresiscmb;
 } DECOMPOSITION;
+
+lookup ASC_RAISE_CMB {
+		pos breveinverteddoublecmb <0 80 0 -80>;
+} ASC_RAISE_CMB;
+
+lookup DSC_LOWER_CMB {
+		pos macrondoublebelowcmb <0 -140 0 140>;
+} DSC_LOWER_CMB;
 
 feature ccmp { # Glyph Composition / Decomposition
 
@@ -201,6 +209,18 @@ feature ccmp { # Glyph Composition / Decomposition
 		sub i.a' ogonekcmb' @MARKS_ABOVE_CMB by iogonek.da;
 		sub [i j iogonek iogonek.a istroke jcrossedtail]' @MARKS_ABOVE_CMB by [dotlessi dotlessj iogonek.d iogonek.da istroke.d jcrossedtail.d];
 	} GLYPH_COMPOSITION_CONTEXTUAL;
+
+	lookup ASC_RAISE_CMB_CONTEXTUAL {
+		# raises breveinverteddoublecmb when preceded or followed by ascending glyphs
+		pos @LETTERS_MINISCULE_LATIN_ASCENDERS breveinverteddoublecmb' lookup ASC_RAISE_CMB;
+		pos breveinverteddoublecmb' lookup ASC_RAISE_CMB @LETTERS_MINISCULE_LATIN_ASCENDERS;
+	} ASC_RAISE_CMB_CONTEXTUAL;
+
+	lookup DSC_LOWER_CMB_CONTEXTUAL {
+		# raises breveinverteddoublecmb when preceded or followed by ascending glyphs
+		pos @LETTERS_MINISCULE_LATIN_DESCENDERS macrondoublebelowcmb' lookup DSC_LOWER_CMB;
+		pos macrondoublebelowcmb' lookup DSC_LOWER_CMB @LETTERS_MINISCULE_LATIN_DESCENDERS;
+	} DSC_LOWER_CMB_CONTEXTUAL;
 
 	lookup MARKS_COMPOSITION {
 		sub dieresiscmb acutecmb by dieresisacutecmb;
@@ -257,7 +277,6 @@ feature ccmp { # Glyph Composition / Decomposition
 	} MAJUCSULE_ACCENTS_CMB_CONTEXT;
 
 } ccmp;
-
 
 #--------------------------------------
 feature cv01 { # Character Variant 1 (alternate lowercase a)
@@ -475,13 +494,11 @@ feature numr { # Numerators
 	} NUMR;
 } numr;
 
-
 #--------------------------------------
 feature dnom { # Denominators
 	sub @FIGURES_LINING by @FIGURES_DENOMINATOR;
 	sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_DENOMINATOR;
 } dnom;
-
 
 #--------------------------------------
 feature frac { # Fractions
@@ -501,7 +518,6 @@ feature frac { # Fractions
 	sub @FIGURES_DENOMINATOR @SPACE_FRAC [@FIGURES_NUMERATOR @PUNCTUATION_NUMERATOR]' by [@FIGURES_DENOMINATOR @PUNCTUATION_DENOMINATOR];
 } frac;
 
-
 #--------------------------------------
 feature ordn {
 	lookup SUPERIOR_LETTERS_MINISCULE {
@@ -509,7 +525,6 @@ feature ordn {
 		sub [egrave eacute schwa] by [egrave.sups eacute.sups schwa.sups];
 	} SUPERIOR_LETTERS_MINISCULE;
 } ordn;
-
 
 #--------------------------------------
 feature sups { # Superscript
@@ -526,7 +541,6 @@ feature sups { # Superscript
 
 } sups;
 
-
 #--------------------------------------
 feature subs { # Subscript
 	lookup INFERIOR {
@@ -535,18 +549,15 @@ feature subs { # Subscript
 	} INFERIOR;
 } subs;
 
-
 #--------------------------------------
 feature sinf { # Scientific Inferiors
 	lookup INFERIOR;
 } sinf;
 
-
 #--------------------------------------
 feature onum { # Oldstyle (Text) Figures
 	sub @FIGURES_LINING by @FIGURES_OLDSTYLE;
 } onum;
-
 
 #--------------------------------------
 feature case { # Case-Sensitive Forms
@@ -556,7 +567,6 @@ feature case { # Case-Sensitive Forms
 	sub at by at.case;
 	sub anoteleia by anoteleia.cap;
 } case;
-
 
 #--------------------------------------
 feature ss01 { # Stylistic Set 1 (typographic alternates)
@@ -573,7 +583,6 @@ feature ss01 { # Stylistic Set 1 (typographic alternates)
 
 } ss01;
 
-
 #--------------------------------------
 feature ss02 { # Stylistic Set 2 (alternate a, cursive beta)
 	featureNames {
@@ -588,7 +597,6 @@ feature ss02 { # Stylistic Set 2 (alternate a, cursive beta)
 	lookup BETA_LC_ALT;
 
 } ss02;
-
 
 #--------------------------------------
 feature ss03 { # Stylistic Set 3 (alternate g, cursive theta, Serbian be)
@@ -606,7 +614,6 @@ feature ss03 { # Stylistic Set 3 (alternate g, cursive theta, Serbian be)
 
 } ss03;
 
-
 #--------------------------------------
 feature ss04 { # Stylistic Set 4 (alternate i)
 	featureNames {
@@ -620,7 +627,6 @@ feature ss04 { # Stylistic Set 4 (alternate i)
 	lookup I_LC_ALT;
 
 } ss04;
-
 
 #--------------------------------------
 feature ss05 { # Stylistic Set 5 (alternate Sami uppercase Eng, cursive phi)
@@ -637,7 +643,6 @@ feature ss05 { # Stylistic Set 5 (alternate Sami uppercase Eng, cursive phi)
 
 } ss05;
 
-
 #--------------------------------------
 feature ss06 { # Stylistic Set 6 (alternate dollar sign)
 	featureNames {
@@ -652,12 +657,10 @@ feature ss06 { # Stylistic Set 6 (alternate dollar sign)
 
 } ss06;
 
-
 #--------------------------------------
 feature zero {
 	lookup ZERO_SLASH;
 } zero;
-
 
 #--------------------------------------
 feature salt { # Stylistic Alternates
@@ -673,7 +676,6 @@ feature salt { # Stylistic Alternates
 	lookup ASTERISK_ALT;
 	lookup DOLLAR_ALT;
 } salt;
-
 
 #-------------------------------------------
 feature size {
