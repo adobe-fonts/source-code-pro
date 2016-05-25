@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="udieresisgrave">
+	<unicode hex="01DC" />
   <advance width="600" />
-  <unicode hex="01DC" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="264" y="-12" />
@@ -63,48 +63,64 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="042260f04020434668e73eb3598e5d9ef33fdf32942d544db64a4b47c4d2bf070683ebd49990ef085a34020f8c499f6080a9e352bd97e9d8a1907fedc2d0e010">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="28" />
-            <hstem pos="478" width="-20" />
-            <hstem pos="602" width="64" />
-            <vstem pos="90" width="30" />
-            <vstem pos="460" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0003">
-            <hstem pos="21" width="-21" />
-            <hstem pos="478" width="-20" />
-            <hstem pos="602" width="64" />
-            <vstem pos="90" width="30" />
-            <vstem pos="460" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0008">
-            <hstem pos="-12" width="28" />
-            <hstem pos="478" width="-20" />
-            <hstem pos="602" width="64" />
-            <vstem pos="90" width="30" />
-            <vstem pos="460" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0014">
-            <hstem pos="-12" width="28" />
-            <hstem pos="478" width="-20" />
-            <hstem pos="602" width="64" />
-            <vstem pos="90" width="30" />
-            <vstem pos="176" width="64" />
-            <vstem pos="348" width="64" />
-            <vstem pos="460" width="30" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>042260f04020434668e73eb3598e5d9ef33fdf32942d544db64a4b47c4d2bf070683ebd49990ef085a34020f8c499f6080a9e352bd97e9d8a1907fedc2d0e010</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 28</string>
+              <string>hstem 478 -20</string>
+              <string>hstem 602 64</string>
+              <string>vstem 90 30</string>
+              <string>vstem 460 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0003</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 478 -20</string>
+              <string>hstem 602 64</string>
+              <string>vstem 90 30</string>
+              <string>vstem 460 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0008</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 28</string>
+              <string>hstem 478 -20</string>
+              <string>hstem 602 64</string>
+              <string>vstem 90 30</string>
+              <string>vstem 460 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0014</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 28</string>
+              <string>hstem 478 -20</string>
+              <string>hstem 602 64</string>
+              <string>vstem 90 30</string>
+              <string>vstem 176 64</string>
+              <string>vstem 348 64</string>
+              <string>vstem 460 30</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

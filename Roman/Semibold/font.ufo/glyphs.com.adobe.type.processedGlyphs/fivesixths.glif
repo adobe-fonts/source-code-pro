@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="fivesixths">
+<glyph format="1" name="fivesixths">
   <advance width="600" />
   <unicode hex="215A" />
   <outline>
@@ -15,9 +15,9 @@
       <point x="142" y="519" />
       <point type="curve" x="129" y="513" />
       <point type="line" x="136" y="565" />
-      <point type="line" x="272" y="565" />
+      <point name="hintSet0005" type="line" x="272" y="565" />
       <point type="line" x="272" y="636" />
-      <point type="line" x="70" y="636" />
+      <point name="hintSet0007" type="line" x="70" y="636" />
       <point type="line" x="55" y="479" />
       <point type="line" x="92" y="454" />
       <point x="111" y="466" />
@@ -92,32 +92,76 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="47eb23918f1084108d54736484df416962a33c5b37a2f49e9a896dce7fe532b0f7f75b9863a2f3cfe81d7f730ae5e0a4b6569c840db9c0aab1ebd0779baa5c9c">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="64" />
-            <hstem pos="137" width="53" />
-            <hstem pos="316" width="64" />
-            <hstem pos="474" width="48" />
-            <hstem pos="565" width="71" />
-            <vstem pos="62.5" width="70" />
-            <vstem pos="204" width="84" />
-            <vstem pos="311" width="78" />
-            <vstem pos="498" width="77" />
-          </hintset>
-          <hintset pointTag="hintSet0024">
-            <hstem pos="-12" width="64" />
-            <hstem pos="137" width="53" />
-            <hstem pos="256" width="64" />
-            <hstem pos="474" width="48" />
-            <hstem pos="565" width="71" />
-            <vstem pos="62.5" width="70" />
-            <vstem pos="311" width="78" />
-            <vstem pos="498" width="77" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>47eb23918f1084108d54736484df416962a33c5b37a2f49e9a896dce7fe532b0f7f75b9863a2f3cfe81d7f730ae5e0a4b6569c840db9c0aab1ebd0779baa5c9c</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 64</string>
+              <string>hstem 137 53</string>
+              <string>hstem 316 64</string>
+              <string>hstem 474 48</string>
+              <string>hstem 565 71</string>
+              <string>vstem 62.5 70</string>
+              <string>vstem 204 84</string>
+              <string>vstem 311 78</string>
+              <string>vstem 498 77</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0005</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 64</string>
+              <string>hstem 137 53</string>
+              <string>hstem 256 64</string>
+              <string>hstem 474 48</string>
+              <string>hstem 565 71</string>
+              <string>vstem 62.5 209.5</string>
+              <string>vstem 311 78</string>
+              <string>vstem 498 77</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0007</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 64</string>
+              <string>hstem 137 53</string>
+              <string>hstem 316 64</string>
+              <string>hstem 474 48</string>
+              <string>hstem 565 71</string>
+              <string>vstem 62.5 70</string>
+              <string>vstem 204 84</string>
+              <string>vstem 311 78</string>
+              <string>vstem 498 77</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0024</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 64</string>
+              <string>hstem 137 53</string>
+              <string>hstem 256 64</string>
+              <string>hstem 474 48</string>
+              <string>hstem 565 71</string>
+              <string>vstem 62.5 70</string>
+              <string>vstem 311 78</string>
+              <string>vstem 498 77</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="trademark">
+	<unicode hex="2122" />
   <advance width="600" />
-  <unicode hex="2122" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="91" y="366" />
@@ -24,9 +24,9 @@
       <point type="line" x="528" y="608" />
       <point type="line" x="532" y="608" />
       <point type="line" x="525" y="503" />
-      <point type="line" x="525" y="366" />
+      <point name="hintSet0018" type="line" x="525" y="366" />
       <point type="line" x="580" y="366" />
-      <point type="line" x="580" y="676" />
+      <point name="hintSet0020" type="line" x="580" y="676" />
       <point type="line" x="509" y="676" />
       <point type="line" x="465" y="562" />
       <point type="line" x="439" y="482" />
@@ -38,30 +38,71 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="560d17a87cdf3351076751858cdafc5e4662d3f3f5c4481b3bc3decd22772f2773ba05e30535b232583300b924f7f105fbaa328b4361a3f1ec334845e273f1c9">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="622" width="54" />
-            <vstem pos="91" width="60" />
-            <vstem pos="292" width="54" />
-            <vstem pos="525" width="55" />
-          </hintset>
-          <hintset pointTag="hintSet0011">
-            <hstem pos="421" width="61" />
-            <hstem pos="608" width="68" />
-            <vstem pos="91" width="60" />
-            <vstem pos="292" width="54" />
-            <vstem pos="525" width="55" />
-          </hintset>
-          <hintset pointTag="hintSet0026">
-            <hstem pos="622" width="54" />
-            <vstem pos="91" width="60" />
-            <vstem pos="292" width="54" />
-            <vstem pos="525" width="55" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>560d17a87cdf3351076751858cdafc5e4662d3f3f5c4481b3bc3decd22772f2773ba05e30535b232583300b924f7f105fbaa328b4361a3f1ec334845e273f1c9</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 622 54</string>
+              <string>vstem 91 60</string>
+              <string>vstem 292 54</string>
+              <string>vstem 525 55</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0011</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 421 61</string>
+              <string>hstem 608 68</string>
+              <string>vstem 91 60</string>
+              <string>vstem 292 54</string>
+              <string>vstem 525 55</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0018</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 366 310</string>
+              <string>vstem 91 60</string>
+              <string>vstem 292 54</string>
+              <string>vstem 525 55</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0020</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 421 61</string>
+              <string>hstem 608 68</string>
+              <string>vstem 91 60</string>
+              <string>vstem 292 54</string>
+              <string>vstem 525 55</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0026</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 622 54</string>
+              <string>vstem 91 60</string>
+              <string>vstem 292 54</string>
+              <string>vstem 525 55</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

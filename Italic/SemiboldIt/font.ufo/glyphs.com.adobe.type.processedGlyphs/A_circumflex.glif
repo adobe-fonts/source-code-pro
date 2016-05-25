@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Acircumflex">
+<glyph format="1" name="Acircumflex">
   <advance width="600" />
   <unicode hex="00C2" />
   <outline>
@@ -38,18 +38,26 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="f8be8f452653b8e43f1c2e6acb488cc79984c6b0f8657ff97dc87e4349d99688712a06f6128d83b8e87e80f00b29b9f9afab0bada3b52fead3c1dc8a06f3d3d0">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="184" width="82" />
-            <hstem pos="569" width="85" />
-            <hstem pos="787" width="63" />
-            <vstem pos="-33" width="580" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>f8be8f452653b8e43f1c2e6acb488cc79984c6b0f8657ff97dc87e4349d99688712a06f6128d83b8e87e80f00b29b9f9afab0bada3b52fead3c1dc8a06f3d3d0</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 184 82</string>
+              <string>hstem 569 85</string>
+              <string>hstem 787 63</string>
+              <string>vstem -33 580</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

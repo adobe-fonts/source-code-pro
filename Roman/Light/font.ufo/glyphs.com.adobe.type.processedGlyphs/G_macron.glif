@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Gmacron">
+	<unicode hex="1E20" />
   <advance width="600" />
-  <unicode hex="1E20" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="334" y="-12" />
@@ -44,26 +44,27 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="09545fbcb9b419c13517d2c6891523e9ceff2107525f823a447660520fcf9ea342b105b25120b0e06947e9b1101a9debfe99fe0e2cd2ea15563f2a912f8ff2b0">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="42" />
-            <hstem pos="285" width="39" />
-            <hstem pos="629" width="42" />
-            <hstem pos="743" width="36" />
-            <vstem pos="59" width="48" />
-            <vstem pos="480" width="45" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>09545fbcb9b419c13517d2c6891523e9ceff2107525f823a447660520fcf9ea342b105b25120b0e06947e9b1101a9debfe99fe0e2cd2ea15563f2a912f8ff2b0</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 42</string>
+              <string>hstem 285 39</string>
+              <string>hstem 629 42</string>
+              <string>hstem 743 36</string>
+              <string>vstem 59 48</string>
+              <string>vstem 480 45</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

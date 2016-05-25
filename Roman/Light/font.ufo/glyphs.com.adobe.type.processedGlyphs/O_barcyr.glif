@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Obarcyr">
+<glyph format="1" name="Obarcyr">
   <advance width="600" />
   <unicode hex="04E8" />
   <outline>
@@ -18,7 +18,7 @@
       <point x="155" y="-12" />
     </contour>
     <contour>
-      <point type="curve" x="300" y="630" />
+      <point name="hintSet0005" type="curve" x="300" y="630" />
       <point x="414" y="630" />
       <point x="490" y="534" />
       <point type="curve" x="499" y="369" />
@@ -27,7 +27,7 @@
       <point x="186" y="630" />
     </contour>
     <contour>
-      <point type="curve" x="300" y="29" />
+      <point name="hintSet0009" type="curve" x="300" y="29" />
       <point x="180" y="29" />
       <point x="102" y="135" />
       <point type="curve" x="100" y="331" />
@@ -38,18 +38,50 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="329783e01dc4340920614f0014f95bf96fec03daf49d3d97132febb7b82b01c05a897cdff54aab7006d85d784e9a9918ccb3dea1cba9da6da8516dadbd48543a">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="41" />
-            <hstem pos="331" width="38" />
-            <hstem pos="630" width="41" />
-            <vstem pos="54" width="46" />
-            <vstem pos="500" width="46" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>329783e01dc4340920614f0014f95bf96fec03daf49d3d97132febb7b82b01c05a897cdff54aab7006d85d784e9a9918ccb3dea1cba9da6da8516dadbd48543a</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 41</string>
+              <string>hstem 331 38</string>
+              <string>hstem 630 41</string>
+              <string>vstem 54 46</string>
+              <string>vstem 500 46</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0005</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 41</string>
+              <string>hstem 331 38</string>
+              <string>hstem 630 41</string>
+              <string>vstem 54 47</string>
+              <string>vstem 499 47</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0009</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 41</string>
+              <string>hstem 331 38</string>
+              <string>hstem 630 41</string>
+              <string>vstem 54 46</string>
+              <string>vstem 500 46</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

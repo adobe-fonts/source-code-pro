@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="palochka">
+	<unicode hex="04CF" />
   <advance width="600" />
-  <unicode hex="04CF" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="395" y="-12" />
@@ -26,23 +26,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600c395-12457-12492-2c54415l511123481111457107c434107392107353127c353188l353701l61701l61585l206585l20619420668271-12">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="119" />
-            <hstem pos="585" width="116" />
-            <vstem pos="206" width="147" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600c395-12457-12492-2c54415l511123481111457107c434107392107353127c353188l353701l61701l61585l206585l20619420668271-12</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 119</string>
+              <string>hstem 585 116</string>
+              <string>vstem 206 147</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

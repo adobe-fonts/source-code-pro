@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="hryvnia">
+<glyph format="1" name="hryvnia">
   <advance width="600" />
   <unicode hex="20B4" />
   <outline>
@@ -66,19 +66,27 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="56f1e84c4b2320a5f3784dd61b888b0b1221b20553171df402786bda6b036c32b4fca357d9e2c2a67ede54972b7864fa8b84e3fb15b0ae1748809cfd2db7df01">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="132" />
-            <hstem pos="208" width="84" />
-            <hstem pos="336" width="84" />
-            <hstem pos="514" width="132" />
-            <vstem pos="104" width="164" />
-            <vstem pos="322" width="164" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>56f1e84c4b2320a5f3784dd61b888b0b1221b20553171df402786bda6b036c32b4fca357d9e2c2a67ede54972b7864fa8b84e3fb15b0ae1748809cfd2db7df01</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 132</string>
+              <string>hstem 208 84</string>
+              <string>hstem 336 84</string>
+              <string>hstem 514 132</string>
+              <string>vstem 104 164</string>
+              <string>vstem 322 164</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

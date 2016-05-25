@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Uhorn">
+<glyph format="1" name="Uhorn">
   <advance width="600" />
   <unicode hex="01AF" />
   <outline>
@@ -39,27 +39,45 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="d4fe50c8a328cd1db2d9507cd292a3ee1a334d085119c9d71063c826d326000cc78fe27fb7bbd7c1efefff0722cb044c5008877a63f01fff14ea7bf65f892ddb">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="101" />
-            <vstem pos="72" width="116" />
-            <vstem pos="417" width="111" />
-          </hintset>
-          <hintset pointTag="hintSet0003">
-            <hstem pos="-12" width="101" />
-            <vstem pos="72" width="116" />
-            <vstem pos="417" width="111" />
-            <vstem pos="547" width="99" />
-          </hintset>
-          <hintset pointTag="hintSet0008">
-            <hstem pos="-12" width="101" />
-            <vstem pos="72" width="116" />
-            <vstem pos="417" width="111" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>d4fe50c8a328cd1db2d9507cd292a3ee1a334d085119c9d71063c826d326000cc78fe27fb7bbd7c1efefff0722cb044c5008877a63f01fff14ea7bf65f892ddb</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 101</string>
+              <string>vstem 72 116</string>
+              <string>vstem 417 111</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0003</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 101</string>
+              <string>vstem 72 116</string>
+              <string>vstem 417 111</string>
+              <string>vstem 547 99</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0008</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 101</string>
+              <string>vstem 72 116</string>
+              <string>vstem 417 111</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

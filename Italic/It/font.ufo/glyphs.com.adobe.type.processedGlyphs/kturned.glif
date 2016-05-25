@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="kturned">
+<glyph format="1" name="kturned">
   <advance width="600" />
   <unicode hex="029E" />
   <outline>
@@ -21,17 +21,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l316-205l392-205l531486l454486l428358l279239l151486l71486l223194l-50l880l405259l409259">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-184" width="-21" />
-            <hstem pos="21" width="-21" />
-            <hstem pos="486" width="-20" />
-            <vstem pos="-5" width="536" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l316-205l392-205l531486l454486l428358l279239l151486l71486l223194l-50l880l405259l409259</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -184 -21</string>
+              <string>hstem 21 -21</string>
+              <string>hstem 486 -20</string>
+              <string>vstem -5 536</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

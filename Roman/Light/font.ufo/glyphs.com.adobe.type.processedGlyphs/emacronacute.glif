@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="emacronacute">
+<glyph format="1" name="emacronacute">
   <advance width="600" />
   <unicode hex="1E17" />
   <outline>
@@ -29,7 +29,7 @@
       <point x="191" y="-12" />
     </contour>
     <contour>
-      <point type="curve" x="318" y="454" />
+      <point name="hintSet0010" type="curve" x="318" y="454" />
       <point x="416" y="454" />
       <point x="485" y="395" />
       <point type="curve" x="492" y="271" />
@@ -52,20 +52,42 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="ec975fdafe0ddd329715ad3d3449e7fb97fe363632fad934094a0b34936ebe6cf171a11c8599c3de35a8b9fe22bd0e07c7dd618c4053e036aff4dd856f9fa8ee">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="38" />
-            <hstem pos="233" width="38" />
-            <hstem pos="454" width="38" />
-            <hstem pos="606" width="36" />
-            <hstem pos="726" width="-20" />
-            <vstem pos="77" width="45" />
-            <vstem pos="492" width="40" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>ec975fdafe0ddd329715ad3d3449e7fb97fe363632fad934094a0b34936ebe6cf171a11c8599c3de35a8b9fe22bd0e07c7dd618c4053e036aff4dd856f9fa8ee</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 38</string>
+              <string>hstem 233 38</string>
+              <string>hstem 454 38</string>
+              <string>hstem 606 36</string>
+              <string>hstem 726 -20</string>
+              <string>vstem 77 45</string>
+              <string>vstem 492 40</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0010</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 38</string>
+              <string>hstem 233 38</string>
+              <string>hstem 454 38</string>
+              <string>hstem 606 36</string>
+              <string>hstem 726 -20</string>
+              <string>vstem 77 47</string>
+              <string>vstem 492 40</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

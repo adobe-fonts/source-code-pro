@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="dblvertbxd">
+	<unicode hex="2551" />
   <advance width="600" />
-  <unicode hex="2551" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="322" y="-400" />
-      <point type="line" x="365" y="-400" />
+      <point name="hintSet0001" type="line" x="365" y="-400" />
       <point type="line" x="365" y="1000" />
-      <point type="line" x="322" y="1000" />
+      <point name="hintSet0003" type="line" x="322" y="1000" />
     </contour>
     <contour>
       <point type="line" x="236" y="-400" />
@@ -27,6 +27,25 @@
           <dict>
             <key>pointTag</key>
             <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -400 1400</string>
+              <string>vstem 236 43</string>
+              <string>vstem 322 43</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0001</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -400 1400</string>
+              <string>vstem 236 129</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0003</string>
             <key>stems</key>
             <array>
               <string>hstem -400 1400</string>

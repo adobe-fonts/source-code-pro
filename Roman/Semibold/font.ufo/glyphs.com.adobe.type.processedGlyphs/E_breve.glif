@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Ebreve">
+	<unicode hex="0114" />
   <advance width="600" />
-  <unicode hex="0114" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="103" y="0" />
@@ -36,26 +36,27 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="b2b856f5f0127390f736fceadbb566e58d79092ccd7204ad782d9c7af0527f7054290eae47fe76ad2b3e024ffa92e3c99c2b1baccb029aa61071addc8859a6d1">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="98" />
-            <hstem pos="291" width="98" />
-            <hstem pos="556" width="98" />
-            <hstem pos="701" width="69" />
-            <vstem pos="103" width="116" />
-            <vstem pos="416" width="66" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>b2b856f5f0127390f736fceadbb566e58d79092ccd7204ad782d9c7af0527f7054290eae47fe76ad2b3e024ffa92e3c99c2b1baccb029aa61071addc8859a6d1</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 98</string>
+              <string>hstem 291 98</string>
+              <string>hstem 556 98</string>
+              <string>hstem 701 69</string>
+              <string>vstem 103 116</string>
+              <string>vstem 416 66</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

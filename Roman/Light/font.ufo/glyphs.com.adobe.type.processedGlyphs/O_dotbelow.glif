@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Odotbelow">
+	<unicode hex="1ECC" />
   <advance width="600" />
-  <unicode hex="1ECC" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="300" y="-12" />
@@ -48,26 +48,27 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="139caae2fcaf53e847123b9244a154642da997cd1681cd6427cac8fef6bef430fdc97dd52efbc885ae851d726700a684db4d08fca4fa2596ae169debda9148a5">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-197" width="96" />
-            <hstem pos="-12" width="42" />
-            <hstem pos="629" width="42" />
-            <vstem pos="54" width="48" />
-            <vstem pos="253" width="94" />
-            <vstem pos="498" width="48" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>139caae2fcaf53e847123b9244a154642da997cd1681cd6427cac8fef6bef430fdc97dd52efbc885ae851d726700a684db4d08fca4fa2596ae169debda9148a5</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -197 96</string>
+              <string>hstem -12 42</string>
+              <string>hstem 629 42</string>
+              <string>vstem 54 48</string>
+              <string>vstem 253 94</string>
+              <string>vstem 498 48</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="napostrophe">
+<glyph format="1" name="napostrophe">
   <advance width="600" />
   <unicode hex="0149" />
   <outline>
@@ -56,24 +56,37 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="3b12f6f26186f160cc98197e68553b6bda5951b026078ee4eaabae042d30f331b80c402feaa1219900e1de9442be1eac4a0caaef5872ba719ffd253c6fba6a3c">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="455" width="37" />
-            <hstem pos="577" width="123" />
-            <vstem pos="537" width="42" />
-          </hintset>
-          <hintset pointTag="hintSet0013">
-            <hstem pos="21" width="-21" />
-            <hstem pos="480" width="-20" />
-            <hstem pos="577" width="123" />
-            <vstem pos="78" width="130" />
-            <vstem pos="537" width="42" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>3b12f6f26186f160cc98197e68553b6bda5951b026078ee4eaabae042d30f331b80c402feaa1219900e1de9442be1eac4a0caaef5872ba719ffd253c6fba6a3c</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 455 37</string>
+              <string>hstem 577 123</string>
+              <string>vstem 537 42</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0013</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 480 -20</string>
+              <string>hstem 577 123</string>
+              <string>vstem 78 130</string>
+              <string>vstem 537 42</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

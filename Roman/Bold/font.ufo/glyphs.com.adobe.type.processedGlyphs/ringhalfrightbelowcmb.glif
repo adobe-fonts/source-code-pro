@@ -1,54 +1,85 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="ringhalfrightbelowcmb">
+	<unicode hex="0339" />
   <advance width="600" />
-  <unicode hex="0339" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="232" y="-258" />
-      <point x="352" y="-261" />
+      <point name="hintSet0001" x="352" y="-261" />
       <point x="398" y="-219" />
       <point type="curve" x="398" y="-156" />
-      <point x="398" y="-93" />
+      <point name="hintSet0002" x="398" y="-93" />
       <point x="352" y="-51" />
       <point type="curve" x="232" y="-55" />
       <point type="line" x="232" y="-109" />
-      <point x="280" y="-109" />
+      <point name="hintSet0004" x="280" y="-109" />
       <point x="300" y="-128" />
       <point type="curve" x="300" y="-156" />
-      <point x="300" y="-184" />
+      <point name="hintSet0005" x="300" y="-184" />
       <point x="280" y="-203" />
       <point type="curve" x="232" y="-203" />
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <integer>0</integer>
-          <key>isGlobal</key>
-          <false />
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string />
-          <key>x</key>
-          <integer>280</integer>
-          <key>y</key>
-          <integer>-138</integer>
-        </dict>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l232-258352-261398-219c398-156398-93352-51c232-55l232-109280-109300-128c300-156300-184280-203c232-203">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-258" width="55" />
-            <hstem pos="-109" width="54" />
-            <vstem pos="300" width="98" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l232-258352-261398-219c398-156398-93352-51c232-55l232-109280-109300-128c300-156300-184280-203c232-203</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -258 55</string>
+              <string>hstem -109 54</string>
+              <string>vstem 232 166</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0001</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -258 55</string>
+              <string>hstem -109 54</string>
+              <string>vstem 300 98</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0002</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -258 55</string>
+              <string>hstem -109 54</string>
+              <string>vstem 232 166</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0004</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -258 55</string>
+              <string>hstem -109 54</string>
+              <string>vstem 300 98</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0005</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -258 55</string>
+              <string>hstem -109 54</string>
+              <string>vstem 232 166</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

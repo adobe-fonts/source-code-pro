@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="checkedbox">
+<glyph format="1" name="checkedbox">
   <advance width="600" />
   <unicode hex="2611" />
   <outline>
@@ -42,18 +42,26 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="e49355139cac9165379e40887e3ca3a81781602aee654b8cfc7d0b9c81d5c616d1fb8bb4772d0faaba49a26bb9b8fb0d8fb22aedb9adbbff86a3676c71c86b83">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-10" width="33" />
-            <hstem pos="104.5" width="38.5" />
-            <hstem pos="604" width="65" />
-            <vstem pos="-23" width="33" />
-            <vstem pos="556" width="67" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>e49355139cac9165379e40887e3ca3a81781602aee654b8cfc7d0b9c81d5c616d1fb8bb4772d0faaba49a26bb9b8fb0d8fb22aedb9adbbff86a3676c71c86b83</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -10 33</string>
+              <string>hstem 104.5 38.5</string>
+              <string>hstem 604 65</string>
+              <string>vstem -23 33</string>
+              <string>vstem 556 67</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="caronbelowcmb">
+	<unicode hex="032C" />
   <advance width="600" />
-  <unicode hex="032C" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="250" y="-224" />
@@ -16,22 +16,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l250-224l350-224l462-87l422-49l302-157l298-157l178-49l138-87">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-224" width="67" />
-            <vstem pos="138" width="324" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l250-224l350-224l462-87l422-49l302-157l298-157l178-49l138-87</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -224 67</string>
+              <string>vstem 138 324</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

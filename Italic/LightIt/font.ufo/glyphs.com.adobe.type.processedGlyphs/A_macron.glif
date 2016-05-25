@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Amacron">
+<glyph format="1" name="Amacron">
   <advance width="600" />
   <unicode hex="0100" />
   <outline>
@@ -34,18 +34,26 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="52b79fbeb18287132baaeb6626510a32735082b2214e0683cf96a14b54d402f61506fa5142ea9ff4c3e0e3b98676f1e55873d0b3d8cfae5a2d665246f18f7857">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="229" width="35" />
-            <hstem pos="617" width="42" />
-            <hstem pos="734" width="34" />
-            <vstem pos="-12" width="523" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>52b79fbeb18287132baaeb6626510a32735082b2214e0683cf96a14b54d402f61506fa5142ea9ff4c3e0e3b98676f1e55873d0b3d8cfae5a2d665246f18f7857</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 229 35</string>
+              <string>hstem 617 42</string>
+              <string>hstem 734 34</string>
+              <string>vstem -12 523</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

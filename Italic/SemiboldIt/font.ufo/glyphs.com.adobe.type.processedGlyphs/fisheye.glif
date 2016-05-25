@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="fisheye">
+	<unicode hex="25C9" />
   <advance width="600" />
-  <unicode hex="25C9" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="300" y="90" />
@@ -48,33 +48,26 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <integer>0</integer>
-          <key>isGlobal</key>
-          <false />
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <integer>369</integer>
-          <key>y</key>
-          <integer>320</integer>
-        </dict>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="d8808c4e96f1287f97595fba4833778630b329cfb12e0bfe506d798a41f2e7f613e78f320fb6e95bac100b4c8fb33645cfa61c06496da1215ff7b7c6b1ff503d">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="90" width="58" />
-            <hstem pos="530" width="59" />
-            <vstem pos="52" width="61" />
-            <vstem pos="169" width="262" />
-            <vstem pos="487" width="61" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>d8808c4e96f1287f97595fba4833778630b329cfb12e0bfe506d798a41f2e7f613e78f320fb6e95bac100b4c8fb33645cfa61c06496da1215ff7b7c6b1ff503d</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 90 58</string>
+              <string>hstem 530 59</string>
+              <string>vstem 52 61</string>
+              <string>vstem 169 262</string>
+              <string>vstem 487 61</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

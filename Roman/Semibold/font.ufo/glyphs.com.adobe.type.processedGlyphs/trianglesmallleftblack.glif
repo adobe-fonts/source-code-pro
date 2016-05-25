@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="trianglesmallleftblack">
+	<unicode hex="25C2" />
   <advance width="600" />
-  <unicode hex="25C2" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="440" y="92" />
@@ -14,15 +14,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l44092l44392l443432l440432l131264l131261">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="92" width="340" />
-            <vstem pos="131" width="312" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l44092l44392l443432l440432l131264l131261</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 92 340</string>
+              <string>vstem 131 312</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

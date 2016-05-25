@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="quotedblbase">
+<glyph format="1" name="quotedblbase">
   <advance width="600" />
   <unicode hex="201E" />
   <outline>
@@ -8,7 +8,7 @@
       <point x="222" y="-172" />
       <point x="332" y="-68" />
       <point type="curve" x="332" y="70" />
-      <point name="hintSet0002" x="332" y="150" />
+      <point x="332" y="150" />
       <point x="290" y="196" />
       <point type="curve" x="222" y="196" />
       <point x="156" y="196" />
@@ -48,21 +48,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="2a3687fd77a3b5f72047c524853b40221e6aafa103136bcf1114b33d7860e90ca96ed5600a24ae2e7a8bb32da7b7ce8abe40625d2b5d151dcd4fe667e0b2e6af">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-204" width="400" />
-            <vstem pos="104" width="228" />
-            <vstem pos="384" width="228" />
-          </hintset>
-          <hintset pointTag="hintSet0002">
-            <hstem pos="-16" width="212" />
-            <vstem pos="104" width="228" />
-            <vstem pos="384" width="228" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>2a3687fd77a3b5f72047c524853b40221e6aafa103136bcf1114b33d7860e90ca96ed5600a24ae2e7a8bb32da7b7ce8abe40625d2b5d151dcd4fe667e0b2e6af</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 8 -21</string>
+              <string>vstem 104 228</string>
+              <string>vstem 384 228</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

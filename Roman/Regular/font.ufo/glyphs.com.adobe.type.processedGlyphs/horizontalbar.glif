@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="horizontalbar">
+	<unicode hex="2015" />
   <advance width="600" />
-  <unicode hex="2015" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="0" y="216" />
@@ -12,22 +12,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l0216l600216l600288l0288">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="216" width="72" />
-            <vstem pos="0" width="600" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l0216l600216l600288l0288</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 216 72</string>
+              <string>vstem 0 600</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

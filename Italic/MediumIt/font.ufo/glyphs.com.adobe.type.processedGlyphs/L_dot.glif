@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Ldot">
+	<unicode hex="013F" />
   <advance width="600" />
-  <unicode hex="013F" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="90" y="0" />
@@ -28,23 +28,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l900l5000l51678l19978l314655l221655c487282529282564316c564358564396538418c499418457418422383c422342422303451282">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="78" />
-            <hstem pos="282" width="136" />
-            <vstem pos="422" width="142" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l900l5000l51678l19978l314655l221655c487282529282564316c564358564396538418c499418457418422383c422342422303451282</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 78</string>
+              <string>hstem 282 136</string>
+              <string>vstem 422 142</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="bulletsquarewhite">
+	<unicode hex="25AB" />
   <advance width="600" />
-  <unicode hex="25AB" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="143" y="107" />
@@ -18,20 +18,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l143107l457107l457417l143417l204162l204362l396362l396162">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="107" width="55" />
-            <hstem pos="362" width="55" />
-            <vstem pos="143" width="61" />
-            <vstem pos="396" width="61" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l143107l457107l457417l143417l204162l204362l396362l396162</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 107 55</string>
+              <string>hstem 362 55</string>
+              <string>vstem 143 61</string>
+              <string>vstem 396 61</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

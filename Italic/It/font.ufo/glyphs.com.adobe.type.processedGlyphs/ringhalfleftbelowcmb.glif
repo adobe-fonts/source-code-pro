@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="ringhalfleftbelowcmb">
+	<unicode hex="031C" />
   <advance width="600" />
-  <unicode hex="031C" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="236" y="-262" />
@@ -22,16 +22,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600c236-262l243-226207-226185-209c185-174185-135217-108c267-106l274-70190-70133-113c133-179133-235179-265">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-262" width="36" />
-            <hstem pos="-106" width="36" />
-            <vstem pos="133" width="52" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600c236-262l243-226207-226185-209c185-174185-135217-108c267-106l274-70190-70133-113c133-179133-235179-265</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -262 36</string>
+              <string>hstem -106 36</string>
+              <string>vstem 133 52</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

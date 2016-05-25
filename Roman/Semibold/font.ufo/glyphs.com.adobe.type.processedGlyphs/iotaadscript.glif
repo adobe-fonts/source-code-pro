@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="iotaadscript">
+	<unicode hex="1FBE" />
   <advance width="600" />
-  <unicode hex="1FBE" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="352" y="-12" />
@@ -26,15 +26,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600c352-12387-12408-6c4262l411884008438982c381823568234193c341123341203344312c349411l232411l23212923242263-12">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="94" />
-            <vstem pos="232" width="109" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600c352-12387-12408-6c4262l411884008438982c381823568234193c341123341203344312c349411l232411l23212923242263-12</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 94</string>
+              <string>vstem 232 109</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

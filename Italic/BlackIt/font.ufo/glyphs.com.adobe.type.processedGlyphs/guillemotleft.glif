@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="guillemotleft">
+	<unicode hex="00AB" />
   <advance width="600" />
-  <unicode hex="00AB" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="168" y="20" />
@@ -24,22 +24,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l16820l24779l172244l316421l261484l53321l30193l44820l52779l452244l596421l541484l333321l310193">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="20" width="464" />
-            <vstem pos="30" width="566" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l16820l24779l172244l316421l261484l53321l30193l44820l52779l452244l596421l541484l333321l310193</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 20 464</string>
+              <string>vstem 30 566</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="undertie">
+	<unicode hex="203F" />
   <advance width="600" />
-  <unicode hex="203F" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="190" y="-230" />
@@ -22,15 +22,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600c190-230341-230505-191c654-108l618-35482-108322-130c210-13095-130-60-108c-170-35l-225-108-109-19139-230">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-230" width="100" />
-            <vstem pos="-225" width="879" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600c190-230341-230505-191c654-108l618-35482-108322-130c210-13095-130-60-108c-170-35l-225-108-109-19139-230</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -230 100</string>
+              <string>vstem -225 879</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

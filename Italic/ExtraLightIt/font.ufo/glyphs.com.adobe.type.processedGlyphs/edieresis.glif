@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="edieresis">
+<glyph format="1" name="edieresis">
   <advance width="600" />
   <unicode hex="00EB" />
   <outline>
@@ -74,27 +74,40 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="441e23337854537665d64be14d330ff0deb2c89ccae41b653c8a3570cc12f4f4fd17209c241a494c0f7c58d3520cb75c132f5f6e76288a2f32af8c6a200b494c">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="26" />
-            <hstem pos="242" width="26" />
-            <hstem pos="464" width="26" />
-            <vstem pos="76" width="28" />
-            <vstem pos="260" width="70" />
-            <vstem pos="488" width="28" />
-          </hintset>
-          <hintset pointTag="hintSet0021">
-            <hstem pos="-12" width="26" />
-            <hstem pos="242" width="26" />
-            <hstem pos="464" width="26" />
-            <vstem pos="76" width="28" />
-            <vstem pos="260" width="70" />
-            <vstem pos="426" width="70" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>441e23337854537665d64be14d330ff0deb2c89ccae41b653c8a3570cc12f4f4fd17209c241a494c0f7c58d3520cb75c132f5f6e76288a2f32af8c6a200b494c</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 26</string>
+              <string>hstem 242 26</string>
+              <string>hstem 464 26</string>
+              <string>vstem 76 28</string>
+              <string>vstem 260 70</string>
+              <string>vstem 488 28</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0021</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 26</string>
+              <string>hstem 242 26</string>
+              <string>hstem 464 26</string>
+              <string>vstem 76 28</string>
+              <string>vstem 260 70</string>
+              <string>vstem 426 70</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

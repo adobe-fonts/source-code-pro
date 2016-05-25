@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="dagger">
+	<unicode hex="2020" />
   <advance width="600" />
-  <unicode hex="2020" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="259" y="-80" />
@@ -20,16 +20,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l259-80l341-80l335478l483472l483554l335548l341712l259712l265548l117554l117472l265478">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="475" width="76" />
-            <hstem pos="712" width="-20" />
-            <vstem pos="262" width="76" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l259-80l341-80l335478l483472l483554l335548l341712l259712l265548l117554l117472l265478</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 475 76</string>
+              <string>hstem 712 -20</string>
+              <string>vstem 262 76</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

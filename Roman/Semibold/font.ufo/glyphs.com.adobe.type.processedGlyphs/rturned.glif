@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="rturned">
+	<unicode hex="0279" />
   <advance width="600" />
-  <unicode hex="0279" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="470" y="491" />
@@ -22,7 +22,7 @@
       <point type="curve" x="362" y="111" />
       <point type="line" x="365" y="111" />
       <point name="hintSet0009" type="line" x="375" y="0" />
-      <point type="line" x="470" y="0" />
+      <point name="hintSet0010" type="line" x="470" y="0" />
     </contour>
   </outline>
   <lib>
@@ -60,12 +60,22 @@
             <array>
               <string>hstem -12 102</string>
               <string>hstem 491 -20</string>
-              <string>vstem 354 116</string>
+              <string>vstem 370 100</string>
             </array>
           </dict>
           <dict>
             <key>pointTag</key>
             <string>hintSet0009</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 491 -20</string>
+              <string>vstem 370 100</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0010</string>
             <key>stems</key>
             <array>
               <string>hstem 21 -21</string>

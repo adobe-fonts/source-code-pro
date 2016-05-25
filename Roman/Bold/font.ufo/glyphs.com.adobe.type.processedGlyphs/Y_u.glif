@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Yu">
+<glyph format="1" name="Yu">
   <advance width="600" />
   <unicode hex="042E" />
   <outline>
@@ -11,17 +11,17 @@
       <point x="580" y="563" />
       <point x="510" y="664" />
       <point type="curve" x="386" y="664" />
-      <point x="291" y="664" />
+      <point name="hintSet0003" x="291" y="664" />
       <point x="227" y="584" />
       <point type="curve" x="214" y="400" />
       <point type="line" x="164" y="400" />
       <point type="line" x="164" y="652" />
       <point type="line" x="31" y="652" />
-      <point name="hintSet0007" type="line" x="31" y="0" />
+      <point type="line" x="31" y="0" />
       <point type="line" x="164" y="0" />
       <point type="line" x="164" y="272" />
-      <point type="line" x="213" y="272" />
-      <point name="hintSet0011" x="224" y="78" />
+      <point name="hintSet0010" type="line" x="213" y="272" />
+      <point x="224" y="78" />
       <point x="289" y="-12" />
     </contour>
     <contour>
@@ -41,35 +41,53 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="51a6679e517c0c59da52ac6df1cbf633a336a9771def7665b6f400a84e5e4893a9e988b9591561d793486fbd342f82058d16bc9157eaa8885503fb69809eb734">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="127" />
-            <hstem pos="272" width="128" />
-            <hstem pos="537" width="127" />
-            <vstem pos="31" width="133" />
-            <vstem pos="213" width="121" />
-            <vstem pos="438" width="142" />
-          </hintset>
-          <hintset pointTag="hintSet0007">
-            <hstem pos="21" width="-21" />
-            <hstem pos="272" width="128" />
-            <hstem pos="537" width="127" />
-            <vstem pos="31" width="133" />
-            <vstem pos="213" width="121" />
-            <vstem pos="438" width="142" />
-          </hintset>
-          <hintset pointTag="hintSet0011">
-            <hstem pos="-12" width="127" />
-            <hstem pos="272" width="128" />
-            <hstem pos="537" width="127" />
-            <vstem pos="31" width="133" />
-            <vstem pos="213" width="121" />
-            <vstem pos="438" width="142" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>51a6679e517c0c59da52ac6df1cbf633a336a9771def7665b6f400a84e5e4893a9e988b9591561d793486fbd342f82058d16bc9157eaa8885503fb69809eb734</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 127</string>
+              <string>hstem 272 128</string>
+              <string>hstem 537 127</string>
+              <string>vstem 31 133</string>
+              <string>vstem 213 121</string>
+              <string>vstem 438 142</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0003</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 272 128</string>
+              <string>hstem 537 127</string>
+              <string>vstem 31 133</string>
+              <string>vstem 214 120</string>
+              <string>vstem 438 142</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0010</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 127</string>
+              <string>hstem 272 128</string>
+              <string>hstem 537 127</string>
+              <string>vstem 31 133</string>
+              <string>vstem 213 121</string>
+              <string>vstem 438 142</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

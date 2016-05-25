@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="one.subs">
+<glyph format="1" name="one.subs">
   <advance width="600" />
   <outline>
     <contour>
@@ -20,16 +20,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l170-182l488-182l488-109l379-109l379208l310208276184245175c186166l186112l292112l292-109l170-109">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-182" width="73" />
-            <hstem pos="112" width="96" />
-            <vstem pos="292" width="87" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l170-182l488-182l488-109l379-109l379208l310208276184245175c186166l186112l292112l292-109l170-109</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -182 73</string>
+              <string>hstem 112 96</string>
+              <string>vstem 292 87</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

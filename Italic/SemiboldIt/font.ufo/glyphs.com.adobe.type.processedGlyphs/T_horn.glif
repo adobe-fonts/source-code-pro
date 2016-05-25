@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Thorn">
+	<unicode hex="00DE" />
   <advance width="600" />
-  <unicode hex="00DE" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="31" y="0" />
@@ -32,17 +32,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="169280106141a6c09820c2bdc9db3c7714b08ea3f227c774499f916799dc2d547dc211c59f64c4cf2a5a614f39212db45e3844cd016678cd5c2f03d87fe93c71">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="138" width="86" />
-            <hstem pos="461" width="86" />
-            <vstem pos="451" width="107" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>169280106141a6c09820c2bdc9db3c7714b08ea3f227c774499f916799dc2d547dc211c59f64c4cf2a5a614f39212db45e3844cd016678cd5c2f03d87fe93c71</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 138 86</string>
+              <string>hstem 461 86</string>
+              <string>vstem 451 107</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

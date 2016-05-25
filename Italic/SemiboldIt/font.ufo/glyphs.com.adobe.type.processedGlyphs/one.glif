@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="one">
+	<unicode hex="0031" />
   <advance width="600" />
-  <unicode hex="0031" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="32" y="0" />
@@ -21,26 +21,44 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l320l4710l48887l32987l440636l360636316611257595c189585l176517l309517l22287l5087">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="87" />
-            <hstem pos="517" width="119" />
-            <vstem pos="32" width="456" />
-          </hintset>
-          <hintset pointTag="hintSet0006">
-            <hstem pos="0" width="87" />
-            <hstem pos="517" width="68" />
-            <vstem pos="32" width="456" />
-          </hintset>
-          <hintset pointTag="hintSet0007">
-            <hstem pos="0" width="87" />
-            <hstem pos="517" width="119" />
-            <vstem pos="32" width="456" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l320l4710l48887l32987l440636l360636316611257595c189585l176517l309517l22287l5087</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 87</string>
+              <string>hstem 517 119</string>
+              <string>vstem 32 456</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0006</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 87</string>
+              <string>hstem 517 68</string>
+              <string>vstem 32 456</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0007</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 87</string>
+              <string>hstem 517 119</string>
+              <string>vstem 32 456</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

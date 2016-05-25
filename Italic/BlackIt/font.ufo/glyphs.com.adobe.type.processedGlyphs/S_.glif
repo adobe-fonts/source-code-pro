@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="S">
+	<unicode hex="0053" />
   <advance width="600" />
-  <unicode hex="0053" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="269" y="-12" />
@@ -48,34 +48,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>149.35786836283526</real>
-          <key>isGlobal</key>
-          <false />
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string />
-          <key>x</key>
-          <integer>501</integer>
-          <key>y</key>
-          <integer>341</integer>
-        </dict>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="be7881b46911d12a779540cc9d83f979cc08ccf82964d42795132286e6badb7a6e3b60d2f35625429471ee3919cebffb000877a5d798ad705ad9c9c294485cfa">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="137" />
-            <hstem pos="527" width="135" />
-            <vstem pos="110" width="165" />
-            <vstem pos="348" width="164" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>be7881b46911d12a779540cc9d83f979cc08ccf82964d42795132286e6badb7a6e3b60d2f35625429471ee3919cebffb000877a5d798ad705ad9c9c294485cfa</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 137</string>
+              <string>hstem 527 135</string>
+              <string>vstem 110 165</string>
+              <string>vstem 348 164</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

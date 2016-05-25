@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Adieresis">
+<glyph format="1" name="Adieresis">
   <advance width="600" />
   <unicode hex="00C4" />
   <outline>
@@ -56,19 +56,27 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="f1a4a25f2c727211bf163c8898410acc8aaa845321025dad8263375790fe1860cd41e991556303b956be77d58b90052cf659ab16d84e02ff94bf46370fd9c7fc">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="184" width="82" />
-            <hstem pos="569" width="85" />
-            <hstem pos="708" width="114" />
-            <vstem pos="237" width="111" />
-            <vstem pos="436" width="110" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>f1a4a25f2c727211bf163c8898410acc8aaa845321025dad8263375790fe1860cd41e991556303b956be77d58b90052cf659ab16d84e02ff94bf46370fd9c7fc</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 184 82</string>
+              <string>hstem 569 85</string>
+              <string>hstem 708 114</string>
+              <string>vstem 237 111</string>
+              <string>vstem 436 110</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

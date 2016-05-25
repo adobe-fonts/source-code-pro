@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="hungarumlautcmb">
+	<unicode hex="030B" />
   <advance width="600" />
-  <unicode hex="030B" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="304" y="571" />
@@ -18,15 +18,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l304571l432725l380759l263596l455571l583725l531759l413596">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="571" width="188" />
-            <vstem pos="263" width="320" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l304571l432725l380759l263596l455571l583725l531759l413596</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 725 -20</string>
+              <string>vstem 263 320</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="tugrik">
+<glyph format="1" name="tugrik">
   <advance width="600" />
   <unicode hex="20AE" />
   <outline>
@@ -18,7 +18,7 @@
       <point type="line" x="578" y="562" />
       <point type="line" x="592" y="637" />
       <point type="line" x="141" y="638" />
-      <point type="line" x="126" y="563" />
+      <point name="hintSet0014" type="line" x="126" y="563" />
       <point type="line" x="305" y="563" />
       <point type="line" x="267" y="373" />
       <point type="line" x="111" y="300" />
@@ -32,16 +32,34 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="d930ce0ae7beb3710eb652dbc764834016c343d1add42c54d948b90b03acde2fce9ba09b90ace893384c5cb28c53cb87b27f7bac1e3c4100680e0b9631e1749f">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="562" width="76" />
-            <vstem pos="88" width="504" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>d930ce0ae7beb3710eb652dbc764834016c343d1add42c54d948b90b03acde2fce9ba09b90ace893384c5cb28c53cb87b27f7bac1e3c4100680e0b9631e1749f</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 562 76</string>
+              <string>vstem 88 504</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0014</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 563 75</string>
+              <string>vstem 88 504</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

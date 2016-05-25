@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="schwa">
+<glyph format="1" name="schwa">
   <advance width="600" />
   <unicode hex="0259" />
   <outline>
@@ -40,18 +40,26 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="d3abcab789dbb5d295d754fa0183afde25219d4fe39a38477d8996b09755110532108a7cbb53a5457978f77943c5b2424ff64fbb096f094ae6a50625524ee872">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="28" />
-            <hstem pos="224" width="28" />
-            <hstem pos="462" width="28" />
-            <vstem pos="80" width="28" />
-            <vstem pos="498" width="32" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>d3abcab789dbb5d295d754fa0183afde25219d4fe39a38477d8996b09755110532108a7cbb53a5457978f77943c5b2424ff64fbb096f094ae6a50625524ee872</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 28</string>
+              <string>hstem 224 28</string>
+              <string>hstem 462 28</string>
+              <string>vstem 80 28</string>
+              <string>vstem 498 32</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

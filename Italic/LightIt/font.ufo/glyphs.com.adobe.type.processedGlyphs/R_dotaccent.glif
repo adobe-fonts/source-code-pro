@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Rdotaccent">
+<glyph format="1" name="Rdotaccent">
   <advance width="600" />
   <unicode hex="1E58" />
   <outline>
@@ -47,18 +47,26 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="e14e84ba75476bd20b60d242c5fb8eefbcb85d3f13adc94020882db8f08f61741ae97f5f4180f45670887b04eab91cb068558c66107c9395ad52b73e9a0edaf2">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="301" width="36" />
-            <hstem pos="623" width="36" />
-            <vstem pos="349" width="75" />
-            <vstem pos="494" width="43" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>e14e84ba75476bd20b60d242c5fb8eefbcb85d3f13adc94020882db8f08f61741ae97f5f4180f45670887b04eab91cb068558c66107c9395ad52b73e9a0edaf2</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 301 36</string>
+              <string>hstem 623 36</string>
+              <string>vstem 349 75</string>
+              <string>vstem 494 43</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

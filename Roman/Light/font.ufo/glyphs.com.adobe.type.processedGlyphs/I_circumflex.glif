@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Icircumflex">
+	<unicode hex="00CE" />
   <advance width="600" />
-  <unicode hex="00CE" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="107" y="0" />
@@ -30,25 +30,26 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="8dc34167754c6c1337b72f9d602991add087c6faa0645a1532a122f408466ceda675ce9594c12fb610fd03ebbd02b5c706985b541727625c0e59823744fb7faf">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="40" />
-            <hstem pos="619" width="40" />
-            <hstem pos="726" width="-20" />
-            <hstem pos="805" width="34" />
-            <vstem pos="277" width="46" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>8dc34167754c6c1337b72f9d602991add087c6faa0645a1532a122f408466ceda675ce9594c12fb610fd03ebbd02b5c706985b541727625c0e59823744fb7faf</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 40</string>
+              <string>hstem 619 40</string>
+              <string>hstem 726 -20</string>
+              <string>hstem 805 34</string>
+              <string>vstem 277 46</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

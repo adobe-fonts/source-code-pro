@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="OE">
+	<unicode hex="0152" />
   <advance width="600" />
-  <unicode hex="0152" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="259" y="0" />
@@ -23,7 +23,7 @@
       <point x="95" y="0" />
     </contour>
     <contour>
-      <point type="line" x="262" y="64" />
+      <point name="hintSet0014" type="line" x="262" y="64" />
       <point x="148" y="64" />
       <point x="107" y="134" />
       <point type="curve" x="107" y="251" />
@@ -36,17 +36,36 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="cf7e8ff47775605f1faab78f65db0a16175cc8be95fea4dcfd5c25f8239a6593b7aa091b35d79ea8c876aaacacc6ebe73b64d0505ee9a7c02efcf2cf569a826e">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="66" />
-            <hstem pos="312" width="66" />
-            <hstem pos="591" width="65" />
-            <vstem pos="27" width="80" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>cf7e8ff47775605f1faab78f65db0a16175cc8be95fea4dcfd5c25f8239a6593b7aa091b35d79ea8c876aaacacc6ebe73b64d0505ee9a7c02efcf2cf569a826e</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 66</string>
+              <string>hstem 312 66</string>
+              <string>hstem 591 65</string>
+              <string>vstem 27 80</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0014</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 64</string>
+              <string>hstem 312 66</string>
+              <string>hstem 593 63</string>
+              <string>vstem 27 80</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

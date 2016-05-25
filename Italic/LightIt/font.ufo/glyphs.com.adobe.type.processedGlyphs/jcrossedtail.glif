@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="jcrossedtail">
+<glyph format="1" name="jcrossedtail">
   <advance width="600" />
   <unicode hex="029D" />
   <outline>
@@ -66,19 +66,27 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="c1d31903f35a7660859cd65b04d6f39bcd9faf12060a87a533d4671d962885dfafeafe2e4bf8107b46f36285a81a9e061dd47e0b1aa6b7ee183c69c3317e1319">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-229" width="36" />
-            <hstem pos="-95" width="35" />
-            <hstem pos="444" width="36" />
-            <hstem pos="597" width="93" />
-            <vstem pos="-1" width="37" />
-            <vstem pos="373" width="91" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>c1d31903f35a7660859cd65b04d6f39bcd9faf12060a87a533d4671d962885dfafeafe2e4bf8107b46f36285a81a9e061dd47e0b1aa6b7ee183c69c3317e1319</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -229 36</string>
+              <string>hstem -95 35</string>
+              <string>hstem 444 36</string>
+              <string>hstem 597 93</string>
+              <string>vstem -1 37</string>
+              <string>vstem 373 91</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

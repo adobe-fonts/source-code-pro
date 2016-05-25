@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="dotlessj">
+	<unicode hex="0237" />
   <advance width="600" />
-  <unicode hex="0237" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="126" y="-212" />
@@ -26,19 +26,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600c126-212261-212327-138c354-4l453489l143489l127415l346415l263-1245-89205-137c124-13781-13748-122c19-101l-20-16711-18962-212">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-212" width="75" />
-            <hstem pos="415" width="74" />
-            <vstem pos="-20" width="473" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600c126-212261-212327-138c354-4l453489l143489l127415l346415l263-1245-89205-137c124-13781-13748-122c19-101l-20-16711-18962-212</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -212 75</string>
+              <string>hstem 415 74</string>
+              <string>vstem -20 473</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

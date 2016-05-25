@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="ecircumflex">
+<glyph format="1" name="ecircumflex">
   <advance width="600" />
   <unicode hex="00EA" />
   <outline>
@@ -56,19 +56,27 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="0bfe9893a946e5bb21bb49748620f21a4744cdf988f7375040bd83da8a3977d8ea12a33db81b088638f805e8722b3607e1c6b9830f4aab75eabf5c946a70ed1d">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="83" />
-            <hstem pos="217" width="74" />
-            <hstem pos="420" width="83" />
-            <hstem pos="670" width="72" />
-            <vstem pos="55" width="106" />
-            <vstem pos="431" width="100" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>0bfe9893a946e5bb21bb49748620f21a4744cdf988f7375040bd83da8a3977d8ea12a33db81b088638f805e8722b3607e1c6b9830f4aab75eabf5c946a70ed1d</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 83</string>
+              <string>hstem 217 74</string>
+              <string>hstem 420 83</string>
+              <string>hstem 670 72</string>
+              <string>vstem 55 106</string>
+              <string>vstem 431 100</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

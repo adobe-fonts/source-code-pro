@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="jcrossedtail">
+<glyph format="1" name="jcrossedtail">
   <advance width="600" />
   <unicode hex="029D" />
   <outline>
@@ -66,26 +66,39 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="86f50bc847069d910704ca3208aefc0fb94444160b030ec73acda10781f42096a8c2408ec9edd23d1b44b743ee8cfca91ee5ae2d47789f149522f4077b0cfc8c">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-234" width="28" />
-            <hstem pos="-108" width="28" />
-            <hstem pos="450" width="28" />
-            <vstem pos="80" width="32" />
-            <vstem pos="346" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0020">
-            <hstem pos="-234" width="28" />
-            <hstem pos="-108" width="28" />
-            <hstem pos="450" width="28" />
-            <hstem pos="600" width="84" />
-            <vstem pos="80" width="32" />
-            <vstem pos="310" width="80" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>86f50bc847069d910704ca3208aefc0fb94444160b030ec73acda10781f42096a8c2408ec9edd23d1b44b743ee8cfca91ee5ae2d47789f149522f4077b0cfc8c</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -234 28</string>
+              <string>hstem -108 28</string>
+              <string>hstem 450 28</string>
+              <string>vstem 80 32</string>
+              <string>vstem 346 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0020</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -234 28</string>
+              <string>hstem -108 28</string>
+              <string>hstem 450 28</string>
+              <string>hstem 600 84</string>
+              <string>vstem 80 32</string>
+              <string>vstem 310 80</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

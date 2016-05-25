@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="servicemark">
+	<unicode hex="2120" />
   <advance width="600" />
-  <unicode hex="2120" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="151" y="371" />
@@ -72,24 +72,37 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="adebeee3576228ded91f415995c1068cd8f3e5c400ceae8bfd9c6cc9912e35fd3b8242d61e0737e0803000218768652379abe3b5e6308c0ea167f2aa6ce07248">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="371" width="31" />
-            <hstem pos="651" width="30" />
-            <vstem pos="98" width="35" />
-            <vstem pos="216" width="35" />
-          </hintset>
-          <hintset pointTag="hintSet0017">
-            <hstem pos="371" width="31" />
-            <hstem pos="419" width="41" />
-            <hstem pos="631" width="45" />
-            <vstem pos="98" width="35" />
-            <vstem pos="216" width="35" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>adebeee3576228ded91f415995c1068cd8f3e5c400ceae8bfd9c6cc9912e35fd3b8242d61e0737e0803000218768652379abe3b5e6308c0ea167f2aa6ce07248</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 371 31</string>
+              <string>hstem 651 30</string>
+              <string>vstem 98 35</string>
+              <string>vstem 216 35</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0017</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 371 31</string>
+              <string>hstem 419 41</string>
+              <string>hstem 631 45</string>
+              <string>vstem 98 35</string>
+              <string>vstem 216 35</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

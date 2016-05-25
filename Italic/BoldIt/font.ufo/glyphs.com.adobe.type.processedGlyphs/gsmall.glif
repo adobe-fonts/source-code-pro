@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="gsmall">
+	<unicode hex="0262" />
   <advance width="600" />
-  <unicode hex="0262" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="288" y="-12" />
@@ -38,17 +38,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="215faf68901727d0d2eb225393453d516e1fc83808836962eeb2467717af8cb5e849858e8d842f33c18d4a0b366c4e34fa968158eba78c53899a2e8389be375c">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="105" />
-            <hstem pos="205" width="87" />
-            <hstem pos="403" width="105" />
-            <vstem pos="51" width="138" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>215faf68901727d0d2eb225393453d516e1fc83808836962eeb2467717af8cb5e849858e8d842f33c18d4a0b366c4e34fa968158eba78c53899a2e8389be375c</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 105</string>
+              <string>hstem 205 87</string>
+              <string>hstem 403 105</string>
+              <string>vstem 51 138</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

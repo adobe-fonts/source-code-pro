@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="caroncmb">
+	<unicode hex="030C" />
   <advance width="600" />
-  <unicode hex="030C" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="286" y="572" />
@@ -16,16 +16,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l286572l314572l432718l414734l302604l298604l186734l168718">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="572" width="32" />
-            <hstem pos="734" width="-20" />
-            <vstem pos="168" width="264" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l286572l314572l432718l414734l302604l298604l186734l168718</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 572 32</string>
+              <string>hstem 734 -20</string>
+              <string>vstem 168 264</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

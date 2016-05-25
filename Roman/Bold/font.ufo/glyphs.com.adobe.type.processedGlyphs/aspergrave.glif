@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="aspergrave">
+	<unicode hex="1FDD" />
   <advance width="600" />
-  <unicode hex="1FDD" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="226" y="575" />
@@ -28,22 +28,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600c226575l237633218637202645c202666202686222698c272701l265783156780105741c105682105611168584l367557l449573l416793l297770">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="701" width="82" />
-            <vstem pos="105" width="97" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600c226575l237633218637202645c202666202686222698c272701l265783156780105741c105682105611168584l367557l449573l416793l297770</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 701 82</string>
+              <string>vstem 105 97</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>
