@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="universal">
+<glyph format="1" name="universal">
   <advance width="600" />
   <unicode hex="2200" />
   <outline>
@@ -28,16 +28,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l591652l441652l401497l204497l165652l9652l2120l3880l301112286181266257c249322l234382l371382l356322339257321181c305112">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="112" />
-            <hstem pos="382" width="115" />
-            <vstem pos="9" width="582" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l591652l441652l401497l204497l165652l9652l2120l3880l301112286181266257c249322l234382l371382l356322339257321181c305112</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 112</string>
+              <string>hstem 382 115</string>
+              <string>vstem 9 582</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

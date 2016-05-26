@@ -10,53 +10,80 @@
       <point name="hintSet0003" type="line" x="315" y="1000" />
     </contour>
     <contour>
-      <point type="line" x="-15" y="255" />
-      <point name="hintSet0005" type="line" x="255" y="255" />
-      <point type="line" x="255" y="-400" />
-      <point type="line" x="285" y="-400" />
-      <point type="line" x="285" y="285" />
-      <point type="line" x="-15" y="285" />
-    </contour>
-    <contour>
-      <point name="hintSet0010" type="line" x="-15" y="315" />
-      <point type="line" x="285" y="315" />
+      <point name="hintSet0004" type="line" x="285" y="315" />
       <point type="line" x="285" y="1000" />
       <point type="line" x="255" y="1000" />
       <point type="line" x="255" y="345" />
       <point type="line" x="-15" y="345" />
+      <point type="line" x="-15" y="315" />
+    </contour>
+    <contour>
+      <point type="line" x="285" y="-400" />
+      <point name="hintSet0011" type="line" x="285" y="285" />
+      <point type="line" x="-15" y="285" />
+      <point type="line" x="-15" y="255" />
+      <point type="line" x="255" y="255" />
+      <point type="line" x="255" y="-400" />
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l315-400l345-400l3451000l3151000l-15255l255255l255-400l285-400l285285l-15285l-15315l285315l2851000l2551000l255345l-15345">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="315" width="30" />
-            <vstem pos="255" width="30" />
-            <vstem pos="315" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0001">
-            <hstem pos="315" width="30" />
-            <vstem pos="255" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0003">
-            <hstem pos="255" width="30" />
-            <hstem pos="315" width="30" />
-            <vstem pos="255" width="30" />
-            <vstem pos="315" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0005">
-            <hstem pos="255" width="30" />
-            <hstem pos="315" width="30" />
-            <vstem pos="255" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0010">
-            <hstem pos="315" width="30" />
-            <vstem pos="255" width="30" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l315-400l345-400l3451000l3151000l285315l2851000l2551000l255345l-15345l-15315l285-400l285285l-15285l-15255l255255l255-400</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 315 30</string>
+              <string>vstem 255 30</string>
+              <string>vstem 315 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0001</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 315 30</string>
+              <string>vstem 255 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0003</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 315 30</string>
+              <string>vstem 255 30</string>
+              <string>vstem 315 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0004</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 315 30</string>
+              <string>vstem 255 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0011</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 255 30</string>
+              <string>hstem 315 30</string>
+              <string>vstem 255 30</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>
