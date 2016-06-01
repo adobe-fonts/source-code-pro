@@ -1,4 +1,4 @@
-# Created: Tue Jul  7 16:01:43 2015
+# Created: Wed Jun  1 17:48:59 2016
 # PS Name: SourceCodePro-ExtraLight
 # MM Inst: None
 # exported from Defcon
@@ -20,7 +20,7 @@ lookup MARK_BASE_above {
 	@bGC_ccurl_above = [ccurl epsilon rho de el];
 	@bGC_d_above = [d dcroat];
 	@bGC_eopen_above = [eopen gsmall dotlessi.a istroke.da eta];
-	@bGC_esh_above = [esh dotlessjstrokehook];
+	@bGC_esh_above = [esh dotlessjstrokehook l.a lslash.a lmiddletilde.a lbelt.a];
 	@bGC_g_above = [g schwa gscript nsmall ezh g.a tse ya izhitsa];
 	@bGC_glottalstopreversed_above = [glottalstopreversed glottalstopstrokereversed];
 	@bGC_hhook_above = [hhook henghook];
@@ -114,7 +114,7 @@ lookup MARK_BASE_base {
 	@bGC_Z_base = [Z e z eopen];
 	@bGC_alphalatin_base = [alphalatin a.a];
 	@bGC_d_base = [d Schwa];
-	@bGC_i.a_base = [i.a dotlessi.a istroke.a];
+	@bGC_i.a_base = [i.a dotlessi.a istroke.a l.a lslash.a lmiddletilde.a lbelt.a];
 	@bGC_i_base = [i dotlessi istroke];
 	@bGC_l_base = [l t];
 	pos base @bGC_AE_base <anchor 460 0> mark @MC_base;
@@ -152,18 +152,18 @@ lookup MARK_BASE_base {
 
 
 lookup MARK_BASE_below {
-	@bGC_A_below = [A H I J M N O T U X Y a d o v w x Ohorn Tbar Uhorn Schwa dcroat ohorn oslash dhook alphalatin schwa eopenreversedclosed ramshorn hturned hsmall ismall nsmall obar rsmallinverted upsilonlatin vhook vturned wturned ysmall a.a Alpha Eta Omega omega circledotted];
+	@bGC_A_below = [A H I J M N O T U X Y a d o v w x Ohorn Tbar Uhorn Schwa dcroat ohorn oslash dhook alphalatin schwa eopenreversedclosed gammalatin ramshorn hturned hsmall ismall nsmall obar rsmallinverted upsilonlatin vhook vturned wturned ysmall a.a Alpha Eta Omega omega circledotted];
 	@bGC_D_below = [D f u Dcroat Eth uhorn ereversed ubar];
 	@bGC_E_below = [E c AE];
 	@bGC_L_below = [L Lslash ccurl tturned];
 	@bGC_R_below = [R S Z e h alphalatinturned bhook bsmall eopen hhook rsmall glottalstopreversed glottalstopstrokereversed];
 	@bGC_b_below = [b s Eng ae oe eth aturned yturned];
-	@bGC_dtail_below = [dtail gammalatin mhook philatin rhookturned];
+	@bGC_dtail_below = [dtail mhook philatin rhookturned];
 	@bGC_eng_below = [eng henghook tretroflex];
 	@bGC_esh_below = [esh dotlessjstrokehook];
 	@bGC_g_below = [g shook];
 	@bGC_ghook_below = [ghook gscript ezh g.a];
-	@bGC_gsmall_below = [gsmall ts i.a dotlessi.a istroke.a istroke.da];
+	@bGC_gsmall_below = [gsmall ts i.a dotlessi.a istroke.a istroke.da l.a lslash.a lmiddletilde.a lbelt.a];
 	@bGC_i_below = [i dotlessi istroke lsmall oesmall istroke.d];
 	@bGC_j_below = [j dotlessj dotlessjstroke jcrossedtail jcrossedtail.d];
 	@bGC_l_below = [l lslash lmiddletilde lbelt];
@@ -223,6 +223,8 @@ lookup MARK_BASE_below {
 
 
 lookup MARK_BASE_center {
+	@bGC_l.a_center = [l.a lslash.a];
+	pos base @bGC_l.a_center <anchor 342 400> mark @MC_center;
 	pos base L <anchor 174 330> mark @MC_center;
 	pos base circledotted <anchor 300 240> mark @MC_center;
 	pos base l <anchor 296 400> mark @MC_center;
@@ -239,21 +241,20 @@ lookup MARK_BASE_horn {
 
 lookup MARK_BASE_ogonek {
 	@bGC_A_ogonek = [A Aacute Adieresis Aring];
-	@bGC_E_ogonek = [E Eacute];
+	@bGC_E_ogonek = [E u a.a aacute.a adieresis.a aring.a];
 	@bGC_I_ogonek = [I O U Y o Odieresis odieresis schwa circledotted];
 	@bGC_a_ogonek = [a aacute adieresis aring];
 	@bGC_e_ogonek = [e eacute];
 	@bGC_i.a_ogonek = [i.a dotlessi.a];
 	@bGC_i_ogonek = [i dotlessi];
-	@bGC_u_ogonek = [u a.a aacute.a adieresis.a aring.a];
 	pos base @bGC_A_ogonek <anchor 512 0> mark @MC_ogonek;
-	pos base @bGC_E_ogonek <anchor 429 0> mark @MC_ogonek;
+	pos base @bGC_E_ogonek <anchor 430 0> mark @MC_ogonek;
 	pos base @bGC_I_ogonek <anchor 300 0> mark @MC_ogonek;
 	pos base @bGC_a_ogonek <anchor 440 0> mark @MC_ogonek;
 	pos base @bGC_e_ogonek <anchor 406 0> mark @MC_ogonek;
 	pos base @bGC_i.a_ogonek <anchor 340 0> mark @MC_ogonek;
 	pos base @bGC_i_ogonek <anchor 360 0> mark @MC_ogonek;
-	pos base @bGC_u_ogonek <anchor 430 0> mark @MC_ogonek;
+	pos base Eacute <anchor 429 0> mark @MC_ogonek;
 	pos base Schwa <anchor 310 0> mark @MC_ogonek;
 	pos base y <anchor 240 -120> mark @MC_ogonek;
 } MARK_BASE_ogonek;

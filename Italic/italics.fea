@@ -66,6 +66,7 @@ languagesystem DFLT dflt; # Default
 languagesystem latn dflt; # Latin default
 	languagesystem latn NSM; # Northern Sami
 	languagesystem latn SKS; # Skolt Sami
+	languagesystem latn ATH; # Athapaskan
 
 languagesystem grek dflt; # Greek default
 
@@ -120,6 +121,10 @@ lookup ASTERISK_ALT {
 lookup DOLLAR_ALT {
 	sub dollar by dollar.a;
 } DOLLAR_ALT;
+
+lookup ONE_ALT {
+	sub [one one.onum one.cap] by [one.a one.ao one.ac];
+} ONE_ALT;
 
 #--------------------------------------
 #feature aalt { # Access All Alternates
@@ -623,6 +628,20 @@ feature ss06 { # Stylistic Set 6 (alternate dollar sign)
 } ss06;
 
 #--------------------------------------
+feature ss07 { # Stylistic Set 7 (alternate numeral one [1])
+	featureNames {
+		name 3 1 0x0409 "alternate numeral one [1]"; # English US
+		name 3 1 0x0809 "alternate numeral one [1]"; # English GB
+		name 1 0 0 "slashed dollar sign [$]"; # Mac English
+#		name 3 1 0x0408 "\03C3\03CD\03BC\03B2\03BF\03BB\03BF \03C4\03BF\03C5 \03B4\03BF\03BB\03B1\03C1\03AF\03BF\03C5 \03BC\03B5 \03BA\03AC\03B8\03B5\03C4\03BF [$]"; # Greek
+#		name 3 1 0x0419 "\0437\0430\0447\0435\0440\043A\043D\0443\0442\044B\0439 \0437\043D\0430\043A \0434\043E\043B\043B\0430\0440\0430 [$]"; # Russian
+	};
+	
+	lookup ONE_ALT;
+
+} ss07;
+
+#--------------------------------------
 feature zero {
 	lookup ZERO_SLASH;
 } zero;
@@ -640,6 +659,7 @@ feature salt { # Stylistic Alternates
 	lookup HYPHEN_ALT;
 	lookup ASTERISK_ALT;
 	lookup DOLLAR_ALT;
+	lookup ONE_ALT;
 } salt;
 
 #-------------------------------------------

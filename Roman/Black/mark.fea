@@ -1,4 +1,4 @@
-# Created: Tue Jul  7 16:01:41 2015
+# Created: Wed Jun  1 17:48:57 2016
 # PS Name: SourceCodePro-Black
 # MM Inst: None
 # exported from Defcon
@@ -28,6 +28,7 @@ lookup MARK_BASE_above {
 	@bGC_hturned_above = [hturned ezh];
 	@bGC_i.a_above = [i.a iogonek.a istroke.a];
 	@bGC_i_above = [i j iogonek istroke];
+	@bGC_l.a_above = [l.a lslash.a lmiddletilde.a lbelt.a];
 	@bGC_l_above = [l lslash lmiddletilde lbelt lretroflex];
 	@bGC_n_above = [n oe eng];
 	@bGC_o_above = [o v w x oogonek ohorn oslash gammalatin ramshorn hsmall ismall kturned mlonglegturned obar upsilonlatin vturned wturned ysmall zcurl omicron omega zhe em en ocyr pe te sha shcha yeru ecyr yu fita circledotted];
@@ -61,6 +62,7 @@ lookup MARK_BASE_above {
 	pos base @bGC_hturned_above <anchor 294 520> mark @MC_above;
 	pos base @bGC_i.a_above <anchor 324 770> mark @MC_above;
 	pos base @bGC_i_above <anchor 344 770> mark @MC_above;
+	pos base @bGC_l.a_above <anchor 324 730> mark @MC_above;
 	pos base @bGC_l_above <anchor 270 730> mark @MC_above;
 	pos base @bGC_n_above <anchor 314 520> mark @MC_above;
 	pos base @bGC_o_above <anchor 300 520> mark @MC_above;
@@ -119,7 +121,7 @@ lookup MARK_BASE_base {
 	@bGC_ae_base = [ae oe];
 	@bGC_alphalatin_base = [alphalatin a.a];
 	@bGC_e_base = [e s Schwa eopen];
-	@bGC_i.a_base = [i.a dotlessi.a istroke.a];
+	@bGC_i.a_base = [i.a dotlessi.a istroke.a l.a lslash.a lmiddletilde.a];
 	@bGC_i_base = [i dotlessi istroke];
 	pos base @bGC_C_base <anchor 340 0> mark @MC_base;
 	pos base @bGC_D_base <anchor 280 0> mark @MC_base;
@@ -163,7 +165,7 @@ lookup MARK_BASE_below {
 	@bGC_esh_below = [esh dotlessjstrokehook];
 	@bGC_ghook_below = [ghook gscript nhookleft philatin g.a];
 	@bGC_glottalstop_below = [glottalstop glottalstopstroke];
-	@bGC_i.a_below = [i.a dotlessi.a istroke.a istroke.da];
+	@bGC_i.a_below = [i.a dotlessi.a istroke.a istroke.da l.a lslash.a lmiddletilde.a lbelt.a];
 	@bGC_i_below = [i dotlessi istroke istroke.d];
 	@bGC_j_below = [j dotlessj dotlessjstroke];
 	@bGC_jcrossedtail_below = [jcrossedtail jcrossedtail.d];
@@ -228,6 +230,7 @@ lookup MARK_BASE_center {
 	pos base L <anchor 180 350> mark @MC_center;
 	pos base circledotted <anchor 300 250> mark @MC_center;
 	pos base l <anchor 274 360> mark @MC_center;
+	pos base l.a <anchor 328 360> mark @MC_center;
 } MARK_BASE_center;
 
 
