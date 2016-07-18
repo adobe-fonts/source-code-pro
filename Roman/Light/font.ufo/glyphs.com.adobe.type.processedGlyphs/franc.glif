@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="franc">
+<glyph format="1" name="franc">
   <advance width="600" />
   <unicode hex="20A3" />
   <outline>
@@ -26,23 +26,36 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l1600l2050l205140l376140l376176l205176l205319l478319l478358l205358l205600l531600l531639l160639l160176l78173l78140l160140">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="176" />
-            <hstem pos="319" width="39" />
-            <hstem pos="600" width="39" />
-            <vstem pos="160" width="45" />
-          </hintset>
-          <hintset pointTag="hintSet0002">
-            <hstem pos="140" width="36" />
-            <hstem pos="319" width="39" />
-            <hstem pos="600" width="39" />
-            <vstem pos="160" width="45" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l1600l2050l205140l376140l376176l205176l205319l478319l478358l205358l205600l531600l531639l160639l160176l78173l78140l160140</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 176</string>
+              <string>hstem 319 39</string>
+              <string>hstem 600 39</string>
+              <string>vstem 160 45</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0002</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 140 36</string>
+              <string>hstem 319 39</string>
+              <string>hstem 600 39</string>
+              <string>vstem 160 45</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

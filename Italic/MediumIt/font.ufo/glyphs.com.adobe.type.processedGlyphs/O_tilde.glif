@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Otilde">
+	<unicode hex="00D5" />
   <advance width="600" />
-  <unicode hex="00D5" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="253" y="-12" />
@@ -56,48 +56,64 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="1eaae132717eb858aa0e9b03e5e415ec5704123b58c749f11dcf86dd98abf81f7e6c72cf9c5b457b045daf275ae281b3badad31542c3379d110aa06da469d0a2">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="80" />
-            <hstem pos="587" width="80" />
-            <hstem pos="715" width="-20" />
-            <hstem pos="773" width="71" />
-            <vstem pos="38" width="95" />
-            <vstem pos="475" width="95" />
-          </hintset>
-          <hintset pointTag="hintSet0010">
-            <hstem pos="-12" width="80" />
-            <hstem pos="587" width="80" />
-            <hstem pos="705" width="70" />
-            <vstem pos="38" width="95" />
-            <vstem pos="475" width="95" />
-          </hintset>
-          <hintset pointTag="hintSet0015">
-            <hstem pos="-12" width="80" />
-            <hstem pos="587" width="80" />
-            <hstem pos="715" width="-20" />
-            <hstem pos="773" width="71" />
-            <vstem pos="38" width="95" />
-            <vstem pos="475" width="95" />
-          </hintset>
-          <hintset pointTag="hintSet0018">
-            <hstem pos="-12" width="80" />
-            <hstem pos="587" width="80" />
-            <hstem pos="705" width="70" />
-            <vstem pos="38" width="95" />
-            <vstem pos="475" width="95" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>1eaae132717eb858aa0e9b03e5e415ec5704123b58c749f11dcf86dd98abf81f7e6c72cf9c5b457b045daf275ae281b3badad31542c3379d110aa06da469d0a2</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 80</string>
+              <string>hstem 587 80</string>
+              <string>hstem 715 -20</string>
+              <string>hstem 773 71</string>
+              <string>vstem 38 95</string>
+              <string>vstem 475 95</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0010</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 80</string>
+              <string>hstem 587 80</string>
+              <string>hstem 705 70</string>
+              <string>vstem 38 95</string>
+              <string>vstem 475 95</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0015</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 80</string>
+              <string>hstem 587 80</string>
+              <string>hstem 715 -20</string>
+              <string>hstem 773 71</string>
+              <string>vstem 38 95</string>
+              <string>vstem 475 95</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0018</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 80</string>
+              <string>hstem 587 80</string>
+              <string>hstem 705 70</string>
+              <string>vstem 38 95</string>
+              <string>vstem 475 95</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

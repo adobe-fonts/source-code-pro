@@ -1,4 +1,4 @@
-# Created: Tue Jul  7 16:01:42 2015
+# Created: Wed Jun  1 17:48:58 2016
 # PS Name: SourceCodePro-Bold
 # MM Inst: None
 # exported from Defcon
@@ -31,6 +31,7 @@ lookup MARK_BASE_above {
 	@bGC_hhook_above = [hhook henghook];
 	@bGC_i.a_above = [i.a iogonek.a istroke.a];
 	@bGC_i_above = [i j iogonek istroke];
+	@bGC_l.a_above = [l.a lslash.a lmiddletilde.a lbelt.a];
 	@bGC_l_above = [l lslash lmiddletilde lbelt lretroflex];
 	@bGC_n_above = [n oe eng eopenreversed ze];
 	@bGC_nsmall_above = [nsmall vhook];
@@ -69,6 +70,7 @@ lookup MARK_BASE_above {
 	pos base @bGC_hhook_above <anchor 285 732> mark @MC_above;
 	pos base @bGC_i.a_above <anchor 325 761> mark @MC_above;
 	pos base @bGC_i_above <anchor 345 761> mark @MC_above;
+	pos base @bGC_l.a_above <anchor 327 732> mark @MC_above;
 	pos base @bGC_l_above <anchor 274 732> mark @MC_above;
 	pos base @bGC_n_above <anchor 315 516> mark @MC_above;
 	pos base @bGC_nsmall_above <anchor 307 516> mark @MC_above;
@@ -153,7 +155,7 @@ lookup MARK_BASE_base {
 	@bGC_Z_base = [Z z];
 	@bGC_alphalatin_base = [alphalatin a.a];
 	@bGC_e_base = [e eopen];
-	@bGC_i.a_base = [i.a dotlessi.a istroke.a];
+	@bGC_i.a_base = [i.a dotlessi.a istroke.a l.a lslash.a lmiddletilde.a];
 	@bGC_i_base = [i dotlessi istroke];
 	pos base @bGC_I_base <anchor 300 0> mark @MC_base;
 	pos base @bGC_Z_base <anchor 320 0> mark @MC_base;
@@ -202,7 +204,7 @@ lookup MARK_BASE_below {
 	@bGC_D_below = [D ereversed mturned];
 	@bGC_Dcroat_below = [Dcroat Eth];
 	@bGC_E_below = [E k];
-	@bGC_K_below = [K i.a dotlessi.a istroke.a istroke.da];
+	@bGC_K_below = [K i.a dotlessi.a istroke.a istroke.da l.a lslash.a lmiddletilde.a lbelt.a];
 	@bGC_L_below = [L Lslash];
 	@bGC_R_below = [R bsmall glottalstopreversed glottalstopstrokereversed];
 	@bGC_V_below = [V W alpha];
@@ -267,7 +269,7 @@ lookup MARK_BASE_below {
 	pos base ezh <anchor 282 -220> mark @MC_below;
 	pos base f <anchor 293 -20> mark @MC_below;
 	pos base g <anchor 305 -205> mark @MC_below;
-	pos base gammalatin <anchor 300 -220> mark @MC_below;
+	pos base gammalatin <anchor 300 -183> mark @MC_below;
 	pos base gsmall <anchor 322 -20> mark @MC_below;
 	pos base hturned <anchor 419 -183> mark @MC_below;
 	pos base kturned <anchor 450 -205> mark @MC_below;
@@ -302,6 +304,7 @@ lookup MARK_BASE_center {
 	pos base L <anchor 179 346> mark @MC_center;
 	pos base circledotted <anchor 300 248> mark @MC_center;
 	pos base l <anchor 278 367> mark @MC_center;
+	pos base l.a <anchor 330 367> mark @MC_center;
 } MARK_BASE_center;
 
 

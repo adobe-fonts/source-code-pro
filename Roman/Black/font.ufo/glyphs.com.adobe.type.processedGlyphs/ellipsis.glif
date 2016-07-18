@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="ellipsis">
+	<unicode hex="2026" />
   <advance width="600" />
-  <unicode hex="2026" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="87" y="-12" />
@@ -48,15 +48,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="51fd593f9930b9178f80daf1a97a7484ae341663171c4fbcba90411c808ce0cdf58a420826bd5e263e3a9b86db580a40806c788b49365d102e31957770342458">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="208" />
-            <vstem3 stem3List="-13,200,200,200,413,200" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>51fd593f9930b9178f80daf1a97a7484ae341663171c4fbcba90411c808ce0cdf58a420826bd5e263e3a9b86db580a40806c788b49365d102e31957770342458</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 208</string>
+              <string>vstem3 -13 200 200 200 413 200</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

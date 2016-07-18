@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="anoteleia">
+	<unicode hex="0387" />
   <advance width="600" />
-  <unicode hex="0387" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="300" y="316" />
@@ -20,22 +20,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600c300316357316399359c399417399475357518c300518243518201475c201417201359243316">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="316" width="202" />
-            <vstem pos="201" width="198" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600c300316357316399359c399417399475357518c300518243518201475c201417201359243316</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 316 202</string>
+              <string>vstem 201 198</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

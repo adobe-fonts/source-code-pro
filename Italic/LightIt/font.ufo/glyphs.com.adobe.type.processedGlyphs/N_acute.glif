@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Nacute">
+	<unicode hex="0143" />
   <advance width="600" />
-  <unicode hex="0143" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="33" y="0" />
@@ -34,23 +34,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="bfd8246ee1f0e6ab2f416da325a702e005101b7aa2d42fb886a853f46b626bb4e52044a4de15b83cf16871245bfd18e123d00245bf3ddf8772e6d26f42954b79">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="57" />
-            <hstem pos="602" width="57" />
-            <vstem pos="33" width="545" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>bfd8246ee1f0e6ab2f416da325a702e005101b7aa2d42fb886a853f46b626bb4e52044a4de15b83cf16871245bfd18e123d00245bf3ddf8772e6d26f42954b79</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 57</string>
+              <string>hstem 602 57</string>
+              <string>vstem 33 545</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

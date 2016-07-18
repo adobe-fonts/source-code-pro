@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="philatin">
+<glyph format="1" name="philatin">
   <advance width="600" />
   <unicode hex="0278" />
   <outline>
@@ -44,18 +44,26 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="9129769f13c4d6aa8c6aaa5e8fc2d9e22b803db157ee61ccbcd2c67c5fee751f7bce5dc24578cea614fad2e9522903d0f4005a0b37bd376c01ec37b67c6273a2">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-173" width="-21" />
-            <hstem pos="16" width="-21" />
-            <hstem pos="706" width="-20" />
-            <vstem pos="15" width="106" />
-            <vstem pos="459" width="105" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>9129769f13c4d6aa8c6aaa5e8fc2d9e22b803db157ee61ccbcd2c67c5fee751f7bce5dc24578cea614fad2e9522903d0f4005a0b37bd376c01ec37b67c6273a2</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -173 -21</string>
+              <string>hstem 16 -21</string>
+              <string>hstem 706 -20</string>
+              <string>vstem 15 106</string>
+              <string>vstem 459 105</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

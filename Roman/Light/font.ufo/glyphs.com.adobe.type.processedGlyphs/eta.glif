@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="eta">
+	<unicode hex="03B7" />
   <advance width="600" />
-  <unicode hex="03B7" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="459" y="-180" />
@@ -10,12 +10,12 @@
       <point x="504" y="432" />
       <point x="460" y="492" />
       <point type="curve" x="362" y="492" />
-      <point x="278" y="492" />
+      <point name="hintSet0004" x="278" y="492" />
       <point x="220" y="465" />
       <point type="curve" x="159" y="379" />
       <point type="line" x="157" y="379" />
       <point name="hintSet0006" type="line" x="152" y="480" />
-      <point type="line" x="110" y="480" />
+      <point name="hintSet0007" type="line" x="110" y="480" />
       <point x="114" y="431" />
       <point x="115" y="396" />
       <point type="curve" x="115" y="358" />
@@ -34,29 +34,69 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="c09d3402559763205d4f1d17cfe90cec3b2cf47a7c04fc068d284ef9cfc6247f8c53c36227f9bd432b3f66e4c55adadf6a1ae691251450d6b2fd889e8990cc50">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="452" width="40" />
-            <vstem pos="115" width="44" />
-            <vstem pos="462" width="42" />
-          </hintset>
-          <hintset pointTag="hintSet0006">
-            <hstem pos="21" width="-21" />
-            <hstem pos="480" width="-20" />
-            <vstem pos="115" width="44" />
-            <vstem pos="462" width="42" />
-          </hintset>
-          <hintset pointTag="hintSet0012">
-            <hstem pos="21" width="-21" />
-            <hstem pos="452" width="40" />
-            <vstem pos="115" width="44" />
-            <vstem pos="462" width="42" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>c09d3402559763205d4f1d17cfe90cec3b2cf47a7c04fc068d284ef9cfc6247f8c53c36227f9bd432b3f66e4c55adadf6a1ae691251450d6b2fd889e8990cc50</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 452 40</string>
+              <string>vstem 115 44</string>
+              <string>vstem 462 42</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0004</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 452 40</string>
+              <string>vstem 115 39.5</string>
+              <string>vstem 462 42</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0006</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 480 -20</string>
+              <string>vstem 115 39.5</string>
+              <string>vstem 462 42</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0007</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 480 -20</string>
+              <string>vstem 115 44</string>
+              <string>vstem 462 42</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0012</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 452 40</string>
+              <string>vstem 115 44</string>
+              <string>vstem 462 42</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

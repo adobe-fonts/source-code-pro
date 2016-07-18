@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Uhorn">
+<glyph format="1" name="Uhorn">
   <advance width="600" />
   <unicode hex="01AF" />
   <outline>
@@ -45,16 +45,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="a83d2706ea1646fe9f3de2690ef0b7952159dde8184893d8e8d005ccab7657b478baf71a8bd99381679c392f6255246fec3e98843ed56193060658364632a616">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="93" />
-            <vstem pos="58" width="106" />
-            <vstem pos="636" width="88" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>a83d2706ea1646fe9f3de2690ef0b7952159dde8184893d8e8d005ccab7657b478baf71a8bd99381679c392f6255246fec3e98843ed56193060658364632a616</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 93</string>
+              <string>vstem 58 106</string>
+              <string>vstem 636 88</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Ydieresis">
+	<unicode hex="0178" />
   <advance width="600" />
-  <unicode hex="0178" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="199" y="0" />
@@ -52,24 +52,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="cefa506629471be5b3c32b3a51e6bd1ed2c8c78ba759b82ee44a7737d4164dcd8453e98449a6bacfd1166d05a74d2bd51ab64dcfadf6b2729d9e24fec17934cd">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="715" width="95" />
-            <vstem pos="240" width="90" />
-            <vstem pos="426" width="90" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>cefa506629471be5b3c32b3a51e6bd1ed2c8c78ba759b82ee44a7737d4164dcd8453e98449a6bacfd1166d05a74d2bd51ab64dcfadf6b2729d9e24fec17934cd</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 715 95</string>
+              <string>vstem 240 90</string>
+              <string>vstem 426 90</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

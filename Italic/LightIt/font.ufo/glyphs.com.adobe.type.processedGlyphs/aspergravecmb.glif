@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="aspergravecmb">
-  <advance width="600" />
+	<advance width="600" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="293" y="578" />
@@ -22,20 +22,37 @@
       <point type="line" x="403" y="560" />
       <point type="line" x="435" y="567" />
       <point type="line" x="429" y="757" />
-      <point type="line" x="380" y="747" />
+      <point name="hintSet0010" type="line" x="380" y="747" />
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600c293578l307604277613258630c264659270690300705c349707l352740292738237716c227664217612254590l403560l435567l429757l380747">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="707" width="33" />
-            <vstem pos="403" width="29" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600c293578l307604277613258630c264659270690300705c349707l352740292738237716c227664217612254590l403560l435567l429757l380747</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 707 33</string>
+              <string>vstem 403 29</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0010</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 707 33</string>
+              <string>vstem 380 52</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

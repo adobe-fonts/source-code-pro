@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Omicrontonos">
+	<unicode hex="038C" />
   <advance width="600" />
-  <unicode hex="038C" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="351" y="-12" />
@@ -40,17 +40,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="a08c55056e2f905da500b3b8deb495f2a8a23b138a346aac5bde4549cb78e59021c1f3ba94d5dd5bcc3aa4bb9b3401813bbaab5a3934fa30827cb7a97d49a96e">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="101" />
-            <hstem pos="565" width="101" />
-            <vstem pos="145" width="111" />
-            <vstem pos="446" width="111" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>a08c55056e2f905da500b3b8deb495f2a8a23b138a346aac5bde4549cb78e59021c1f3ba94d5dd5bcc3aa4bb9b3401813bbaab5a3934fa30827cb7a97d49a96e</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 101</string>
+              <string>hstem 565 101</string>
+              <string>vstem 145 111</string>
+              <string>vstem 446 111</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

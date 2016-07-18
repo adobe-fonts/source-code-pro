@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Adotbelow">
+<glyph format="1" name="Adotbelow">
   <advance width="600" />
   <unicode hex="1EA0" />
   <outline>
@@ -42,24 +42,37 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="8e3a7349ad428b4b6e5e46733739ce75320be8e6835f9f85085d6bee1eb1ede62faeec6e239f96d704e49e2c766114f12c1b7be989eab7d3896618b631e2f2aa">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="138" width="133" />
-            <hstem pos="522" width="128" />
-            <vstem pos="0" width="600" />
-          </hintset>
-          <hintset pointTag="hintSet0014">
-            <hstem pos="-258" width="202" />
-            <hstem pos="21" width="-21" />
-            <hstem pos="138" width="133" />
-            <hstem pos="522" width="128" />
-            <vstem pos="190" width="220" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>8e3a7349ad428b4b6e5e46733739ce75320be8e6835f9f85085d6bee1eb1ede62faeec6e239f96d704e49e2c766114f12c1b7be989eab7d3896618b631e2f2aa</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 138 133</string>
+              <string>hstem 522 128</string>
+              <string>vstem 0 600</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0014</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -258 202</string>
+              <string>hstem 21 -21</string>
+              <string>hstem 138 133</string>
+              <string>hstem 522 128</string>
+              <string>vstem 190 220</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

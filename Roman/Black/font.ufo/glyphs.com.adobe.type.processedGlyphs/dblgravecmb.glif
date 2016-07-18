@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="dblgravecmb">
+	<unicode hex="030F" />
   <advance width="600" />
-  <unicode hex="030F" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="162" y="564" />
@@ -18,15 +18,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l162564l252604l164788l50738l352564l442604l354788l240738">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="564" width="224" />
-            <vstem pos="50" width="392" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l162564l252604l164788l50738l352564l442604l354788l240738</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 564 224</string>
+              <string>vstem 50 392</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

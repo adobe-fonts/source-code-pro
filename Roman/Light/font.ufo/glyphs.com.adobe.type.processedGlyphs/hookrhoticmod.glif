@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="hookrhoticmod">
+	<unicode hex="02DE" />
   <advance width="600" />
-  <unicode hex="02DE" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="325" y="232" />
@@ -24,15 +24,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600c325232351232370244c384255l367283357275345267c329267301267282284c271378l150330l150293l243327256259286232">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="232" width="35" />
-            <vstem pos="150" width="234" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600c325232351232370244c384255l367283357275345267c329267301267282284c271378l150330l150293l243327256259286232</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 232 35</string>
+              <string>vstem 150 234</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

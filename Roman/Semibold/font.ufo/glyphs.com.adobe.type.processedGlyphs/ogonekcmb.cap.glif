@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="ogonekcmb.cap">
-  <advance width="600" />
+	<advance width="600" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="314" y="-226" />
@@ -14,11 +14,11 @@
       <point x="315" y="-149" />
       <point x="290" y="-135" />
       <point type="curve" x="290" y="-104" />
-      <point x="290" y="-66" />
+      <point name="hintSet0005" x="290" y="-66" />
       <point x="318" y="-30" />
       <point type="curve" x="362" y="3" />
       <point type="line" x="286" y="3" />
-      <point x="252" y="-22" />
+      <point name="hintSet0007" x="252" y="-22" />
       <point x="204" y="-69" />
       <point type="curve" x="204" y="-132" />
       <point x="204" y="-194" />
@@ -27,15 +27,41 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="cfbd254c9be1da2de7069349263d35d05ebc7de57e84e23112ddcadadad657fcc4ddeb2114cfca9afb63515eb6d878fac59c43cfc90c6a32f7c6448fac0c542b">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-226" width="77" />
-            <vstem pos="204" width="86" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>cfbd254c9be1da2de7069349263d35d05ebc7de57e84e23112ddcadadad657fcc4ddeb2114cfca9afb63515eb6d878fac59c43cfc90c6a32f7c6448fac0c542b</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -226 77</string>
+              <string>vstem 204 86</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0005</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -226 229</string>
+              <string>vstem 204 86</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0007</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -226 77</string>
+              <string>vstem 204 86</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

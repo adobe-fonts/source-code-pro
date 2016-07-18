@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="imacron.a">
+<glyph format="1" name="imacron.a">
   <advance width="600" />
   <outline>
     <contour>
@@ -23,23 +23,36 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l990l5640l56467l37867l378486l123486l123419l296419l29667l9967l191601l457601l457658l191658">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="67" />
-            <hstem pos="419" width="67" />
-            <hstem pos="601" width="57" />
-            <vstem pos="296" width="82" />
-          </hintset>
-          <hintset pointTag="hintSet0010">
-            <hstem pos="0" width="67" />
-            <hstem pos="419" width="67" />
-            <hstem pos="601" width="57" />
-            <vstem pos="191" width="266" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l990l5640l56467l37867l378486l123486l123419l296419l29667l9967l191601l457601l457658l191658</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 67</string>
+              <string>hstem 419 67</string>
+              <string>hstem 601 57</string>
+              <string>vstem 296 82</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0010</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 67</string>
+              <string>hstem 419 67</string>
+              <string>hstem 601 57</string>
+              <string>vstem 191 266</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

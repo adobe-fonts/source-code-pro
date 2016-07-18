@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="tdotbelow">
+	<unicode hex="1E6D" />
   <advance width="600" />
-  <unicode hex="1E6D" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="388" y="-12" />
@@ -46,30 +46,36 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="a65fea92e81b7f5d8aa55e94f811ebb324c86a12e52a662d214de590f7187548dfdd93fd32f64b7bdde084b88fde2922952e405f187995dd731bb87c7b16ee63">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-246" width="181" />
-            <hstem pos="-12" width="115" />
-            <hstem pos="381" width="115" />
-            <vstem pos="174" width="147" />
-          </hintset>
-          <hintset pointTag="hintSet0017">
-            <hstem pos="-246" width="181" />
-            <hstem pos="-12" width="115" />
-            <hstem pos="381" width="115" />
-            <vstem pos="270" width="196" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>a65fea92e81b7f5d8aa55e94f811ebb324c86a12e52a662d214de590f7187548dfdd93fd32f64b7bdde084b88fde2922952e405f187995dd731bb87c7b16ee63</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -246 181</string>
+              <string>hstem -12 115</string>
+              <string>hstem 381 115</string>
+              <string>vstem 174 147</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0017</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -246 181</string>
+              <string>hstem -12 115</string>
+              <string>hstem 381 115</string>
+              <string>vstem 270 196</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

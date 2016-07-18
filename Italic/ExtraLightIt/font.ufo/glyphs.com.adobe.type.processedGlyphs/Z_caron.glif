@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Zcaron">
+<glyph format="1" name="Zcaron">
   <advance width="600" />
   <unicode hex="017D" />
   <outline>
@@ -28,17 +28,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l4800l48626l7126l572642l576660l144660l138634l528634l2817l240l356710l384710l520824l506840l374738l370738l276838l260824">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="26" />
-            <hstem pos="634" width="26" />
-            <hstem pos="710" width="28" />
-            <vstem pos="24" width="552" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l4800l48626l7126l572642l576660l144660l138634l528634l2817l240l356710l384710l520824l506840l374738l370738l276838l260824</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 26</string>
+              <string>hstem 634 26</string>
+              <string>hstem 710 28</string>
+              <string>vstem 24 552</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="cedillacmb">
+	<unicode hex="0327" />
   <advance width="600" />
-  <unicode hex="0327" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="112" y="-219" />
@@ -24,16 +24,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l112-219206-217270-184c271-125272-96261-79c214-67l2595l2245l164-87211-91232-104c232-132232-165191-188c110-191">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-219" width="28" />
-            <hstem pos="-87" width="92" />
-            <vstem pos="232" width="39" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l112-219206-217270-184c271-125272-96261-79c214-67l2595l2245l164-87211-91232-104c232-132232-165191-188c110-191</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -219 28</string>
+              <string>hstem -87 92</string>
+              <string>vstem 232 39</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

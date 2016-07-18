@@ -1,33 +1,41 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="heavydbldashhorzbxd">
+	<unicode hex="254D" />
   <advance width="600" />
-  <unicode hex="254D" />
   <outline>
     <contour>
-      <point name="hintSet0000" type="line" x="75" y="222" />
-      <point type="line" x="225" y="222" />
-      <point type="line" x="225" y="378" />
-      <point type="line" x="75" y="378" />
-    </contour>
-    <contour>
-      <point type="line" x="375" y="222" />
+      <point name="hintSet0000" type="line" x="375" y="222" />
       <point type="line" x="525" y="222" />
       <point type="line" x="525" y="378" />
       <point type="line" x="375" y="378" />
     </contour>
+    <contour>
+      <point type="line" x="75" y="222" />
+      <point type="line" x="225" y="222" />
+      <point type="line" x="225" y="378" />
+      <point type="line" x="75" y="378" />
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l75222l225222l225378l75378l375222l525222l525378l375378">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="222" width="156" />
-            <vstem pos="75" width="150" />
-            <vstem pos="375" width="150" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l375222l525222l525378l375378l75222l225222l225378l75378</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 222 156</string>
+              <string>vstem 75 150</string>
+              <string>vstem 375 150</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

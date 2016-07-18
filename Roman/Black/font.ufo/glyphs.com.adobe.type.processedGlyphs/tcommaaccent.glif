@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="tcommaaccent">
+	<unicode hex="021B" />
   <advance width="600" />
-  <unicode hex="021B" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="386" y="-12" />
@@ -48,33 +48,39 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="a8d5d04c648a2cc3041ad0eac82f4c748380bf37cadb0a928b325af725914f381217b2b2b52a71ca6619a86d5cceaeed5cbf12dfbf34b7087364452f3a10adff">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-244" width="66" />
-            <hstem pos="-110" width="60" />
-            <hstem pos="-12" width="134" />
-            <hstem pos="366" width="134" />
-            <vstem pos="162" width="172" />
-          </hintset>
-          <hintset pointTag="hintSet0018">
-            <hstem pos="-244" width="66" />
-            <hstem pos="-110" width="60" />
-            <hstem pos="-12" width="134" />
-            <hstem pos="366" width="134" />
-            <vstem pos="162" width="172" />
-            <vstem pos="344" width="122" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>a8d5d04c648a2cc3041ad0eac82f4c748380bf37cadb0a928b325af725914f381217b2b2b52a71ca6619a86d5cceaeed5cbf12dfbf34b7087364452f3a10adff</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -244 66</string>
+              <string>hstem -110 60</string>
+              <string>hstem -12 134</string>
+              <string>hstem 366 134</string>
+              <string>vstem 162 172</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0018</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -244 66</string>
+              <string>hstem -110 60</string>
+              <string>hstem -12 134</string>
+              <string>hstem 366 134</string>
+              <string>vstem 162 172</string>
+              <string>vstem 344 122</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

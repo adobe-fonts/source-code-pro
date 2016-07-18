@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="exclamdown">
+	<unicode hex="00A1" />
   <advance width="600" />
-  <unicode hex="00A1" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="286" y="-192" />
@@ -28,19 +28,32 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l286-192l314-192l314-130l312264l288264l286-130c300374326374352394c352432352470326490c300490274490248470c248432248394274374">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="490" width="-20" />
-            <vstem pos="286" width="28" />
-          </hintset>
-          <hintset pointTag="hintSet0006">
-            <hstem pos="374" width="116" />
-            <vstem pos="248" width="104" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l286-192l314-192l314-130l312264l288264l286-130c300374326374352394c352432352470326490c300490274490248470c248432248394274374</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 490 -20</string>
+              <string>vstem 286 28</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0006</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 374 116</string>
+              <string>vstem 248 104</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

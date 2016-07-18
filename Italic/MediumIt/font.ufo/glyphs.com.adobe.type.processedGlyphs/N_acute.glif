@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Nacute">
+	<unicode hex="0143" />
   <advance width="600" />
-  <unicode hex="0143" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="21" y="0" />
@@ -34,28 +34,34 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="e5ce5a2143f59530a42b409561ec6db781d8b433d56700ead7985d4ba65d6a203dca92700479a8e0e78f5953b8119187bdc50068a999a44272c5079f5fa944ff">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="539" width="116" />
-            <vstem pos="21" width="566" />
-          </hintset>
-          <hintset pointTag="hintSet0011">
-            <hstem pos="0" width="117" />
-            <hstem pos="539" width="116" />
-            <vstem pos="21" width="566" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>e5ce5a2143f59530a42b409561ec6db781d8b433d56700ead7985d4ba65d6a203dca92700479a8e0e78f5953b8119187bdc50068a999a44272c5079f5fa944ff</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 539 116</string>
+              <string>vstem 21 566</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0011</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 117</string>
+              <string>hstem 539 116</string>
+              <string>vstem 21 566</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,32 +1,40 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="lightdbldashvertbxd">
+	<unicode hex="254E" />
   <advance width="600" />
-  <unicode hex="254E" />
   <outline>
     <contour>
-      <point name="hintSet0000" type="line" x="285" y="-75" />
-      <point type="line" x="315" y="-75" />
-      <point type="line" x="315" y="175" />
-      <point type="line" x="285" y="175" />
+      <point name="hintSet0000" type="line" x="285" y="450" />
+      <point type="line" x="315" y="450" />
+      <point type="line" x="315" y="750" />
+      <point type="line" x="285" y="750" />
     </contour>
     <contour>
-      <point type="line" x="285" y="425" />
-      <point type="line" x="315" y="425" />
-      <point type="line" x="315" y="675" />
-      <point type="line" x="285" y="675" />
+      <point type="line" x="285" y="-150" />
+      <point type="line" x="315" y="-150" />
+      <point type="line" x="315" y="150" />
+      <point type="line" x="285" y="150" />
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l285-75l315-75l315175l285175l285425l315425l315675l285675">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-75" width="750" />
-            <vstem pos="285" width="30" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l285450l315450l315750l285750l285-150l315-150l315150l285150</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -150 900</string>
+              <string>vstem 285 30</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

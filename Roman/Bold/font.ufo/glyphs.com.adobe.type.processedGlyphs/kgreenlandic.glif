@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="kgreenlandic">
+	<unicode hex="0138" />
   <advance width="600" />
-  <unicode hex="0138" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="76" y="0" />
@@ -21,16 +21,24 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l760l2230l223123l297195l4260l5850l382292l570496l409496l226300l223299l223496l76496">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="21" width="-21" />
-            <hstem pos="496" width="-20" />
-            <vstem pos="76" width="147" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l760l2230l223123l297195l4260l5850l382292l570496l409496l226300l223299l223496l76496</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 496 -20</string>
+              <string>vstem 76 147</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

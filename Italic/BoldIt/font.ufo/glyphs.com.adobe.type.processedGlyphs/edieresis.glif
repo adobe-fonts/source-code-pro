@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="edieresis">
+<glyph format="1" name="edieresis">
   <advance width="600" />
   <unicode hex="00EB" />
   <outline>
@@ -71,28 +71,41 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="24ec6e76533ec54499e0a25d9bfff5783ca8052131bb7e8c088b5e878c85b005c1d64001bb05b6a43c56f40f6a16dad586e8abe29e1624e5cfda0bfb06374cd8">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="105" />
-            <hstem pos="210" width="88" />
-            <hstem pos="403" width="105" />
-            <hstem pos="572" width="136" />
-            <vstem pos="46" width="137" />
-            <vstem pos="410" width="126" />
-          </hintset>
-          <hintset pointTag="hintSet0015">
-            <hstem pos="-12" width="105" />
-            <hstem pos="210" width="88" />
-            <hstem pos="403" width="105" />
-            <hstem pos="572" width="136" />
-            <vstem pos="46" width="137" />
-            <vstem pos="196" width="136" />
-            <vstem pos="406" width="136" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>24ec6e76533ec54499e0a25d9bfff5783ca8052131bb7e8c088b5e878c85b005c1d64001bb05b6a43c56f40f6a16dad586e8abe29e1624e5cfda0bfb06374cd8</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 105</string>
+              <string>hstem 210 88</string>
+              <string>hstem 403 105</string>
+              <string>hstem 572 136</string>
+              <string>vstem 46 137</string>
+              <string>vstem 410 126</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0015</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 105</string>
+              <string>hstem 210 88</string>
+              <string>hstem 403 105</string>
+              <string>hstem 572 136</string>
+              <string>vstem 46 137</string>
+              <string>vstem 196 136</string>
+              <string>vstem 406 136</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

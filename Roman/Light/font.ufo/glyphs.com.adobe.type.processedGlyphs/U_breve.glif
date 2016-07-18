@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Ubreve">
+	<unicode hex="016C" />
   <advance width="600" />
-  <unicode hex="016C" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="300" y="-12" />
@@ -42,32 +42,38 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="cb14be4b10939ee327e7fe1dfa2a6c9ae78fd70efe6bb09f5fae75be91cd6c7adff1dcf7e2eb82e0d942ca3092ad262be794776bb5457dc2731c23b7c711fdc5">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="42" />
-            <hstem pos="710" width="33" />
-            <vstem pos="89" width="46" />
-            <vstem pos="468" width="43" />
-          </hintset>
-          <hintset pointTag="hintSet0011">
-            <hstem pos="-12" width="42" />
-            <hstem pos="710" width="33" />
-            <vstem pos="89" width="46" />
-            <vstem pos="164" width="33" />
-            <vstem pos="403" width="33" />
-            <vstem pos="468" width="43" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>cb14be4b10939ee327e7fe1dfa2a6c9ae78fd70efe6bb09f5fae75be91cd6c7adff1dcf7e2eb82e0d942ca3092ad262be794776bb5457dc2731c23b7c711fdc5</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 42</string>
+              <string>hstem 710 33</string>
+              <string>vstem 89 46</string>
+              <string>vstem 468 43</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0011</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 42</string>
+              <string>hstem 710 33</string>
+              <string>vstem 89 46</string>
+              <string>vstem 164 33</string>
+              <string>vstem 403 33</string>
+              <string>vstem 468 43</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

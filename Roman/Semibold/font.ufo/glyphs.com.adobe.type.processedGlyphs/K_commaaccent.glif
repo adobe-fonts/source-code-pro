@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Kcommaaccent">
+<glyph format="1" name="Kcommaaccent">
   <advance width="600" />
   <unicode hex="0136" />
   <outline>
@@ -37,18 +37,26 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="0b8ed8d24fdbb1c7593fe6a2c9106062b54fb5dadf9014360799fe0968c9eaaf5062772dec2d24545e6f086fffd8eb7716eafaf0c1d6ef25885adcc17231ff18">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-233" width="50" />
-            <hstem pos="-101" width="46" />
-            <hstem pos="21" width="-21" />
-            <vstem pos="82" width="118" />
-            <vstem pos="334" width="85" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>0b8ed8d24fdbb1c7593fe6a2c9106062b54fb5dadf9014360799fe0968c9eaaf5062772dec2d24545e6f086fffd8eb7716eafaf0c1d6ef25885adcc17231ff18</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -233 50</string>
+              <string>hstem -101 46</string>
+              <string>hstem 21 -21</string>
+              <string>vstem 82 118</string>
+              <string>vstem 334 85</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

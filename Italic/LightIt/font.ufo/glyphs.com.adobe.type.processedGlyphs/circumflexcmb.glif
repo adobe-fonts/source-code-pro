@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="circumflexcmb">
+	<unicode hex="0302" />
   <advance width="600" />
-  <unicode hex="0302" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="239" y="572" />
@@ -16,15 +16,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l239572l377700l381700l469572l494591l403737l360737l218593">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="700" width="37" />
-            <vstem pos="218" width="276" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l239572l377700l381700l469572l494591l403737l360737l218593</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 700 37</string>
+              <string>vstem 218 276</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

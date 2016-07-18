@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Edotbelow">
+	<unicode hex="1EB8" />
   <advance width="600" />
-  <unicode hex="1EB8" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="55" y="0" />
@@ -34,25 +34,26 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="fb8d04c0937e247cb03e78bb32d78e427b50f50898ada5d5871df25d53d065ef6f07c5ce73f7e549d88c27347ecacd27df9cb7257981cbdf5f52a4d41281d220">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-240" width="136" />
-            <hstem pos="0" width="78" />
-            <hstem pos="304" width="78" />
-            <hstem pos="577" width="78" />
-            <vstem pos="175" width="142" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>fb8d04c0937e247cb03e78bb32d78e427b50f50898ada5d5871df25d53d065ef6f07c5ce73f7e549d88c27347ecacd27df9cb7257981cbdf5f52a4d41281d220</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -240 136</string>
+              <string>hstem 0 78</string>
+              <string>hstem 304 78</string>
+              <string>hstem 577 78</string>
+              <string>vstem 175 142</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

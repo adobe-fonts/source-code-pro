@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="gcircumflex">
+	<unicode hex="011D" />
   <advance width="600" />
-  <unicode hex="011D" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="201" y="-217" />
@@ -64,39 +64,50 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="ec42959c436feb06945c09e4d397f6dbee6f51d0d8c231b075428890f42b3b33dd1fa875996a84b4db4e4b57cca05b12ee5ed5e1b3f23000429cbddb11e89604">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-217" width="63" />
-            <hstem pos="4" width="64" />
-            <hstem pos="434" width="64" />
-            <hstem pos="684" width="56" />
-            <vstem pos="55" width="79" />
-          </hintset>
-          <hintset pointTag="hintSet0002">
-            <hstem pos="-217" width="63" />
-            <hstem pos="4" width="64" />
-            <hstem pos="486" width="-20" />
-            <hstem pos="684" width="56" />
-            <vstem pos="55" width="79" />
-          </hintset>
-          <hintset pointTag="hintSet0004">
-            <hstem pos="-217" width="63" />
-            <hstem pos="4" width="64" />
-            <hstem pos="434" width="64" />
-            <hstem pos="684" width="56" />
-            <vstem pos="55" width="79" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>ec42959c436feb06945c09e4d397f6dbee6f51d0d8c231b075428890f42b3b33dd1fa875996a84b4db4e4b57cca05b12ee5ed5e1b3f23000429cbddb11e89604</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -217 63</string>
+              <string>hstem 4 64</string>
+              <string>hstem 434 64</string>
+              <string>hstem 684 56</string>
+              <string>vstem 55 79</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0002</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -217 63</string>
+              <string>hstem 4 64</string>
+              <string>hstem 486 -20</string>
+              <string>hstem 684 56</string>
+              <string>vstem 55 79</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0004</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -217 63</string>
+              <string>hstem 4 64</string>
+              <string>hstem 434 64</string>
+              <string>hstem 684 56</string>
+              <string>vstem 55 79</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

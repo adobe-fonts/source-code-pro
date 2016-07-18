@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="downtackbelowcmb">
+	<unicode hex="031E" />
   <advance width="600" />
-  <unicode hex="031E" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="286" y="-242" />
       <point type="line" x="314" y="-242" />
-      <point type="line" x="314" y="-136" />
+      <point name="hintSet0002" type="line" x="314" y="-136" />
       <point type="line" x="406" y="-136" />
       <point type="line" x="406" y="-108" />
       <point type="line" x="194" y="-108" />
@@ -16,15 +16,32 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l286-242l314-242l314-136l406-136l406-108l194-108l194-136l286-136">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-136" width="28" />
-            <vstem pos="286" width="28" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l286-242l314-242l314-136l406-136l406-108l194-108l194-136l286-136</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -242 134</string>
+              <string>vstem 286 28</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0002</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -136 28</string>
+              <string>vstem 286 28</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

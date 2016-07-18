@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="circumflex">
+	<unicode hex="02C6" />
   <advance width="600" />
-  <unicode hex="02C6" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="221" y="561" />
@@ -16,22 +16,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l221561l368657l372657l478561l539613l454744l304744l173616">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="657" width="87" />
-            <vstem pos="173" width="366" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l221561l368657l372657l478561l539613l454744l304744l173616</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 657 87</string>
+              <string>vstem 173 366</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="partialdiff">
+<glyph format="1" name="partialdiff">
   <advance width="600" />
   <unicode hex="2202" />
   <outline>
@@ -50,18 +50,26 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="d64c4a5812d02ad4fc082a67176cb24719c021df0bd4382522d4cd8460d0ec8832c3fd863fc3761cad7253661c91e9f631bf634c43fbcc1b61947af3a33c0a7a">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="81" />
-            <hstem pos="331" width="78" />
-            <hstem pos="591" width="81" />
-            <vstem pos="72" width="93" />
-            <vstem pos="432" width="95" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>d64c4a5812d02ad4fc082a67176cb24719c021df0bd4382522d4cd8460d0ec8832c3fd863fc3761cad7253661c91e9f631bf634c43fbcc1b61947af3a33c0a7a</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 81</string>
+              <string>hstem 331 78</string>
+              <string>hstem 591 81</string>
+              <string>vstem 72 93</string>
+              <string>vstem 432 95</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

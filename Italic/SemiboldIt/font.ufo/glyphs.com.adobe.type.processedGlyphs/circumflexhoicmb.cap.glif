@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="circumflexhoicmb.cap">
-  <advance width="600" />
+	<advance width="600" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="284" y="692" />
@@ -13,7 +13,7 @@
       <point type="line" x="242" y="725" />
     </contour>
     <contour>
-      <point type="line" x="513" y="753" />
+      <point name="hintSet0008" type="line" x="513" y="753" />
       <point x="570" y="759" />
       <point x="622" y="780" />
       <point type="curve" x="631" y="835" />
@@ -31,16 +31,34 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="82bc25df2d1d54bd257bdda686e0bc7a8c3e786277335f6661ea9d7bf9721dbd7828ffd8adbcb301a010e65a727edfe37fd44e32e867a4ce76b794bc553e2e74">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="762" width="58" />
-            <hstem pos="861" width="51" />
-            <vstem pos="242" width="391" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>82bc25df2d1d54bd257bdda686e0bc7a8c3e786277335f6661ea9d7bf9721dbd7828ffd8adbcb301a010e65a727edfe37fd44e32e867a4ce76b794bc553e2e74</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 762 58</string>
+              <string>hstem 861 51</string>
+              <string>vstem 242 391</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0008</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 753 67</string>
+              <string>hstem 861 51</string>
+              <string>vstem 242 391</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="zretroflex">
+	<unicode hex="0290" />
   <advance width="600" />
-  <unicode hex="0290" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="557" y="-187" />
@@ -32,17 +32,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="82e612e768d50242821ae2aa00d0af7bc6288194a878d65f9b08fd7b628fd59728969325b7864aaf8293bfcf98f82592c4b815ce872bd373edabc725cdc4adea">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-187" width="116" />
-            <hstem pos="0" width="115" />
-            <hstem pos="381" width="115" />
-            <vstem pos="390" width="147" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>82e612e768d50242821ae2aa00d0af7bc6288194a878d65f9b08fd7b628fd59728969325b7864aaf8293bfcf98f82592c4b815ce872bd373edabc725cdc4adea</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -187 116</string>
+              <string>hstem 0 115</string>
+              <string>hstem 381 115</string>
+              <string>vstem 390 147</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -1,26 +1,34 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="dnquarterblock">
+	<unicode hex="2582" />
   <advance width="600" />
-  <unicode hex="2582" />
   <outline>
     <contour>
-      <point name="hintSet0000" type="line" x="0" y="-200" />
-      <point type="line" x="600" y="-200" />
-      <point type="line" x="600" y="50" />
-      <point type="line" x="0" y="50" />
+      <point name="hintSet0000" type="line" x="0" y="-400" />
+      <point type="line" x="600" y="-400" />
+      <point type="line" x="600" y="-50" />
+      <point type="line" x="0" y="-50" />
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l0-200l600-200l60050l050">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-200" width="250" />
-            <vstem pos="0" width="600" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l0-400l600-400l600-50l0-50</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -400 350</string>
+              <string>vstem 0 600</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

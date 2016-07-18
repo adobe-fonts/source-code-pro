@@ -1,13 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="vertsngrightdblbxd">
+	<unicode hex="255E" />
   <advance width="600" />
-  <unicode hex="255E" />
   <outline>
     <contour>
-      <point name="hintSet0000" type="line" x="220" y="-400" />
-      <point type="line" x="380" y="-400" />
-      <point type="line" x="380" y="60" />
-      <point type="line" x="680" y="60" />
+      <point name="hintSet0000" type="line" x="680" y="60" />
       <point type="line" x="680" y="220" />
       <point type="line" x="380" y="220" />
       <point type="line" x="380" y="380" />
@@ -16,20 +13,31 @@
       <point type="line" x="380" y="540" />
       <point type="line" x="380" y="1000" />
       <point type="line" x="220" y="1000" />
+      <point type="line" x="220" y="-400" />
+      <point type="line" x="380" y="-400" />
+      <point type="line" x="380" y="60" />
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l220-400l380-400l38060l68060l680220l380220l380380l680380l680540l380540l3801000l2201000">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="60" width="160" />
-            <hstem pos="380" width="160" />
-            <vstem pos="220" width="160" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l68060l680220l380220l380380l680380l680540l380540l3801000l2201000l220-400l380-400l38060</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 60 160</string>
+              <string>hstem 380 160</string>
+              <string>vstem 220 160</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

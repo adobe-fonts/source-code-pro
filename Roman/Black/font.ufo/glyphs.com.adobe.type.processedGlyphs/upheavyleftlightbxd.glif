@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="upheavyleftlightbxd">
+	<unicode hex="251A" />
   <advance width="600" />
-  <unicode hex="251A" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="-80" y="220" />
@@ -14,15 +14,23 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l-80220l460220l4601000l1401000l140380l-80380">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="220" width="160" />
-            <vstem pos="140" width="320" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l-80220l460220l4601000l1401000l140380l-80380</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 220 160</string>
+              <string>vstem 140 320</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

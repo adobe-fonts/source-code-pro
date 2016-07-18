@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="carondotaccentcmb">
-  <advance width="600" />
+	<advance width="600" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="300" y="702" />
@@ -29,21 +29,34 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="34c845ae2f2feb8ba5d56e2ed5cd094153153bfe60446a8418cdf9677ee694de670fe275d95749e3f76a4bad75db78e93e476c78abbc50a4f329c7064fc41f0e">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="577" width="78" />
-            <hstem pos="702" width="148" />
-            <vstem pos="224" width="152" />
-          </hintset>
-          <hintset pointTag="hintSet0007">
-            <hstem pos="577" width="78" />
-            <hstem pos="708" width="-20" />
-            <vstem pos="224" width="152" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>34c845ae2f2feb8ba5d56e2ed5cd094153153bfe60446a8418cdf9677ee694de670fe275d95749e3f76a4bad75db78e93e476c78abbc50a4f329c7064fc41f0e</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 577 78</string>
+              <string>hstem 702 148</string>
+              <string>vstem 224 152</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0007</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 577 78</string>
+              <string>hstem 708 -20</string>
+              <string>vstem 224 152</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

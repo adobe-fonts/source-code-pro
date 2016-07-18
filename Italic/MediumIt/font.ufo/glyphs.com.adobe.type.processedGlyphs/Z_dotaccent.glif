@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Zdotaccent">
+<glyph format="1" name="Zdotaccent">
   <advance width="600" />
   <unicode hex="017B" />
   <outline>
@@ -32,17 +32,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="8d862155feefec202a955aeda3734d859fe616dfe4d704a3959acb4fbdbf3fd8b8af7b0db2239f4efe5a601839f42544faaab7348eb660a1e38b73b67615f880">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="78" />
-            <hstem pos="578" width="78" />
-            <hstem pos="712" width="115" />
-            <vstem pos="320" width="120" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>8d862155feefec202a955aeda3734d859fe616dfe4d704a3959acb4fbdbf3fd8b8af7b0db2239f4efe5a601839f42544faaab7348eb660a1e38b73b67615f880</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 78</string>
+              <string>hstem 578 78</string>
+              <string>hstem 712 115</string>
+              <string>vstem 320 120</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

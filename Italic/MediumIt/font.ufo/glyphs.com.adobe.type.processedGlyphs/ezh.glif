@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="ezh">
+	<unicode hex="0292" />
   <advance width="600" />
-  <unicode hex="0292" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="192" y="-212" />
@@ -37,17 +37,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="ac790fd04bc4ec3d1a940bb3934c90ac37409392828926379845090de11785a22b385c0d11c9f1b4ac92fff3ad9273f0cf9fa8474cd9e03ab5262557d3971150">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-212" width="75" />
-            <hstem pos="140" width="61" />
-            <hstem pos="415" width="74" />
-            <vstem pos="374" width="93" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>ac790fd04bc4ec3d1a940bb3934c90ac37409392828926379845090de11785a22b385c0d11c9f1b4ac92fff3ad9273f0cf9fa8474cd9e03ab5262557d3971150</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -212 75</string>
+              <string>hstem 140 61</string>
+              <string>hstem 415 74</string>
+              <string>vstem 374 93</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

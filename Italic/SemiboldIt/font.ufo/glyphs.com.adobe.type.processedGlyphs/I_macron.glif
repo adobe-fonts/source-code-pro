@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Imacron">
+	<unicode hex="012A" />
   <advance width="600" />
-  <unicode hex="012A" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="25" y="0" />
@@ -26,24 +26,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l250l4490l46891l30991l404563l563563l582654l157654l138563l296563l20191l4491l247724l519724l534796l262796">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="91" />
-            <hstem pos="563" width="91" />
-            <hstem pos="724" width="72" />
-            <vstem pos="25" width="557" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l250l4490l46891l30991l404563l563563l582654l157654l138563l296563l20191l4491l247724l519724l534796l262796</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 91</string>
+              <string>hstem 563 91</string>
+              <string>hstem 724 72</string>
+              <string>vstem 25 557</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

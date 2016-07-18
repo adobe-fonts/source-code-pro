@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph format="2" name="Klinebelow">
+<glyph format="1" name="Klinebelow">
   <advance width="600" />
   <unicode hex="1E34" />
   <outline>
@@ -27,22 +27,35 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l980l1820l182209l295344l4860l5800l348407l556656l461656l185327l182327l182656l98656l205-170l471-170l471-113l205-113">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-170" width="57" />
-            <hstem pos="21" width="-21" />
-            <vstem pos="98" width="84" />
-          </hintset>
-          <hintset pointTag="hintSet0013">
-            <hstem pos="-170" width="57" />
-            <hstem pos="21" width="-21" />
-            <vstem pos="98" width="84" />
-            <vstem pos="205" width="266" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l980l1820l182209l295344l4860l5800l348407l556656l461656l185327l182327l182656l98656l205-170l471-170l471-113l205-113</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -170 57</string>
+              <string>hstem 21 -21</string>
+              <string>vstem 98 84</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0013</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -170 57</string>
+              <string>hstem 21 -21</string>
+              <string>vstem 98 84</string>
+              <string>vstem 205 266</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

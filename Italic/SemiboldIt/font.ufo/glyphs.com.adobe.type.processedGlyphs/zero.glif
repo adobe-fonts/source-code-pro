@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="zero">
+	<unicode hex="0030" />
   <advance width="600" />
-  <unicode hex="0030" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="254" y="-12" />
@@ -48,36 +48,27 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>79.0</real>
-          <key>isGlobal</key>
-          <false />
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string />
-          <key>x</key>
-          <integer>445</integer>
-          <key>y</key>
-          <integer>750</integer>
-        </dict>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="b9bbf23162b9ce3e543425e2a9e4d19ab3bbbebea54b449ddda6b0572b56f8cb10fb3eebbce46b20e51cc70dbaa3383f04064cef19d4d49e5e47640ed61efdd2">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="84" />
-            <hstem pos="255" width="143" />
-            <hstem pos="565" width="83" />
-            <vstem pos="50" width="100" />
-            <vstem pos="242" width="122" />
-            <vstem pos="453" width="100" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>b9bbf23162b9ce3e543425e2a9e4d19ab3bbbebea54b449ddda6b0572b56f8cb10fb3eebbce46b20e51cc70dbaa3383f04064cef19d4d49e5e47640ed61efdd2</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 84</string>
+              <string>hstem 255 143</string>
+              <string>hstem 565 83</string>
+              <string>vstem 50 100</string>
+              <string>vstem 242 122</string>
+              <string>vstem 453 100</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

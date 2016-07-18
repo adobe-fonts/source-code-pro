@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="Ncaron">
+	<unicode hex="0147" />
   <advance width="600" />
-  <unicode hex="0147" />
   <outline>
     <contour>
       <point name="hintSet0000" type="line" x="33" y="0" />
@@ -38,24 +38,25 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="e163f19494334c6599363669ae8247dfed2748512857ddf8daa0f82426f4379a5638cba9fad5059ff1b8d80a3a83ed2c6420fefd637d790995c8eacdbf114a23">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="0" width="57" />
-            <hstem pos="602" width="57" />
-            <hstem pos="709" width="34" />
-            <vstem pos="33" width="545" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>e163f19494334c6599363669ae8247dfed2748512857ddf8daa0f82426f4379a5638cba9fad5059ff1b8d80a3a83ed2c6420fefd637d790995c8eacdbf114a23</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 0 57</string>
+              <string>hstem 602 57</string>
+              <string>hstem 709 34</string>
+              <string>vstem 33 545</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

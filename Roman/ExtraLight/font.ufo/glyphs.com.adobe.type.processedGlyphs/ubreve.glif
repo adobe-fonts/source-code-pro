@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="ubreve">
+	<unicode hex="016D" />
   <advance width="600" />
-  <unicode hex="016D" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="264" y="-12" />
@@ -45,48 +45,64 @@
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.30000000000000004</real>
-        <real>0.6294117647058824</real>
-        <integer>1</integer>
-        <integer>1</integer>
-      </array>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="d2bc658a572aa059a127c101c41802e8bbfb5223279413dc394b2f86cbc5b6ff00668064449076818078195e928443f5769ff1e221d025f58e5213f1d2bc34e6">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-12" width="28" />
-            <hstem pos="478" width="-20" />
-            <hstem pos="570" width="26" />
-            <vstem pos="90" width="30" />
-            <vstem pos="460" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0003">
-            <hstem pos="21" width="-21" />
-            <hstem pos="478" width="-20" />
-            <hstem pos="570" width="26" />
-            <vstem pos="90" width="30" />
-            <vstem pos="460" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0008">
-            <hstem pos="-12" width="28" />
-            <hstem pos="478" width="-20" />
-            <hstem pos="570" width="26" />
-            <vstem pos="90" width="30" />
-            <vstem pos="460" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0014">
-            <hstem pos="-12" width="28" />
-            <hstem pos="478" width="-20" />
-            <hstem pos="570" width="26" />
-            <vstem pos="90" width="30" />
-            <vstem pos="148" width="26" />
-            <vstem pos="414" width="26" />
-            <vstem pos="460" width="30" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>d2bc658a572aa059a127c101c41802e8bbfb5223279413dc394b2f86cbc5b6ff00668064449076818078195e928443f5769ff1e221d025f58e5213f1d2bc34e6</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 28</string>
+              <string>hstem 478 -20</string>
+              <string>hstem 570 26</string>
+              <string>vstem 90 30</string>
+              <string>vstem 460 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0003</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 478 -20</string>
+              <string>hstem 570 26</string>
+              <string>vstem 90 30</string>
+              <string>vstem 460 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0008</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 28</string>
+              <string>hstem 478 -20</string>
+              <string>hstem 570 26</string>
+              <string>vstem 90 30</string>
+              <string>vstem 460 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0014</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 28</string>
+              <string>hstem 478 -20</string>
+              <string>hstem 570 26</string>
+              <string>vstem 90 30</string>
+              <string>vstem 148 26</string>
+              <string>vstem 414 26</string>
+              <string>vstem 460 30</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

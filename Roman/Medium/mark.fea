@@ -1,4 +1,4 @@
-# Created: Tue Jul  7 16:01:45 2015
+# Created: Wed Jun  1 17:49:01 2016
 # PS Name: SourceCodePro-Medium
 # MM Inst: None
 # exported from Defcon
@@ -36,6 +36,7 @@ lookup MARK_BASE_above {
 	@bGC_hhook_above = [hhook henghook];
 	@bGC_i.a_above = [i.a iogonek.a istroke.a];
 	@bGC_i_above = [i j iogonek istroke];
+	@bGC_l.a_above = [l.a lslash.a lmiddletilde.a lbelt.a];
 	@bGC_l_above = [l lslash lmiddletilde lbelt lretroflex];
 	@bGC_mhook_above = [mhook ze];
 	@bGC_n_above = [n eng];
@@ -81,6 +82,7 @@ lookup MARK_BASE_above {
 	pos base @bGC_hhook_above <anchor 275 735> mark @MC_above;
 	pos base @bGC_i.a_above <anchor 327 744> mark @MC_above;
 	pos base @bGC_i_above <anchor 347 744> mark @MC_above;
+	pos base @bGC_l.a_above <anchor 332 735> mark @MC_above;
 	pos base @bGC_l_above <anchor 282 735> mark @MC_above;
 	pos base @bGC_mhook_above <anchor 305 509> mark @MC_above;
 	pos base @bGC_n_above <anchor 317 510> mark @MC_above;
@@ -167,7 +169,7 @@ lookup MARK_BASE_base {
 	@bGC_Z_base = [Z z];
 	@bGC_ae_base = [ae ubar];
 	@bGC_alphalatin_base = [alphalatin a.a];
-	@bGC_i.a_base = [i.a dotlessi.a istroke.a];
+	@bGC_i.a_base = [i.a dotlessi.a istroke.a l.a lslash.a lmiddletilde.a];
 	@bGC_i_base = [i dotlessi istroke];
 	pos base @bGC_I_base <anchor 300 0> mark @MC_base;
 	pos base @bGC_L_base <anchor 345 0> mark @MC_base;
@@ -228,7 +230,7 @@ lookup MARK_BASE_below {
 	@bGC_ghook_below = [ghook gscript g.a];
 	@bGC_glottalstop_below = [glottalstop glottalstopstroke];
 	@bGC_h_below = [h z];
-	@bGC_i.a_below = [i.a dotlessi.a istroke.a istroke.da];
+	@bGC_i.a_below = [i.a dotlessi.a istroke.a istroke.da l.a lslash.a lmiddletilde.a lbelt.a];
 	@bGC_i_below = [i dotlessi istroke istroke.d];
 	@bGC_j_below = [j dotlessj];
 	@bGC_jcrossedtail_below = [jcrossedtail jcrossedtail.d];
@@ -284,7 +286,7 @@ lookup MARK_BASE_below {
 	pos base ezh <anchor 285 -224> mark @MC_below;
 	pos base f <anchor 292 -20> mark @MC_below;
 	pos base g <anchor 307 -215> mark @MC_below;
-	pos base gammalatin <anchor 300 -224> mark @MC_below;
+	pos base gammalatin <anchor 300 -116> mark @MC_below;
 	pos base gsmall <anchor 325 -20> mark @MC_below;
 	pos base hhook <anchor 314 -20> mark @MC_below;
 	pos base hturned <anchor 370 -116> mark @MC_below;
@@ -315,6 +317,7 @@ lookup MARK_BASE_center {
 	pos base L <anchor 177 340> mark @MC_center;
 	pos base circledotted <anchor 300 245> mark @MC_center;
 	pos base l <anchor 285 381> mark @MC_center;
+	pos base l.a <anchor 335 381> mark @MC_center;
 } MARK_BASE_center;
 
 
@@ -328,21 +331,20 @@ lookup MARK_BASE_horn {
 
 lookup MARK_BASE_ogonek {
 	@bGC_A_ogonek = [A Aacute Adieresis Aring];
-	@bGC_E_ogonek = [E Eacute];
+	@bGC_E_ogonek = [E a.a aacute.a adieresis.a aring.a];
 	@bGC_I_ogonek = [I O U Y o Odieresis odieresis circledotted];
-	@bGC_a.a_ogonek = [a.a aacute.a adieresis.a aring.a];
 	@bGC_a_ogonek = [a aacute adieresis aring];
 	@bGC_e_ogonek = [e eacute];
 	@bGC_i.a_ogonek = [i.a dotlessi.a];
 	@bGC_i_ogonek = [i dotlessi];
 	pos base @bGC_A_ogonek <anchor 501 0> mark @MC_ogonek;
-	pos base @bGC_E_ogonek <anchor 429 0> mark @MC_ogonek;
+	pos base @bGC_E_ogonek <anchor 430 0> mark @MC_ogonek;
 	pos base @bGC_I_ogonek <anchor 300 0> mark @MC_ogonek;
-	pos base @bGC_a.a_ogonek <anchor 430 0> mark @MC_ogonek;
 	pos base @bGC_a_ogonek <anchor 435 0> mark @MC_ogonek;
 	pos base @bGC_e_ogonek <anchor 403 0> mark @MC_ogonek;
 	pos base @bGC_i.a_ogonek <anchor 335 0> mark @MC_ogonek;
 	pos base @bGC_i_ogonek <anchor 355 0> mark @MC_ogonek;
+	pos base Eacute <anchor 429 0> mark @MC_ogonek;
 	pos base Schwa <anchor 310 0> mark @MC_ogonek;
 	pos base schwa <anchor 295 0> mark @MC_ogonek;
 	pos base u <anchor 425 0> mark @MC_ogonek;

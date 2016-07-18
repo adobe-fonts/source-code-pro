@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="henghook">
+	<unicode hex="0267" />
   <advance width="600" />
-  <unicode hex="0267" />
   <outline>
     <contour>
       <point name="hintSet0000" type="curve" x="352" y="-188" />
@@ -12,7 +12,7 @@
       <point x="546" y="412" />
       <point x="498" y="492" />
       <point type="curve" x="388" y="492" />
-      <point x="314" y="492" />
+      <point name="hintSet0004" x="314" y="492" />
       <point x="262" y="458" />
       <point type="curve" x="230" y="426" />
       <point type="line" x="226" y="426" />
@@ -53,35 +53,66 @@
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="f1088ec9f8811cbd22a32562349fe152c68d9e8cf23f3f318c84cee071cc4860f5d0c96c77c9a9a830d04e77fe8cd72167e55aa20098158443d9a2a6f2730e6a">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="-188" width="134" />
-            <hstem pos="21" width="-21" />
-            <hstem pos="346" width="146" />
-            <hstem pos="574" width="134" />
-            <vstem pos="64" width="172" />
-            <vstem pos="374" width="172" />
-          </hintset>
-          <hintset pointTag="hintSet0009">
-            <hstem pos="-188" width="134" />
-            <hstem pos="21" width="-21" />
-            <hstem pos="346" width="146" />
-            <hstem pos="708" width="-20" />
-            <vstem pos="64" width="172" />
-            <vstem pos="374" width="172" />
-          </hintset>
-          <hintset pointTag="hintSet0010">
-            <hstem pos="-188" width="134" />
-            <hstem pos="21" width="-21" />
-            <hstem pos="346" width="146" />
-            <hstem pos="574" width="134" />
-            <vstem pos="64" width="172" />
-            <vstem pos="374" width="172" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>f1088ec9f8811cbd22a32562349fe152c68d9e8cf23f3f318c84cee071cc4860f5d0c96c77c9a9a830d04e77fe8cd72167e55aa20098158443d9a2a6f2730e6a</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -188 134</string>
+              <string>hstem 21 -21</string>
+              <string>hstem 346 146</string>
+              <string>hstem 574 134</string>
+              <string>vstem 64 172</string>
+              <string>vstem 374 172</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0004</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -188 134</string>
+              <string>hstem 21 -21</string>
+              <string>hstem 346 146</string>
+              <string>hstem 574 134</string>
+              <string>vstem 64 167</string>
+              <string>vstem 374 172</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0009</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -188 134</string>
+              <string>hstem 21 -21</string>
+              <string>hstem 346 146</string>
+              <string>hstem 708 -20</string>
+              <string>vstem 64 172</string>
+              <string>vstem 374 172</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0010</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -188 134</string>
+              <string>hstem 21 -21</string>
+              <string>hstem 346 146</string>
+              <string>hstem 574 134</string>
+              <string>vstem 64 172</string>
+              <string>vstem 374 172</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>

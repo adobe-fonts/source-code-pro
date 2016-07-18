@@ -1,42 +1,55 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph format="1" name="dblupleftbxd">
+	<unicode hex="255D" />
   <advance width="600" />
-  <unicode hex="255D" />
   <outline>
     <contour>
-      <point name="hintSet0000" type="line" x="-15" y="255" />
-      <point type="line" x="345" y="255" />
-      <point type="line" x="345" y="1000" />
-      <point type="line" x="315" y="1000" />
-      <point type="line" x="315" y="285" />
-      <point type="line" x="-15" y="285" />
-    </contour>
-    <contour>
-      <point name="hintSet0006" type="line" x="-15" y="315" />
-      <point type="line" x="285" y="315" />
+      <point name="hintSet0000" type="line" x="285" y="315" />
       <point type="line" x="285" y="1000" />
       <point type="line" x="255" y="1000" />
       <point type="line" x="255" y="345" />
       <point type="line" x="-15" y="345" />
+      <point type="line" x="-15" y="315" />
+    </contour>
+    <contour>
+      <point name="hintSet0006" type="line" x="345" y="255" />
+      <point type="line" x="345" y="1000" />
+      <point type="line" x="315" y="1000" />
+      <point type="line" x="315" y="285" />
+      <point type="line" x="-15" y="285" />
+      <point type="line" x="-15" y="255" />
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList id="w600l-15255l345255l3451000l3151000l315285l-15285l-15315l285315l2851000l2551000l255345l-15345">
-          <hintset pointTag="hintSet0000">
-            <hstem pos="255" width="30" />
-            <hstem pos="315" width="30" />
-            <vstem pos="255" width="30" />
-            <vstem pos="315" width="30" />
-          </hintset>
-          <hintset pointTag="hintSet0006">
-            <hstem pos="315" width="30" />
-            <vstem pos="255" width="30" />
-          </hintset>
-        </hintSetList>
-      </data>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>id</key>
+        <string>w600l285315l2851000l2551000l255345l-15345l-15315l345255l3451000l3151000l315285l-15285l-15255</string>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 315 30</string>
+              <string>vstem 255 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintSet0006</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 255 30</string>
+              <string>hstem 315 30</string>
+              <string>vstem 255 30</string>
+              <string>vstem 315 30</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </lib>
 </glyph>
