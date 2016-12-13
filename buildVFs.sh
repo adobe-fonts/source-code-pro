@@ -1,0 +1,2 @@
+buildMasterOTFs RomanMasters/SourceCodePro.designspace
+buildCFF2VF RomanMasters/SourceCodePro.designspace  SourceCodePro-Variable.otf
