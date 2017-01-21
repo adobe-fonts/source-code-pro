@@ -1,3 +1,8 @@
+table head {
+	include (../familyVersion.fea);
+} head;
+
+
 table name {
 	nameid 0 "Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name \2018Source\2019.";
 	nameid 0 1 "Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name \D4Source\D5.";
@@ -5,8 +10,8 @@ table name {
 	nameid 11 1 "http://www.adobe.com/type";
 	nameid 13 "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL. This Font Software is distributed on an \2018AS IS\2019 BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
 	nameid 13 1 "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL. This Font Software is distributed on an \D4AS IS\D5 BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
-	nameid 14 "http://www.adobe.com/type/legal.html";
-	nameid 14 1 "http://www.adobe.com/type/legal.html";
+	nameid 14 "http://scripts.sil.org/OFL";
+	nameid 14 1 "http://scripts.sil.org/OFL";
 	nameid 7 "Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.";
 	nameid 7 1 "Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.";
 	nameid 8 "Adobe Systems Incorporated";
@@ -15,11 +20,22 @@ table name {
 	nameid 9 1 "Paul D. Hunt, Teo Tuominen";
 } name;
 
+
+table hhea {
+	# NOTE: The OS/2.winAscent and OS/2.winDescent values are set by MakeOTF and vary depending on the font's bounding box
+	Ascender 984;		# Must match OS/2.winAscent for cross-platform consistency
+	Descender -273;		# Must match OS/2.winDescent for cross-platform consistency
+	LineGap 0;			# Must be zero for cross-platform consistency
+} hhea;
+
+
 table BASE {
 	HorizAxis.BaseTagList ideo romn;
-	HorizAxis.BaseScriptList 
+	HorizAxis.BaseScriptList
 	latn romn -170 0,
 	grek romn -170 0,
 	cyrl romn -170 0,
 	DFLT romn -170 0;
 } BASE;
+
+
