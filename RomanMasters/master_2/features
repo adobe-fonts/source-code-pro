@@ -1,56 +1,22 @@
-table head {
-   FontRevision 1.000;
-} head;
+include (../../familyTables.fea);
 
-include (../../family.fea);
+table OS/2 {
+	include (../../Roman/Black/os2.fea);
+	include (../../Roman/familyUnicodeRange.fea);
+	include (../../familyOS2.fea);
+} OS/2;
 
+include (../../Roman/familyGSUB.fea);
+
+# GPOS -----------------------------------
 include (../../Roman/Black/markclasses.fea);
 
 feature mark {
-	include (../../widthsAdjust.fea);
+	include (../../familyWidthsAdjust.fea);
 	include (../../Roman/Black/mark.fea);
 } mark;
+
 
 feature mkmk {
 	include (../../Roman/Black/mkmk.fea);
 } mkmk;
-
-table OS/2 {
-	Panose 2 11 8 9 3 4 3 2 2 4;
-	FSType 0;
-	# NOTE: For cross-platform consistency, OS/2.TypoAscender and |OS/2.TypoDescender| must add up to the font's UPM value
-	TypoAscender 750;	# Must be the same on all fonts for cross-platform consistency
-	TypoDescender -250;	# Must be the same on all fonts for cross-platform consistency
-	TypoLineGap 0;		# Must be zero for cross-platform consistency
-	winAscent 984;		# Must be the same on all fonts for cross-weight consistency
-	winDescent 273;		# Must be the same on all fonts for cross-weight consistency
-	XHeight 480;
-	CapHeight 660;
-	WeightClass 900;	# Black
-	WidthClass 5;		# Medium (normal)
-	Vendor "ADBO";
-	UnicodeRange 0  # Basic Latin
-	             1  # Latin-1 Supplement
-	             2  # Latin Extended-A
-	             4  # IPA Extensions
-	             5  # Spacing Modifier Letters
-	             6  # Combining Diacritical Marks
-	             7  # Greek
-	             9  # Cyrillic
-	             29 # Latin Extended Additional
-	             32 # Superscripts and Subscripts
-	             33 # Currency Symbols
-	             43 # Box Drawing
-	             44 # Block Elements
-	             45 # Geometric Shapes (override to force makeotf to turn this bit on)
-	             57;# beyond the BMP (Basic Multilingual Plane)
-} OS/2;
-
-table hhea {
-	# NOTE: The OS/2.winAscent and OS/2.winDescent values are set by MakeOTF and vary depending on the font's bounding box
-	Ascender 984;		# Must match OS/2.winAscent for cross-platform consistency
-	Descender -273;		# Must match OS/2.winDescent for cross-platform consistency
-	LineGap 0;			# Must be zero for cross-platform consistency
-} hhea;
-
-include (../../tables.fea);

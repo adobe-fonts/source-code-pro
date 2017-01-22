@@ -1,0 +1,22 @@
+include (../../familyTables.fea);
+
+table OS/2 {
+	include (../../Italic/ExtraLightIt/os2.fea);
+	include (../../Italic/familyUnicodeRange.fea);
+	include (../../familyOS2.fea);
+} OS/2;
+
+include (../../Italic/familyGSUB.fea);
+
+# GPOS -----------------------------------
+include (../../Italic/ExtraLightIt/markclasses.fea);
+
+feature mark {
+	include (../../familyWidthsAdjust.fea);
+	include (../../Italic/ExtraLightIt/mark.fea);
+} mark;
+
+
+feature mkmk {
+	include (../../Italic/ExtraLightIt/mkmk.fea);
+} mkmk;
