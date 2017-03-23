@@ -61,7 +61,7 @@ or this on Windows:
 
 ## Getting Involved
 
-Send suggestions for changes to the Source Code OpenType font project maintainer, [Paul D. Hunt](mailto:opensourcefonts@adobe.com?subject=[GitHub] Source Code Pro), for consideration.
+Send suggestions for changes to the Source Code OpenType font project maintainer, [Paul D. Hunt](mailto:opensourcefonts@adobe.com?subject=[GitHub]%20Source%20Code%20Pro), for consideration.
 
 ## Further information
 
