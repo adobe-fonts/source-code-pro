@@ -7,8 +7,8 @@ by using the AFDKO makeotf tool.
 
 ## Download the fonts (OTF, TTF, WOFF, WOFF2, EOT)
 
-* [Latest release](../../releases/latest)
-* [All releases](../../releases)
+* [Latest release](releases/latest)
+* [All releases](releases)
 
 ## Font installation instructions
 
