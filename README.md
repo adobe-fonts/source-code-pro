@@ -7,7 +7,7 @@ by using the AFDKO makeotf tool.
 
 ## Font installation instructions
 
-* [macOS](http://support.apple.com/kb/HT2509)
+* [macOS](https://support.apple.com/en-us/HT201749)
 * [Windows](https://www.microsoft.com/en-us/Typography/TrueTypeInstall.aspx)
 * [Linux/Unix-based systems](https://github.com/adobe-fonts/source-code-pro/issues/17#issuecomment-8967116)
 * Bower<br/>
