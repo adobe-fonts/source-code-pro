@@ -10,7 +10,7 @@ for /f %%a in ('where makeotf') do set MAKEOTF_PATH=%%a
 if "%MAKEOTF_PATH%" == "" goto error_makeotf_not_found
 
 call :GetDirectoryName PYTHON_PATH "%MAKEOTF_PATH%"
-set PYTHON_PATH=%PYTHON_PATH%Python\AFDKOPython\python.exe
+set PYTHON_PATH=%PYTHON_PATH%Python\AFDKOPython27\python.exe
 
 set TARGET_PATH=%~dp0\target\
 set TARGET_OTF_PATH=%TARGET_PATH%OTF\
