@@ -1,0 +1,22 @@
+include (../../../../familyTables.fea);
+
+table OS/2 {
+	include (../../../Instances/It/os2.fea);
+	include (../../../familyUnicodeRange.fea);
+	include (../../../../familyOS2.fea);
+} OS/2;
+
+include (../../../familyGSUB.fea);
+
+# GPOS -----------------------------------
+include (../../../Instances/It/markclasses.fea);
+
+feature mark {
+	include (../../../../familyWidthsAdjust.fea);
+	include (../../../Instances/It/mark.fea);
+} mark;
+
+
+feature mkmk {
+	include (../../../Instances/It/mkmk.fea);
+} mkmk;
