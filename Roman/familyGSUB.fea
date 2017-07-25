@@ -170,13 +170,13 @@ feature locl { # Localized Forms
 
 		language SKS exclude_dflt;
 			lookup ENG_UC_SAMI;
-			
+
 	script grek;
 		sub [acutecmb gravecmb commaturnedabovecmb commaabovecmb] by [tonoscmb variacmb aspercmb leniscmb]; # combining marks
 
 	script cyrl;
 		lookup BREVE_CYR;
-		
+
 		language SRB include_dflt;
 			lookup BE_LC_SRB;
 
@@ -293,13 +293,11 @@ feature cv01 { # Character Variant 1 (alternate lowercase a)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "simple a"; # English US
-			name 3 1 0x0809 "simple a"; # English GB
-			name 1 0 0 "simple a"; # Mac English
 			name 3 1 0x0408 "\03B1\03C0\03BB\03CC a"; # Greek
 			name 3 1 0x0419 "\043F\0440\043E\0441\0442\043E\0439 \0430"; # Russian
 		};
 	};
-	
+
 	lookup A_LC_ALT;
 
 } cv01;
@@ -309,13 +307,11 @@ feature cv02 { # Character Variant 2 (alternate lowercase g)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "simple g"; # English US
-			name 3 1 0x0809 "simple g"; # English GB
-			name 1 0 0 "simple g"; # Mac English
 			name 3 1 0x0408 "\03B1\03C0\03BB\03CC g"; # Greek
 			name 3 1 0x0419 "\043F\0440\043E\0441\0442\043E\0439 g"; # Russian
 		};
 	};
-	
+
 	lookup G_LC_ALT;
 
 } cv02;
@@ -325,13 +321,11 @@ feature cv04 { # Character Variant 4 (alternate lowercase i)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "serifed i & l"; # English US
-			name 3 1 0x0809 "serifed i & l"; # English GB
-			name 1 0 0 "serifed i & l"; # Mac English
 			name 3 1 0x0408 "i & l \03BC\03B5 \03B1\03BA\03C1\03B5\03BC\03CC\03BD\03B5\03C2"; # Greek
 			name 3 1 0x0419 "\0456 \0438 \04CF \0441 \0437\0430\0441\0435\0447\043A\0430\043C\0438"; # Russian
 		};
 	};
-	
+
 	lookup I_LC_ALT;
 
 } cv04;
@@ -341,13 +335,11 @@ feature cv06 { # Character Variant 6 (Sami uppercase Eng)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "Sami \014A"; # English US
-			name 3 1 0x0809 "Sami \014A"; # English GB
-			name 1 0 0 "Sami Eng"; # Mac English
 			name 3 1 0x0408 "\03A3\03AC\03BC\03B7 \014A"; # Greek
 			name 3 1 0x0419 "\0441\0430\0430\043C\0441\043A\0438\0439 \014A"; # Russian
 		};
 	};
-	
+
 	lookup ENG_UC_SAMI;
 
 } cv06;
@@ -357,13 +349,11 @@ feature cv07 { # Character Variant 7 (cursive beta)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "cursive \03B2"; # English US
-			name 3 1 0x0809 "cursive \03B2"; # English GB
-			name 1 0 0 "cursive beta"; # Mac English
 			name 3 1 0x0408 "\03C1\03AD\03C9\03BD \03B2"; # Greek
 			name 3 1 0x0419 "\0441\043A\043E\0440\043E\043F\0438\0441\043D\044B\0439 \03B2"; # Russian
 		};
 	};
-	
+
 	lookup BETA_LC_ALT;
 
 } cv07;
@@ -373,13 +363,11 @@ feature cv08 { # Character Variant 8 (cursive theta)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "cursive \03B8"; # English US
-			name 3 1 0x0809 "cursive \03B8"; # English GB
-			name 1 0 0 "cursive theta"; # Mac English
 			name 3 1 0x0408 "\03C1\03AD\03C9\03BD \03B8"; # Greek
 			name 3 1 0x0419 "\0441\043A\043E\0440\043E\043F\0438\0441\043D\044B\0439 \03B8"; # Russian
 		};
 	};
-	
+
 	lookup THETA_LC_ALT;
 
 } cv08;
@@ -389,13 +377,11 @@ feature cv09 { # Character Variant 9 (cursive phi)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "cursive \03C6"; # English US
-			name 3 1 0x0809 "cursive \03C6"; # English GB
-			name 1 0 0 "cursive phi"; # Mac English
 			name 3 1 0x0408 "\03C1\03AD\03C9\03BD \03C6"; # Greek
 			name 3 1 0x0419 "\0441\043A\043E\0440\043E\043F\0438\0441\043D\044B\0439 \03C6"; # Russian
 		};
 	};
-	
+
 	lookup PHI_LC_ALT;
 
 } cv09;
@@ -405,8 +391,6 @@ feature cv10 { # Character Variant 10 (Serbian be)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "Serbian \03C6"; # English US
-			name 3 1 0x0809 "Serbian \03C6"; # English GB
-			name 1 0 0 "Serbian be"; # Mac English
 			name 3 1 0x0408 "\03A3\03AD\03C1\03B2\03B9\03BA\03BF \0431"; # Greek
 			name 3 1 0x0419 "\0441\0435\0440\0431\0441\043A\0438\0439 \0431"; # Russian
 		};
@@ -421,8 +405,6 @@ feature cv11 { # Character Variant 11 (Cyrillic breve)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "Cyrillic breve [\02D8]"; # English US
-			name 3 1 0x0809 "Cyrillic breve [\02D8]"; # English GB
-			name 1 0 0 "Cyrillic breve"; # Mac English
 			name 3 1 0x0408 "\03BA\03C5\03C1\03B9\03BB\03BB\03B9\03BA\03CC \03B2\03C1\03B1\03C7\03CD [\02D8]"; # Greek
 			name 3 1 0x0419 "\043A\0438\0440\0438\043B\043B\0438\0447\0435\0441\043A\0430\044F \043A\0440\0430\0442\043A\0430 [\02D8]"; # Russian
 		};
@@ -437,13 +419,11 @@ feature cv12 { # Character Variant 12 (slashed zero)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "slashed zero [0]"; # English US
-			name 3 1 0x0809 "slashed zero [0]"; # English GB
-			name 1 0 0 "slashed zero [0]"; # Mac English
 			name 3 1 0x0408 "\03BC\03B7\03B4\03AD\03BD \03BC\03B5 \03BA\03AC\03B8\03B5\03C4\03BF [0]"; # Greek
 			name 3 1 0x0419 "\0437\0430\0447\0435\0440\043A\043D\0443\0442\044B\0439 \043D\043E\043B\044C [0]"; # Russian
 		};
 	};
-	
+
 	lookup ZERO_SLASH;
 
 } cv12;
@@ -453,13 +433,11 @@ feature cv14 { # Character Variant 14 (typographic hyphen)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "typographic hyphen [-]"; # English US
-			name 3 1 0x0809 "typographic hyphen [-]"; # English GB
-			name 1 0 0 "typographic hyphen [-]"; # Mac English
 			name 3 1 0x0408 "\03C4\03C5\03C0\03BF\03B3\03C1\03B1\03C6\03B9\03BA\03AE \03C0\03B1\03CD\03BB\03B1 [-]"; # Greek
 			name 3 1 0x0419 "\0442\0438\043F\043E\0433\0440\0430\0444\0441\043A\0438\0439 \0434\0435\0444\0438\0441 [-]"; # Russian
 		};
 	};
- 
+
  	lookup HYPHEN_ALT;
 
 } cv14;
@@ -469,13 +447,11 @@ feature cv15 { # Character Variant 15 (typographic asterisk)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "typographic asterisk [*]"; # English US
-			name 3 1 0x0809 "typographic asterisk [*]"; # English GB
-			name 1 0 0 "typographic asterisk [*]"; # Mac English
 			name 3 1 0x0408 "\03C4\03C5\03C0\03BF\03B3\03C1\03B1\03C6\03B9\03BA\03BF\03C2 \03B1\03C3\03C4\03B5\03C1\03AF\03C3\03BA\03BF\03C2 [*]"; # Greek
 			name 3 1 0x0419 "\0442\0438\043F\043E\0433\0440\0430\0444\0441\043A\0430\044F \0437\0432\0435\0437\0434\043E\0447\043A\0430 [*]"; # Russian
 		};
 	};
- 
+
 	lookup ASTERISK_ALT;
 
 } cv15;
@@ -485,13 +461,11 @@ feature cv16 { # Character Variant 16 (barred dollar sign)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "slashed dollar sign [$]"; # English US
-			name 3 1 0x0809 "slashed dollar sign [$]"; # English GB
-			name 1 0 0 "slashed dollar sign [$]"; # Mac English
 			name 3 1 0x0408 "\03C3\03CD\03BC\03B2\03BF\03BB\03BF \03C4\03BF\03C5 \03B4\03BF\03BB\03B1\03C1\03AF\03BF\03C5 \03BC\03B5 \03BA\03AC\03B8\03B5\03C4\03BF [$]"; # Greek
 			name 3 1 0x0419 "\0437\0430\0447\0435\0440\043A\043D\0443\0442\044B\0439 \0437\043D\0430\043A \0434\043E\043B\043B\0430\0440\0430 [$]"; # Russian
 		};
 	};
- 
+
 	lookup DOLLAR_ALT;
 
 } cv16;
@@ -501,13 +475,11 @@ feature cv17 { # Character Variant 17 (alternate numeral one)
 	cvParameters {
 		FeatUILabelNameID {
 			name 3 1 0x0409 "alternate numeral one [1]"; # English US
-			name 3 1 0x0809 "alternate numeral one [1]"; # English GB
-			name 1 0 0 "alternate numeral one [1]"; # Mac English
 #			name 3 1 0x0408 "XXX"; # Greek
 #			name 3 1 0x0419 "XXX"; # Russian
 		};
 	};
- 
+
 	lookup ONE_ALT;
 
 } cv17;
@@ -557,7 +529,7 @@ feature ordn {
 #--------------------------------------
 feature sups { # Superscript
 	lookup SUPERIOR_LETTERS_MINISCULE;
-	
+
 	lookup SUPERIOR_NUMERALS_SORTS {
 		sub @FIGURES_LINING by @FIGURES_SUPERIOR;
 		sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_SUPERIOR;
@@ -605,8 +577,6 @@ feature case { # Case-Sensitive Forms
 feature ss01 { # Stylistic Set 1 (typographic alternates)
 	featureNames {
 		name 3 1 0x0409 "typographic alternates [-,*]"; # English US
-		name 3 1 0x0809 "typographic alternates [-,*]"; # English GB
-		name 1 0 0 "typographic alternates [-,*]"; # Mac English
 		name 3 1 0x0408 "\03C4\03C5\03C0\03BF\03B3\03C1\03B1\03C6\03B9\03BA\03AC \03B5\03BD\03B1\03BB\03BB\03B1\03BA\03C4\03B9\03BA\03AC [-,*]"; # Greek
 		name 3 1 0x0419 "\0442\0438\043F\043E\0433\0440\0430\0444\0441\043A\0438\0435 \0437\0430\043C\0435\0441\0442\0438\0442\0435\043B\0438 [-,*]"; # Russian
 	};
@@ -620,12 +590,10 @@ feature ss01 { # Stylistic Set 1 (typographic alternates)
 feature ss02 { # Stylistic Set 2 (alternate a, cursive beta)
 	featureNames {
 		name 3 1 0x0409 "simple a, cursive \03B2"; # English US
-		name 3 1 0x0809 "simple a, cursive \03B2"; # English GB
-		name 1 0 0 "simple a, cursive beta"; # Mac English
 		name 3 1 0x0408 "\03C1\03AD\03C9\03BD \03B2, \03B1\03C0\03BB\03CC a"; # Greek
 		name 3 1 0x0419 "\043F\0440\043E\0441\0442\043E\0439 \0430, \0441\043A\043E\0440\043E\043F\0438\0441\043D\044B\0439 \03B2"; # Russian
 	};
-	
+
 	lookup A_LC_ALT;
 	lookup BETA_LC_ALT;
 
@@ -635,12 +603,10 @@ feature ss02 { # Stylistic Set 2 (alternate a, cursive beta)
 feature ss03 { # Stylistic Set 3 (alternate g, cursive theta, Serbian be)
 	featureNames {
 		name 3 1 0x0409 "simple g, cursive \03B8, Serbian \0431"; # English US
-		name 3 1 0x0809 "simple g, cursive \03B8, Serbian \0431"; # English GB
-		name 1 0 0 "simple g, cursive theta, Serbian be"; # Mac English
 		name 3 1 0x0408 "\03C1\03AD\03C9\03BD \03B8, \03B1\03C0\03BB\03CC g, \03A3\03AD\03C1\03B2\03B9\03BA\03BF \0431"; # Greek
 		name 3 1 0x0419 "\0441\0435\0440\0431\0441\043A\0438\0439 \0431, \043F\0440\043E\0441\0442\043E\0439 g, \0441\043A\043E\0440\043E\043F\0438\0441\043D\044B\0439 \03B8"; # Russian
 	};
-	
+
 	lookup G_LC_ALT;
 	lookup THETA_LC_ALT;
 	lookup BE_LC_SRB;
@@ -651,12 +617,10 @@ feature ss03 { # Stylistic Set 3 (alternate g, cursive theta, Serbian be)
 feature ss04 { # Stylistic Set 4 (alternate i)
 	featureNames {
 		name 3 1 0x0409 "serifed i & l"; # English US
-		name 3 1 0x0809 "serifed i & l"; # English GB
-		name 1 0 0 "serifed i & l"; # Mac English
 		name 3 1 0x0408 "i & l \03BC\03B5 \03B1\03BA\03C1\03B5\03BC\03CC\03BD\03B5\03C2"; # Greek
 		name 3 1 0x0419 "\0456 \0438 \04CF \0441 \0437\0430\0441\0435\0447\043A\0430\043C\0438"; # Russian
 	};
-	
+
 	lookup I_LC_ALT;
 
 } ss04;
@@ -665,12 +629,10 @@ feature ss04 { # Stylistic Set 4 (alternate i)
 feature ss05 { # Stylistic Set 5 (alternate Sami uppercase Eng, cursive phi)
 	featureNames {
 		name 3 1 0x0409 "Sami \014A, cursive \03C6"; # English US
-		name 3 1 0x0809 "Sami \014A, cursive \03C6"; # English GB
-		name 1 0 0 "Sami Eng, cursive phi"; # Mac English
 		name 3 1 0x0408 "\03C1\03AD\03C9\03BD \03C6, \03A3\03AC\03BC\03B7 \014A"; # Greek
 		name 3 1 0x0419 "\0441\0430\0430\043C\0441\043A\0438\0439 \014A, \0441\043A\043E\0440\043E\043F\0438\0441\043D\044B\0439 \03C6"; # Russian
 	};
-	
+
 	lookup ENG_UC_SAMI;
 	lookup PHI_LC_ALT;
 
@@ -680,12 +642,10 @@ feature ss05 { # Stylistic Set 5 (alternate Sami uppercase Eng, cursive phi)
 feature ss06 { # Stylistic Set 6 (alternate dollar sign)
 	featureNames {
 		name 3 1 0x0409 "slashed dollar sign [$]"; # English US
-		name 3 1 0x0809 "slashed dollar sign [$]"; # English GB
-		name 1 0 0 "slashed dollar sign [$]"; # Mac English
 		name 3 1 0x0408 "\03C3\03CD\03BC\03B2\03BF\03BB\03BF \03C4\03BF\03C5 \03B4\03BF\03BB\03B1\03C1\03AF\03BF\03C5 \03BC\03B5 \03BA\03AC\03B8\03B5\03C4\03BF [$]"; # Greek
 		name 3 1 0x0419 "\0437\0430\0447\0435\0440\043A\043D\0443\0442\044B\0439 \0437\043D\0430\043A \0434\043E\043B\043B\0430\0440\0430 [$]"; # Russian
 	};
-	
+
 	lookup DOLLAR_ALT;
 
 } ss06;
@@ -694,12 +654,10 @@ feature ss06 { # Stylistic Set 6 (alternate dollar sign)
 feature ss07 { # Stylistic Set 7 (alternate numeral one)
 	featureNames {
 		name 3 1 0x0409 "alternate numeral one [1]"; # English US
-		name 3 1 0x0809 "alternate numeral one [1]"; # English GB
-		name 1 0 0 "alternate numeral one [1]"; # Mac English
 #		name 3 1 0x0408 "XXX"; # Greek
 #		name 3 1 0x0419 "XXX"; # Russian
 	};
-	
+
 lookup ONE_ALT_FULL {
 	sub [one one.onum one.cap] by [one.a one.ao one.ac];
 } ONE_ALT_FULL;
