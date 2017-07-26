@@ -1,4 +1,4 @@
-# Created: Wed Jun  1 17:48:59 2016
+# Created: Wed Jul 26 14:29:52 2017
 # PS Name: SourceCodePro-ExtraLight
 # MM Inst: None
 # exported from Defcon
@@ -152,13 +152,13 @@ lookup MARK_BASE_base {
 
 
 lookup MARK_BASE_below {
-	@bGC_A_below = [A H I J M N O T U X Y a d o v w x Ohorn Tbar Uhorn Schwa dcroat ohorn oslash dhook alphalatin schwa eopenreversedclosed gammalatin ramshorn hturned hsmall ismall nsmall obar rsmallinverted upsilonlatin vhook vturned wturned ysmall a.a Alpha Eta Omega omega circledotted];
+	@bGC_A_below = [A H I J M N O T U X Y a d o v w x Ohorn Tbar Uhorn Schwa dcroat ohorn oslash dhook alphalatin schwa eopenreversedclosed ramshorn hturned hsmall ismall nsmall obar rsmallinverted upsilonlatin vhook vturned wturned ysmall a.a Alpha Eta Omega omega circledotted];
 	@bGC_D_below = [D f u Dcroat Eth uhorn ereversed ubar];
 	@bGC_E_below = [E c AE];
 	@bGC_L_below = [L Lslash ccurl tturned];
 	@bGC_R_below = [R S Z e h alphalatinturned bhook bsmall eopen hhook rsmall glottalstopreversed glottalstopstrokereversed];
 	@bGC_b_below = [b s Eng ae oe eth aturned yturned];
-	@bGC_dtail_below = [dtail mhook philatin rhookturned];
+	@bGC_dtail_below = [dtail gammalatin mhook philatin rhookturned];
 	@bGC_eng_below = [eng henghook tretroflex];
 	@bGC_esh_below = [esh dotlessjstrokehook];
 	@bGC_g_below = [g shook];
@@ -223,11 +223,10 @@ lookup MARK_BASE_below {
 
 
 lookup MARK_BASE_center {
-	@bGC_l.a_center = [l.a lslash.a];
-	pos base @bGC_l.a_center <anchor 342 400> mark @MC_center;
 	pos base L <anchor 174 330> mark @MC_center;
 	pos base circledotted <anchor 300 240> mark @MC_center;
 	pos base l <anchor 296 400> mark @MC_center;
+	pos base l.a <anchor 342 400> mark @MC_center;
 } MARK_BASE_center;
 
 
