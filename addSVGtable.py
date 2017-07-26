@@ -89,7 +89,7 @@ def processFontFile(fontFilePath, svgFilePathsList):
 	svgDocsList = [svgDocsDict[index] for index in sorted(svgDocsDict.keys())]
 
 	svgTable = ttLib.newTable(TABLE_TAG)
-	svgTable.compressed = True # GZIP the SVG docs
+	svgTable.compressed = False # GZIP the SVG docs
 	svgTable.docList = svgDocsList
 	font[TABLE_TAG] = svgTable
 
