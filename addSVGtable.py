@@ -106,7 +106,7 @@ def processFontFile(fontFilePath, svgFilePathsList):
 	os.remove(fontFilePath)
 	os.rename(newFontFilePath, fontFilePath)
 
-	print >> sys.stdout, "\nSVG table successfully added to %s" % fontFilePath
+	print >> sys.stdout, "SVG table successfully added to %s" % fontFilePath
 
 
 def validateSVGfiles(svgFilePathsList):
