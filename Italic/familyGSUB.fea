@@ -74,59 +74,6 @@ languagesystem cyrl dflt; # Cyrillic default
 	languagesystem cyrl SRB; # Serbian
 
 #--------------------------------------
-lookup A_LC_ALT {
-	sub @A_LC by @A_LC_ALT;
-} A_LC_ALT;
-
-lookup G_LC_ALT {
-	sub @G_LC by @G_LC_ALT;
-} G_LC_ALT;
-
-lookup ENG_UC_SAMI { # preferred Eng shape for Sami languages
-	sub Eng by Eng.a;
-} ENG_UC_SAMI;
-
-#lookup BETA_LC_ALT {
-#	sub beta by beta.a;
-#} BETA_LC_ALT;
-#
-#lookup THETA_LC_ALT {
-#	sub theta by theta.a;
-#} THETA_LC_ALT;
-#
-#lookup PHI_LC_ALT {
-#	sub phi by phi.a;
-#} PHI_LC_ALT;
-
-lookup BREVE_CYR { #preferred breve shape for Cyrillic script
-	sub [brevecmb brevecmb.cap] by [brevecmb.cyr brevecmb.cyrcap]; # combining marks
-} BREVE_CYR;
-
-#lookup BE_LC_SRB {
-#	sub be by be.srb;
-#} BE_LC_SRB;
-
-lookup ZERO_SLASH {
-	sub [zero zero.onum zero.cap] by [zero.0 zero.0o zero.0c];
-} ZERO_SLASH;
-
-lookup HYPHEN_ALT {
-	sub [hyphen sfthyphen hyphentwo] by [hyphen.a sfthyphen.a hyphentwo.a];
-} HYPHEN_ALT;
-
-lookup ASTERISK_ALT {
-	sub asterisk by asterisk.a;
-} ASTERISK_ALT;
-
-lookup DOLLAR_ALT {
-	sub dollar by dollar.a;
-} DOLLAR_ALT;
-
-lookup ONE_ALT {
-	sub one by one.a;
-} ONE_ALT;
-
-#--------------------------------------
 #feature aalt { # Access All Alternates
 #	feature locl;
 #	feature numr;
@@ -152,21 +99,28 @@ lookup ONE_ALT {
 feature locl { # Localized Forms
 
 	script latn;
-
 		language NSM exclude_dflt;
-			lookup ENG_UC_SAMI;
+			lookup ENG_UC_SAMI { # preferred Eng shape for Sami languages
+				sub Eng by Eng.a;
+			} ENG_UC_SAMI;
 
 		language SKS exclude_dflt;
 			lookup ENG_UC_SAMI;
 
 #	script grek;
-#		sub [acutecmb gravecmb commaturnedabovecmb commaabovecmb] by [tonoscmb variacmb aspercmb leniscmb]; # combining marks
+#		language dflt;
+#			sub [acutecmb gravecmb commaturnedabovecmb commaabovecmb] by [tonoscmb variacmb aspercmb leniscmb]; # combining marks
 #
 #	script cyrl;
-#		lookup BREVE_CYR;
+#		language dflt;
+#			lookup BREVE_CYR { #preferred breve shape for Cyrillic script
+#				sub [brevecmb brevecmb.cap] by [brevecmb.cyr brevecmb.cyrcap]; # combining marks
+#			} BREVE_CYR;
 #
 #		language SRB include_dflt;
-#			lookup BE_LC_SRB;
+#			lookup BE_LC_SRB {
+#				sub be by be.srb;
+#			} BE_LC_SRB;
 
 } locl;
 
@@ -276,6 +230,131 @@ feature ccmp { # Glyph Composition / Decomposition
 } ccmp;
 
 #--------------------------------------
+feature numr { # Numerators
+	lookup NUMR {
+		sub @FIGURES_LINING by @FIGURES_NUMERATOR;
+		sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_NUMERATOR;
+	} NUMR;
+} numr;
+
+#--------------------------------------
+feature dnom { # Denominators
+	sub @FIGURES_LINING by @FIGURES_DENOMINATOR;
+	sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_DENOMINATOR;
+} dnom;
+
+#--------------------------------------
+feature frac { # Fractions
+	@SPACE_DEFAULT = [space nbspace];
+	@SPACE_FRAC = [space.frac nbspace.frac];
+	@SLASH = [slash.frac fraction divisionslash];
+
+	lookup NUMR;
+	sub slash by slash.frac;
+	sub @FIGURES_NUMERATOR @SPACE_DEFAULT' by @SPACE_FRAC;
+
+	lookup ADJUST_WIDTHS_FRAC {
+		pos @SLASH <-300 0 -600 0>;
+	} ADJUST_WIDTHS_FRAC;
+
+	sub [fraction divisionslash slash.frac @FIGURES_DENOMINATOR @PUNCTUATION_DENOMINATOR] [@FIGURES_NUMERATOR @PUNCTUATION_NUMERATOR]' by [@FIGURES_DENOMINATOR @PUNCTUATION_DENOMINATOR];
+	sub @FIGURES_DENOMINATOR @SPACE_FRAC [@FIGURES_NUMERATOR @PUNCTUATION_NUMERATOR]' by [@FIGURES_DENOMINATOR @PUNCTUATION_DENOMINATOR];
+} frac;
+
+#--------------------------------------
+feature ordn {
+	lookup SUPERIOR_LETTERS_MINISCULE {
+		sub @LETTERS_MINISCULE_LATIN_BASIC by @LETTERS_MINISCULE_LATIN_SUPERIOR;
+		sub [egrave eacute eogonek schwa hhook] by [egrave.sups eacute.sups eogonek.sups schwa.sups hhook.sups];
+	} SUPERIOR_LETTERS_MINISCULE;
+} ordn;
+
+#--------------------------------------
+feature sups { # Superscript
+	lookup SUPERIOR_LETTERS_MINISCULE;
+
+	lookup SUPERIOR_NUMERALS_SORTS {
+		sub @FIGURES_LINING by @FIGURES_SUPERIOR;
+		sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_SUPERIOR;
+	} SUPERIOR_NUMERALS_SORTS;
+
+	lookup SUPERIOR_SORTS {
+		sub [colon hyphen endash emdash] by [colon.sups hyphen.sups endash.sups emdash.sups];
+	} SUPERIOR_SORTS;
+
+} sups;
+
+#--------------------------------------
+feature subs { # Subscript
+	lookup INFERIOR {
+		sub @FIGURES_LINING by @FIGURES_INFERIOR;
+		sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_INFERIOR;
+	} INFERIOR;
+} subs;
+
+#--------------------------------------
+feature sinf { # Scientific Inferiors
+	lookup INFERIOR;
+} sinf;
+
+#--------------------------------------
+feature onum { # Oldstyle (Text) Figures
+	sub @FIGURES_LINING by @FIGURES_OLDSTYLE;
+} onum;
+
+#--------------------------------------
+feature case { # Case-Sensitive Forms
+	sub @MARKS_CMB_ALL by @MARKS_CMB_ALL_CASE;
+	sub @FIGURES_LINING by @FIGURES_CASE;
+	sub @FIGURES_OLDSTYLE by @FIGURES_CASE;
+	sub one.a by one.ac;
+	sub ijacute by IJacute;
+	sub at by at.case;
+#	sub anoteleia by anoteleia.cap;
+} case;
+
+#--------------------------------------
+lookup A_LC_ALT {
+	sub @A_LC by @A_LC_ALT;
+} A_LC_ALT;
+
+lookup G_LC_ALT {
+	sub @G_LC by @G_LC_ALT;
+} G_LC_ALT;
+
+#lookup BETA_LC_ALT {
+#	sub beta by beta.a;
+#} BETA_LC_ALT;
+#
+#lookup THETA_LC_ALT {
+#	sub theta by theta.a;
+#} THETA_LC_ALT;
+#
+#lookup PHI_LC_ALT {
+#	sub phi by phi.a;
+#} PHI_LC_ALT;
+
+lookup ZERO_SLASH {
+	sub [zero zero.onum zero.cap] by [zero.0 zero.0o zero.0c];
+} ZERO_SLASH;
+
+lookup HYPHEN_ALT {
+	sub [hyphen sfthyphen hyphentwo] by [hyphen.a sfthyphen.a hyphentwo.a];
+} HYPHEN_ALT;
+
+lookup ASTERISK_ALT {
+	sub asterisk by asterisk.a;
+} ASTERISK_ALT;
+
+lookup DOLLAR_ALT {
+	sub dollar by dollar.a;
+} DOLLAR_ALT;
+
+lookup ONE_ALT {
+	sub one by one.a;
+} ONE_ALT;
+
+#--------------------------------------
 feature cv01 { # Character Variant 1 (alternate lowercase a)
 	cvParameters {
 		FeatUILabelNameID {
@@ -376,18 +455,18 @@ feature cv06 { # Character Variant 6 (Sami uppercase Eng)
 #} cv10;
 
 #--------------------------------------
-feature cv11 { # Character Variant 11 (Cyrillic breve)
-	cvParameters {
-		FeatUILabelNameID {
-			name 3 1 0x0409 "Cyrillic breve [\02D8]"; # English US
-			name 3 1 0x0408 "\03BA\03C5\03C1\03B9\03BB\03BB\03B9\03BA\03CC \03B2\03C1\03B1\03C7\03CD [\02D8]"; # Greek
-			name 3 1 0x0419 "\043A\0438\0440\0438\043B\043B\0438\0447\0435\0441\043A\0430\044F \043A\0440\0430\0442\043A\0430 [\02D8]"; # Russian
-		};
-	};
-
-	lookup BREVE_CYR;
-
-} cv11;
+#feature cv11 { # Character Variant 11 (Cyrillic breve)
+#	cvParameters {
+#		FeatUILabelNameID {
+#			name 3 1 0x0409 "Cyrillic breve [\02D8]"; # English US
+#			name 3 1 0x0408 "\03BA\03C5\03C1\03B9\03BB\03BB\03B9\03BA\03CC \03B2\03C1\03B1\03C7\03CD [\02D8]"; # Greek
+#			name 3 1 0x0419 "\043A\0438\0440\0438\043B\043B\0438\0447\0435\0441\043A\0430\044F \043A\0440\0430\0442\043A\0430 [\02D8]"; # Russian
+#		};
+#	};
+#
+#	lookup BREVE_CYR;
+#
+#} cv11;
 
 #--------------------------------------
 feature cv12 { # Character Variant 12 (slashed zero)
@@ -458,95 +537,6 @@ feature cv17 { # Character Variant 17 (alternate numeral one)
 	lookup ONE_ALT;
 
 } cv17;
-
-#--------------------------------------
-feature numr { # Numerators
-	lookup NUMR {
-		sub @FIGURES_LINING by @FIGURES_NUMERATOR;
-		sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_NUMERATOR;
-		sub one.a by one.numr;
-	} NUMR;
-} numr;
-
-#--------------------------------------
-feature dnom { # Denominators
-	sub @FIGURES_LINING by @FIGURES_DENOMINATOR;
-	sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_DENOMINATOR;
-		sub one.a by one.dnom;
-} dnom;
-
-#--------------------------------------
-feature frac { # Fractions
-	@SPACE_DEFAULT = [space nbspace];
-	@SPACE_FRAC = [space.frac nbspace.frac];
-	@SLASH = [slash.frac fraction divisionslash];
-
-	lookup NUMR;
-	sub slash by slash.frac;
-	sub @FIGURES_NUMERATOR @SPACE_DEFAULT' by @SPACE_FRAC;
-
-	lookup ADJUST_WIDTHS_FRAC {
-		pos @SLASH <-300 0 -600 0>;
-	} ADJUST_WIDTHS_FRAC;
-
-	sub [fraction divisionslash slash.frac @FIGURES_DENOMINATOR @PUNCTUATION_DENOMINATOR] [@FIGURES_NUMERATOR @PUNCTUATION_NUMERATOR]' by [@FIGURES_DENOMINATOR @PUNCTUATION_DENOMINATOR];
-	sub @FIGURES_DENOMINATOR @SPACE_FRAC [@FIGURES_NUMERATOR @PUNCTUATION_NUMERATOR]' by [@FIGURES_DENOMINATOR @PUNCTUATION_DENOMINATOR];
-} frac;
-
-#--------------------------------------
-feature ordn {
-	lookup SUPERIOR_LETTERS_MINISCULE {
-		sub @LETTERS_MINISCULE_LATIN_BASIC by @LETTERS_MINISCULE_LATIN_SUPERIOR;
-		sub [egrave eacute schwa] by [egrave.sups eacute.sups schwa.sups];
-	} SUPERIOR_LETTERS_MINISCULE;
-} ordn;
-
-#--------------------------------------
-feature sups { # Superscript
-	lookup SUPERIOR_LETTERS_MINISCULE;
-
-	lookup SUPERIOR_NUMERALS_SORTS {
-		sub @FIGURES_LINING by @FIGURES_SUPERIOR;
-		sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_SUPERIOR;
-		sub one.a by one.sups;
-	} SUPERIOR_NUMERALS_SORTS;
-
-	lookup SUPERIOR_SORTS {
-		sub [colon hyphen endash emdash] by [colon.sups hyphen.sups endash.sups emdash.sups];
-	} SUPERIOR_SORTS;
-
-} sups;
-
-#--------------------------------------
-feature subs { # Subscript
-	lookup INFERIOR {
-		sub @FIGURES_LINING by @FIGURES_INFERIOR;
-		sub @PUNCTUATION_FOR_SMALL_FIGURE_STYLES by @PUNCTUATION_INFERIOR;
-		sub one.a by one.subs;
-	} INFERIOR;
-} subs;
-
-#--------------------------------------
-feature sinf { # Scientific Inferiors
-	lookup INFERIOR;
-} sinf;
-
-#--------------------------------------
-feature onum { # Oldstyle (Text) Figures
-	sub @FIGURES_LINING by @FIGURES_OLDSTYLE;
-	sub one.a by one.ao;
-} onum;
-
-#--------------------------------------
-feature case { # Case-Sensitive Forms
-	sub @MARKS_CMB_ALL by @MARKS_CMB_ALL_CASE;
-	sub @FIGURES_LINING by @FIGURES_CASE;
-	sub @FIGURES_OLDSTYLE by @FIGURES_CASE;
-	sub one.a by one.ac;
-	sub ijacute by IJacute;
-	sub at by at.case;
-#	sub anoteleia by anoteleia.cap;
-} case;
 
 #--------------------------------------
 feature ss01 { # Stylistic Set 1 (typographic alternates)
