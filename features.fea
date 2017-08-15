@@ -1,0 +1,14 @@
+include (../../../../familyTables.fea);
+
+table OS/2 {
+	include (../os2.fea);
+	include (../../../familyUnicodeRange.fea);
+	include (../../../../familyOS2.fea);
+} OS/2;
+
+table name {
+	include (../../../../familynameIDs.fea);
+} name;
+
+include (../../../familyGSUB.fea);
+include (../../../../familyGPOS.fea);

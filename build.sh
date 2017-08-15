@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 family=SourceCodePro
 romanWeights='Black Bold ExtraLight Light Medium Regular Semibold'
@@ -18,18 +18,18 @@ mkdir -p $otfDir $ttfDir
 
 for w in $romanWeights
 do
-  makeotf -f Roman/$w/font.ufo -r -ci "$UVS" -o $otfDir/$family-$w.otf
-  makeotf -f Roman/$w/font.ttf -r -ci "$UVS" -o $ttfDir/$family-$w.ttf
-  rm Roman/$w/current.fpr # remove default options file from the source tree after building
+  font_path=Roman/Instances/$w/font
+  makeotf -f $font_path.ufo -r -ci "$UVS" -o $otfDir/$family-$w.otf
+  makeotf -f $font_path.ttf -r -ci "$UVS" -o $ttfDir/$family-$w.ttf -ff $font_path.ufo/features.fea
   "$addSVG" $otfDir/$family-$w.otf svg
   "$addSVG" $ttfDir/$family-$w.ttf svg
 done
 
 for w in $italicWeights
 do
-  makeotf -f Italic/$w/font.ufo -r -ci "$UVS" -o $otfDir/$family-$w.otf
-  makeotf -f Italic/$w/font.ttf -r -ci "$UVS" -o $ttfDir/$family-$w.ttf
-  rm Italic/$w/current.fpr # remove default options file from the source tree after building
+  font_path=Italic/Instances/$w/font
+  makeotf -f $font_path.ufo -r -ci "$UVS" -o $otfDir/$family-$w.otf
+  makeotf -f $font_path.ttf -r -ci "$UVS" -o $ttfDir/$family-$w.ttf -ff $font_path.ufo/features.fea
   "$addSVG" $otfDir/$family-$w.otf svg
   "$addSVG" $ttfDir/$family-$w.ttf svg
 done

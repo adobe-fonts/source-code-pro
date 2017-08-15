@@ -1,0 +1,23 @@
+table head {
+	include (../../familyVersion.fea);
+} head;
+
+
+table hhea {
+	# NOTE: The OS/2.winAscent and OS/2.winDescent values are set by MakeOTF and vary depending on the font's bounding box
+	Ascender 984;		# Must match OS/2.winAscent for cross-platform consistency
+	Descender -273;		# Must match OS/2.winDescent for cross-platform consistency
+	LineGap 0;			# Must be zero for cross-platform consistency
+} hhea;
+
+
+table BASE {
+	HorizAxis.BaseTagList ideo romn;
+	HorizAxis.BaseScriptList
+	latn romn -170 0,
+	grek romn -170 0,
+	cyrl romn -170 0,
+	DFLT romn -170 0;
+} BASE;
+
+

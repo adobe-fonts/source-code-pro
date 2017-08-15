@@ -43,10 +43,8 @@ goto :eof
 :: %1 - Roman/Italic
 :: %2 - Weight
 :build_font
-call makeotf -f "%~dp0\%1\%2\font.ufo" -r -o "%TARGET_OTF_PATH%\%FAMILY%-%2.otf"
-call makeotf -f "%~dp0\%1\%2\font.ttf" -r -o "%TARGET_TTF_PATH%\%FAMILY%-%2.ttf"
-:: remove default options file from the source tree after building
-del "%~dp0\%1\%2\current.fpr"
+call makeotf -f "%~dp0\%1\Instances\%2\font.ufo" -r -ci "%~dp0\uvs.txt" -o "%TARGET_OTF_PATH%\%FAMILY%-%2.otf"
+call makeotf -f "%~dp0\%1\Instances\%2\font.ttf" -r -ci "%~dp0\uvs.txt" -o "%TARGET_TTF_PATH%\%FAMILY%-%2.ttf" -ff "%~dp0\%1\Instances\%2\font.ufo\features.fea"
 "%PYTHON_PATH%" "%~dp0\addSVGtable.py" "%TARGET_OTF_PATH%\%FAMILY%-%2.otf" "%~dp0\svg"
 "%PYTHON_PATH%" "%~dp0\addSVGtable.py" "%TARGET_TTF_PATH%\%FAMILY%-%2.ttf" "%~dp0\svg"
 goto :eof
@@ -59,7 +57,7 @@ exit /b 1
 ::
 :: Get directory name from full path name.
 :: Usage:
-::   GetDirectoryName VARIABLE VALUE 
+::   GetDirectoryName VARIABLE VALUE
 ::
 :GetDirectoryName
 call set %~1=%~dp2

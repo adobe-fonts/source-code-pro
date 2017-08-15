@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 
 """
 Adds an SVG table to a TTF or OTF font.
@@ -8,23 +8,12 @@ The file names of the SVG glyphs need to match their corresponding glyph final n
 import os
 import sys
 import re
-from distutils.version import StrictVersion
 
 try:
 	from fontTools import ttLib, version
 except ImportError:
 	print >> sys.stderr, "ERROR: FontTools Python module is not installed."
 	sys.exit(1)
-
-# support for the SVG table was added to FontTools on Aug 28, 2013
-# https://github.com/behdad/fonttools/commit/ddcca79308b52dc36b24ef94cab4ab00c8e32376
-minFontToolsVersion = '2.5'
-if StrictVersion(version) < StrictVersion(minFontToolsVersion):
-	print >> sys.stderr, "ERROR:  The FontTools module version must be %s or higher.\n\
-	You have version %s installed.\n\
-	Get the latest version at https://github.com/behdad/fonttools" % (minFontToolsVersion, version)
-	sys.exit(1)
-
 
 TABLE_TAG = 'SVG '
 
@@ -100,7 +89,7 @@ def processFontFile(fontFilePath, svgFilePathsList):
 	svgDocsList = [svgDocsDict[index] for index in sorted(svgDocsDict.keys())]
 
 	svgTable = ttLib.newTable(TABLE_TAG)
-	svgTable.compressed = True # GZIP the SVG docs
+	svgTable.compressed = False # GZIP the SVG docs
 	svgTable.docList = svgDocsList
 	font[TABLE_TAG] = svgTable
 
@@ -117,7 +106,7 @@ def processFontFile(fontFilePath, svgFilePathsList):
 	os.remove(fontFilePath)
 	os.rename(newFontFilePath, fontFilePath)
 
-	print >> sys.stdout, "\nSVG table successfully added to %s" % fontFilePath
+	print >> sys.stdout, "SVG table successfully added to %s" % fontFilePath
 
 
 def validateSVGfiles(svgFilePathsList):
