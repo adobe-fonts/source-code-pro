@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from __future__ import print_function
 
 """
 Adds an SVG table to a TTF or OTF font.
@@ -10,10 +11,10 @@ import sys
 import re
 
 try:
-	from fontTools import ttLib, version
+    from fontTools import ttLib, version
 except ImportError:
-	print >> sys.stderr, "ERROR: FontTools Python module is not installed."
-	sys.exit(1)
+    print("ERROR: FontTools Python module is not installed.", file=sys.stderr)
+    sys.exit(1)
 
 TABLE_TAG = 'SVG '
 
@@ -25,165 +26,191 @@ reWhiteSpace = re.compile(r">\s+<", re.DOTALL)
 
 
 def readFile(filePath):
-	f = open(filePath, "rt")
-	data = f.read()
-	f.close()
-	return data
+    f = open(filePath, "rt")
+    data = f.read()
+    f.close()
+    return data
 
 
 def setIDvalue(data, gid):
-	id = reIDvalue.search(data)
-	if id:
-		newData = re.sub(id.group(1), 'id="glyph%s"' % gid, data)
-	else:
-		newData = re.sub('<svg', '<svg id="glyph%s"' % gid, data)
-	return newData
+    id = reIDvalue.search(data)
+    if id:
+        newData = re.sub(id.group(1), 'id="glyph{}"'.format(gid), data)
+    else:
+        newData = re.sub('<svg', '<svg id="glyph{}"'.format(gid), data)
+    return newData
 
 
 def fixViewBox(data):
-	viewBox = reViewBox.search(data)
-	if not viewBox:
-		return data
-	fixedViewBox = 'viewBox=\"0 1000 1000 1000\"'
-	fixedData = re.sub(viewBox.group(1), fixedViewBox, data)
-	return fixedData
+    viewBox = reViewBox.search(data)
+    if not viewBox:
+        return data
+    fixedViewBox = 'viewBox=\"0 1000 1000 1000\"'
+    fixedData = re.sub(viewBox.group(1), fixedViewBox, data)
+    return fixedData
 
 
 def getGlyphNameFromFileName(filePath):
-	folderPath, fontFileName = os.path.split(filePath)
-	fileNameNoExtension, fileExtension = os.path.splitext(fontFileName)
-	return fileNameNoExtension
+    folderPath, fontFileName = os.path.split(filePath)
+    fileNameNoExtension, fileExtension = os.path.splitext(fontFileName)
+    return fileNameNoExtension
 
 
 def processFontFile(fontFilePath, svgFilePathsList):
-	font = ttLib.TTFont(fontFilePath)
+    font = ttLib.TTFont(fontFilePath)
 
-	# first create a dictionary because the SVG glyphs need to be sorted in the table
-	svgDocsDict = {}
+    # first create a dictionary because the SVG glyphs need to be sorted in the table
+    svgDocsDict = {}
 
-	for svgFilePath in svgFilePathsList:
-		gName = getGlyphNameFromFileName(svgFilePath)
+    for svgFilePath in svgFilePathsList:
+        gName = getGlyphNameFromFileName(svgFilePath)
 
-		try:
-			gid = font.getGlyphID(gName)
-		except KeyError:
-			print >> sys.stderr, "ERROR: Could not find a glyph named %s in the font %s." % (gName, os.path.split(fontFilePath)[1])
-			continue
+        try:
+            gid = font.getGlyphID(gName)
+        except KeyError:
+            print(
+                "ERROR: Could not find a glyph named {} in the font {}.".format(
+                    gName, os.path.split(fontFilePath)[1]
+                ),
+                file=sys.stderr
+            )
+            continue
 
-		svgItemsList = []
-		svgItemData = readFile(svgFilePath)
-		svgItemData = setIDvalue(svgItemData, gid)
-		svgItemData = fixViewBox(svgItemData)
-		# Remove all white space between elements
-		for whiteSpace in set(reWhiteSpace.findall(svgItemData)):
-			svgItemData = svgItemData.replace(whiteSpace, '><')
-		svgItemsList.append(svgItemData.strip())
-		svgItemsList.extend([gid, gid])
-		svgDocsDict[gid] = svgItemsList
+        svgItemsList = []
+        svgItemData = readFile(svgFilePath)
+        svgItemData = setIDvalue(svgItemData, gid)
+        svgItemData = fixViewBox(svgItemData)
+        # Remove all white space between elements
+        for whiteSpace in set(reWhiteSpace.findall(svgItemData)):
+            svgItemData = svgItemData.replace(whiteSpace, '><')
+        svgItemsList.append(svgItemData.strip())
+        svgItemsList.extend([gid, gid])
+        svgDocsDict[gid] = svgItemsList
 
-	# don't do any changes to the source OTF/TTF font if there's no SVG data
-	if not svgDocsDict:
-		print >> sys.stderr, "ERROR: Could not find any artwork files that can be added to the font."
-		return
+    # don't do any changes to the source OTF/TTF font if there's no SVG data
+    if not svgDocsDict:
+        print(
+            "ERROR: Could not find any artwork files "
+            "that can be added to the font.",
+            file=sys.stderr
+        )
+        return
 
-	svgDocsList = [svgDocsDict[index] for index in sorted(svgDocsDict.keys())]
+    svgDocsList = [svgDocsDict[index] for index in sorted(svgDocsDict.keys())]
 
-	svgTable = ttLib.newTable(TABLE_TAG)
-	svgTable.compressed = False # GZIP the SVG docs
-	svgTable.docList = svgDocsList
-	font[TABLE_TAG] = svgTable
+    svgTable = ttLib.newTable(TABLE_TAG)
+    svgTable.compressed = False  # GZIP the SVG docs
+    svgTable.docList = svgDocsList
+    font[TABLE_TAG] = svgTable
 
-	# FontTools can't overwrite a font on save,
-	# so save to a hidden file, and then rename it
-	# https://github.com/behdad/fonttools/issues/302
-	folderPath, fontFileName = os.path.split(fontFilePath)
-	fileNameNoExtension, fileExtension = os.path.splitext(fontFileName)
-	newFontFilePath = os.path.join(folderPath, "%s%s%s" % ('.', fileNameNoExtension, fileExtension))
+    # FontTools can't overwrite a font on save,
+    # so save to a hidden file, and then rename it
+    # https://github.com/behdad/fonttools/issues/302
+    folderPath, fontFileName = os.path.split(fontFilePath)
+    fileNameNoExtension, fileExtension = os.path.splitext(fontFileName)
+    newFontFilePath = os.path.join(folderPath, "{}{}{}".format(
+        '.', fileNameNoExtension, fileExtension))
 
-	font.save(newFontFilePath)
-	font.close()
-	# On Windows a file can't be renamed to a file that already exists
-	os.remove(fontFilePath)
-	os.rename(newFontFilePath, fontFilePath)
+    font.save(newFontFilePath)
+    font.close()
+    # On Windows a file can't be renamed to a file that already exists
+    os.remove(fontFilePath)
+    os.rename(newFontFilePath, fontFilePath)
 
-	print >> sys.stdout, "SVG table successfully added to %s" % fontFilePath
+    print(
+        "SVG table successfully added to {}".format(fontFilePath),
+        file=sys.stderr
+    )
 
 
 def validateSVGfiles(svgFilePathsList):
-	"""
-	Light validation of SVG files.
-	Checks that there is an <svg> element.
-	"""
-	validatedPaths = []
+    """
+    Light validation of SVG files.
+    Checks that there is an <svg> element.
+    """
+    validatedPaths = []
 
-	for filePath in svgFilePathsList:
-		# skip hidden files (filenames that start with period)
-		fileName = os.path.basename(filePath)
-		if fileName[0] == '.':
-			continue
+    for filePath in svgFilePathsList:
+        # skip hidden files (filenames that start with period)
+        fileName = os.path.basename(filePath)
+        if fileName[0] == '.':
+            continue
 
-		# read file
-		data = readFile(filePath)
+        # read file
+        data = readFile(filePath)
 
-		# find <svg> blob
-		svg = reSVGelement.search(data)
-		if not svg:
-			print "WARNING: Could not find <svg> element in the file. Skiping %s" % (filePath)
-			continue
+        # find <svg> blob
+        svg = reSVGelement.search(data)
+        if not svg:
+            print(
+                "WARNING: Could not find <svg> element in the file. "
+                "Skiping {}".format(filePath)
+            )
+            continue
 
-		validatedPaths.append(filePath)
+        validatedPaths.append(filePath)
 
-	return validatedPaths
+    return validatedPaths
 
 
 def getFontFormat(fontFilePath):
-	# these lines were scavenged from fontTools
-	f = open(fontFilePath, "rb")
-	header = f.read(256)
-	head = header[:4]
-	f.close()
-	if head == "OTTO":
-		return "OTF"
-	elif head in ("\0\1\0\0", "true"):
-		return "TTF"
-	return None
+    # these lines were scavenged from fontTools
+    f = open(fontFilePath, "rb")
+    header = f.read(256)
+    head = header[:4]
+    f.close()
+    if head == "OTTO":
+        return "OTF"
+    elif head in ("\0\1\0\0", "true"):
+        return "TTF"
+    return None
 
 
 def run():
-	fontFilePath = os.path.realpath(sys.argv[1])
-	svgFolderPath = os.path.realpath(sys.argv[2])
+    fontFilePath = os.path.realpath(sys.argv[1])
+    svgFolderPath = os.path.realpath(sys.argv[2])
 
-	# Font file path
-	if os.path.isfile(fontFilePath):
-		if getFontFormat(fontFilePath) not in ["OTF", "TTF"]:
-			print >> sys.stderr, "ERROR: The path is not a valid OTF or TTF font."
-			return
-	else:
-		print >> sys.stderr, "ERROR: The path to the font is invalid."
-		return
+    # Font file path
+    if os.path.isfile(fontFilePath):
+        if getFontFormat(fontFilePath) not in ["OTF", "TTF"]:
+            print("ERROR: The path is not a valid OTF or TTF font.",
+                  file=sys.stderr)
+            return
+    else:
+        print("ERROR: The path to the font is invalid.",
+              file=sys.stderr)
+        return
 
-	# SVG folder path
-	if os.path.isdir(svgFolderPath):
-		svgFilePathsList = []
-		for dirName, subdirList, fileList in os.walk(svgFolderPath): # Support nested folders
-			for file in fileList:
-				svgFilePathsList.append(os.path.join(dirName, file)) # Assemble the full paths, not just file names
-	else:
-		print >> sys.stderr, "ERROR: The path to the folder containing the SVG files is invalid."
-		return
+    # SVG folder path
+    if os.path.isdir(svgFolderPath):
+        svgFilePathsList = []
+        for dirName, subdirList, fileList in os.walk(
+                svgFolderPath):  # Support nested folders
+            for file in fileList:
+                svgFilePathsList.append(os.path.join(dirName,
+                                                     file))  # Assemble the full paths, not just file names
+    else:
+        print(
+            "ERROR: The path to the folder "
+            "containing the SVG files is invalid.",
+            file=sys.stderr
+        )
+        return
 
-	# validate the SVGs
-	svgFilePathsList = validateSVGfiles(svgFilePathsList)
+    # validate the SVGs
+    svgFilePathsList = validateSVGfiles(svgFilePathsList)
 
-	if not svgFilePathsList:
-		print >> sys.stderr, "WARNING: No SVG files were found."
-		return
+    if not svgFilePathsList:
+        print("WARNING: No SVG files were found.", file=sys.stderr)
+        return
 
-	processFontFile(fontFilePath, svgFilePathsList)
+    processFontFile(fontFilePath, svgFilePathsList)
 
 
 if __name__ == "__main__":
-	if len(sys.argv) != 3:
-		print "To run this script type:\n  python %s <path to input OTF/TTF file>  <path to folder tree containing SVG files>" % sys.argv[0]
-	else:
-		run()
+    if len(sys.argv) != 3:
+        print("To run this script type:\n  "
+              "python {} <path to input OTF/TTF file>  "
+              "<path to folder tree containing SVG files>".format(sys.argv[0]))
+    else:
+        run()
