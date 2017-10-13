@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
 family=SourceCodePro
-romanWeights=('Black' 'Bold' 'ExtraLight' 'Light' 'Medium' 'Regular' 'Semibold')
-italicWeights=('BlackIt' 'BoldIt' 'ExtraLightIt' 'LightIt' 'MediumIt' 'It' 'SemiboldIt')
+romanWeights='Black Bold ExtraLight Light Medium Regular Semibold'
+italicWeights='BlackIt BoldIt ExtraLightIt LightIt MediumIt It SemiboldIt'
 
 # path to Python script that adds the SVG table
 addSVG=$(cd $(dirname "$0") && pwd -P)/addSVGtable.py
