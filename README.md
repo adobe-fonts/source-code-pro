@@ -40,7 +40,7 @@ In this repository, all necessary files are in place for building the OTF and TT
 For example, build a binary OTF font for the Regular style like this:
 
 ```sh
-$ cd Roman/Regular/
+$ cd Roman/Instances/Regular/
 $ makeotf -r
 ```
 
