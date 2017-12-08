@@ -15,6 +15,8 @@ by using the AFDKO makeotf tool.
 * [macOS](https://support.apple.com/en-us/HT201749)
 * [Windows](https://www.microsoft.com/en-us/Typography/TrueTypeInstall.aspx)
 * [Linux/Unix-based systems](https://github.com/adobe-fonts/source-code-pro/issues/17#issuecomment-8967116)
+* Homebrew (macOS)<br/>
+	`brew cask install font-source-code-pro`
 * Bower<br/>
 	`bower install git://github.com/adobe-fonts/source-code-pro.git#release`
 * npm 2.x<br/>
