@@ -13,10 +13,10 @@ ro_name=SourceCodeVariable-Roman
 it_name=SourceCodeVariable-Italic
 
 # build variable OTFs
-buildMasterOTFs --mkot -ci,"$UVS" $rom/$ro_name.designspace
-buildCFF2VF $rom/$ro_name.designspace
-buildMasterOTFs --mkot -ci,"$UVS" $itm/$it_name.designspace
-buildCFF2VF $itm/$it_name.designspace
+buildmasterotfs --mkot -ci,"$UVS" $rom/$ro_name.designspace
+buildcff2vf $rom/$ro_name.designspace
+buildmasterotfs --mkot -ci,"$UVS" $itm/$it_name.designspace
+buildcff2vf $itm/$it_name.designspace
 
 # extract and subroutinize the CFF2 table
 echo 'Subroutinizing' $rom/$ro_name.otf
