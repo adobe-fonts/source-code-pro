@@ -17,6 +17,8 @@ by using the AFDKO makeotf tool.
 * [Linux/Unix-based systems](https://github.com/adobe-fonts/source-code-pro/issues/17#issuecomment-8967116)
 * Homebrew (macOS)<br/>
 	`brew tap caskroom/fonts && brew cask install font-source-code-pro`
+* Pacman (Arch Linux)<br/>
+	`pacman -S adobe-source-code-pro-fonts`
 * Bower<br/>
 	`bower install git://github.com/adobe-fonts/source-code-pro.git#release`
 * npm 2.x<br/>
