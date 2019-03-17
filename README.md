@@ -19,6 +19,8 @@ by using the AFDKO makeotf tool.
 	`brew tap homebrew/cask-fonts && brew cask install font-source-code-pro`
 * Pacman (Arch Linux)<br/>
 	`pacman -S adobe-source-code-pro-fonts`
+* dnf (Fedora)<br/>
+	`sudo dnf install adobe-source-code-pro-fonts`
 * [pkg(8)](https://man.freebsd.org/pkg/8) (FreeBSD)<br/>
 	`pkg install sourcecodepro-ttf`
 * Bower<br/>
