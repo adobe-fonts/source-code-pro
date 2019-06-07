@@ -1,21 +1,21 @@
-include (../../../../featuresVar.fea);
+include (../../../featuresVar.fea);
 
 table OS/2 {
-	include (../../../Instances/ExtraLightIt/os2.fea);
-	include (../../../familyUnicodeRange.fea);
-	include (../../../../familyOS2.fea);
+	include (../../Instances/ExtraLightIt/os2.fea);
+	include (../../familyUnicodeRange.fea);
+	include (../../../familyOS2.fea);
 } OS/2;
 
 
 # GPOS -----------------------------------
-include (../../../Instances/ExtraLightIt/markclasses.fea);
+include (../../Instances/ExtraLightIt/markclasses.fea);
 
 feature mark {
-	include (../../../../familyWidthsAdjust.fea);
-	include (../../../Instances/ExtraLightIt/mark.fea);
+	include (../../../familyWidthsAdjust.fea);
+	include (../../Instances/ExtraLightIt/mark.fea);
 } mark;
 
 
 feature mkmk {
-	include (../../../Instances/ExtraLightIt/mkmk.fea);
+	include (../../Instances/ExtraLightIt/mkmk.fea);
 } mkmk;
