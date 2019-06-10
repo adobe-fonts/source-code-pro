@@ -1,35 +1,64 @@
 #!/usr/bin/env sh
 
 family=SourceCodePro
-romanWeights='Black Bold ExtraLight Light Medium Regular Semibold'
-italicWeights='BlackIt BoldIt ExtraLightIt LightIt MediumIt It SemiboldIt'
+roman_weights=(Black Bold ExtraLight Light Medium Regular Semibold)
+italic_weights=(BlackIt BoldIt ExtraLightIt LightIt MediumIt It SemiboldIt)
 
-# path to Python script that adds the SVG table
-addSVG=$(cd $(dirname "$0") && pwd -P)/addSVGtable.py
-
-# path to UVS file
-UVS=$(cd $(dirname "$0") && pwd -P)/uvs.txt
+# get absolute path to bash script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 # clean existing build artifacts
-rm -rf target/
-otfDir="target/OTF"
-ttfDir="target/TTF"
-mkdir -p $otfDir $ttfDir
+rm -rf "$DIR/target/"
+otf_dir="$DIR/target/OTF"
+ttf_dir="$DIR/target/TTF"
+mkdir -p "$otf_dir" "$ttf_dir"
 
-for w in $romanWeights
+# path to Python script that adds the SVG table
+addSVG="$DIR"/addSVGtable.py
+
+# path to UVS file
+UVS="$DIR"/uvs.txt
+
+
+function build_font {
+    # $1 is Roman or Italic
+    # $2 is weight name
+    font_dir="$DIR"/$1/Instances/$2
+    font_ufo="$font_dir"/font.ufo
+    font_ttf="$font_dir"/font.ttf
+    ps_name=$family-$2
+    echo $ps_name
+    echo "Building OTF ..."
+    # -r is for "release mode" (subroutinization + applied glyph order)
+    makeotf -f "$font_ufo" -r -ci "$UVS"
+    echo "Building TTF ..."
+    makeotf -f "$font_ttf" -r -ci "$UVS" -ff "$font_ufo"/features.fea
+    echo "Adding SVG table ..."
+    "$addSVG" "$font_dir"/$ps_name.otf "$DIR"/svg
+
+    # copy SVG and DSIG tables from OTF to TTF
+    sfntedit -x DSIG="$font_dir"/.tb_DSIG,SVG="$font_dir"/.tb_SVG "$font_dir"/$ps_name.otf
+    sfntedit -a DSIG="$font_dir"/.tb_DSIG,SVG="$font_dir"/.tb_SVG "$font_dir"/$ps_name.ttf
+
+    # delete build artifacts
+    rm "$font_dir"/.tb_*
+
+    # move font files to target directory
+    mv "$font_dir"/$ps_name.otf "$otf_dir"
+    mv "$font_dir"/$ps_name.ttf "$ttf_dir"
+    echo "Done with $ps_name"
+    echo ""
+    echo ""
+}
+
+
+for w in ${roman_weights[@]}
 do
-  font_path=Roman/Instances/$w/font
-  makeotf -f $font_path.ufo -r -ci "$UVS" -o $otfDir/$family-$w.otf
-  makeotf -f $font_path.ttf -r -ci "$UVS" -o $ttfDir/$family-$w.ttf -ff $font_path.ufo/features.fea
-  "$addSVG" $otfDir/$family-$w.otf svg
-  "$addSVG" $ttfDir/$family-$w.ttf svg
+  build_font Roman $w
 done
 
-for w in $italicWeights
+
+for w in ${italic_weights[@]}
 do
-  font_path=Italic/Instances/$w/font
-  makeotf -f $font_path.ufo -r -ci "$UVS" -o $otfDir/$family-$w.otf
-  makeotf -f $font_path.ttf -r -ci "$UVS" -o $ttfDir/$family-$w.ttf -ff $font_path.ufo/features.fea
-  "$addSVG" $otfDir/$family-$w.otf svg
-  "$addSVG" $ttfDir/$family-$w.ttf svg
+  build_font Italic $w
 done
