@@ -147,9 +147,9 @@ def getFontFormat(fontFilePath):
     header = f.read(256)
     head = header[:4]
     f.close()
-    if head == "OTTO":
+    if head == b"OTTO":
         return "OTF"
-    elif head in ("\0\1\0\0", "true"):
+    elif head in (b"\0\1\0\0", b"true"):
         return "TTF"
     return None
 
