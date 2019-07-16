@@ -45,13 +45,13 @@ function build_var_font {
 	# build variable TTF
 	fontmake -m "$dsp_file" -o variable --production-names --output-path "$ttf_file" --feature-writer None
 
-	# use DSIG, name, OS/2, hhea, post, SVG, and STAT tables from OTFs
-	sfntedit -x DSIG="$1"/.tb_DSIG,name="$1"/.tb_name,OS/2="$1"/.tb_os2,hhea="$1"/.tb_hhea,post="$1"/.tb_post,SVG="$1"/.tb_SVG,STAT="$1"/.tb_STAT "$otf_file"
-	sfntedit -a DSIG="$1"/.tb_DSIG,name="$1"/.tb_name,OS/2="$1"/.tb_os2,hhea="$1"/.tb_hhea,post="$1"/.tb_post,SVG="$1"/.tb_SVG,STAT="$1"/.tb_STAT "$ttf_file"
+	# use cmap, DSIG, name, OS/2, hhea, post, SVG, and STAT tables from OTFs
+	sfntedit -x cmap="$1"/.tb_cmap,DSIG="$1"/.tb_DSIG,name="$1"/.tb_name,OS/2="$1"/.tb_os2,hhea="$1"/.tb_hhea,post="$1"/.tb_post,SVG="$1"/.tb_SVG,STAT="$1"/.tb_STAT "$otf_file"
+	sfntedit -a cmap="$1"/.tb_cmap,DSIG="$1"/.tb_DSIG,name="$1"/.tb_name,OS/2="$1"/.tb_os2,hhea="$1"/.tb_hhea,post="$1"/.tb_post,SVG="$1"/.tb_SVG,STAT="$1"/.tb_STAT "$ttf_file"
 
-	# use cmap, GDEF, GPOS, and GSUB tables from TTFs
-	sfntedit -x cmap="$1"/.tb_cmap,GDEF="$1"/.tb_GDEF,GPOS="$1"/.tb_GPOS,GSUB="$1"/.tb_GSUB "$ttf_file"
-	sfntedit -a cmap="$1"/.tb_cmap,GDEF="$1"/.tb_GDEF,GPOS="$1"/.tb_GPOS,GSUB="$1"/.tb_GSUB "$otf_file"
+	# use GDEF, GPOS, and GSUB tables from TTFs
+	sfntedit -x GDEF="$1"/.tb_GDEF,GPOS="$1"/.tb_GPOS,GSUB="$1"/.tb_GSUB "$ttf_file"
+	sfntedit -a GDEF="$1"/.tb_GDEF,GPOS="$1"/.tb_GPOS,GSUB="$1"/.tb_GSUB "$otf_file"
 
 	# move font files to target directory
 	mv "$otf_file" "$var_dir"
