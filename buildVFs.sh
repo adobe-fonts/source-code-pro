@@ -28,8 +28,8 @@ function build_var_font {
 	dsp_file="$1"/$2.designspace
 
 	# build variable OTF
-	buildmasterotfs --mkot -ci,"$UVS" "$dsp_file"
-	buildcff2vf --omit-mac-names -d "$dsp_file"
+	buildmasterotfs --mkot -ci,"$UVS" -d "$dsp_file"
+	buildcff2vf --omit-mac-names --keep-glyph-names -d "$dsp_file"
 
 	# extract and subroutinize the CFF2 table
 	echo 'Subroutinizing' $2.otf
