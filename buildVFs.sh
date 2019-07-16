@@ -39,6 +39,7 @@ function build_var_font {
 	sfntedit -a CFF2="$1"/.tb_cff2 "$otf_file"
 
 	# add SVG table to variable OTF
+	echo 'Adding SVG table to' $2.otf
 	"$addSVG" "$otf_file" "$DIR"/svg
 
 	# build variable TTF
@@ -52,17 +53,17 @@ function build_var_font {
 	sfntedit -x cmap="$1"/.tb_cmap,GDEF="$1"/.tb_GDEF,GPOS="$1"/.tb_GPOS,GSUB="$1"/.tb_GSUB "$ttf_file"
 	sfntedit -a cmap="$1"/.tb_cmap,GDEF="$1"/.tb_GDEF,GPOS="$1"/.tb_GPOS,GSUB="$1"/.tb_GSUB "$otf_file"
 
-    # move font files to target directory
-    mv "$otf_file" "$var_dir"
-    mv "$ttf_file" "$var_dir"
+	# move font files to target directory
+	mv "$otf_file" "$var_dir"
+	mv "$ttf_file" "$var_dir"
 
 	# delete build artifacts
 	rm "$1"/.tb_*
 	rm "$1"/master_*/*.*tf
 
-    echo "Done with $2"
-    echo ""
-    echo ""
+	echo "Done with $2"
+	echo ""
+	echo ""
 }
 
 build_var_font "$DIR"/Roman/Masters $ro_name
