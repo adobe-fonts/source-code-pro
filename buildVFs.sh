@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -e
+
 ro_name=SourceCodeVariable-Roman
 it_name=SourceCodeVariable-Italic
 

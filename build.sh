@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -e
+
 family=SourceCodePro
 roman_weights=(Black Bold ExtraLight Light Medium Regular Semibold)
 italic_weights=(BlackIt BoldIt ExtraLightIt LightIt MediumIt It SemiboldIt)
