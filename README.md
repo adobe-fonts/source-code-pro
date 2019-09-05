@@ -1,60 +1,48 @@
 # Source Code Pro
 
-Source Code Pro is a set of OpenType fonts that have been designed to work well
-in user interface (UI) environments. In addition to a functional OpenType font, this open
-source project provides all of the source files that were used to build this OpenType font
-by using the AFDKO makeotf tool.
+[Source Code Pro](http://adobe-fonts.github.io/source-code-pro/)
+is a set of OpenType fonts that have been designed to work well
+in user interface (UI) environments.
 
-## Download the fonts (OTF, TTF, WOFF, WOFF2, EOT)
+## Getting involved
+
+[Open an issue](https://github.com/adobe-fonts/source-code-pro/issues) or send a suggestion to Source Code's designer [Paul D. Hunt](mailto:opensourcefonts@adobe.com?subject=[GitHub]%20Source%20Code%20Pro), for consideration.
+
+## Releases
 
 * [Latest release](../../releases/latest)
 * [All releases](../../releases)
-
-## Font installation instructions
-
-* [macOS](https://support.apple.com/en-us/HT201749)
-* [Windows](https://www.microsoft.com/en-us/Typography/TrueTypeInstall.aspx)
-* [Linux/Unix-based systems](https://github.com/adobe-fonts/source-code-pro/issues/17#issuecomment-8967116)
-* Homebrew (macOS)<br/>
-	`brew tap homebrew/cask-fonts && brew cask install font-source-code-pro`
-* Pacman (Arch Linux)<br/>
-	`pacman -S adobe-source-code-pro-fonts`
-* dnf (Fedora)<br/>
-	`sudo dnf install adobe-source-code-pro-fonts`
-* [pkg(8)](https://man.freebsd.org/pkg/8) (FreeBSD)<br/>
-	`pkg install sourcecodepro-ttf`
-* Bower<br/>
-	`bower install git://github.com/adobe-fonts/source-code-pro.git#release`
-* npm 2.x<br/>
-	`npm install --fetch-only git://github.com/adobe-fonts/source-code-pro.git#release`
-* npm 3.x<br/>
-	`npm install git://github.com/adobe-fonts/source-code-pro.git#release`
 
 ## Building the fonts from source
 
 ### Requirements
 
 To build the binary font files from source, you need to have installed the
-[Adobe Font Development Kit for OpenType](http://www.adobe.com/devnet/opentype/afdko.html) (AFDKO). The AFDKO
-tools are widely used for font development today, and are part of most font
-editor applications.
+[Adobe Font Development Kit for OpenType](https://github.com/adobe-type-tools/afdko/) (AFDKO).
 
 ### Building one font
 
-The key to building OTF or TTF fonts is `makeotf`, which is part of the AFDKO toolset.
-Information and usage instructions can be found by executing `makeotf -h`.
+The key to building the OTF fonts is `makeotf`, which is part of the AFDKO toolset.
+Information and usage instructions can be found by executing `makeotf -h`. The TTFs
+are generated with the `otf2ttf` and `ttfcomponentizer` tools.
 
-In this repository, all necessary files are in place for building the OTF and TTF fonts.
-For example, build a binary OTF font for the Regular style like this:
+Commands to build the Regular style OTF font:
 
 ```sh
 $ cd Roman/Instances/Regular/
-$ makeotf -r
+$ makeotf -r -gs -omitMacNames
 ```
 
-### Building all fonts
+Commands to generate the Regular style TTF font:
 
-For convenience, a shell script named **build** is provided in the root directory.
+```sh
+$ otf2ttf SourceCodePro-Regular.otf
+$ ttfcomponentizer SourceCodePro-Regular.ttf
+```
+
+### Building all non-variable fonts
+
+For convenience, a shell script named **build.sh** is provided in the root directory.
 It builds all OTFs and TTFs, and can be executed by typing:
 
 ```sh
@@ -67,10 +55,17 @@ or this on Windows:
 > build.cmd
 ```
 
-## Getting Involved
+### Building the variable fonts
 
-Send suggestions for changes to the Source Code OpenType font project maintainer, [Paul D. Hunt](mailto:opensourcefonts@adobe.com?subject=[GitHub]%20Source%20Code%20Pro), for consideration.
+To build the variable TTFs you must install **fontmake** using this command:
 
-## Further information
+```sh
+$ pip install fontmake
+```
 
-For information about the design and background of Source Code, please refer to the [official font readme file](https://www.adobe.com/products/type/font-information/source-code-pro-readme-file.html).
+A shell script named **buildVFs.sh** is provided in the root directory.
+It generates four variable fonts (two CFF2-OTFs and two TTFs), and can be executed by typing:
+
+```sh
+$ ./buildVFs.sh
+```
