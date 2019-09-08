@@ -17,8 +17,13 @@ in user interface (UI) environments.
 
 ### Requirements
 
-To build the binary font files from source, you need to have installed the
-[Adobe Font Development Kit for OpenType](https://github.com/adobe-type-tools/afdko/) (AFDKO).
+To build the binary font files from source, you need Python 3 along with the
+[Adobe Font Development Kit for OpenType](https://github.com/adobe-type-tools/afdko/) (AFDKO) and
+[FontTools](https://github.com/fonttools/fonttools) packages, which you can install with
+
+```sh
+pip3 install afdko fonttools
+```
 
 ### Building one font
 
@@ -29,30 +34,30 @@ are generated with the `otf2ttf` and `ttfcomponentizer` tools.
 Commands to build the Regular style OTF font:
 
 ```sh
-$ cd Roman/Instances/Regular/
-$ makeotf -r -gs -omitMacNames
+cd Roman/Instances/Regular/
+makeotf -r -gs -omitMacNames
 ```
 
 Commands to generate the Regular style TTF font:
 
 ```sh
-$ otf2ttf SourceCodePro-Regular.otf
-$ ttfcomponentizer SourceCodePro-Regular.ttf
+otf2ttf SourceCodePro-Regular.otf
+ttfcomponentizer SourceCodePro-Regular.ttf
 ```
 
 ### Building all non-variable fonts
 
 For convenience, a shell script named **build.sh** is provided in the root directory.
-It builds all OTFs and TTFs, and can be executed by typing:
+It builds all OTFs and TTFs into a directory called **target/**. It can be executed by typing:
 
 ```sh
-$ ./build.sh
+./build.sh
 ```
 
 or this on Windows:
 
 ```sh
-> build.cmd
+build.cmd
 ```
 
 ### Building the variable fonts
@@ -60,12 +65,12 @@ or this on Windows:
 To build the variable TTFs you must install **fontmake** using this command:
 
 ```sh
-$ pip install fontmake
+pip3 install fontmake
 ```
 
 A shell script named **buildVFs.sh** is provided in the root directory.
 It generates four variable fonts (two CFF2-OTFs and two TTFs), and can be executed by typing:
 
 ```sh
-$ ./buildVFs.sh
+./buildVFs.sh
 ```
