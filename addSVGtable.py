@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-from __future__ import print_function
+#!/usr/bin/env python3
 
 """
 Adds an SVG table to a TTF or OTF font.
@@ -26,10 +25,8 @@ reWhiteSpace = re.compile(r">\s+<", re.DOTALL)
 
 
 def readFile(filePath):
-    f = open(filePath, "rt")
-    data = f.read()
-    f.close()
-    return data
+    with open(filePath, "rt") as f:
+        return f.read()
 
 
 def setIDvalue(data, gid):
@@ -143,10 +140,9 @@ def validateSVGfiles(svgFilePathsList):
 
 def getFontFormat(fontFilePath):
     # these lines were scavenged from fontTools
-    f = open(fontFilePath, "rb")
-    header = f.read(256)
-    head = header[:4]
-    f.close()
+    with open(fontFilePath, "rb") as f:
+        header = f.read(256)
+        head = header[:4]
     if head == b"OTTO":
         return "OTF"
     elif head in (b"\0\1\0\0", b"true"):
