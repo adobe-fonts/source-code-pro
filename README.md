@@ -22,7 +22,7 @@ To build the binary font files from source, you need Python 3 along with the
 [FontTools](https://github.com/fonttools/fonttools) packages, which you can install with
 
 ```sh
-pip3 install afdko fonttools
+pip3 install afdko fonttools fs
 ```
 
 ### Building one font
