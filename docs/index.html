@@ -125,6 +125,31 @@
                 max-width: 1100px;
             }
         }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #222;
+                color: #FFF;
+            }
+            div:hover
+            {
+                background-color: #333;
+            }
+            .ribbon:before {
+                background-color: rgb(221, 221, 221);;
+            }
+            .ribbon:after {
+                color: #000;
+        }
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #FFF;
+                color: #000;
+            }
+            div:hover
+            {
+                background-color: #EEE;
+            }
+        }
     </style>
   </head>
   <body>
