@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-set -e
+#!/usr/bin/env sh
 
 ro_name=SourceCodeVariable-Roman
 it_name=SourceCodeVariable-Italic
@@ -9,64 +7,56 @@ it_name=SourceCodeVariable-Italic
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 # clean existing build artifacts
-var_dir="$DIR"/target/VAR
-rm -rf "$var_dir"
-mkdir -p "$var_dir"
-
-# path to Python script that adds the SVG table
-addSVG="$DIR"/addSVGtable.py
-
-# path to UVS file
-UVS="$DIR"/uvs.txt
+var_dir=$DIR/target/VAR
+rm -rf $var_dir
+mkdir -p $var_dir
 
 
 function build_var_font {
 	# $1 is Master directory
 	# $2 is font name
 	echo $2
-
-	otf_file="$1"/$2.otf
-	ttf_file="$1"/$2.ttf
-	dsp_file="$1"/$2.designspace
-
 	# build variable OTF
-	buildmasterotfs --mkot -ci,"$UVS" -d "$dsp_file"
-	buildcff2vf --omit-mac-names --keep-glyph-names -d "$dsp_file"
+	# --mkot gs is for using the makeotf option -gs, which omits glyphs not in the GOADB
+	buildmasterotfs --mkot gs -d $1/$2.designspace
+	buildcff2vf -d $1/$2.designspace
 
 	# extract and subroutinize the CFF2 table
 	echo 'Subroutinizing' $2.otf
-	tx -cff2 +S +b -std "$otf_file" "$1"/.tb_cff2 2> /dev/null
+	tx -cff2 +S +b -std $1/$2.otf $1/.tb_cff2 2> /dev/null
 
 	# replace CFF2 table with subroutinized version
-	sfntedit -a CFF2="$1"/.tb_cff2 "$otf_file"
+	sfntedit -a CFF2=$1/.tb_cff2 $1/$2.otf
 
-	# add SVG table to variable OTF
-	echo 'Adding SVG table to' $2.otf
-	"$addSVG" "$otf_file" "$DIR"/svg
+	# comment out STAT feature file which cannot be digested by fontmake
+	sed -i '' 's/^/#/' $1/STAT.fea
 
 	# build variable TTF
-	fontmake -m "$dsp_file" -o variable --production-names --output-path "$ttf_file" --feature-writer None
+	fontmake -m $1/$2.designspace -o variable --production-names --output-path $1/$2.ttf
 
-	# use cmap, DSIG, name, OS/2, hhea, post, SVG, and STAT tables from OTFs
-	sfntedit -x cmap="$1"/.tb_cmap,DSIG="$1"/.tb_DSIG,name="$1"/.tb_name,OS/2="$1"/.tb_os2,hhea="$1"/.tb_hhea,post="$1"/.tb_post,SVG="$1"/.tb_SVG,STAT="$1"/.tb_STAT "$otf_file"
-	sfntedit -a cmap="$1"/.tb_cmap,DSIG="$1"/.tb_DSIG,name="$1"/.tb_name,OS/2="$1"/.tb_os2,hhea="$1"/.tb_hhea,post="$1"/.tb_post,SVG="$1"/.tb_SVG,STAT="$1"/.tb_STAT "$ttf_file"
+	# use DSIG, name, OS/2, hhea, post, and STAT tables from OTFs
+	sfntedit -x DSIG=$1/.tb_DSIG,name=$1/.tb_name,OS/2=$1/.tb_os2,hhea=$1/.tb_hhea,post=$1/.tb_post,STAT=$1/.tb_STAT,fvar=$1/.tb_fvar $1/$2.otf
+	sfntedit -a DSIG=$1/.tb_DSIG,name=$1/.tb_name,OS/2=$1/.tb_os2,hhea=$1/.tb_hhea,post=$1/.tb_post,STAT=$1/.tb_STAT,fvar=$1/.tb_fvar $1/$2.ttf
 
-	# use GDEF, GPOS, and GSUB tables from TTFs
-	sfntedit -x GDEF="$1"/.tb_GDEF,GPOS="$1"/.tb_GPOS,GSUB="$1"/.tb_GSUB "$ttf_file"
-	sfntedit -a GDEF="$1"/.tb_GDEF,GPOS="$1"/.tb_GPOS,GSUB="$1"/.tb_GSUB "$otf_file"
+	# use cmap, GDEF, GPOS, and GSUB tables from TTFs
+	sfntedit -x cmap=$1/.tb_cmap,GDEF=$1/.tb_GDEF,GPOS=$1/.tb_GPOS,GSUB=$1/.tb_GSUB $1/$2.ttf
+	sfntedit -a cmap=$1/.tb_cmap,GDEF=$1/.tb_GDEF,GPOS=$1/.tb_GPOS,GSUB=$1/.tb_GSUB $1/$2.otf
 
-	# move font files to target directory
-	mv "$otf_file" "$var_dir"
-	mv "$ttf_file" "$var_dir"
+    # move font files to target directory
+    mv $1/$2.otf $var_dir
+    mv $1/$2.ttf $var_dir
 
 	# delete build artifacts
-	rm "$1"/.tb_*
-	rm "$1"/master_*/*.*tf
+	rm $1/.tb_*
+	rm $1/master_*/*.*tf
 
-	echo "Done with $2"
-	echo ""
-	echo ""
+	# undo changes to STAT feature file
+	sed -i '' 's/#//' $1/STAT.fea
+
+    echo "Done with $2"
+    echo ""
+    echo ""
 }
 
-build_var_font "$DIR"/Roman/Masters $ro_name
-build_var_font "$DIR"/Italic/Masters $it_name
+build_var_font $DIR/Roman/Masters $ro_name
+build_var_font $DIR/Italic/Masters $it_name

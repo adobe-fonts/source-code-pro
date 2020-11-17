@@ -45,8 +45,8 @@ goto :eof
 :build_font
 call makeotf -f "%~dp0\%1\Instances\%2\font.ufo" -r -ci "%~dp0\uvs.txt" -o "%TARGET_OTF_PATH%\%FAMILY%-%2.otf"
 call makeotf -f "%~dp0\%1\Instances\%2\font.ttf" -r -ci "%~dp0\uvs.txt" -o "%TARGET_TTF_PATH%\%FAMILY%-%2.ttf" -ff "%~dp0\%1\Instances\%2\font.ufo\features.fea"
-"%PYTHON_PATH%" "%~dp0\addSVGtable.py" "%TARGET_OTF_PATH%\%FAMILY%-%2.otf" "%~dp0\svg"
-"%PYTHON_PATH%" "%~dp0\addSVGtable.py" "%TARGET_TTF_PATH%\%FAMILY%-%2.ttf" "%~dp0\svg"
+:: "%PYTHON_PATH%" "%~dp0\addSVGtable.py" "%TARGET_OTF_PATH%\%FAMILY%-%2.otf" "%~dp0\svg"
+:: "%PYTHON_PATH%" "%~dp0\addSVGtable.py" "%TARGET_TTF_PATH%\%FAMILY%-%2.ttf" "%~dp0\svg"
 goto :eof
 
 :error_makeotf_not_found
