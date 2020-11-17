@@ -9,7 +9,7 @@
     <style>
 
         body {
-            font-family: 'Source Code Pro', monospace;
+            font-family: 'Source Code Pro VF', 'Source Code Pro', monospace;
             overflow-x: hidden;
             font-size: 100%;
         }
@@ -44,29 +44,60 @@
         {
             background-color: #EEE;
         }
-        .ribbon {
-            background: none repeat scroll 0% 0% rgb(34, 34, 34);
-            color: white;
-            display: block;
-            font: 400 13px 'Source Code Pro';
-            font-weight: 700;
-            padding: 8px 150px;
-            position: absolute;
-            right: 0px;
-            text-decoration: none;
-            top: 0px;
-            -webkit-transform: translate(50%, -50%) rotate(45deg) translateY(72px);
-            -moz-transform: translate(50%, -50%) rotate(45deg) translateY(72px);
-            -ms-transform: translate(50%, -50%) rotate(45deg) translateY(72px);
-            -o-transform: translate(50%, -50%) rotate(45deg) translateY(72px);
-            transform: translate(50%, -50%) rotate(45deg) translateY(72px);
-            white-space: nowrap;
-        }
         .ss04 {
             font-feature-settings: "ss04" 1;
         }
+        .ribbon {
+            width: 12.1em;
+            height: 12.1em;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            z-index: 9999;
+            pointer-events: none;
+            font-size: 13px;
+            text-decoration: none;
+            text-indent: -999999px;
+        }
+        .ribbon:before, .ribbon:after {
+            position: absolute;
+            display: block;
+            width: 15.38em;
+            height: 1.54em;
 
+            top: 3.23em;
+            right: -3.23em;
 
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .ribbon:before {
+            content: "";
+            padding: .38em 0;
+            background-color: rgb(34, 34, 34);
+            pointer-events: auto;
+        }
+        .ribbon:after {
+            content: attr(data-ribbon);
+
+            color: #fff;
+            font: 700 13px 'Source Code Pro VF', 'Source Code Pro';
+            line-height: 1.54em;
+            text-decoration: none;
+            text-align: center;
+            text-indent: 0;
+
+            padding: .15em 0;
+            margin: .15em 0;
+        }
         @media (max-width: 720px) {
             h1 {
                 font-size: 36px;
@@ -94,7 +125,31 @@
                 max-width: 1100px;
             }
         }
-
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #222;
+                color: #FFF;
+            }
+            div:hover
+            {
+                background-color: #333;
+            }
+            .ribbon:before {
+                background-color: rgb(221, 221, 221);;
+            }
+            .ribbon:after {
+                color: #000;
+        }
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #FFF;
+                color: #000;
+            }
+            div:hover
+            {
+                background-color: #EEE;
+            }
+        }
     </style>
   </head>
   <body>
@@ -409,7 +464,8 @@
         </p>
         </div>
 
-        <a class="ribbon" href="https://github.com/adobe-fonts/source-code-pro">Fork me on GitHub</a>
+        <a class="ribbon" href="https://github.com/adobe-fonts/source-code-pro" data-ribbon="Fork me on GitHub"
+        title="Fork me on GitHub"></a>
 
     </article>
   </body>

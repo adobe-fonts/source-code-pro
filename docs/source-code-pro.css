@@ -123,3 +123,23 @@
     src: url('WOFF2/TTF/SourceCodePro-BlackIt.ttf.woff2') format('woff2'),
          url('WOFF/OTF/SourceCodePro-BlackIt.otf.woff') format('woff');
 }
+
+@supports (font-variation-settings:normal) {
+    @font-face{
+        font-family: 'Source Code Pro VF';
+        font-weight: 200 900;
+        font-style: normal;
+        font-stretch: normal;
+        src: url('WOFF2/SourceCodeVariable-Roman.otf.woff2') format('woff2-variations'),
+             url('WOFF2/SourceCodeVariable-Roman.ttf.woff2') format('woff2-variations');
+    }
+    @font-face{
+        font-family: 'Source Code Pro VF';
+        font-weight: 200 900;
+        font-style: italic;
+        font-stretch: normal;
+        src: url('WOFF2/SourceCodeVariable-Italic.otf.woff2') format('woff2-variations'),
+             url('WOFF2/SourceCodeVariable-Italic.ttf.woff2') format('woff2-variations');
+    }
+
+}
