@@ -1,6 +1,6 @@
 # Source Code Pro
 
-[Source Code Pro](http://adobe-fonts.github.io/source-code-pro/)
+[Source Code Pro](https://adobe-fonts.github.io/source-code-pro/)
 is a set of OpenType fonts that have been designed to work well
 in user interface (UI) environments.
 
