@@ -166,7 +166,7 @@ feature ccmp { # Glyph Composition / Decomposition
 		#substitutes dotless forms of i & j when followed by combining accents above: (Navajo language support)
 		sub i' ogonekcmb' @MARKS_ABOVE_CMB by iogonek.d;
 		sub i.a' ogonekcmb' @MARKS_ABOVE_CMB by iogonek.da;
-		sub [i j iogonek iogonek.a istroke jcrossedtail]' @MARKS_ABOVE_CMB by [dotlessi dotlessj iogonek.d iogonek.da istroke.d jcrossedtail.d];
+		sub [i j iogonek iogonek.a istroke istroke.a jcrossedtail]' @MARKS_ABOVE_CMB by [dotlessi dotlessj iogonek.d iogonek.da istroke.d istroke.da jcrossedtail.d];
 	} GLYPH_COMPOSITION_CONTEXTUAL;
 
 	lookup ASC_RAISE_CMB_CONTEXTUAL {
