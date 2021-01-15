@@ -1,0 +1,53 @@
+table STAT {
+
+   ElidedFallbackName { name "Italic"; };
+
+   DesignAxis wght 0 { name "Weight"; };
+   DesignAxis ital 1 { name "Italic"; };
+
+   AxisValue {
+      location wght 200 200 250;
+      name "ExtraLight";
+   };
+
+   AxisValue {
+      location wght 300 250 350;
+      name "Light";
+   };
+
+   AxisValue {
+      location wght 400 350 450;
+      name "Regular";
+      flag ElidableAxisValueName;
+   };
+
+   AxisValue {
+      location wght 500 450 550;
+      name "Medium";
+   };
+
+   AxisValue {
+      location wght 600 550 650;
+      name "Semibold";
+   };
+
+   AxisValue {
+      location wght 700 650 750;
+      name "Bold";
+   };
+
+   AxisValue {
+      location wght 800 750 800;
+      name "ExtraBold";
+   };
+
+   AxisValue {
+      location wght 900 800 900;
+      name "Black";
+   };
+
+   AxisValue {
+      location ital 1 0;
+      name "Italic";
+   };
+} STAT;
