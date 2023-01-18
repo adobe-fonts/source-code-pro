@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-ro_name=SourceCodeVariable-Roman
-it_name=SourceCodeVariable-Italic
+ro_name=SourceCodeVF-Roman
+it_name=SourceCodeVF-Italic
 
 # get absolute path to bash script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
