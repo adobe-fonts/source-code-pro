@@ -125,7 +125,7 @@ def build_vf(args, slope):
     subprocess.call([
         'fontmake', '-m', designspace_file, '-o', 'variable',
         '--production-names', '--output-path', output_ttf,
-        '--feature-writer', 'None'],
+        '--feature-writer', 'None', '--no-check-compatibility'],
         stdout=STDOUT,
         stderr=STDERR
     )
