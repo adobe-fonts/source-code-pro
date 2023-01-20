@@ -38,16 +38,19 @@ def get_args():
     return parser.parse_args()
 
 
-def remove_source_otfs(slope):
+def remove_source_otfs(slope=None):
     # deletes source otf files
-    for i in range(4):
+    if slope:
         source_directory = ROOT_DIR.joinpath(
-            f'{slope}', f'master_{i}')
-        for otf_to_delete in source_directory.glob("*.otf"):
-            subprocess.call(['rm', otf_to_delete])
+            f'{slope}', 'Masters')
+    else:
+        source_directory = ROOT_DIR
+
+    for otf_to_delete in source_directory.rglob("master_*/*.otf"):
+        subprocess.call(['rm', otf_to_delete])
 
 
-def build_vf(args, slope):
+def build_vf(args, slope=None):
     # default mode is being quiet
     STDOUT = subprocess.DEVNULL
     STDERR = subprocess.DEVNULL
@@ -57,19 +60,19 @@ def build_vf(args, slope):
         STDOUT = None
         STDERR = None
 
-    target_dir = ROOT_DIR.joinpath(f'{slope}').joinpath("Masters")
-
-    if slope == 'Italic':
+    if slope:
+        target_dir = ROOT_DIR.joinpath(f'{slope}')
         vf_output_name = ROOT_DIR.joinpath(
             target_dir, f'{FAMILY_NAME}-{slope}')
     else:
-        slope == 'Roman'
+        target_dir = ROOT_DIR
         vf_output_name = ROOT_DIR.joinpath(
-            target_dir, f'{FAMILY_NAME}-{slope}')
+            target_dir, f'{FAMILY_NAME}')
 
     output_otf = vf_output_name.with_suffix('.otf')
     output_ttf = vf_output_name.with_suffix('.ttf')
     designspace_file = vf_output_name.with_suffix('.designspace')
+    hinting_data_file = target_dir.joinpath('vf_hinting_metadata.plist')
 
     # build master OTFs
     subprocess.call(
@@ -84,7 +87,7 @@ def build_vf(args, slope):
     if args.hinted:
         # split combined private dicts into FDArrays
         subprocess.call(
-            ['splitpsdicts', '-m', f'{slope}/vf_hinting_metadata.plist', '-d', designspace_file],
+            ['splitpsdicts', '-m', hinting_data_file, '-d', designspace_file],
             stdout=STDOUT,
             stderr=STDERR
         )
@@ -130,11 +133,11 @@ def build_vf(args, slope):
         stderr=STDERR
     )
 
-    # use DSIG, name, OS/2, hhea, post, and STAT tables from OTFs
+    # use DSIG, name, OS/2, MVAR, hhea, post, and STAT tables from OTFs
     tables_from_otf = (
         'DSIG=/tmp/.tb_DSIG,name=/tmp/.tb_name,OS/2=/tmp/.tb_os2,'
-        'hhea=/tmp/.tb_hhea,post=/tmp/.tb_post,STAT=/tmp/.tb_STAT,'
-        'fvar=/tmp/.tb_fvar')
+        'MVAR=/tmp/.tb_MVAR,hhea=/tmp/.tb_hhea,post=/tmp/.tb_post,'
+        'STAT=/tmp/.tb_STAT,fvar=/tmp/.tb_fvar')
 
     subprocess.call([
         'sfntedit', '-x', tables_from_otf, output_otf])
