@@ -57,7 +57,7 @@ def build_vf(args, slope):
         STDOUT = None
         STDERR = None
 
-    target_dir = ROOT_DIR.joinpath(f'{slope}')
+    target_dir = ROOT_DIR.joinpath(f'{slope}').joinpath("Masters")
 
     if slope == 'Italic':
         vf_output_name = ROOT_DIR.joinpath(
