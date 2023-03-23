@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <designspace format="3">
 	<axes>
-		<axis default="200.0" maximum="900.0" minimum="200.0" name="weight" tag="wght">
-			<map input="200" output="0"/>		<!-- ExtraLight -->
-			<map input="300" output="100"/>		<!-- Light -->
-			<map input="400" output="368"/>		<!-- Regular -->
-			<map input="500" output="486"/>		<!-- Medium -->
-			<map input="600" output="600"/>		<!-- Semibold -->
-			<map input="700" output="824"/>		<!-- Bold -->
-			<map input="900" output="1000"/>	<!-- Black -->
-		</axis>
+		<axis default="0.0" maximum="1000.0" minimum="0.0" name="weight" tag="wght"/>
 	</axes>
 	<sources>
-		<source familyname="Source Code VF" filename="master_0/SourceCode-ExtraLightItalic.ufo" name="master_0">
+		<source filename="Masters/master_0/SourceCode-ExtraLightItalic.ufo" name="master_0">
 			<lib copy="1"/>
 			<groups copy="1"/>
 			<info copy="1"/>
@@ -20,7 +12,7 @@
 				<dimension name="weight" xvalue="0"/>
 			</location>
 		</source>
-		<source filename="master_1/SourceCode-Italic.ufo" name="master_1">
+		<source filename="Masters/master_1/SourceCode-Italic.ufo" name="master_1">
 			<glyph mute="1" name="D"/>
 			<glyph mute="1" name="H"/>
 			<glyph mute="1" name="T"/>
@@ -33,56 +25,56 @@
 				<dimension name="weight" xvalue="368"/>
 			</location>
 		</source>
-		<source filename="master_2/SourceCode-BlackItalic.ufo" name="master_2">
+		<source filename="Masters/master_2/SourceCode_BlackItalic.ufo" name="master_2">
 			<location>
 				<dimension name="weight" xvalue="1000"/>
 			</location>
 		</source>
 	</sources>
 	<instances>
-		<instance postscriptfontname="SourceCodeVF-ExtraLightItalic" stylename="Extra Light Italic">
+		<instance familyname="Source Code Pro" filename="Instances/ExtraLightIt/font.ufo" postscriptfontname="SourceCodePro-ExtraLightIt" stylename="ExtraLightIt">
 			<location>
 				<dimension name="weight" xvalue="0"/>
 			</location>
 			<kerning/>
 			<info/>
 		</instance>
-		<instance postscriptfontname="SourceCodeVF-LightItalic" stylename="Light Italic">
+		<instance familyname="Source Code Pro" filename="Instances/LightIt/font.ufo" postscriptfontname="SourceCodePro-LightIt" stylename="LightIt">
 			<location>
 				<dimension name="weight" xvalue="100"/>
 			</location>
 			<kerning/>
 			<info/>
 		</instance>
-		<instance postscriptfontname="SourceCodeVF-Italic" stylename="Regular">
+		<instance familyname="Source Code Pro" filename="Instances/It/font.ufo" postscriptfontname="SourceCodePro-It" stylename="It">
 			<location>
 				<dimension name="weight" xvalue="368"/>
 			</location>
 			<kerning/>
 			<info/>
 		</instance>
-		<instance postscriptfontname="SourceCodeVF-MediumItalic" stylename="Medium Italic">
+		<instance familyname="Source Code Pro" filename="Instances/MediumIt/font.ufo" postscriptfontname="SourceCodePro-MediumIt" stylename="MediumIt">
 			<location>
 				<dimension name="weight" xvalue="486"/>
 			</location>
 			<kerning/>
 			<info/>
 		</instance>
-		<instance postscriptfontname="SourceCodeVF-SemiboldItalic" stylename="Semibold Italic">
+		<instance familyname="Source Code Pro" filename="Instances/SemiboldIt/font.ufo" postscriptfontname="SourceCodePro-SemiboldIt" stylename="SemiboldIt">
 			<location>
 				<dimension name="weight" xvalue="600"/>
 			</location>
 			<kerning/>
 			<info/>
 		</instance>
-		<instance postscriptfontname="SourceCodeVF-BoldItalic" stylename="Bold Italic">
+		<instance familyname="Source Code Pro" filename="Instances/BoldIt/font.ufo" postscriptfontname="SourceCodePro-BoldIt" stylename="BoldIt">
 			<location>
 				<dimension name="weight" xvalue="824"/>
 			</location>
 			<kerning/>
 			<info/>
 		</instance>
-		<instance postscriptfontname="SourceCodeVF-BlackItalic" stylename="Black Italic">
+		<instance familyname="Source Code Pro" filename="Instances/BlackIt/font.ufo" postscriptfontname="SourceCodePro-BlackIt" stylename="BlackIt">
 			<location>
 				<dimension name="weight" xvalue="1000"/>
 			</location>
