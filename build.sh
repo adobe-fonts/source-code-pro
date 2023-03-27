@@ -3,7 +3,7 @@
 set -e
 
 family=SourceCodePro
-roman_weights=(Black Bold ExtraLight Light Medium Regular Semibold)
+upright_weights=(Black Bold ExtraLight Light Medium Regular Semibold)
 italic_weights=(BlackIt BoldIt ExtraLightIt LightIt MediumIt It SemiboldIt)
 
 # get absolute path to bash script
@@ -17,7 +17,7 @@ mkdir -p $otf_dir $ttf_dir
 
 
 function build_font {
-    # $1 is Roman or Italic
+    # $1 is Upright or Italic
     # $2 is weight name
     font_dir=$DIR/$1/Instances/$2
     font_ufo=$font_dir/font.ufo
@@ -41,9 +41,9 @@ function build_font {
 }
 
 
-for w in ${roman_weights[@]}
+for w in ${upright_weights[@]}
 do
-	build_font Roman $w
+	build_font Upright $w
 done
 
 

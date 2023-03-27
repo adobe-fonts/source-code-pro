@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-Build script for Variable Fonts
+Build script for Variable Fonts (VF)
 '''
 
 from pathlib import Path
@@ -38,19 +38,16 @@ def get_args():
     return parser.parse_args()
 
 
-def remove_source_otfs(slope=None):
+def remove_source_otfs(slope):
     # deletes source otf files
-    if slope:
+    for i in range(4):
         source_directory = ROOT_DIR.joinpath(
-            f'{slope}', 'Masters')
-    else:
-        source_directory = ROOT_DIR
-
-    for otf_to_delete in source_directory.rglob("master_*/*.otf"):
-        subprocess.call(['rm', otf_to_delete])
+            f'{slope}', 'Poles', f'pole_{i}')
+        for otf_to_delete in source_directory.glob("*.otf"):
+            subprocess.call(['rm', otf_to_delete])
 
 
-def build_vf(args, slope=None):
+def build_vf(args, slope):
     # default mode is being quiet
     STDOUT = subprocess.DEVNULL
     STDERR = subprocess.DEVNULL
@@ -60,21 +57,21 @@ def build_vf(args, slope=None):
         STDOUT = None
         STDERR = None
 
-    if slope:
-        target_dir = ROOT_DIR.joinpath(f'{slope}')
+    target_dir = ROOT_DIR.joinpath(f'{slope}')
+
+    if slope == 'Italic':
         vf_output_name = ROOT_DIR.joinpath(
             target_dir, f'{FAMILY_NAME}-{slope}')
     else:
-        target_dir = ROOT_DIR
+        slope == 'Upright'
         vf_output_name = ROOT_DIR.joinpath(
-            target_dir, f'{FAMILY_NAME}')
+            target_dir, f'{FAMILY_NAME}-{slope}')
 
     output_otf = vf_output_name.with_suffix('.otf')
     output_ttf = vf_output_name.with_suffix('.ttf')
     designspace_file = vf_output_name.with_suffix('.designspace')
-    hinting_data_file = target_dir.joinpath('vf_hinting_metadata.plist')
 
-    # build master OTFs
+    # build pole OTFs
     subprocess.call(
         # --mkot to set makeotf options:
         # gs to omit glyphs not in the GOADB
@@ -87,7 +84,7 @@ def build_vf(args, slope=None):
     if args.hinted:
         # split combined private dicts into FDArrays
         subprocess.call(
-            ['splitpsdicts', '-m', hinting_data_file, '-d', designspace_file],
+            ['splitpsdicts', '-m', f'{slope}/vf_hinting_metadata.plist', '-d', designspace_file],
             stdout=STDOUT,
             stderr=STDERR
         )
@@ -124,20 +121,20 @@ def build_vf(args, slope=None):
             stderr=STDERR
         )
 
-    # build variable TTF with fontmake.
+    # build VF TTF with fontmake.
     subprocess.call([
         'fontmake', '-m', designspace_file, '-o', 'variable',
         '--production-names', '--output-path', output_ttf,
-        '--feature-writer', 'None'],
+        '--feature-writer', 'None', '--no-check-compatibility'],
         stdout=STDOUT,
         stderr=STDERR
     )
 
-    # use DSIG, name, OS/2, MVAR, hhea, post, and STAT tables from OTFs
+    # use DSIG, name, OS/2, hhea, post, and STAT tables from OTFs
     tables_from_otf = (
         'DSIG=/tmp/.tb_DSIG,name=/tmp/.tb_name,OS/2=/tmp/.tb_os2,'
-        'MVAR=/tmp/.tb_MVAR,hhea=/tmp/.tb_hhea,post=/tmp/.tb_post,'
-        'STAT=/tmp/.tb_STAT,fvar=/tmp/.tb_fvar')
+        'hhea=/tmp/.tb_hhea,post=/tmp/.tb_post,STAT=/tmp/.tb_STAT,'
+        'fvar=/tmp/.tb_fvar')
 
     subprocess.call([
         'sfntedit', '-x', tables_from_otf, output_otf])
@@ -156,9 +153,9 @@ def build_vf(args, slope=None):
 
     # move font files to target directory
     if output_otf.exists():
-        shutil.move(output_otf, var_dir)
+        shutil.move(output_otf, vf_dir)
     if output_ttf.exists():
-        shutil.move(output_ttf, var_dir)
+        shutil.move(output_ttf, vf_dir)
 
     # delete build artifacts
     if not args.debug:
@@ -167,20 +164,20 @@ def build_vf(args, slope=None):
 
 if __name__ == '__main__':
     args = get_args()
-    slopes = ['Roman', 'Italic']
+    slopes = ['Upright', 'Italic']
 
     if args.hinted:
-        output_dir_name = 'VAR_hinted'
+        output_dir_name = 'VF_hinted'
     else:
-        output_dir_name = 'VAR'
+        output_dir_name = 'VF'
 
-    var_dir = ROOT_DIR.joinpath('target', output_dir_name)
+    vf_dir = ROOT_DIR.joinpath('target', output_dir_name)
 
     # clean existing target directory
-    if var_dir.exists():
-        subprocess.call(['rm', '-rf', var_dir])
+    if vf_dir.exists():
+        subprocess.call(['rm', '-rf', vf_dir])
     # build target directory
-    var_dir.mkdir(parents=True)
+    vf_dir.mkdir(parents=True)
 
     for slope in slopes:
         build_vf(args, slope)
