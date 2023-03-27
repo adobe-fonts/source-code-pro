@@ -1,69 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="rfishhook" format="2">
-	<unicode hex="027E"/>
-	<advance width="600"/>
-	<outline>
-		<contour>
-			<point name="hintSet0000" x="138" y="0" type="line"/>
-			<point x="237" y="0" type="line"/>
-			<point x="237" y="230" type="line"/>
-			<point x="237" y="361"/>
-			<point x="321" y="413"/>
-			<point x="408" y="413" type="curve"/>
-			<point x="449" y="413"/>
-			<point x="475" y="410"/>
-			<point x="518" y="396" type="curve"/>
-			<point name="hintSet0005" x="540" y="481" type="line"/>
-			<point name="hintSet0006" x="504" y="493"/>
-			<point x="455" y="501"/>
-			<point x="397" y="501" type="curve"/>
-			<point x="232" y="501"/>
-			<point x="138" y="407"/>
-			<point x="138" y="251" type="curve"/>
-		</contour>
-	</outline>
-	<anchor name="aboveLC" x="355" y="510"/>
-	<anchor name="belowLC" x="192" y="-20"/>
-	<lib>
-		<dict>
-			<key>com.adobe.type.autohint.v2</key>
-			<dict>
-				<key>hintSetList</key>
-				<array>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0000</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 21 -21</string>
-							<string>hstem 413 88</string>
-							<string>vstem 138 99</string>
-						</array>
-					</dict>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0005</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 21 -21</string>
-							<string>hstem 481 20</string>
-							<string>vstem 138 99</string>
-						</array>
-					</dict>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0006</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 21 -21</string>
-							<string>hstem 413 88</string>
-							<string>vstem 138 99</string>
-						</array>
-					</dict>
-				</array>
-				<key>id</key>
-				<string>w600l1380l2370l237230237361321413c408413449413475410c518396l540481504493455501c397501232501138407c138251</string>
-			</dict>
-		</dict>
-	</lib>
+  <advance width="600"/>
+  <unicode hex="027E"/>
+  <anchor x="355" y="510" name="aboveLC"/>
+  <anchor x="192" y="-20" name="belowLC"/>
+  <outline>
+    <contour>
+      <point x="138" y="0" type="line" name="hintRef0000"/>
+      <point x="237" y="0" type="line"/>
+      <point x="237" y="230" type="line"/>
+      <point x="237" y="361"/>
+      <point x="321" y="413"/>
+      <point x="408" y="413" type="curve"/>
+      <point x="449" y="413"/>
+      <point x="475" y="410"/>
+      <point x="518" y="396" type="curve"/>
+      <point x="540" y="481" type="line"/>
+      <point x="504" y="493"/>
+      <point x="455" y="501"/>
+      <point x="397" y="501" type="curve"/>
+      <point x="232" y="501"/>
+      <point x="138" y="407"/>
+      <point x="138" y="251" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintRef0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 21 -21</string>
+              <string>hstem 413 88</string>
+              <string>vstem 138 99</string>
+            </array>
+          </dict>
+        </array>
+        <key>id</key>
+        <string>w600l1380l2370l237230237361321413c408413449413475410c518396l540481504493455501c397501232501138407c138251</string>
+      </dict>
+    </dict>
+  </lib>
 </glyph>

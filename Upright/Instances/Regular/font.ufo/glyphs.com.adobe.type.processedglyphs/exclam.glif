@@ -1,77 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="exclam" format="2">
-	<unicode hex="0021"/>
-	<advance width="600"/>
-	<outline>
-		<contour>
-			<point name="hintSet0000" x="272" y="232" type="line"/>
-			<point x="328" y="232" type="line"/>
-			<point x="338" y="576" type="line"/>
-			<point x="340" y="670" type="line"/>
-			<point x="260" y="670" type="line"/>
-			<point x="262" y="576" type="line"/>
-		</contour>
-		<contour>
-			<point name="hintSet0006" x="300" y="-12" type="curve"/>
-			<point x="340" y="-12"/>
-			<point x="373" y="18"/>
-			<point x="373" y="66" type="curve"/>
-			<point name="hintSet0008" x="373" y="113"/>
-			<point x="340" y="142"/>
-			<point x="300" y="142" type="curve"/>
-			<point x="260" y="142"/>
-			<point x="227" y="113"/>
-			<point x="227" y="66" type="curve"/>
-			<point name="hintSet0010" x="227" y="18"/>
-			<point x="260" y="-12"/>
-		</contour>
-	</outline>
-	<lib>
-		<dict>
-			<key>com.adobe.type.autohint.v2</key>
-			<dict>
-				<key>hintSetList</key>
-				<array>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0000</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 9 -21</string>
-							<string>vstem 267 66</string>
-						</array>
-					</dict>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0006</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 9 -21</string>
-							<string>vstem 227 146</string>
-						</array>
-					</dict>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0008</string>
-						<key>stems</key>
-						<array>
-							<string>hstem -12 154</string>
-							<string>vstem 227 146</string>
-						</array>
-					</dict>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0010</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 9 -21</string>
-							<string>vstem 227 146</string>
-						</array>
-					</dict>
-				</array>
-				<key>id</key>
-				<string>w600l272232l328232l338576l340670l260670l262576c300-12340-1237318c37366373113340142c300142260142227113c2276622718260-12</string>
-			</dict>
-		</dict>
-	</lib>
+  <advance width="600"/>
+  <unicode hex="0021"/>
+  <outline>
+    <contour>
+      <point x="272" y="232" type="line" name="hintRef0000"/>
+      <point x="328" y="232" type="line"/>
+      <point x="338" y="576" type="line"/>
+      <point x="340" y="670" type="line"/>
+      <point x="260" y="670" type="line"/>
+      <point x="262" y="576" type="line"/>
+    </contour>
+    <contour>
+      <point x="300" y="-12" type="curve"/>
+      <point x="340" y="-12" name="hintRef0001"/>
+      <point x="373" y="18"/>
+      <point x="373" y="66" type="curve"/>
+      <point x="373" y="113" name="hintRef0002"/>
+      <point x="340" y="142"/>
+      <point x="300" y="142" type="curve"/>
+      <point x="260" y="142"/>
+      <point x="227" y="113"/>
+      <point x="227" y="66" type="curve"/>
+      <point x="227" y="18"/>
+      <point x="260" y="-12"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintRef0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 154</string>
+              <string>vstem 267 66</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintRef0001</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 9 -21</string>
+              <string>vstem 227 146</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintRef0002</string>
+            <key>stems</key>
+            <array>
+              <string>hstem -12 154</string>
+              <string>vstem 227 146</string>
+            </array>
+          </dict>
+        </array>
+        <key>id</key>
+        <string>w600l272232l328232l338576l340670l260670l262576c300-12340-1237318c37366373113340142c300142260142227113c2276622718260-12</string>
+      </dict>
+    </dict>
+  </lib>
 </glyph>

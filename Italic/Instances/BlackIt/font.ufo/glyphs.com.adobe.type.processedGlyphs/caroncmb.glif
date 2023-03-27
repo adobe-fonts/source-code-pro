@@ -1,68 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="caroncmb" format="2">
-	<unicode hex="030C"/>
-	<advance width="600"/>
-	<outline>
-		<contour>
-			<point name="hintSet0000" x="276" y="580" type="line"/>
-			<point x="452" y="580" type="line"/>
-			<point name="hintSet0002" x="580" y="704" type="line"/>
-			<point name="hintSet0003" x="526" y="768" type="line"/>
-			<point x="376" y="680" type="line"/>
-			<point x="372" y="680" type="line"/>
-			<point name="hintSet0006" x="262" y="768" type="line"/>
-			<point x="192" y="708" type="line"/>
-		</contour>
-	</outline>
-	<anchor name="_aboveLC" x="340" y="520"/>
-	<lib>
-		<dict>
-			<key>com.adobe.type.autohint.v2</key>
-			<dict>
-				<key>hintSetList</key>
-				<array>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0000</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 580 100</string>
-							<string>hstem 708 -20</string>
-							<string>vstem 192 388</string>
-						</array>
-					</dict>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0002</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 704 -20</string>
-							<string>vstem 192 388</string>
-						</array>
-					</dict>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0003</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 580 100</string>
-							<string>hstem 708 -20</string>
-							<string>vstem 192 388</string>
-						</array>
-					</dict>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0006</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 708 -20</string>
-							<string>vstem 192 388</string>
-						</array>
-					</dict>
-				</array>
-				<key>id</key>
-				<string>w600l276580l452580l580704l526768l376680l372680l262768l192708</string>
-			</dict>
-		</dict>
-	</lib>
+  <advance width="600"/>
+  <unicode hex="030C"/>
+  <anchor x="340" y="520" name="_aboveLC"/>
+  <outline>
+    <contour>
+      <point x="276" y="580" type="line" name="hintRef0000"/>
+      <point x="452" y="580" type="line"/>
+      <point x="580" y="704" type="line" name="hintRef0001"/>
+      <point x="526" y="768" type="line"/>
+      <point x="376" y="680" type="line" name="hintRef0002"/>
+      <point x="372" y="680" type="line"/>
+      <point x="262" y="768" type="line"/>
+      <point x="192" y="708" type="line" name="hintRef0003"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintRef0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 580 100</string>
+              <string>vstem 192 388</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintRef0001</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 704 -20</string>
+              <string>vstem 192 388</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintRef0002</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 580 100</string>
+              <string>vstem 192 388</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintRef0003</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 708 -20</string>
+              <string>vstem 192 388</string>
+            </array>
+          </dict>
+        </array>
+        <key>id</key>
+        <string>w600l276580l452580l580704l526768l376680l372680l262768l192708</string>
+      </dict>
+    </dict>
+  </lib>
 </glyph>

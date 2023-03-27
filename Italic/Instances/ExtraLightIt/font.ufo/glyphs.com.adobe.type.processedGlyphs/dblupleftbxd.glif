@@ -1,55 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="dblupleftbxd" format="2">
-	<unicode hex="255D"/>
-	<advance width="600"/>
-	<outline>
-		<contour>
-			<point name="hintSet0000" x="285" y="315" type="line"/>
-			<point x="285" y="1000" type="line"/>
-			<point x="255" y="1000" type="line"/>
-			<point x="255" y="345" type="line"/>
-			<point x="-15" y="345" type="line"/>
-			<point x="-15" y="315" type="line"/>
-		</contour>
-		<contour>
-			<point name="hintSet0006" x="345" y="255" type="line"/>
-			<point x="345" y="1000" type="line"/>
-			<point x="315" y="1000" type="line"/>
-			<point x="315" y="285" type="line"/>
-			<point x="-15" y="285" type="line"/>
-			<point x="-15" y="255" type="line"/>
-		</contour>
-	</outline>
-	<lib>
-		<dict>
-			<key>com.adobe.type.autohint.v2</key>
-			<dict>
-				<key>hintSetList</key>
-				<array>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0000</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 315 30</string>
-							<string>vstem 255 30</string>
-						</array>
-					</dict>
-					<dict>
-						<key>pointTag</key>
-						<string>hintSet0006</string>
-						<key>stems</key>
-						<array>
-							<string>hstem 255 30</string>
-							<string>hstem 315 30</string>
-							<string>vstem 255 30</string>
-							<string>vstem 315 30</string>
-						</array>
-					</dict>
-				</array>
-				<key>id</key>
-				<string>w600l285315l2851000l2551000l255345l-15345l-15315l345255l3451000l3151000l315285l-15285l-15255</string>
-			</dict>
-		</dict>
-	</lib>
+  <advance width="600"/>
+  <unicode hex="255D"/>
+  <outline>
+    <contour>
+      <point x="285" y="315" type="line" name="hintRef0000"/>
+      <point x="285" y="1000" type="line"/>
+      <point x="255" y="1000" type="line"/>
+      <point x="255" y="345" type="line"/>
+      <point x="-15" y="345" type="line"/>
+      <point x="-15" y="315" type="line"/>
+    </contour>
+    <contour>
+      <point x="345" y="255" type="line" name="hintRef0001"/>
+      <point x="345" y="1000" type="line"/>
+      <point x="315" y="1000" type="line"/>
+      <point x="315" y="285" type="line"/>
+      <point x="-15" y="285" type="line"/>
+      <point x="-15" y="255" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint.v2</key>
+      <dict>
+        <key>hintSetList</key>
+        <array>
+          <dict>
+            <key>pointTag</key>
+            <string>hintRef0000</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 315 30</string>
+              <string>vstem 255 30</string>
+            </array>
+          </dict>
+          <dict>
+            <key>pointTag</key>
+            <string>hintRef0001</string>
+            <key>stems</key>
+            <array>
+              <string>hstem 255 30</string>
+              <string>vstem 315 30</string>
+            </array>
+          </dict>
+        </array>
+        <key>id</key>
+        <string>w600l285315l2851000l2551000l255345l-15345l-15315l345255l3451000l3151000l315285l-15285l-15255</string>
+      </dict>
+    </dict>
+  </lib>
 </glyph>
