@@ -34,7 +34,7 @@ are generated with the `otf2ttf` and `ttfcomponentizer` tools.
 Commands to build the Regular style OTF font:
 
 ```sh
-cd Roman/Instances/Regular/
+cd Upright/Instances/Regular/
 makeotf -r -gs -omitMacNames
 ```
 
