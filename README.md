@@ -68,9 +68,9 @@ To build the variable TTFs you must install **fontmake** using this command:
 pip3 install fontmake
 ```
 
-A shell script named **buildVFs.sh** is provided in the root directory.
-It generates four variable fonts (two CFF2-OTFs and two TTFs), and can be executed by typing:
+A Python script named **buildVFs.py** is provided in the root directory.
+It generates four variable fonts (two CFF2-OTFs and two TTFs), and can be executed from the repository root by typing:
 
 ```sh
-./buildVFs.sh
+python3 buildVFs.py
 ```
